@@ -1,0 +1,7 @@
+.bash_history
+.config/*
+.mozilla/*
+.purple/*
+.ssh/*
+.viminfo
+GIT_Ignore

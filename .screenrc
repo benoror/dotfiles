@@ -1,0 +1,38 @@
+#hardstatus alwayslastline '%{= Kw}[%{g}%H%{w}] %{= Kw}%-w%{= KB}%{+b}%50>%t%{= Kw}%+w%< %{= Kw}'
+#caption always '%{= Kw}[%{g}screen%{w}] %{= Kw}%-w%{= KB}%{+b}%50>%t%{= Kw}%+w%< %{= Kw}'
+startup_message off
+caption always "%{= Kw}%-w%{= gk}%n %t%{-}%+w %-= %c"
+hardstatus alwaysignore
+vbell off
+
+#screen -t macmini   2  ssh benoror@macmini
+#screen -t [msn]     2   finch
+screen -t edit 1
+screen -t term 0
+
+# terminfo and termcap for nice 256 color terminal
+term screen-256color
+# allow bold colors - necessary for some reason
+attrcolor b ".I"
+# tell screen how to set colors. AB = background, AF=foreground
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+# erase background with current bg color
+defbce "on" 
+# Turn off start message:
+startup_message off
+# Set messages timeout to one second:
+msgwait 1
+# Monitor changes
+#monitor on
+
+# To clear the screen after closing some programs
+altscreen on
+
+#termcapinfo * 'hs:ts=\E]0;:fs=\007:ds=\E]0;\007'
+
+# Ubuntu screen backspace fix
+bindkey -d ^@ stuff ^?
+
+# Keys
+bindkey "^[[1;5D" prev  # change window with ctrl-left
+bindkey "^[[1;5C" next  # change window with ctrl-right
