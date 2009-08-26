@@ -34,7 +34,7 @@ alias ...='cd ../..'
 alias n='netstat -a -e -e -p -A inet'
 alias cal='cal -3' #show 3 months by default
 alias sudo='sudo env PATH=$PATH' #work around sudo built --with-secure-path (ubuntu)
-alias pacman='echo Use yaourt instead'
+alias pacman='echo -e "\n\t+Using yaourt instead\n"; yaourt'
 alias apt-get='sudo apt-get'
 alias aptitude='sudo aptitude'
 

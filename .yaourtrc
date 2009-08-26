@@ -21,6 +21,7 @@ ColorMod LightBackGround
 #   LastCommentsOrder asc
 #   NoConfirm no
 PacmanBin /usr/bin/pacman-color
+#PacmanBin /usr/bin/powerpill
 #   PkgbuildEditor gvim
 #   SearchInAurUnsupported yes
 #   ShowAurComment yes
