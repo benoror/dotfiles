@@ -225,7 +225,7 @@ imap <F1> <Esc>
 hi CursorLine cterm=bold ctermbg=8
 
 " Line numbers
-hi LineNr ctermfg=3 ctermbg=8
+hi LineNr ctermfg=7 ctermbg=8
 
 " Search higlighted
 hi Search cterm=bold ctermfg=0 ctermbg=3
@@ -236,7 +236,7 @@ hi FoldColumn cterm=bold ctermfg=8 ctermbg=0
 
 " Statusline
 " I like this better than all the reverse video of the default statusline.
-hi StatusLine term=reverse cterm=bold ctermfg=7 ctermbg=6
+hi StatusLine term=reverse cterm=bold ctermfg=16 ctermbg=12
 hi StatusLineNC term=reverse cterm=bold ctermfg=2 ctermbg=8
 hi User1 ctermfg=4
 hi User2 ctermfg=1
@@ -250,7 +250,7 @@ hi User9 cterm=reverse ctermfg=8 ctermbg=7
 
 " A nice, minimalistic tabline
 hi TabLine cterm=underline ctermfg=12 ctermbg=8
-hi TabLineSel cterm=none ctermfg=3 ctermbg=12
+hi TabLineSel cterm=none ctermfg=8 ctermbg=12
 hi TabLineFill cterm=underline ctermbg=8 ctermfg=12
 
 " Always show tabs

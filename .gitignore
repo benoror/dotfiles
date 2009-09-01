@@ -5,3 +5,4 @@
 .ssh/*
 .viminfo
 GIT_Ignore
+.DS_Store
