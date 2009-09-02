@@ -27,6 +27,7 @@ alias vim='vim'
 alias v='vim'
 alias vi='vim'
 alias psaux='ps aux | less'
+alias clear='clear ; source ~/.message'
 alias cls='clear'
 alias cd..='cd ..'
 alias ..='cd ..'
@@ -190,7 +191,7 @@ alias xx=exit
 #------------------------------------------------------------------------------
 # Message.
 #------------------------------------------------------------------------------
-cat ~/.message
+source ~/.message
 
 if [ "$COLORTERM" == "gnome-terminal" ]; then
         export TERM=xterm-256color
