@@ -4,5 +4,6 @@
 .purple/*
 .ssh/*
 .viminfo
+.lesshst
 GIT_Ignore
 .DS_Store
