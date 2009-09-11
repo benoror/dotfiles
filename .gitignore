@@ -1,6 +1,7 @@
 .bash_history
 .config/*
 .mozilla/*
+.irssi/*
 .purple/*
 .ssh/*
 .viminfo

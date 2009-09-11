@@ -1,0 +1,3 @@
+#!/bin/bash
+# Remove ophaned packages
+sudo pacman -Rns $(pacman -Qdt | awk '{print $1}')
