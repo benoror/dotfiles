@@ -1,18 +1,8 @@
-#style "xfdesktop-icon-view" {
-#XfdesktopIconView::label-alpha = 0
-#base[NORMAL] = "#ffffff"
-#base[SELECTED] = "#71B9FF"
-#base[ACTIVE] = "#71B9FF"
-#fg[NORMAL] = "#000000"
-#fg[SELECTED] = "#ffffff"
-#fg[ACTIVE] = "#ffffff"
-#}
-#widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"
+# DO NOT EDIT!  This file will be overwritten by LXAppearance.
+# Any customization should be done in ~/.gtkrc-2.0.mine
 
-#style "my-blist" {
-#    text[NORMAL] = "#ffffff"
-#    bg[NORMAL] = "#2E3436"
-#    base[NORMAL] = "#2E3436"
-#}
-#widget "*pidgin_blist_treeview" style "my-blist"
-#widget "*pidgin_conv_imhtml" style "my-blist"
+gtk-theme-name="Clearlooks-DarkLime"
+gtk-icon-theme-name="Mist"
+gtk-font-name="DejaVu Sans 10"
+gtk-toolbar-style=2
+include "/home/benoror/.gtkrc-2.0.mine"

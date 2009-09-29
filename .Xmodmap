@@ -1,0 +1,3 @@
+keycode 110 = XF86RockerUp
+keycode 111 = XF86RockerDown
+keycode 112 = apCopy

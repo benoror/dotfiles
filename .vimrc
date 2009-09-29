@@ -23,6 +23,8 @@ if has("autocmd")
   \   exe "normal g'\"" |
   \ endif
 endif
+"You can use the mouse to resize windows in Vim if you set your mouse as follows.
+set mouse=a
 "This is necessary to allow pasting from outside vim. It turns off auto stuff.
 "You can tell you are in paste mode when the ruler is not visible
 set pastetoggle=<F2>
@@ -50,7 +52,8 @@ set cinoptions=l1,c4,(s,U1,w1,m1,j1
 set cinwords=if,elif,else,for,while,try,except,finally,def,class
 
 set nobackup                    "bk:    does not write a persistent backup file of an edited file
-set writebackup                 "wb:    does keep a backup file while editing a file
+set nowritebackup                 "wb:    does keep a backup file while editing a file
+set noswapfile
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " Indenting
@@ -220,9 +223,13 @@ vmap <C-x> "+d<Esc>
 map <F1> <Esc>
 imap <F1> <Esc>
 
+"Center search results
+:nmap n nzz  
+:nmap p pzz
+
 " I love the new CursorLine, but terminal underlining kicks legibility in the nuts.
 " So what to do? Bold is (extremely) subtle, but it's better than nothing.
-hi CursorLine cterm=bold ctermbg=8
+hi CursorLine cterm=bold ctermbg=0
 
 " Line numbers
 hi LineNr ctermfg=7 ctermbg=8
