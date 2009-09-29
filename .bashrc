@@ -5,7 +5,7 @@
 [ -z "$PS1" ] && return
 
 # Set our environment variables
-export PATH="$PATH:/usr/local/sbin:/usr/sbin:/sbin:$HOME/dotfiles/scripts:$HOME/.gem/ruby/1.8/bin"
+export PATH="$PATH:/usr/local/sbin:$HOME/bin:$HOME/.gem/ruby/1.9.1/bin"
 export MAILCHECK=0
 export EDITOR=vim
 export VISUAL=$EDITOR
@@ -21,6 +21,15 @@ export TERM=xterm-256color
 #------------------------------------------------------------------------------
 # Misc Alias.
 #------------------------------------------------------------------------------
+ls --color 2> /dev/null > /dev/null
+LSCOLOR="$?"
+if [ "$LSCOLOR" -eq "0" ]
+then
+    alias ls='ls --color -C'
+else
+    alias ls='ls -CG'
+fi
+
 alias vim='vim'
 alias v='vim'
 alias vi='vim'
@@ -33,10 +42,11 @@ alias ...='cd ../..'
 alias n='netstat -a -e -e -p -A inet'
 alias cal='cal -3' #show 3 months by default
 alias sudo='sudo env PATH=$PATH' #work around sudo built --with-secure-path (ubuntu)
-alias pacman='echo -e "\n\t+Using yaourt instead\n"; yaourt'
+#alias pacman='echo -e "\t+Using yaourt instead"; yaourt'
+alias pacman='sudo pacman'
+alias yaourt='sudo yaourt'
 alias apt-get='sudo apt-get'
 alias aptitude='sudo aptitude'
-alias ls='ls -G'
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'

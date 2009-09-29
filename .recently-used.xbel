@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/benoror/Desktop/md5.c" added="2009-09-15T01:09:13Z" modified="2009-09-14T08:41:12Z" visited="2009-09-15T01:09:13Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Text Editor" exec="&apos;gedit %u&apos;" modified="2009-09-14T08:41:12Z" count="383"/>
+          <bookmark:application name="File Manager" exec="&apos;gedit&apos;" modified="2009-09-14T06:28:31Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Dropbox/ArchApps.txt" added="2009-09-15T02:50:35Z" modified="2009-09-16T16:56:32Z" visited="2009-09-15T02:50:35Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;gedit&apos;" modified="2009-09-16T16:56:32Z" count="3"/>
+          <bookmark:application name="Text Editor" exec="&apos;gedit %u&apos;" modified="2009-09-16T16:56:32Z" count="13"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Desktop/Screenshot.png" added="2009-09-15T04:40:35Z" modified="2009-09-14T09:13:50Z" visited="2009-09-15T04:40:35Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="GNOME Screenshot" exec="&apos;eog %u&apos;" modified="2009-09-15T04:40:35Z" count="1"/>
+          <bookmark:application name="File Manager" exec="&apos;gimp-2.6&apos;" modified="2009-09-14T09:13:18Z" count="1"/>
+          <bookmark:application name="GNU Image Manipulation Program" exec="&apos;gimp-2.6 %u&apos;" modified="2009-09-14T09:13:50Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Dropbox/Personales/curp.png" added="2009-09-14T09:14:44Z" modified="2009-09-22T20:34:17Z" visited="2009-09-14T09:14:44Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;eog&apos;" modified="2009-09-22T20:34:17Z" count="2"/>
+          <bookmark:application name="Eye of GNOME Image Viewer" exec="&apos;eog %u&apos;" modified="2009-09-22T20:34:17Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Downloads/chromium_printing_test.pdf" added="2009-09-14T10:01:28Z" modified="2009-09-14T10:01:29Z" visited="2009-09-14T10:01:28Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;evince&apos;" modified="2009-09-14T10:01:28Z" count="1"/>
+          <bookmark:application name="Document Viewer" exec="&apos;evince %u&apos;" modified="2009-09-14T10:01:29Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Downloads/PAGINA_WEB_090709.zip" added="2009-09-14T10:01:53Z" modified="2009-09-14T10:01:54Z" visited="2009-09-14T10:01:53Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;file-roller&apos;" modified="2009-09-14T10:01:53Z" count="1"/>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2009-09-14T10:01:54Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Downloads/PAGINA_WEB_190809.zip" added="2009-09-14T10:02:19Z" modified="2009-09-14T10:02:20Z" visited="2009-09-14T10:02:19Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;file-roller&apos;" modified="2009-09-14T10:02:19Z" count="1"/>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2009-09-14T10:02:20Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/dotfiles/gnome-terminal-palette" added="2009-09-14T10:40:17Z" modified="2009-09-14T10:42:04Z" visited="2009-09-14T10:40:17Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;gedit&apos;" modified="2009-09-14T10:42:04Z" count="2"/>
+          <bookmark:application name="Text Editor" exec="&apos;gedit %u&apos;" modified="2009-09-14T10:42:04Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Desktop/PAGINA_WEB_090709.html" added="2009-09-14T11:02:06Z" modified="2009-09-15T15:18:31Z" visited="2009-09-14T11:02:06Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;gedit&apos;" modified="2009-09-15T15:18:30Z" count="2"/>
+          <bookmark:application name="Text Editor" exec="&apos;gedit %u&apos;" modified="2009-09-15T15:18:31Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/share/arch-artwork/logos/logo-unknown-2.png" added="2009-09-14T11:28:39Z" modified="2009-09-14T11:28:39Z" visited="2009-09-14T11:28:39Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;eog&apos;" modified="2009-09-14T11:28:39Z" count="1"/>
+          <bookmark:application name="Eye of GNOME Image Viewer" exec="&apos;eog %u&apos;" modified="2009-09-14T11:28:39Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/share/arch-artwork/logos/logo-unknown-8.jpg" added="2009-09-14T11:42:48Z" modified="2009-09-14T11:42:48Z" visited="2009-09-14T11:42:48Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;eog&apos;" modified="2009-09-14T11:42:48Z" count="1"/>
+          <bookmark:application name="Eye of GNOME Image Viewer" exec="&apos;eog %u&apos;" modified="2009-09-14T11:42:48Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/share/arch-artwork/logos/logo-unknown-1.svg" added="2009-09-15T16:10:47Z" modified="2009-09-15T16:10:48Z" visited="2009-09-15T16:10:47Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/svg+xml"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;eog&apos;" modified="2009-09-15T16:10:47Z" count="1"/>
+          <bookmark:application name="Eye of GNOME Image Viewer" exec="&apos;eog %u&apos;" modified="2009-09-15T16:10:48Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Desktop/q.txt" added="2009-09-15T16:59:58Z" modified="2009-09-17T08:18:37Z" visited="2009-09-15T16:59:58Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Text Editor" exec="&apos;gedit %u&apos;" modified="2009-09-17T08:18:37Z" count="4"/>
+          <bookmark:application name="File Manager" exec="&apos;gedit&apos;" modified="2009-09-17T08:18:35Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/share/applications/gnome-terminal.desktop" added="2009-09-16T17:05:13Z" modified="2009-09-16T17:05:13Z" visited="2009-09-16T17:05:13Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-desktop"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Text Editor" exec="&apos;gedit %u&apos;" modified="2009-09-16T17:05:13Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/share/sounds/card_shuffle.wav" added="2009-09-16T17:12:09Z" modified="2009-09-16T17:12:09Z" visited="2009-09-16T17:12:09Z">
+    <title>card_shuffle.wav</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/x-wav"/>
+        <bookmark:groups>
+          <bookmark:group>Totem</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Totem Movie Player" exec="&apos;totem %u&apos;" modified="2009-09-16T17:12:09Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///media/Untitled%20DVD/Michael%20Jackson%20-%20Live%20in%20Bucarest%20-%20The%20Dangerous%20Tour.avi" added="2009-09-17T14:54:31Z" modified="2009-09-17T14:54:32Z" visited="2009-09-17T14:54:31Z">
+    <title>Michael Jackson - Live in Bucarest - The Dangerous Tour.avi</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/x-msvideo"/>
+        <bookmark:groups>
+          <bookmark:group>Totem</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;totem&apos;" modified="2009-09-17T14:54:31Z" count="1"/>
+          <bookmark:application name="Totem Movie Player" exec="&apos;totem %u&apos;" modified="2009-09-17T14:54:32Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///media/win/Book/Guide.pdf" added="2009-09-17T16:41:12Z" modified="2009-09-17T16:41:13Z" visited="2009-09-17T16:41:12Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;evince&apos;" modified="2009-09-17T16:41:12Z" count="1"/>
+          <bookmark:application name="Document Viewer" exec="&apos;evince %u&apos;" modified="2009-09-17T16:41:13Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Dropbox/WinApps.txt" added="2009-09-17T16:48:31Z" modified="2009-09-17T16:48:32Z" visited="2009-09-17T16:48:31Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;gedit&apos;" modified="2009-09-17T16:48:31Z" count="1"/>
+          <bookmark:application name="Text Editor" exec="&apos;gedit %u&apos;" modified="2009-09-17T16:48:32Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///media/win/Users/benoror/Downloads/ss_1.pdf" added="2009-09-17T16:49:38Z" modified="2009-09-17T16:49:39Z" visited="2009-09-17T16:49:38Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;evince&apos;" modified="2009-09-17T16:49:38Z" count="1"/>
+          <bookmark:application name="Document Viewer" exec="&apos;evince %u&apos;" modified="2009-09-17T16:49:39Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Downloads/ATT00010.jpg" added="2009-09-17T21:32:56Z" modified="2009-09-17T21:33:12Z" visited="2009-09-17T21:32:56Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Eye of GNOME Image Viewer" exec="&apos;eog %u&apos;" modified="2009-09-17T21:33:12Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Downloads/ATT00010%20(1).jpg" added="2009-09-17T21:33:03Z" modified="2009-09-17T21:33:13Z" visited="2009-09-17T21:33:03Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Eye of GNOME Image Viewer" exec="&apos;eog %u&apos;" modified="2009-09-17T21:33:13Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Downloads/ATT00010%20(2).jpg" added="2009-09-17T21:33:04Z" modified="2009-09-17T21:33:14Z" visited="2009-09-17T21:33:04Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Eye of GNOME Image Viewer" exec="&apos;eog %u&apos;" modified="2009-09-17T21:33:14Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Desktop/PAGINA_WEB_190809.html" added="2009-09-18T17:45:25Z" modified="2009-09-18T17:45:27Z" visited="2009-09-18T17:45:25Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;gedit&apos;" modified="2009-09-18T17:45:25Z" count="1"/>
+          <bookmark:application name="Text Editor" exec="&apos;gedit %u&apos;" modified="2009-09-18T17:45:27Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///media/Untitled%20DVD/The%20Notebook.avi" added="2009-09-18T18:33:46Z" modified="2009-09-18T18:33:46Z" visited="2009-09-18T18:33:46Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/x-msvideo"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;vlc&apos;" modified="2009-09-18T18:33:46Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Downloads/Hoja%20de%20vida.pdf" added="2009-09-21T15:10:55Z" modified="2009-09-21T15:10:55Z" visited="2009-09-21T15:10:55Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Document Viewer" exec="&apos;evince %u&apos;" modified="2009-09-21T15:10:55Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Downloads/Chief_Security_Officer_Servicios.pdf" added="2009-09-21T16:11:11Z" modified="2009-09-21T16:11:11Z" visited="2009-09-21T16:11:12Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Document Viewer" exec="&apos;evince %u&apos;" modified="2009-09-21T16:11:11Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Downloads/CSO.pdf" added="2009-09-21T16:12:01Z" modified="2009-09-21T16:12:01Z" visited="2009-09-21T16:12:01Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Document Viewer" exec="&apos;evince %u&apos;" modified="2009-09-21T16:12:01Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="sftp://slp4x4expedition@slp4x4expedition.com/home/slp4x4expedition/slp4x4expedition.com/terranova/www/default.htm" added="2009-09-21T23:21:28Z" modified="2009-09-21T23:21:29Z" visited="2009-09-21T23:21:28Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;gedit&apos;" modified="2009-09-21T23:21:28Z" count="1"/>
+          <bookmark:application name="Text Editor" exec="&apos;gedit %u&apos;" modified="2009-09-21T23:21:29Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Dropbox/Photos/Design/benji_outline_small.png" added="2009-09-22T01:58:51Z" modified="2009-09-22T01:58:53Z" visited="2009-09-22T01:58:52Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;eog&apos;" modified="2009-09-22T01:58:52Z" count="2"/>
+          <bookmark:application name="Eye of GNOME Image Viewer" exec="&apos;eog %u&apos;" modified="2009-09-22T01:58:53Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Dropbox/Photos/Design/benji_outline2.svg" added="2009-09-22T01:58:55Z" modified="2009-09-22T01:58:56Z" visited="2009-09-22T01:58:55Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/svg+xml"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;eog&apos;" modified="2009-09-22T01:58:55Z" count="1"/>
+          <bookmark:application name="Eye of GNOME Image Viewer" exec="&apos;eog %u&apos;" modified="2009-09-22T01:58:56Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Dropbox/Photos/Design/big_ben.svg" added="2009-09-22T01:58:59Z" modified="2009-09-22T01:59:00Z" visited="2009-09-22T01:58:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/svg+xml"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;eog&apos;" modified="2009-09-22T01:58:59Z" count="1"/>
+          <bookmark:application name="Eye of GNOME Image Viewer" exec="&apos;eog %u&apos;" modified="2009-09-22T01:59:00Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Dropbox/Photos/Design/design.svg" added="2009-09-22T01:59:03Z" modified="2009-09-22T01:59:03Z" visited="2009-09-22T01:59:03Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/svg+xml"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;eog&apos;" modified="2009-09-22T01:59:03Z" count="1"/>
+          <bookmark:application name="Eye of GNOME Image Viewer" exec="&apos;eog %u&apos;" modified="2009-09-22T01:59:03Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Dropbox/Photos/Design/char_s.svg" added="2009-09-22T01:59:08Z" modified="2009-09-22T01:59:09Z" visited="2009-09-22T01:59:08Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/svg+xml"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;eog&apos;" modified="2009-09-22T01:59:08Z" count="1"/>
+          <bookmark:application name="Eye of GNOME Image Viewer" exec="&apos;eog %u&apos;" modified="2009-09-22T01:59:09Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Dropbox/Photos/Design/drawing.svg" added="2009-09-22T01:59:10Z" modified="2009-09-22T01:59:11Z" visited="2009-09-22T01:59:10Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/svg+xml"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;eog&apos;" modified="2009-09-22T01:59:10Z" count="1"/>
+          <bookmark:application name="Eye of GNOME Image Viewer" exec="&apos;eog %u&apos;" modified="2009-09-22T01:59:11Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Dropbox/Photos/Design/bg.svg" added="2009-09-22T01:59:17Z" modified="2009-09-22T01:59:18Z" visited="2009-09-22T01:59:17Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/svg+xml"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;eog&apos;" modified="2009-09-22T01:59:17Z" count="1"/>
+          <bookmark:application name="Eye of GNOME Image Viewer" exec="&apos;eog %u&apos;" modified="2009-09-22T01:59:18Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Dropbox/Photos/Design/Mustang%20Design/mustang.svg" added="2009-09-22T01:59:28Z" modified="2009-09-22T01:59:28Z" visited="2009-09-22T01:59:28Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/svg+xml"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;eog&apos;" modified="2009-09-22T01:59:28Z" count="1"/>
+          <bookmark:application name="Eye of GNOME Image Viewer" exec="&apos;eog %u&apos;" modified="2009-09-22T01:59:28Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Dropbox/Photos/Design/Mustang%20Design/mustang%20(copia).svg" added="2009-09-22T01:59:31Z" modified="2009-09-22T01:59:32Z" visited="2009-09-22T01:59:31Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/svg+xml"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;eog&apos;" modified="2009-09-22T01:59:31Z" count="1"/>
+          <bookmark:application name="Eye of GNOME Image Viewer" exec="&apos;eog %u&apos;" modified="2009-09-22T01:59:32Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Dropbox/Photos/Design/Mustang%20Design/mus1.png" added="2009-09-22T01:59:35Z" modified="2009-09-22T01:59:36Z" visited="2009-09-22T01:59:35Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;eog&apos;" modified="2009-09-22T01:59:35Z" count="1"/>
+          <bookmark:application name="Eye of GNOME Image Viewer" exec="&apos;eog %u&apos;" modified="2009-09-22T01:59:36Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Dropbox/Photos/Design/Gnome-id58gw-laptop.svg" added="2009-09-22T02:05:55Z" modified="2009-09-22T02:13:58Z" visited="2009-09-22T02:05:55Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/svg+xml"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;eog&apos;" modified="2009-09-22T02:13:57Z" count="3"/>
+          <bookmark:application name="Eye of GNOME Image Viewer" exec="&apos;eog %u&apos;" modified="2009-09-22T02:13:58Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Desktop/output.pdf" added="2009-09-22T02:25:01Z" modified="2009-09-22T20:33:40Z" visited="2009-09-22T02:25:01Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;evince&apos;" modified="2009-09-22T20:33:40Z" count="2"/>
+          <bookmark:application name="Document Viewer" exec="&apos;evince %u&apos;" modified="2009-09-22T20:33:40Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Desktop/hojas%20vida/Hoja%20de%20vida.pdf" added="2009-09-22T09:45:55Z" modified="2009-09-22T09:51:15Z" visited="2009-09-22T09:45:55Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;evince&apos;" modified="2009-09-22T09:45:55Z" count="1"/>
+          <bookmark:application name="Document Viewer" exec="&apos;evince %u&apos;" modified="2009-09-22T09:51:15Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Desktop/hojas%20vida/Hoja_de_vida__1133430.pdf" added="2009-09-22T09:46:55Z" modified="2009-09-22T09:51:31Z" visited="2009-09-22T09:46:55Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;evince&apos;" modified="2009-09-22T09:46:55Z" count="1"/>
+          <bookmark:application name="Document Viewer" exec="&apos;evince %u&apos;" modified="2009-09-22T09:51:31Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Desktop/hojas%20vida/hoja%20de%20vida%20600401.pdf" added="2009-09-22T09:46:59Z" modified="2009-09-22T09:51:37Z" visited="2009-09-22T09:46:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;evince&apos;" modified="2009-09-22T09:46:59Z" count="1"/>
+          <bookmark:application name="Document Viewer" exec="&apos;evince %u&apos;" modified="2009-09-22T09:51:37Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Desktop/hojas%20vida/DE_Indice_PCE.pdf" added="2009-09-22T09:50:22Z" modified="2009-09-22T09:50:23Z" visited="2009-09-22T09:50:22Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;evince&apos;" modified="2009-09-22T09:50:22Z" count="1"/>
+          <bookmark:application name="Document Viewer" exec="&apos;evince %u&apos;" modified="2009-09-22T09:50:23Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Desktop/hojas%20vida/Hoja_de_vida.pdf" added="2009-09-22T09:51:23Z" modified="2009-09-22T09:51:23Z" visited="2009-09-22T09:51:23Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="Document Viewer" exec="&apos;evince %u&apos;" modified="2009-09-22T09:51:23Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Dropbox/Documents/HWGuide.pdf" added="2009-09-22T18:40:42Z" modified="2009-09-22T18:40:42Z" visited="2009-09-22T18:40:42Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;evince&apos;" modified="2009-09-22T18:40:42Z" count="1"/>
+          <bookmark:application name="Document Viewer" exec="&apos;evince %u&apos;" modified="2009-09-22T18:40:42Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Dropbox/Documents/Guide.pdf" added="2009-09-22T18:51:51Z" modified="2009-09-22T18:51:51Z" visited="2009-09-22T18:51:51Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;evince&apos;" modified="2009-09-22T18:51:51Z" count="1"/>
+          <bookmark:application name="Document Viewer" exec="&apos;evince %u&apos;" modified="2009-09-22T18:51:51Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Dropbox/Personales/CV2009.pdf" added="2009-09-22T20:32:33Z" modified="2009-09-22T20:33:06Z" visited="2009-09-22T20:32:33Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;gimp-2.6&apos;" modified="2009-09-22T20:32:58Z" count="2"/>
+          <bookmark:application name="Document Viewer" exec="&apos;evince %u&apos;" modified="2009-09-22T20:32:34Z" count="1"/>
+          <bookmark:application name="GNU Image Manipulation Program" exec="&apos;gimp-2.6 %u&apos;" modified="2009-09-22T20:33:06Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Dropbox/Personales/ife-frente-ROBADA.png" added="2009-09-22T20:34:12Z" modified="2009-09-22T20:34:12Z" visited="2009-09-22T20:34:12Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;eog&apos;" modified="2009-09-22T20:34:12Z" count="1"/>
+          <bookmark:application name="Eye of GNOME Image Viewer" exec="&apos;eog %u&apos;" modified="2009-09-22T20:34:12Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Dropbox/Personales/pase-ceneval.pdf" added="2009-09-22T20:34:14Z" modified="2009-09-22T20:34:15Z" visited="2009-09-22T20:34:14Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;evince&apos;" modified="2009-09-22T20:34:14Z" count="1"/>
+          <bookmark:application name="Document Viewer" exec="&apos;evince %u&apos;" modified="2009-09-22T20:34:15Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Dropbox/Personales/Pasaporte-Benoror-ROBADO.jpg" added="2009-09-22T20:34:20Z" modified="2009-09-22T20:34:21Z" visited="2009-09-22T20:34:20Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;eog&apos;" modified="2009-09-22T20:34:20Z" count="1"/>
+          <bookmark:application name="Eye of GNOME Image Viewer" exec="&apos;eog %u&apos;" modified="2009-09-22T20:34:21Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Downloads/Star.Trek.2009.DvDRip-FxM%20%5Bmininova%5D.torrent" added="2009-09-22T21:17:05Z" modified="2009-09-22T21:17:05Z" visited="2009-09-22T21:17:05Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-bittorrent"/>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;transmission&apos;" modified="2009-09-22T21:17:05Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Downloads/021b.jpg" added="2009-09-22T22:05:08Z" modified="2009-09-22T22:08:22Z" visited="2009-09-22T22:05:08Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;gimp-2.6&apos;" modified="2009-09-22T22:05:29Z" count="2"/>
+          <bookmark:application name="Eye of GNOME Image Viewer" exec="&apos;eog %u&apos;" modified="2009-09-22T22:05:08Z" count="1"/>
+          <bookmark:application name="GNU Image Manipulation Program" exec="&apos;gimp-2.6 %u&apos;" modified="2009-09-22T22:08:22Z" count="5"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Downloads/012b.jpg" added="2009-09-22T22:20:29Z" modified="2009-09-22T22:20:42Z" visited="2009-09-22T22:20:29Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="File Manager" exec="&apos;gimp-2.6&apos;" modified="2009-09-22T22:20:29Z" count="1"/>
+          <bookmark:application name="GNU Image Manipulation Program" exec="&apos;gimp-2.6 %u&apos;" modified="2009-09-22T22:20:42Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/benoror/Desktop/pantallanegra.png" added="2009-09-23T13:15:13Z" modified="2009-09-23T13:21:40Z" visited="2009-09-23T13:15:13Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="GNOME Screenshot" exec="&apos;eog %u&apos;" modified="2009-09-23T13:15:13Z" count="1"/>
+          <bookmark:application name="File Manager" exec="&apos;eog&apos;" modified="2009-09-23T13:21:39Z" count="2"/>
+          <bookmark:application name="Eye of GNOME Image Viewer" exec="&apos;eog %u&apos;" modified="2009-09-23T13:21:40Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

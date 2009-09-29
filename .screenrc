@@ -7,8 +7,12 @@ vbell off
 
 #screen -t macmini   2  ssh benoror@macmini
 #screen -t [msn]     2   finch
-screen -t edit 1
-screen -t term 0
+split
+screen -t term  0
+focus
+screen -t irssi 1   irssi
+resize 16
+focus
 
 # terminfo and termcap for nice 256 color terminal
 term screen-256color

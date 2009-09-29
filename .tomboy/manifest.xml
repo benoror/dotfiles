@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://beatniksoftware.com/tomboy">
+  <last-sync-date>0001-01-01T00:00:00.0000000+00:00</last-sync-date>
+  <last-sync-rev>-1</last-sync-rev>
+  <server-id />
+  <note-revisions />
+  <note-deletions>
+    <note guid="8f1725ed-2962-40d3-87f5-c71febf1da46" title="Using Links in Tomboy" />
+  </note-deletions>
+</manifest>

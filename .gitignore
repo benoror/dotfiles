@@ -1,9 +1,12 @@
 .bash_history
+backup_etc_*.tar.gz
 .config/*
 .mozilla/*
 .irssi/*
 .purple/*
 .ssh/*
+.irssi/*
+.tomboy/*
 .viminfo
 .lesshst
 .DS_Store

@@ -1,5 +1,0 @@
-#!/bin/bash
-sudo pacman -Sc # remove old packages from cache
-sudo pacman -Cd # clean AUR packages database
-set orphans = $(sudo pacman -Qdt | awk '{print $1}')
-sudo pacman -Rns $orphans

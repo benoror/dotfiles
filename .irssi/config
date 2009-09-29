@@ -10,28 +10,20 @@ servers = (
 );
 
 chatnets = {
-  "Freenode" = {
+  Freenode = {
     type = "IRC";
     nick = "benoror";
     username = "benoror";
     realname = "Benji Orozco";
+    autosendcmd = "/msg NickServ identify g8ag8g";
   };
 };
 
 channels = (
   { name = "#archlinux"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#archlinux64"; chatnet = "Freenode"; autojoin = "yes"; },
-  { 
-    name = "#archlinux-pacman";
-    chatnet = "Freenode";
-    autojoin = "yes";
-  },
   { name = "#archlinux-es"; chatnet = "Freenode"; autojoin = "yes"; },
-  {
-    name = "#archlinux-offtopic";
-    chatnet = "Freenode";
-    autojoin = "yes";
-  }
+  { name = "##proggit"; chatnet = "Freenode"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -203,4 +195,6 @@ settings = {
   };
   "fe-common/core" = { theme = "hagge"; };
   "irc/core" = { alternate_nick = "benoror"; };
+  "fe-text" = { actlist_sort = "refnum"; };
 };
+ignores = ( );
