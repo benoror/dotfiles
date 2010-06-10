@@ -7,10 +7,10 @@
 #   AlwaysUpgradeDevel no
 #   AlwaysUpgradeAur no
 #   AlwaysForce no
-#   AurVoteSupport yes
+    AurVoteSupport yes
 #   AutoSaveBackupFile no
-#   ColorMod Normal
-ColorMod LightBackGround
+   ColorMod Normal
+#   ColorMod LightBackGround
 #   ColorMod NoColor
 #   ColorMod TextOnly
 #   DontNeedToPressEnter yes
@@ -20,13 +20,13 @@ ColorMod LightBackGround
 #   LastCommentsNumber 5
 #   LastCommentsOrder asc
 #   NoConfirm no
-PacmanBin /usr/bin/pacman-color
+#PacmanBin /usr/bin/pacman-color
 #PacmanBin /usr/bin/powerpill
 #   PkgbuildEditor gvim
 #   SearchInAurUnsupported yes
 #   ShowAurComment yes
 #   TmpDirectory /where/you/want
-#   UpdateTerminalTitle yes
+    UpdateTerminalTitle yes
 #
 #   Define here your prefered Sourceforge mirror: (none surfnet ufpr heanet easynews umn switch belnet kent mesh optusnet jaist puzzle superb-east nchc superb-west)
 #  SourceforgeMirror heanet

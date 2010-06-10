@@ -14,3 +14,6 @@ fi
 if [ -d ~/bin ] ; then
     PATH=~/bin:"${PATH}"
 fi
+
+autocutsel &
+autocutsel -selection PRIMARY &

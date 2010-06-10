@@ -1,1 +1,50 @@
-XTerm.VT100*color255: on
+! Xft settings
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+! URxvt
+URxvt.buffered:         true
+URxvt.cursorColor:      #ffffff
+URxvt.underlineColor:   #ffffff
+URxvt.geometry:         250x78
+URxvt.title:            URxvt Terminal
+URxvt.cursorBlink: true
+URxvt.perl-ext-common: default,matcher
+URxvt.urlLauncher: /usr/bin/chromium-browser
+URxvt.matcher.button: 1
+
+!scrolling
+URxvt.shiva.scrollKey:            true
+URxvt.shiva.scrollWithBuffer:     true
+URxvt.shiva.scrollBack:           true
+URxvt.shiva.scrollTtyOutput:      false
+
+! borderless and no scrollbar
+URxvt*scrollBar_right: false
+URxvt*scrollBar: false
+#URxvt*borderLess: false
+
+! -- Fonts -- !
+URxvt.font:             xft:Terminus:pixelsize=12:antialias=true
+URxvt.boldFont:         xft:Terminus:bold:pixelsize=12:antialias=true
+#URxvt.font:xft:envy code r:medium:pixelsize=12
+#URxvt.boldFont:xft:envy code r:bold:pixelsize=12
+#URxvt.font:xft:dina:medium:pixelsize=12
+#URxvt.boldFont:xft:dina:bold:pixelsize=12
+
+! teh transparency stuff
+#URxvt.transparent: true
+#URxvt*inheritPixmap: true
+#URxvt*tintColor: #666666
+#URxvt*shading: 50
+#URxvt*depth: 24
+#URxvt*background: rgba:0000/0000/0000/dddd
+
+! -- Colours -- !
+#include "/home/benoror/.colours/xoria256"
+##include "/home/benoror/.colours/cyb3rpunk"
+##include "/home/benoror/.colours/dark"
+##include "/home/benoror/.colours/grayscale-yellow"
