@@ -1,27 +1,37 @@
 #hardstatus alwayslastline '%{= Kw}[%{g}%H%{w}] %{= Kw}%-w%{= KB}%{+b}%50>%t%{= Kw}%+w%< %{= Kw}'
 #caption always '%{= Kw}[%{g}screen%{w}] %{= Kw}%-w%{= KB}%{+b}%50>%t%{= Kw}%+w%< %{= Kw}'
 startup_message off
-caption always "%{= Kw}%-w%{= gk}%n %t%{-}%+w %-= %c"
+
+#caption always "%{= dw}%-w%{= Bk} %n %t %{-}%+w %-= %c"
+#caption always "%{= Kw}%-w%{= Bk} %n %t %{-}%+w %-= %c"
+caption always "%{= Kw}%-w%{= Bk} %n %t %{-}%+w %-= @%H"
 hardstatus alwaysignore
 vbell off
 
-#screen -t macmini   2  ssh benoror@macmini
-#screen -t [msn]     2   finch
-split
-screen -t term  0
-focus
-screen -t irssi 1   irssi
-resize 16
-focus
+#split
+#screen -t term  0
+#focus
+#screen -t irssi 1   irssi
+#resize 16
+#focus
+
+#screen -t irssi 1   irssi
+
+#screen -t vim       2       vim -c NERDTree
+screen -t syslog-ng 0   tail -f -n36 /var/log/everything.log
+#source /home/benoror/.screentabs
+screen -t bash 3
+screen -t irssi 2   irssi
+screen -t ncmpcpp 1   ncmpcpp
 
 # terminfo and termcap for nice 256 color terminal
-term screen-256color
+term "screen-256color"
 # allow bold colors - necessary for some reason
 attrcolor b ".I"
 # tell screen how to set colors. AB = background, AF=foreground
-termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
-# erase background with current bg color
-defbce "on" 
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm' 
+# Erase background with current bg color.  Not needed if TERM=screen-256color 
+#defbce "on" 
 # Turn off start message:
 startup_message off
 # Set messages timeout to one second:
@@ -38,5 +48,19 @@ altscreen on
 bindkey -d ^@ stuff ^?
 
 # Keys
+bindkey "^[[5D" prev  # change window with ctrl-left
+bindkey "^[[5C" next  # change window with ctrl-right
 bindkey "^[[1;5D" prev  # change window with ctrl-left
 bindkey "^[[1;5C" next  # change window with ctrl-right
+bindkey "^[[1;5A" focus  # change window with ctrl-right
+bindkey "^[[1;5B" focus  # change window with ctrl-right
+bindkey "^[0d"    prev
+bindkey "^[0c"    next
+bindkey "^[[d"    prev
+bindkey "^[[c"    next
+bindkey "^[Od"    prev
+bindkey "^[Oc"    next
+bindkey "^[OD"    prev
+bindkey "^[OC"    next
+
+termcapinfo Terminal* ti@:te@

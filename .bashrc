@@ -1,13 +1,18 @@
 # ~/.bashrc
 # by Benji Orozco
 
+# bash options ------------------------------------
+#set -o vi                  # vi input mode
+shopt -s checkwinsize       # update the value of LINES and COLUMNS after each command if altered
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
 # Set our environment variables
-export PATH="$PATH:/usr/local/sbin:$HOME/bin:$HOME/.gem/ruby/1.9.1/bin"
+export PATH="$PATH:/usr/local/sbin:$HOME/Dropbox/bin:$HOME/.gem/ruby/1.9.1/bin:$HOME/.gem/ruby/1.8/bin"
 export MAILCHECK=0
-export EDITOR=vim
+export EDITOR="vim"
+export FCEDIT="vim"
 export VISUAL=$EDITOR
 export PAGER=less
 export LESS='-iMnQR'
@@ -17,6 +22,11 @@ export HISTSIZE=2000
 export HISTFILESIZE=100000
 export HISTCONTROL=ignoredups
 export TERM=xterm-256color
+export DISPLAY=":0"
+
+# share history across all terminals
+shopt -s histappend
+PROMPT_COMMAND='history -a'
 
 #------------------------------------------------------------------------------
 # Misc Alias.
@@ -32,9 +42,8 @@ fi
 
 alias vim='vim'
 alias v='vim'
-alias vi='vim'
 alias psaux='ps aux | less'
-alias clear='clear ; source ~/.message'
+alias clear='clear'
 alias cls='clear'
 alias cd..='cd ..'
 alias ..='cd ..'
@@ -42,14 +51,12 @@ alias ...='cd ../..'
 alias n='netstat -a -e -e -p -A inet'
 alias cal='cal -3' #show 3 months by default
 alias sudo='sudo env PATH=$PATH' #work around sudo built --with-secure-path (ubuntu)
-#alias pacman='echo -e "\t+Using yaourt instead"; yaourt'
-alias pacman='sudo pacman'
-alias yaourt='sudo yaourt'
 alias apt-get='sudo apt-get'
 alias aptitude='sudo aptitude'
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
+alias xit='exit'
 alias grep='grep --colour'
 
 #------------------------------------------------------------------------------
@@ -131,6 +138,31 @@ swap () {               # swap 2 filenames around
         local TMPFILE=tmp.$$ ; mv $1 $TMPFILE ; mv $2 $1 ; mv $TMPFILE $2
 }
 
+# Extract Files
+extract () {
+  if [ -f $1 ] ; then
+      case $1 in
+          *.tar.bz2)   tar xvjf $1    ;;
+          *.tar.gz)    tar xvzf $1    ;;
+          *.tar.xz)    tar xvJf $1    ;;
+          *.bz2)       bunzip2 $1     ;;
+          *.rar)       unrar x $1     ;;
+          *.gz)        gunzip $1      ;;
+          *.tar)       tar xvf $1     ;;
+          *.tbz2)      tar xvjf $1    ;;
+          *.tgz)       tar xvzf $1    ;;
+          *.zip)       unzip $1       ;;
+          *.Z)         uncompress $1  ;;
+          *.7z)        7z x $1        ;;
+          *.xz)        unxz $1        ;;
+          *.exe)       cabextract $1  ;;
+          *)           echo "\`$1': unrecognized file compression" ;;
+      esac
+  else
+      echo "\`$1' is not a valid file"
+  fi
+}
+
 #------------------------------------------------------------------------------
 # Completion. (bash only)
 #------------------------------------------------------------------------------
@@ -158,4 +190,3 @@ fi
 # Message.
 #------------------------------------------------------------------------------
 . ~/.message
-

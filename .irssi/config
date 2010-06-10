@@ -6,6 +6,30 @@ servers = (
     use_ssl = "no";
     ssl_verify = "no";
     autoconnect = "yes";
+  },
+  {
+    address = "irc.oftc.net";
+    chatnet = "OFTC";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  },
+  {
+    address = "localhost";
+    chatnet = "BitlBee";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.2600.net";
+    chatnet = "2600";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "yes";
   }
 );
 
@@ -15,15 +39,37 @@ chatnets = {
     nick = "benoror";
     username = "benoror";
     realname = "Benji Orozco";
-    autosendcmd = "/msg NickServ identify g8ag8g";
+    autosendcmd = "/msg NickServ identify g8ag8g;wait 500;/window goto NickServ;/wc";
+  };
+  OFTC = {
+    type = "IRC";
+    nick = "benoror";
+    username = "benoror";
+    realname = "Benji Orozco";
+  };
+  BitlBee = {
+    type = "IRC";
+    nick = "benoror";
+    username = "benoror";
+    realname = "Benji Orozco";
+    autosendcmd = "/msg &bitlbee identify g8ag8g";
+  };
+  2600 = {
+    type = "IRC";
+    nick = "benoror";
+    username = "benoror";
+    realname = "Benji Orozco";
   };
 };
 
 channels = (
+  { name = "#unixmexico"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#awesome"; chatnet = "OFTC"; autojoin = "yes"; },
   { name = "#archlinux"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#archlinux64"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#archlinux-es"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "##proggit"; chatnet = "Freenode"; autojoin = "yes"; }
+  { name = "#rubyonrails"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#django"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#undergroundorgmx"; chatnet = "2600"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -69,7 +115,7 @@ aliases = {
   SBAR = "STATUSBAR";
   INVITELIST = "mode $C +I";
   Q = "QUERY";
-  "MANUAL-WINDOWS" = "set use_status_window off;set autocreate_windows off;set autocreate_query_level none;set autoclose_windows off;set reuse_unused_windows on;save";
+  "MANUAL-WINDOWS" = "set autoclose_windows off;set reuse_unused_windows on;save";
   EXEMPTLIST = "mode $C +e";
   ATAG = "WINDOW SERVER";
   UNSET = "set -clear";
@@ -77,72 +123,52 @@ aliases = {
 };
 
 statusbar = {
-  # formats:
-  # when using {templates}, the template is shown only if it's argument isn't
-  # empty unless no argument is given. for example {sb} is printed always,
-  # but {sb $T} is printed only if $T isn't empty.
-
   items = {
-    # start/end text in statusbars
     barstart = "{sbstart}";
     barend = "{sbend}";
 
     topicbarstart = "{topicsbstart}";
     topicbarend = "{topicsbend}";
 
-    # treated "normally", you could change the time/user name to whatever
     time = "{sb $Z}";
     user = "{sb {sbnickmode $cumode}$N{sbmode $usermode}{sbaway $A}}";
 
-    # treated specially .. window is printed with non-empty windows,
-    # window_empty is printed with empty windows
-    window = "{sb $winref:$tag/$itemname{sbmode $M}}";
+    window = "{sb $winref:$itemname{sbmode $M}}";
     window_empty = "{sb $winref{sbservertag $tag}}";
     prompt = "{prompt $[.15]itemname}";
     prompt_empty = "{prompt $winname}";
     topic = " $topic";
-    topic_empty = " Irssi v$J - http://www.irssi.org";
+    topic_empty = " Irssi";
 
-    # all of these treated specially, they're only displayed when needed
     lag = "{sb Lag: $0-}";
     act = "{sb Act: $0-}";
-    more = "-- more --";
+    more = ":: more ::";
   };
 
-  # there's two type of statusbars. root statusbars are either at the top
-  # of the screen or at the bottom of the screen. window statusbars are at
-  # the top/bottom of each split window in screen.
   default = {
-    # the "default statusbar" to be displayed at the bottom of the window.
-    # contains all the normal items.
     window = {
       disabled = "no";
 
-      # window, root
       type = "window";
-      # top, bottom
-      placement = "bottom";
-      # number
+      placement = "top";
       position = "1";
-      # active, inactive, always
       visible = "active";
 
-      # list of items in statusbar in the display order
       items = {
         barstart = { priority = "100"; };
-        time = { };
+        #time = { };
         user = { };
         window = { };
         window_empty = { };
         lag = { priority = "-1"; };
-        act = { priority = "10"; };
         more = { priority = "-1"; alignment = "right"; };
         barend = { priority = "100"; alignment = "right"; };
+        usercount = { };
       };
     };
 
-    # statusbar to use in inactive split windows
     window_inact = {
+      disabled = "yes";
       type = "window";
       placement = "bottom";
       position = "1";
@@ -156,23 +182,18 @@ statusbar = {
       };
     };
 
-    # we treat input line as yet another statusbar :) It's possible to
-    # add other items before or after the input line item.
     prompt = {
       type = "root";
       placement = "bottom";
-      # we want to be at the bottom always
       position = "100";
       visible = "always";
       items = {
         prompt = { priority = "-1"; };
         prompt_empty = { priority = "-1"; };
-        # treated specially, this is the real input line.
         input = { priority = "10"; };
       };
     };
 
-    # topicbar
     topic = {
       type = "root";
       placement = "top";
@@ -185,16 +206,121 @@ statusbar = {
         topicbarend = { priority = "100"; alignment = "right"; };
       };
     };
+    awl_0 = {
+      items = {
+        barstart = { priority = "100"; };
+        awl_0 = { };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
   };
 };
+
 settings = {
   core = {
-    real_name = "Benjamin Orozco";
+    real_name = "Benji Orozco";
     user_name = "benoror";
     nick = "benoror";
+    settings_autosave = "off";
+    awaylog_file = "~/.irssi/irclogs/away.log";
+    awaylog_level = "MSGS HILIGHT";
+    log_create_mode = "600";
   };
-  "fe-common/core" = { theme = "hagge"; };
-  "irc/core" = { alternate_nick = "benoror"; };
-  "fe-text" = { actlist_sort = "refnum"; };
+
+  "fe-common/core" = {
+    theme = "awesome";
+    timestamps = "yes";
+    autocreate_own_query = "ON";
+    autocreate_query_level = "MSGS DCCMSGS";
+    use_status_window = "yes";
+    use_msgs_window = "no";
+    autolog = "no";
+    autolog_level = "ALL -CRAP -CLIENTCRAP -CTCPS";
+    autolog_path = "~/.irssi/irclogs/$tag/$0.log";
+    emphasis_multiword = "on";
+    emphasis_replace = "on";
+    autoclose_windows = "on";
+    hide_server_tags = "on";
+    show_own_nickchange_once = "on";
+    bell_beeps = "on";
+    beep_msg_level = "MSGS NOTICES INVITES DCC DCCMSGS HILIGHT";
+    # Not working, why?
+    #recode_fallback = "cp1250";
+    #term_charset = "utf-8";
+  };
+
+  "irc/core" = {
+    alternate_nick = "benoror86";
+    ctcp_version_reply = "irssi v$J ($sysname)";
+    ctcp_userinfo_reply = "$Y ($X)";
+  };
+
+  "fe-text" = { term_force_colors = "on"; actlist_sort = "refnum"; };
+
+  "perl/core/scripts" = {
+    awl_display_key = "$Q%G:%n$H$C$S ::";
+    awl_placement = "bottom";
+    neat_maxlength = "12";
+    neat_right_mode = "on";
+    neat_left_actions = "no";
+    neat_colorize = "yes";
+    nicklist_automode = "SCREEN";
+    usercount_show_zero = "no";
+    usercount_show_halfops = "no";
+    crapbuster_levels = "JOINS PARTS QUITS NICKS CLIENTCRAP CRAP MODE TOPICS KICKS";
+	nicklist_width = "20";
+    hilightwin_showprivmsg = "OFF";
+    beep_command = "mplayer -quiet /usr/share/sounds/generic.wav &> /dev/null ";
+    beep_when_not_away = "on";
+  };
 };
-ignores = ( );
+
+hilights = (
+  { text = "benoror";    nick = "yes"; word = "yes"; },
+  { text = "benja";  nick = "no";  word = "yes"; },
+  { text = "benji"; nick = "no";  word = "yes"; }
+  { text = "benj"; nick = "no";  word = "yes"; }
+  { text = "benjamin"; nick = "no";  word = "yes"; }
+);
+
+logs = { };
+
+ignores = (
+  {
+    level = "JOINS PARTS QUITS MODES";
+    channels = ( "#unixmexico", "#archlinux", "#archlinux-es", "#rubyonrails", "#django", "#awesome", "&bitlbee", "&twitter_benoror" );
+  }
+);
+
+windows = {
+  1 = {
+    immortal = "yes";
+    name = "(status)";
+    level = "ALL";
+    sticky = "yes";
+    parent = "2";
+  };
+  2 = { name = "hilight"; sticky = "yes"; };
+  3 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "&bitlbee";
+        sticky = "yes";
+        tag = "bitlbee";
+      }
+    );
+  };
+  4 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "&twitter_benoror";
+        sticky = "yes";
+        tag = "bitlbee";
+      }
+    );
+  };
+};
