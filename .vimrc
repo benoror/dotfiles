@@ -1,3 +1,8 @@
+" Identation
+set shiftwidth=2
+set tabstop=2
+set autoindent
+
 "highlight current line
 set cursorline 
 "don't be backwards compatible with silly vi options
@@ -31,10 +36,6 @@ set showcmd
 set laststatus=2
 "tf:    improves redrawing for newer computers
 set ttyfast
-"cin:   enables the second-most configurable indentation (see :help C-indenting).
-set smartindent
-set shiftwidth=2
-set smarttab
 "smartindent moves # to start of line which is not very smart, so undo here.
 :inoremap # X#
 "bk:    does not write a persistent backup file of an edited file
@@ -48,7 +49,6 @@ set lazyredraw
 "The rest deal with whitespace handling and
 "mainly make sure hardtabs are never entered
 "as their interpretation is too non standard in my experience
-"set softtabstop=4
 " Dark background
 set t_Co=256
 "I always work on dark terminals
