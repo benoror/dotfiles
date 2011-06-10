@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="show_menu_icons" mtime="1270591783" schema="/schemas/apps/gnome-applet-globalmenu/prefs/show_menu_icons"/>
+	<entry name="grab_menu_bar_key" mtime="1270591783" schema="/schemas/apps/gnome-applet-globalmenu/prefs/grab_menu_bar_key"/>
+	<entry name="show_local_menu" mtime="1270591783" schema="/schemas/apps/gnome-applet-globalmenu/prefs/show_local_menu"/>
+	<entry name="show_icon" mtime="1268195461" schema="/schemas/apps/gnome-applet-globalmenu/prefs/show_icon"/>
+	<entry name="per_monitor_mode" mtime="1268195461" schema="/schemas/apps/gnome-applet-globalmenu/prefs/per_monitor_mode"/>
+	<entry name="show_window_actions" mtime="1268195461" schema="/schemas/apps/gnome-applet-globalmenu/prefs/show_window_actions"/>
+	<entry name="enable_search_box" mtime="1268195461" schema="/schemas/apps/gnome-applet-globalmenu/prefs/enable_search_box"/>
+	<entry name="show_name" mtime="1268195461" schema="/schemas/apps/gnome-applet-globalmenu/prefs/show_name"/>
+	<entry name="show_window_list" mtime="1268195461" schema="/schemas/apps/gnome-applet-globalmenu/prefs/show_window_list"/>
+	<entry name="title_max_width" mtime="1268195461" schema="/schemas/apps/gnome-applet-globalmenu/prefs/title_max_width"/>
+	<entry name="disable_module_check" mtime="1268195461" schema="/schemas/apps/gnome-applet-globalmenu/prefs/disable_module_check"/>
+	<entry name="has_handle" mtime="1268195461" schema="/schemas/apps/gnome-applet-globalmenu/prefs/has_handle"/>
+	<entry name="tiny_mode" mtime="1268195461" schema="/schemas/apps/gnome-applet-globalmenu/prefs/tiny_mode"/>
+	<entry name="use_rgba_colormap" mtime="1268195461" schema="/schemas/apps/gnome-applet-globalmenu/prefs/use_rgba_colormap"/>
+	<entry name="grab_mnemonic_keys" mtime="1268195461" schema="/schemas/apps/gnome-applet-globalmenu/prefs/grab_mnemonic_keys"/>
+</gconf>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="auto_hide" mtime="1253124272" schema="/schemas/apps/panel/toplevels/auto_hide"/>
+	<entry name="y_bottom" mtime="1253124272" schema="/schemas/apps/panel/toplevels/y_bottom"/>
+	<entry name="orientation" mtime="1253124273" schema="/schemas/apps/panel/toplevels/orientation" type="string">
+		<stringvalue>right</stringvalue>
+	</entry>
+	<entry name="y" mtime="1253124272" schema="/schemas/apps/panel/toplevels/y"/>
+	<entry name="x" mtime="1253124273" schema="/schemas/apps/panel/toplevels/x" type="int" value="683"/>
+	<entry name="auto_hide_size" mtime="1253124272" schema="/schemas/apps/panel/toplevels/auto_hide_size"/>
+	<entry name="monitor" mtime="1253124272" schema="/schemas/apps/panel/toplevels/monitor"/>
+	<entry name="animation_speed" mtime="1253124272" schema="/schemas/apps/panel/toplevels/animation_speed"/>
+	<entry name="unhide_delay" mtime="1253124272" schema="/schemas/apps/panel/toplevels/unhide_delay"/>
+	<entry name="screen" mtime="1253124272" schema="/schemas/apps/panel/toplevels/screen"/>
+	<entry name="x_right" mtime="1253124272" schema="/schemas/apps/panel/toplevels/x_right"/>
+	<entry name="x_centered" mtime="1253124273" schema="/schemas/apps/panel/toplevels/x_centered" type="bool" value="false"/>
+	<entry name="hide_delay" mtime="1253124272" schema="/schemas/apps/panel/toplevels/hide_delay"/>
+	<entry name="size" mtime="1253124272" schema="/schemas/apps/panel/toplevels/size"/>
+	<entry name="name" mtime="1253124272" schema="/schemas/apps/panel/toplevels/name"/>
+	<entry name="expand" mtime="1253124272" schema="/schemas/apps/panel/toplevels/expand"/>
+	<entry name="enable_animations" mtime="1253124272" schema="/schemas/apps/panel/toplevels/enable_animations"/>
+	<entry name="y_centered" mtime="1253124272" schema="/schemas/apps/panel/toplevels/y_centered"/>
+	<entry name="enable_buttons" mtime="1253124272" schema="/schemas/apps/panel/toplevels/enable_buttons" type="bool" value="true"/>
+	<entry name="enable_arrows" mtime="1253124272" schema="/schemas/apps/panel/toplevels/enable_arrows" type="bool" value="true"/>
+</gconf>

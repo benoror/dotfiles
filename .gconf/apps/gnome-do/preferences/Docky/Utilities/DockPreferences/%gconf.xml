@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="AutohideType" mtime="1254796801" type="string">
+		<stringvalue>Intellihide</stringvalue>
+	</entry>
+	<entry name="Orientation" mtime="1254796777" type="string">
+		<stringvalue>Bottom</stringvalue>
+	</entry>
+	<entry name="Monitor" mtime="1254796777" type="int" value="0"/>
+	<entry name="AutomaticIcons" mtime="1254796871" type="int" value="1"/>
+	<entry name="SummonTime" mtime="1254796777" type="int" value="100"/>
+	<entry name="IconSize" mtime="1254797670" type="int" value="40"/>
+	<entry name="EnableZoom" mtime="1254796777" type="bool" value="true"/>
+	<entry name="ZoomPercent" mtime="1254796822" type="float" value="1.5"/>
+	<entry name="IndicateMultipleWindows" mtime="1254796777" type="bool" value="false"/>
+</gconf>

@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="import_asked" mtime="1253923773" type="bool" value="true"/>
+</gconf>

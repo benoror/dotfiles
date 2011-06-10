@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="icon-scale" mtime="1286843312" type="string">
+		<stringvalue>1</stringvalue>
+	</entry>
+	<entry name="custom-icon" mtime="1267232156" type="string">
+		<stringvalue>file:///home/benoror/Dropbox/dotfiles/iconsets/computer-apple-mac-mini.png</stringvalue>
+	</entry>
+	<entry name="nautilus-icon-position-timestamp" mtime="1287432628" type="string">
+		<stringvalue>1287432628</stringvalue>
+	</entry>
+	<entry name="nautilus-icon-position" mtime="1286843312" type="string">
+		<stringvalue>64,22</stringvalue>
+	</entry>
+</gconf>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="expanded" mtime="1269200362" type="bool" value="false"/>
+	<entry name="username" mtime="1275519052" type="string">
+		<stringvalue>benoror</stringvalue>
+	</entry>
+	<entry name="subscriber" mtime="1275519052" type="bool" value="false"/>
+	<entry name="session_key" mtime="1275519052" type="string">
+		<stringvalue>9404b432975619e4861ffcae1ccc867d</stringvalue>
+	</entry>
+</gconf>

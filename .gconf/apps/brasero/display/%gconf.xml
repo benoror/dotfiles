@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="volume" mtime="1262473413" type="int" value="0"/>
+	<entry name="video_height" mtime="1262473413" type="int" value="90"/>
+	<entry name="video_width" mtime="1262473413" type="int" value="120"/>
+	<entry name="image_height" mtime="1262473413" type="int" value="90"/>
+	<entry name="image_width" mtime="1262473413" type="int" value="120"/>
+	<entry name="sidepane" mtime="1268866283" type="bool" value="false"/>
+	<entry name="audio_pane" mtime="1268866283" type="string">
+		<stringvalue>Chooser</stringvalue>
+	</entry>
+	<entry name="position" mtime="1268866280" type="int" value="275"/>
+	<entry name="viewer" mtime="1268866280" type="bool" value="true"/>
+</gconf>

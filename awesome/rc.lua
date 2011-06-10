@@ -43,20 +43,18 @@ layouts =
 -- Define a tag table which hold all screen tags.
 tags = {
     names  = {
-                "[ term ]",     	-- 1 term                                   -- tile
-                "[ web ]",      	-- 1 term                                   -- max
-                "[ irc ]",     		-- irssi + bitlbee                          -- tile
-                "[ ncmpcpp ]",   	-- ncmpcpp & radio playlists                -- tile
-                "[ syslog ]",    	-- syslog, htop				    -- tile
-                "[ float ]"     	-- floating mode                            -- float
+                "1 [code]",     	-- tile
+                "2 [debug]",     	-- tile
+                "3 [misc]",   		-- tile
+                "4 [float]",     	-- float
+                "5 [log]"     	        -- tile
              },
     layout = {
                 layouts[2],
-                layouts[1],
                 layouts[2],
                 layouts[2],
-                layouts[2],
-                layouts[7]
+                layouts[7],
+                layouts[2]
              }
 }
 
@@ -308,14 +306,14 @@ awful.rules.rules = {
                      keys = clientkeys,
                      buttons = clientbuttons } },
     { rule = { instance = "term1", class = "URxvt" }, 		properties = { tag = tags[1][1] } },
-    { rule = { instance = "term2", class = "URxvt" }, 		properties = { tag = tags[1][1] } },
-    { rule = { instance = "term3", class = "URxvt" }, 		properties = { tag = tags[1][1] } },
-    { rule = { instance = "chromium", class = "Chromium" }, 	properties = { tag = tags[1][2] } },
-    { rule = { instance = "irssi", class = "URxvt" }, 		properties = { tag = tags[1][3] } },
-    { rule = { instance = "ncmpcpp", class = "URxvt" }, 	properties = { tag = tags[1][4] } },
+    { rule = { instance = "gvim", class = "GVIM" }, 		properties = { tag = tags[1][1] } },
+    -- { rule = { instance = "term3", class = "URxvt" }, 		properties = { tag = tags[1][1] } },
+    -- { rule = { instance = "chromium", class = "Chromium" }, 	properties = { tag = tags[1][2] } },
+    -- { rule = { instance = "irssi", class = "URxvt" }, 		properties = { tag = tags[1][3] } },
+    -- { rule = { instance = "ncmpcpp", class = "URxvt" }, 	properties = { tag = tags[1][4] } },
     { rule = { instance = "syslog-ng", class = "URxvt" }, 	properties = { tag = tags[1][5] } },
-    { rule = { instance = "htop", class = "URxvt" }, 		properties = { tag = tags[1][5] } },
-    { rule = { class = "gimp" }, 	properties = { tag = tags[1][6] } },
+    { rule = { instance = "htop", class = "URxvt" }, 		properties = { tag = tags[1][5] } }
+    -- { rule = { class = "gimp" }, 	properties = { tag = tags[1][5] } },
 }
 -- }}}
 
@@ -353,16 +351,19 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 -- {{{ Autorun
 autorun = true
 autorunApps = {
-	"urxvt -name term3",
-	"urxvt -name term2",
+	"feh --bg-scale Dropbox/Pictures/Wallpapers/squares2.jpg",
 	"urxvt -name term1",
-	"chromium",
-	"urxvt -name irssi -e irssi",
-	"urxvt -name ncmpcpp -e ncmpcpp",
+	"gvim",
+	-- "chromium",
+	-- "urxvt -name irssi -e irssi",
+	-- "urxvt -name ncmpcpp -e ncmpcpp",
 	"urxvt -name syslog-ng -e tail -f -n100 /var/log/everything.log",
 	"urxvt -name htop -e htop",
 	"wicd-client",
+	"volwheel",
 	"dropboxd"
+	-- "parcellite",
+	-- "gnome-settings-daemon"
 }
 if autorun then
   for app = 1, #autorunApps do

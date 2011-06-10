@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="show-virtual-unstaged" mtime="1258608235" type="bool" value="true"/>
+	<entry name="show-virtual-staged" mtime="1258608235" type="bool" value="true"/>
+	<entry name="show-virtual-stash" mtime="1258608235" type="bool" value="true"/>
+	<entry name="collapse-inactive-lanes" mtime="1258608235" type="int" value="2"/>
+	<entry name="collapse-inactive-lanes-active" mtime="1258608235" type="bool" value="true"/>
+	<entry name="search-filter" mtime="1258608235" type="bool" value="false"/>
+</gconf>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="last_file_chooser_uri" mtime="1268466480" type="string">
+		<stringvalue>file:///media/Seagate/Downloads</stringvalue>
+	</entry>
+	<entry name="show_cover_art" mtime="1269200115" type="bool" value="true"/>
+	<entry name="height" mtime="1274416480" type="int" value="700"/>
+	<entry name="width" mtime="1274416480" type="int" value="1024"/>
+	<entry name="y_pos" mtime="1274416480" type="int" value="24"/>
+	<entry name="x_pos" mtime="1274416480" type="int" value="0"/>
+	<entry name="maximized" mtime="1274416480" type="bool" value="false"/>
+	<entry name="source_view_width" mtime="1275519048" type="int" value="179"/>
+</gconf>

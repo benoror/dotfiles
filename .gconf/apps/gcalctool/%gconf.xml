@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="button_layout" mtime="1285980572" type="string">
+		<stringvalue>PROGRAMMING</stringvalue>
+	</entry>
+	<entry name="wordlen" mtime="1285980572" type="int" value="64"/>
+	<entry name="result_format" mtime="1285980572" type="string">
+		<stringvalue>decimal</stringvalue>
+	</entry>
+	<entry name="angle_units" mtime="1285980572" type="string">
+		<stringvalue>degrees</stringvalue>
+	</entry>
+	<entry name="trigtype" mtime="1270435859" type="string">
+		<stringvalue>DEG</stringvalue>
+	</entry>
+	<entry name="mode" mtime="1270435859" type="string">
+		<stringvalue>BASIC</stringvalue>
+	</entry>
+	<entry name="yposition" mtime="1270435865" type="int" value="66"/>
+	<entry name="xposition" mtime="1270435865" type="int" value="2"/>
+	<entry name="showregisters" mtime="1255614907" type="string">
+		<stringvalue>false</stringvalue>
+	</entry>
+	<entry name="accuracy" mtime="1285980572" type="int" value="9"/>
+	<entry name="base" mtime="1270435859" type="int" value="10"/>
+	<entry name="display" mtime="1270435859" type="string">
+		<stringvalue>FIX</stringvalue>
+	</entry>
+	<entry name="modetype" mtime="1255614907" type="string">
+		<stringvalue>SCIENTIFIC</stringvalue>
+	</entry>
+	<entry name="showzeroes" mtime="1270435859" type="bool" value="false"/>
+	<entry name="register9" mtime="1270435859" type="string">
+		<stringvalue>0</stringvalue>
+	</entry>
+	<entry name="register8" mtime="1270435859" type="string">
+		<stringvalue>0</stringvalue>
+	</entry>
+	<entry name="register7" mtime="1270435859" type="string">
+		<stringvalue>0</stringvalue>
+	</entry>
+	<entry name="register6" mtime="1270435859" type="string">
+		<stringvalue>0</stringvalue>
+	</entry>
+	<entry name="register5" mtime="1270435859" type="string">
+		<stringvalue>0</stringvalue>
+	</entry>
+	<entry name="register4" mtime="1270435859" type="string">
+		<stringvalue>0</stringvalue>
+	</entry>
+	<entry name="register3" mtime="1270435859" type="string">
+		<stringvalue>0</stringvalue>
+	</entry>
+	<entry name="register2" mtime="1270435859" type="string">
+		<stringvalue>0</stringvalue>
+	</entry>
+	<entry name="register1" mtime="1270435859" type="string">
+		<stringvalue>0</stringvalue>
+	</entry>
+	<entry name="register0" mtime="1270435859" type="string">
+		<stringvalue>0</stringvalue>
+	</entry>
+	<entry name="showthousands" mtime="1270435859" type="bool" value="false"/>
+	<entry name="function9value" mtime="1270435858" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="function9name" mtime="1270435858" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="function8value" mtime="1270435858" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="function8name" mtime="1270435858" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="function7value" mtime="1270435858" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="function7name" mtime="1270435858" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="function6value" mtime="1270435858" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="function6name" mtime="1270435858" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="function5value" mtime="1270435858" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="function5name" mtime="1270435858" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="function4value" mtime="1270435858" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="function4name" mtime="1270435858" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="function3value" mtime="1270435858" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="function3name" mtime="1270435858" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="function2value" mtime="1270435858" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="function2name" mtime="1270435858" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="function1value" mtime="1270435858" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="function1name" mtime="1270435858" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="function0value" mtime="1270435858" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="function0name" mtime="1270435858" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="constant9value" mtime="1270435858" type="string">
+		<stringvalue>0.061</stringvalue>
+	</entry>
+	<entry name="constant9name" mtime="1270435858" type="string">
+		<stringvalue>Cubic-centimeter-to-cubic-inch conversion factor</stringvalue>
+	</entry>
+	<entry name="constant8value" mtime="1270435858" type="string">
+		<stringvalue>0.948</stringvalue>
+	</entry>
+	<entry name="constant8name" mtime="1270435858" type="string">
+		<stringvalue>Kilojoule-to-British-thermal-unit conversion factor</stringvalue>
+	</entry>
+	<entry name="constant7value" mtime="1270435858" type="string">
+		<stringvalue>0.0353</stringvalue>
+	</entry>
+	<entry name="constant7name" mtime="1270435858" type="string">
+		<stringvalue>Gram-to-ounce conversion factor</stringvalue>
+	</entry>
+	<entry name="constant6value" mtime="1270435858" type="string">
+		<stringvalue>1048576</stringvalue>
+	</entry>
+	<entry name="constant6name" mtime="1270435858" type="string">
+		<stringvalue>2 ^ 20</stringvalue>
+	</entry>
+	<entry name="constant5value" mtime="1270435858" type="string">
+		<stringvalue>57.295779513</stringvalue>
+	</entry>
+	<entry name="constant5name" mtime="1270435858" type="string">
+		<stringvalue>degrees in a radian</stringvalue>
+	</entry>
+	<entry name="constant4value" mtime="1270435858" type="string">
+		<stringvalue>0.3937007</stringvalue>
+	</entry>
+	<entry name="constant4name" mtime="1270435858" type="string">
+		<stringvalue>Centimeter-to-inch conversion factor</stringvalue>
+	</entry>
+	<entry name="constant3value" mtime="1270435858" type="string">
+		<stringvalue>3.1415926536</stringvalue>
+	</entry>
+	<entry name="constant3name" mtime="1270435858" type="string">
+		<stringvalue>π</stringvalue>
+	</entry>
+	<entry name="constant2value" mtime="1270435858" type="string">
+		<stringvalue>2.7182818284</stringvalue>
+	</entry>
+	<entry name="constant2name" mtime="1270435858" type="string">
+		<stringvalue>Euler&apos;s Number (e)</stringvalue>
+	</entry>
+	<entry name="constant1value" mtime="1270435858" type="string">
+		<stringvalue>1.4142135623</stringvalue>
+	</entry>
+	<entry name="constant1name" mtime="1270435858" type="string">
+		<stringvalue>square root of 2</stringvalue>
+	</entry>
+	<entry name="constant0value" mtime="1270435858" type="string">
+		<stringvalue>0.621</stringvalue>
+	</entry>
+	<entry name="constant0name" mtime="1270435858" type="string">
+		<stringvalue>Kilometer-to-mile conversion factor</stringvalue>
+	</entry>
+</gconf>

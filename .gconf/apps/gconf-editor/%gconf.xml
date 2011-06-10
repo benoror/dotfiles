@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="recents" mtime="1279006968" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>/apps/gnome_settings_daemon/gtk-modules/gnomenu-panel</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/apps/gnome_settings_daemon/gtk-modules/globalmenu-gnome</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/apps/nautilus/preferences/show_desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/apps/panel/applets/notification_area_screen0/panel_right_stick</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/apps/panel/applets/applet_2/use_custom_icon</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/apps/panel/applets/clock_screen0/prefs/custom_format</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/apps/panel/applets/clock_screen0/prefs/format</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/apps/nautilus/preferences/show_zoom_slider_icons</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/apps/nautilus/preferences/show_zoom_slider</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/apps/nautilus/preferences/rgba_colormap</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/apps/nautilus/preferences/background_set</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/apps/nautilus/icon_view/labels_beside_icons</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/apps/nautilus/icon_view/default_use_manual_layout</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/apps/nautilus/icon_view/default_use_tighter_layout</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/apps/metacity/general/disable_workarounds</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/apps/metacity/general/titlebar_uses_system_font</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/apps/metacity/general/compositing_manager</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/apps/docky-2/Docky/Interface/DockPreferences/Dock1/PanelMode</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/apps/panel/default_setup/toplevels/bottom_panel/unhide_delay</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/apps/panel/default_setup/toplevels/bottom_panel/hide_delay</stringvalue>
+		</li>
+	</entry>
+</gconf>

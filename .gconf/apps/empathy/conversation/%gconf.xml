@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="avatar_in_icon" mtime="1253979495" type="bool" value="true"/>
+	<entry name="theme" mtime="1257464441" type="string">
+		<stringvalue>clean</stringvalue>
+	</entry>
+	<entry name="graphical_smileys" mtime="1255474641" type="bool" value="true"/>
+	<entry name="spell_checker_enabled" mtime="1257464413" type="bool" value="true"/>
+</gconf>

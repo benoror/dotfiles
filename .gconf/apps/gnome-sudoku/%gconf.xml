@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="show_toolbar" mtime="1267505981" type="bool" value="false"/>
+	<entry name="generate_puzzles_in_background" mtime="1254279089" type="int" value="1"/>
+	<entry name="show_impossible_implications" mtime="1267506568" type="bool" value="false"/>
+	<entry name="highlight" mtime="1267506521" type="bool" value="false"/>
+	<entry name="bg_custom_color" mtime="1254279089" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="width" mtime="1268275455" type="int" value="1213"/>
+	<entry name="difficulty" mtime="1267660067" type="float" value="0.20000000298023224"/>
+	<entry name="bg_black" mtime="1254279089" type="int" value="1"/>
+	<entry name="show_tracker" mtime="1266945291" type="bool" value="false"/>
+	<entry name="font_zoom" mtime="1254279089" type="int" value="0"/>
+	<entry name="auto_save_interval" mtime="1254279089" type="int" value="60"/>
+	<entry name="zoom_on_resize" mtime="1254279089" type="int" value="1"/>
+	<entry name="always_show_hints" mtime="1267507903" type="bool" value="false"/>
+	<entry name="minimum_number_of_new_puzzles" mtime="1254279089" type="int" value="90"/>
+	<entry name="player" mtime="1254279089" type="string">
+		<stringvalue>benoror</stringvalue>
+	</entry>
+	<entry name="height" mtime="1268275455" type="int" value="722"/>
+	<entry name="group_size" mtime="1254279089" type="int" value="9"/>
+</gconf>

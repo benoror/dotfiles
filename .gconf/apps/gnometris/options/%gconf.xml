@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="use_target" mtime="1253708660" type="bool" value="true"/>
+	<entry name="theme" mtime="1253708625" type="string">
+		<stringvalue>joined</stringvalue>
+	</entry>
+</gconf>

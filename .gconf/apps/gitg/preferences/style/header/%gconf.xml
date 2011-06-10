@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="style" mtime="1258608235" type="int" value="8"/>
+	<entry name="background" mtime="1258608235" type="string">
+		<stringvalue>#ce5c00</stringvalue>
+	</entry>
+	<entry name="foreground" mtime="1258608235" type="string">
+		<stringvalue>#d3d7cf</stringvalue>
+	</entry>
+</gconf>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="volume_up" mtime="1267300501" type="string">
+		<stringvalue>XF86AudioRaiseVolume</stringvalue>
+	</entry>
+	<entry name="volume_mute" mtime="1267300496" type="string">
+		<stringvalue>XF86AudioMute</stringvalue>
+	</entry>
+	<entry name="volume_down" mtime="1267300499" type="string">
+		<stringvalue>XF86AudioLowerVolume</stringvalue>
+	</entry>
+	<entry name="sleep" mtime="1252919966" type="string">
+		<stringvalue>XF86Sleep</stringvalue>
+	</entry>
+</gconf>

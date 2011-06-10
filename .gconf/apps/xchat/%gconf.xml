@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="version" mtime="1261693598" type="string">
+		<stringvalue>0.26.1</stringvalue>
+	</entry>
+</gconf>

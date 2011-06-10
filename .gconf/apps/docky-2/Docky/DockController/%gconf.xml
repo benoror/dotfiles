@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="GlowTime" mtime="1270590743" type="int" value="10"/>
+	<entry name="UrgentHue" mtime="1265181550" type="int" value="150"/>
+	<entry name="Theme" mtime="1273815799" type="string">
+		<stringvalue>Classic</stringvalue>
+	</entry>
+	<entry name="ActiveDocks" mtime="1256939443" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>Dock1</stringvalue>
+		</li>
+	</entry>
+</gconf>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="brightness" mtime="1267166305" type="float" value="0"/>
+	<entry name="contrast" mtime="1267166301" type="float" value="1"/>
+	<entry name="saturation" mtime="1267166277" type="float" value="1"/>
+	<entry name="hue" mtime="1267166275" type="float" value="0"/>
+	<entry name="wide_mode" mtime="1281664482" type="bool" value="true"/>
+	<entry name="selected_effects" mtime="1267166260" type="list" ltype="string">
+	</entry>
+	<entry name="y_resolution" mtime="1267166270" type="int" value="480"/>
+	<entry name="x_resolution" mtime="1267166270" type="int" value="640"/>
+	<entry name="webcam" mtime="1252926911" type="string">
+		<stringvalue>/dev/video0</stringvalue>
+	</entry>
+	<entry name="countdown" mtime="1281664481" type="bool" value="true"/>
+</gconf>

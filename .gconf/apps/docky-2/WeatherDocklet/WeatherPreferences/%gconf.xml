@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="Timeout" mtime="1257271653" type="int" value="5"/>
+	<entry name="Location" mtime="1275544471" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>san luis potosi</stringvalue>
+		</li>
+	</entry>
+	<entry name="Metric" mtime="1256939730" type="bool" value="true"/>
+	<entry name="Source" mtime="1260817251" type="string">
+		<stringvalue>Weather Underground</stringvalue>
+	</entry>
+</gconf>

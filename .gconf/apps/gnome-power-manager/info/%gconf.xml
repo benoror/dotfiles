@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="history_graph_smooth" mtime="1254749955" type="bool" value="false"/>
+	<entry name="history_graph_points" mtime="1254749953" type="bool" value="false"/>
+	<entry name="page_number" mtime="1257146459" type="int" value="3"/>
+	<entry name="last_device" mtime="1257146459" type="string">
+		<stringvalue>wakeups</stringvalue>
+	</entry>
+	<entry name="stats_type" mtime="1257146447" type="string">
+		<stringvalue>charge-data</stringvalue>
+	</entry>
+	<entry name="history_type" mtime="1257146447" type="string">
+		<stringvalue>charge</stringvalue>
+	</entry>
+</gconf>

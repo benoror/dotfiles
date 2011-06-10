@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="use_overmine_warning" mtime="1259014961" type="bool" value="true"/>
+	<entry name="height" mtime="1261588517" type="int" value="524"/>
+	<entry name="width" mtime="1261588517" type="int" value="567"/>
+</gconf>

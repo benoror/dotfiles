@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="type" mtime="1253495134" type="string">
+		<stringvalue>802-11-wireless</stringvalue>
+	</entry>
+	<entry name="uuid" mtime="1253495134" type="string">
+		<stringvalue>a7b5378e-4b4c-456e-a6bf-a7b227446996</stringvalue>
+	</entry>
+	<entry name="id" mtime="1253495134" type="string">
+		<stringvalue>Auto prodigymovil</stringvalue>
+	</entry>
+	<entry name="name" mtime="1253495134" type="string">
+		<stringvalue>connection</stringvalue>
+	</entry>
+</gconf>

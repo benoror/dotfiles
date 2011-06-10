@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="bold_color" mtime="1287369998" type="string">
+		<stringvalue>#000000000000</stringvalue>
+	</entry>
+	<entry name="cursor_shape" mtime="1264037098" type="string">
+		<stringvalue>block</stringvalue>
+	</entry>
+	<entry name="scrollback_lines" mtime="1287369998" type="int" value="5000"/>
+	<entry name="scroll_on_keystroke" mtime="1262817549" type="bool" value="true"/>
+	<entry name="scroll_on_output" mtime="1287369998" type="bool" value="true"/>
+	<entry name="exit_action" mtime="1262816090" type="string">
+		<stringvalue>close</stringvalue>
+	</entry>
+	<entry name="title_mode" mtime="1287369998" type="string">
+		<stringvalue>after</stringvalue>
+	</entry>
+	<entry name="scroll_background" mtime="1287369998" type="bool" value="false"/>
+	<entry name="background_image" mtime="1287369998" type="string">
+		<stringvalue>/home/benoror/Dropbox/Photos/Wallpapers/StockMark_ResearchCode_1920px.jpg</stringvalue>
+	</entry>
+	<entry name="use_custom_command" mtime="1265178694" type="bool" value="false"/>
+	<entry name="custom_command" mtime="1265178682" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="palette" mtime="1287369998" type="string">
+		<stringvalue>#333333333333:#DFDF87878787:#AFAFDFDF8787:#ED09ED09957C:#5F5F8787DFDF:#757550507B7B:#5F5F8787DFDF:#D3D3D7D7CFCF:#555555555555:#DFDFAFAFAFAF:#AFAFDFDF8787:#FFFFFFFFAFAF:#8787AFAFDFDF:#ADAD7F7FA8A8:#AFAFDFDFFFFF:#EEEEEEEEECEC</stringvalue>
+	</entry>
+	<entry name="font" mtime="1287369998" type="string">
+		<stringvalue>Terminus 8</stringvalue>
+	</entry>
+	<entry name="use_system_font" mtime="1287369998" type="bool" value="false"/>
+	<entry name="scrollbar_position" mtime="1287369998" type="string">
+		<stringvalue>hidden</stringvalue>
+	</entry>
+	<entry name="background_darkness" mtime="1287369998" type="float" value="0.43540668487548828"/>
+	<entry name="background_type" mtime="1266884389" type="string">
+		<stringvalue>solid</stringvalue>
+	</entry>
+	<entry name="use_theme_colors" mtime="1287369998" type="bool" value="false"/>
+	<entry name="silent_bell" mtime="1287369998" type="bool" value="true"/>
+	<entry name="default_show_menubar" mtime="1287369998" type="bool" value="false"/>
+	<entry name="visible_name" mtime="1287369998" type="string">
+		<stringvalue>Default</stringvalue>
+	</entry>
+	<entry name="background_color" mtime="1287369998" type="string">
+		<stringvalue>#3D3D3D3D3D3D</stringvalue>
+	</entry>
+	<entry name="foreground_color" mtime="1287369998" type="string">
+		<stringvalue>#FFFFFFFFFFFF</stringvalue>
+	</entry>
+</gconf>

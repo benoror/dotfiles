@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="show_offline" mtime="1253967227" type="bool" value="false"/>
+	<entry name="sort_criterium" mtime="1266432304" type="string">
+		<stringvalue>state</stringvalue>
+	</entry>
+</gconf>

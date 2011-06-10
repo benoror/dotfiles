@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="window_y_position" mtime="1279865353" type="int" value="18"/>
+	<entry name="window_x_position" mtime="1279865353" type="int" value="614"/>
+	<entry name="window_height" mtime="1279865353" type="int" value="778"/>
+	<entry name="window_width" mtime="1279865353" type="int" value="1062"/>
+	<entry name="sourcelist_height" mtime="1279865353" type="int" value="300"/>
+	<entry name="right_paned_position" mtime="1279865368" type="int" value="400"/>
+	<entry name="paned_position" mtime="1279865368" type="int" value="160"/>
+	<entry name="volume" mtime="1279864916" type="float" value="1"/>
+</gconf>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="autoconnect" mtime="1261361999" type="bool" value="false"/>
+	<entry name="type" mtime="1261361999" type="string">
+		<stringvalue>802-11-wireless</stringvalue>
+	</entry>
+	<entry name="uuid" mtime="1261361999" type="string">
+		<stringvalue>4111ad90-e06b-407e-aef0-0c80307e82fb</stringvalue>
+	</entry>
+	<entry name="id" mtime="1261361999" type="string">
+		<stringvalue>Auto NETGEAR</stringvalue>
+	</entry>
+	<entry name="name" mtime="1261361999" type="string">
+		<stringvalue>connection</stringvalue>
+	</entry>
+</gconf>

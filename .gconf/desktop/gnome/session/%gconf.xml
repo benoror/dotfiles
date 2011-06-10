@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="idle_delay" mtime="1273261231" type="int" value="60"/>
+</gconf>

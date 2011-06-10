@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="library-location" mtime="1269200461" type="string">
+		<stringvalue>/media/Seagate/Videos</stringvalue>
+	</entry>
+	<entry name="expanded" mtime="1269199293" type="bool" value="false"/>
+</gconf>

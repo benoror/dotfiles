@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="icon-scale" mtime="1286843312" type="string">
+		<stringvalue>1</stringvalue>
+	</entry>
+	<entry name="custom-icon" mtime="1267502599" type="string">
+		<stringvalue>file:///usr/share/icons/elementary/devices/48/gnome-dev-harddisk-usb.svg</stringvalue>
+	</entry>
+	<entry name="nautilus-icon-position-timestamp" mtime="1287432628" type="string">
+		<stringvalue>1287432628</stringvalue>
+	</entry>
+	<entry name="nautilus-icon-position" mtime="1286843312" type="string">
+		<stringvalue>64,182</stringvalue>
+	</entry>
+</gconf>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="AlwaysShowResults" mtime="1254797573" type="bool" value="false"/>
+	<entry name="Theme" mtime="1254797637" type="string">
+		<stringvalue>Docky</stringvalue>
+	</entry>
+	<entry name="QuietStart" mtime="1254797637" type="bool" value="true"/>
+</gconf>

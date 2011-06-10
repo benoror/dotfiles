@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="history-gedit2_replace_with_entry" mtime="1278400149" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>jQuery(</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>ruby-1.8</stringvalue>
+		</li>
+	</entry>
+	<entry name="history-gedit2_search_for_entry" mtime="1278399433" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>jque</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>ifoot</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>ifoo</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>href</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>grass</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>banner</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>border</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>background</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>color</stringvalue>
+		</li>
+	</entry>
+</gconf>

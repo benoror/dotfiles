@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="switch_group" mtime="1265252938" type="string">
+		<stringvalue>&lt;Alt&gt;masculine</stringvalue>
+	</entry>
+	<entry name="run_command_terminal" mtime="1265252878" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+</gconf>

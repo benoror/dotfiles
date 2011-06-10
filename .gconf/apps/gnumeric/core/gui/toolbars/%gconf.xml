@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="FormatToolbar" mtime="1259011030" type="bool" value="true"/>
+	<entry name="ObjectToolbar" mtime="1259011030" type="bool" value="false"/>
+	<entry name="StandardToolbar" mtime="1259011030" type="bool" value="true"/>
+</gconf>

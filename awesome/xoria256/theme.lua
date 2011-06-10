@@ -7,19 +7,19 @@ path = home .. "/.config/awesome/xoria256"
 
 theme = {}
 
-theme.font          = "Terminus 8"
+theme.font          = "Terminus 9"
 
 theme.bg_normal     = "#333333"
-theme.bg_focus      = "#87afdf"
+theme.bg_focus      = "#555555"
 theme.bg_urgent     = "#afdf87"
 theme.bg_minimize   = "#444444"
 
-theme.fg_normal     = "#d3d7cf"
-theme.fg_focus      = "#333333"
+theme.fg_normal     = "#eeeeee"
+theme.fg_focus      = "#eeeeee"
 theme.fg_urgent     = "#333333"
 theme.fg_minimize   = "#ffffff"
 
-theme.border_width  = "2"
+theme.border_width  = "1"
 theme.border_normal = "#333333"
 theme.border_focus  = "#87afdf"
 theme.border_marked = "#91231c"
@@ -97,4 +97,3 @@ theme.layout_dwindle = path .. "/layouts/dwindlew.png"
 theme.awesome_icon = "/usr/share/awesome/icons/awesome16.png"
 
 return theme
--- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:encoding=utf-8:textwidth=80

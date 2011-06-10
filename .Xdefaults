@@ -7,9 +7,9 @@ Xft.hintstyle:  hintslight
 
 ! URxvt
 URxvt.buffered:         true
-URxvt.cursorColor:      #ffffff
+URxvt.cursorColor:      #afdf87
 URxvt.underlineColor:   #ffffff
-URxvt.geometry:         250x78
+!URxvt.geometry:         250x78
 URxvt.title:            URxvt Terminal
 URxvt.cursorBlink: true
 URxvt.perl-ext-common: default,matcher
@@ -23,25 +23,27 @@ URxvt.shiva.scrollBack:           true
 URxvt.shiva.scrollTtyOutput:      false
 
 ! borderless and no scrollbar
-URxvt*scrollBar_right: false
-URxvt*scrollBar: false
-#URxvt*borderLess: false
+!URxvt*scrollBar: false
+URxvt*scrollBar_right: true
+URxvt*scrollstyle:plain
+URxvt*scrollColor:#555555
+URxvt*borderLess: false
 
 ! -- Fonts -- !
-URxvt.font:             xft:Terminus:pixelsize=12:antialias=true
-URxvt.boldFont:         xft:Terminus:bold:pixelsize=12:antialias=true
+URxvt.font:             xft:Terminus:pixelsize=14:antialias=true
+URxvt.boldFont:         xft:Terminus:bold:pixelsize=14:antialias=true
 #URxvt.font:xft:envy code r:medium:pixelsize=12
 #URxvt.boldFont:xft:envy code r:bold:pixelsize=12
 #URxvt.font:xft:dina:medium:pixelsize=12
 #URxvt.boldFont:xft:dina:bold:pixelsize=12
 
 ! teh transparency stuff
-#URxvt.transparent: true
-#URxvt*inheritPixmap: true
-#URxvt*tintColor: #666666
-#URxvt*shading: 50
-#URxvt*depth: 24
-#URxvt*background: rgba:0000/0000/0000/dddd
+URxvt.transparent: true
+URxvt*inheritPixmap: true
+!URxvt*tintColor: #3a3a3a
+!URxvt*shading: 50
+URxvt*depth: 24
+!URxvt*background: rgba:3f00/3f00/3f00/dddd
 
 ! -- Colours -- !
 #include "/home/benoror/.colours/xoria256"

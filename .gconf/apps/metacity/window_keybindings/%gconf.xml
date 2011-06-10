@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="toggle_fullscreen" mtime="1265252891" type="string">
+		<stringvalue>F11</stringvalue>
+	</entry>
+</gconf>

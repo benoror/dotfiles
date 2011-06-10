@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="unhide_delay" mtime="1259620206" type="int" value="0"/>
+	<entry name="hide_delay" mtime="1259620201" type="int" value="0"/>
+	<entry name="auto_hide" mtime="1259620182" type="bool" value="true"/>
+	<entry name="auto_hide_size" mtime="1259620169" type="int" value="0"/>
+</gconf>

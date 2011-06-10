@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="repeatrate" mtime="1253319541" type="int" value="30"/>
+	<entry name="feedbackselection" mtime="1253319541" type="string">
+		<stringvalue>key_flashing</stringvalue>
+	</entry>
+	<entry name="feedbackmovement" mtime="1253319541" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="keyleave" mtime="1253319541" type="string">
+		<stringvalue>mousepointer</stringvalue>
+	</entry>
+	<entry name="keyenter" mtime="1253319541" type="string">
+		<stringvalue>mousepointer</stringvalue>
+	</entry>
+	<entry name="outputselected" mtime="1253319541" type="string">
+		<stringvalue>dwell</stringvalue>
+	</entry>
+</gconf>

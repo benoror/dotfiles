@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="security" mtime="1262651107" type="string">
+		<stringvalue>802-11-wireless-security</stringvalue>
+	</entry>
+	<entry name="mode" mtime="1262651107" type="string">
+		<stringvalue>infrastructure</stringvalue>
+	</entry>
+	<entry name="ssid" mtime="1262651107" type="list" ltype="int">
+		<li type="int" value="73"/>
+		<li type="int" value="78"/>
+		<li type="int" value="70"/>
+		<li type="int" value="73"/>
+		<li type="int" value="78"/>
+		<li type="int" value="73"/>
+		<li type="int" value="84"/>
+		<li type="int" value="85"/>
+		<li type="int" value="77"/>
+		<li type="int" value="52"/>
+		<li type="int" value="55"/>
+		<li type="int" value="99"/>
+		<li type="int" value="99"/>
+	</entry>
+	<entry name="name" mtime="1262651107" type="string">
+		<stringvalue>802-11-wireless</stringvalue>
+	</entry>
+</gconf>

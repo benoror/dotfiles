@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="numlock_on" mtime="1289593443" type="bool" value="false"/>
+</gconf>

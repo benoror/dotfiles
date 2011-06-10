@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="height" mtime="1264482357" type="int" value="711"/>
+	<entry name="width" mtime="1264482357" type="int" value="1366"/>
+	<entry name="logfiles" mtime="1264482355" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>/var/log/Xorg.2.log</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/var/log/Xorg.3.log</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/var/log/pacman.log</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/var/log/Xorg.4.log</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/var/log/Xorg.1.log</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/var/log/Xorg.5.log</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/var/log/snmpd.log</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/var/log/pm-suspend.log</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/var/log/soundon.log</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/var/log/Xorg.0.log</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/var/log/dmesg.log</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/var/log/crond</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/var/log/pm-powersave.log</stringvalue>
+		</li>
+	</entry>
+</gconf>
