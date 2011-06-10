@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="cache_display" mtime="1254139795" type="bool" value="false"/>
+	<entry name="cache_expire" mtime="1254139787" type="bool" value="false"/>
+	<entry name="cache_method" mtime="1254139787" type="string">
+		<stringvalue>gnome</stringvalue>
+	</entry>
+	<entry name="cache_enabled" mtime="1254139787" type="bool" value="true"/>
+</gconf>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="input_feedback_sounds" mtime="1256797778" type="bool" value="true"/>
+	<entry name="theme_name" mtime="1267657893" type="string">
+		<stringvalue>freedesktop</stringvalue>
+	</entry>
+	<entry name="event_sounds" mtime="1286772987" type="bool" value="false"/>
+</gconf>

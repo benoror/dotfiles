@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="Notify" mtime="1256939671" type="bool" value="true"/>
+	<entry name="LastChecked" mtime="1262495978" type="string">
+		<stringvalue>1/2/2010 11:19:37 PM</stringvalue>
+	</entry>
+	<entry name="RefreshRate" mtime="1256940139" type="int" value="15"/>
+	<entry name="NeedsAttention" mtime="1256939642" type="bool" value="true"/>
+	<entry name="User" mtime="1275544328" type="string">
+		<stringvalue>benoror</stringvalue>
+	</entry>
+	<entry name="Labels" mtime="1257146782" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>unread</stringvalue>
+		</li>
+	</entry>
+</gconf>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="readcd-image" mtime="1271014846" type="int" value="0"/>
+	<entry name="cdrdao-burn" mtime="1271014845" type="int" value="0"/>
+	<entry name="audio2cue-image" mtime="1271014845" type="int" value="0"/>
+	<entry name="growisofs-burn" mtime="1271014845" type="int" value="0"/>
+	<entry name="vcdimager-image" mtime="1271014845" type="int" value="0"/>
+	<entry name="dvdauthor-image" mtime="1271014845" type="int" value="0"/>
+	<entry name="dvdcss-image" mtime="1271014845" type="int" value="0"/>
+	<entry name="dvd@43@rw-format-burn" mtime="1271014845" type="int" value="0"/>
+	<entry name="cdrecord-burn" mtime="1271014845" type="int" value="0"/>
+	<entry name="mkisofs-image" mtime="1271014845" type="int" value="0"/>
+	<entry name="cdda2wav-image" mtime="1271014845" type="int" value="0"/>
+	<entry name="transcode2vob-convert" mtime="1268427927" type="int" value="0"/>
+	<entry name="Image@32@Checksum-misc" mtime="1255641046" type="int" value="0"/>
+	<entry name="genisoimage-image" mtime="1255641046" type="int" value="0"/>
+	<entry name="File@32@Checksum-misc" mtime="1255641046" type="int" value="0"/>
+	<entry name="transcode-convert" mtime="1255641046" type="int" value="0"/>
+	<entry name="File@32@Downloader-misc" mtime="1255641046" type="int" value="0"/>
+	<entry name="toc2cue-convert" mtime="1255641045" type="int" value="0"/>
+	<entry name="Normalize-misc" mtime="1255641045" type="int" value="0"/>
+	<entry name="wodim-burn" mtime="1255641045" type="int" value="0"/>
+	<entry name="CD@47@DVD@32@Creator@32@Folder-misc" mtime="1255641045" type="int" value="0"/>
+	<entry name="readom-image" mtime="1255641045" type="int" value="0"/>
+	<entry name="Cdrdao-burn" mtime="1255641045" type="int" value="0"/>
+</gconf>

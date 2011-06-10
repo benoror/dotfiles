@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="show_icon" mtime="1267561209" type="bool" value="false"/>
+</gconf>

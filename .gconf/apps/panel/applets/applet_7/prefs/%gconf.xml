@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="hour_format" mtime="1258101687" schema="/schemas/apps/clock_applet/prefs/hour_format"/>
+	<entry name="temperature_unit" mtime="1266895302" schema="/schemas/apps/clock_applet/prefs/temperature_unit" type="string">
+		<stringvalue>C</stringvalue>
+	</entry>
+	<entry name="expand_locations" mtime="1266942268" schema="/schemas/apps/clock_applet/prefs/expand_locations" type="bool" value="true"/>
+	<entry name="unix_time" mtime="1258101687" schema="/schemas/apps/clock_applet/prefs/unix_time"/>
+	<entry name="show_temperature" mtime="1258101687" schema="/schemas/apps/clock_applet/prefs/show_temperature"/>
+	<entry name="format" mtime="1259624751" schema="/schemas/apps/clock_applet/prefs/format" type="string">
+		<stringvalue>24-hour</stringvalue>
+	</entry>
+	<entry name="config_tool" mtime="1258101687" schema="/schemas/apps/clock_applet/prefs/config_tool"/>
+	<entry name="expand_birthdays" mtime="1258101687" schema="/schemas/apps/clock_applet/prefs/expand_birthdays"/>
+	<entry name="show_date" mtime="1275348995" schema="/schemas/apps/clock_applet/prefs/show_date" type="bool" value="true"/>
+	<entry name="expand_appointments" mtime="1258101687" schema="/schemas/apps/clock_applet/prefs/expand_appointments"/>
+	<entry name="speed_unit" mtime="1266895303" schema="/schemas/apps/clock_applet/prefs/speed_unit" type="string">
+		<stringvalue>km/h</stringvalue>
+	</entry>
+	<entry name="expand_weather" mtime="1258101687" schema="/schemas/apps/clock_applet/prefs/expand_weather"/>
+	<entry name="show_seconds" mtime="1258101687" schema="/schemas/apps/clock_applet/prefs/show_seconds"/>
+	<entry name="internet_time" mtime="1258101687" schema="/schemas/apps/clock_applet/prefs/internet_time"/>
+	<entry name="show_week_numbers" mtime="1258101687" schema="/schemas/apps/clock_applet/prefs/show_week_numbers"/>
+	<entry name="expand_tasks" mtime="1258101687" schema="/schemas/apps/clock_applet/prefs/expand_tasks"/>
+	<entry name="show_weather" mtime="1275349001" schema="/schemas/apps/clock_applet/prefs/show_weather" type="bool" value="false"/>
+	<entry name="gmt_time" mtime="1258101687" schema="/schemas/apps/clock_applet/prefs/gmt_time"/>
+	<entry name="show_tooltip" mtime="1258101687" schema="/schemas/apps/clock_applet/prefs/show_tooltip"/>
+	<entry name="custom_format" mtime="1258101687" schema="/schemas/apps/clock_applet/prefs/custom_format"/>
+	<entry name="cities" mtime="1266942301" schema="/schemas/apps/clock_applet/prefs/cities" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>&lt;location name=&quot;&quot; city=&quot;San Luis Potosí&quot; timezone=&quot;America/Mexico_City&quot; latitude=&quot;22.150000&quot; longitude=&quot;-100.983330&quot; code=&quot;MMSP&quot; current=&quot;true&quot;/&gt;</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>&lt;location name=&quot;&quot; city=&quot;Mexico City&quot; timezone=&quot;America/Mexico_City&quot; latitude=&quot;19.433332&quot; longitude=&quot;-99.099998&quot; code=&quot;MMMX&quot; current=&quot;false&quot;/&gt;</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>&lt;location name=&quot;&quot; city=&quot;Monterrey&quot; timezone=&quot;America/Mexico_City&quot; latitude=&quot;25.866667&quot; longitude=&quot;-100.233330&quot; code=&quot;MMAN&quot; current=&quot;false&quot;/&gt;</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>&lt;location name=&quot;&quot; city=&quot;Guadalajara&quot; timezone=&quot;America/Mexico_City&quot; latitude=&quot;20.516666&quot; longitude=&quot;-103.316666&quot; code=&quot;MMGL&quot; current=&quot;false&quot;/&gt;</stringvalue>
+		</li>
+	</entry>
+</gconf>

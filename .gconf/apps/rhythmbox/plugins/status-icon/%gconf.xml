@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="window-visible" mtime="1279865376" type="bool" value="true"/>
+	<entry name="active" mtime="1279864778" type="bool" value="true"/>
+</gconf>

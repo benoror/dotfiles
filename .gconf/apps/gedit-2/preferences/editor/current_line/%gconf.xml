@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="highlight_current_line" mtime="1256538526" type="bool" value="true"/>
+</gconf>

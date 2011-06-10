@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="recreate_folders" mtime="1264397326" type="bool" value="true"/>
+	<entry name="skip_newer" mtime="1264397326" type="bool" value="false"/>
+	<entry name="overwrite" mtime="1264397326" type="bool" value="true"/>
+</gconf>

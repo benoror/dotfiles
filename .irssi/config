@@ -64,11 +64,10 @@ chatnets = {
 
 channels = (
   { name = "#unixmexico"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#awesome"; chatnet = "OFTC"; autojoin = "yes"; },
   { name = "#archlinux"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#archlinux-es"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#rubyonrails"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#django"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#diaspora"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#diaspora-dev"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#undergroundorgmx"; chatnet = "2600"; autojoin = "yes"; }
 );
 
@@ -288,7 +287,7 @@ logs = { };
 ignores = (
   {
     level = "JOINS PARTS QUITS MODES";
-    channels = ( "#unixmexico", "#archlinux", "#archlinux-es", "#rubyonrails", "#django", "#awesome", "&bitlbee", "&twitter_benoror" );
+    channels = ( "#unixmexico", "#archlinux", "#archlinux-es", "#rubyonrails", "#django", "#awesome", "&bitlbee" );
   }
 );
 
@@ -307,17 +306,6 @@ windows = {
         type = "CHANNEL";
         chat_type = "IRC";
         name = "&bitlbee";
-        sticky = "yes";
-        tag = "bitlbee";
-      }
-    );
-  };
-  4 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "&twitter_benoror";
         sticky = "yes";
         tag = "bitlbee";
       }

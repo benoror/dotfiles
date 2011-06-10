@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="sync_selected_service_addin" mtime="1265181768" type="string">
+		<stringvalue>local</stringvalue>
+	</entry>
+	<entry name="sync_local_path" mtime="1265181768" type="string">
+		<stringvalue>/home/benoror/Dropbox/dotfiles/tomboy</stringvalue>
+	</entry>
+</gconf>

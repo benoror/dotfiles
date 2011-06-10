@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="captions" mtime="1267658353" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>size</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>permissions</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>date_modified</stringvalue>
+		</li>
+	</entry>
+	<entry name="default_use_manual_layout" mtime="1265178329" type="bool" value="false"/>
+	<entry name="default_zoom_level" mtime="1266383023" type="string">
+		<stringvalue>standard</stringvalue>
+	</entry>
+	<entry name="default_use_tighter_layout" mtime="1266289912" type="bool" value="false"/>
+	<entry name="labels_beside_icons" mtime="1266289913" type="bool" value="false"/>
+</gconf>

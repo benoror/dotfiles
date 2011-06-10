@@ -1,0 +1,2 @@
+screen -t "@gateway" 1   /home/benoror/Dropbox/bin/spawnshell.sh gateway
+screen -t "macmini" 2   /home/benoror/Dropbox/bin/spawnshell.sh macmini

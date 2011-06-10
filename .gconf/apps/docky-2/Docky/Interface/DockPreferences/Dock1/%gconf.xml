@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="ThreeDimensional" mtime="1271314083" type="bool" value="false"/>
+	<entry name="MonitorNumber" mtime="1260753479" type="int" value="0"/>
+	<entry name="PanelMode" mtime="1275460189" type="bool" value="true"/>
+	<entry name="FadeOpacity" mtime="1256939557" type="float" value="0"/>
+	<entry name="IndicateMultipleWindows" mtime="1265182510" type="bool" value="true"/>
+	<entry name="FadeOnHide" mtime="1265177781" type="bool" value="true"/>
+	<entry name="IconSize" mtime="1275686180" type="int" value="51"/>
+	<entry name="ZoomPercent" mtime="1260920571" type="float" value="1.5"/>
+	<entry name="ZoomEnabled" mtime="1270591882" type="bool" value="true"/>
+	<entry name="Position" mtime="1277926677" type="string">
+		<stringvalue>Bottom</stringvalue>
+	</entry>
+	<entry name="Autohide" mtime="1275534223" type="string">
+		<stringvalue>None</stringvalue>
+	</entry>
+	<entry name="SortList" mtime="1277926886" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>/usr/share/applications/rxvt-unicode.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>MountItem#139664421932128</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>GMailDockItem#Inbox</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>WeatherDockItem</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>CPUMonitor</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>TrashCan</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/usr/share/applications/chromium.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>MountItem#139664421932224</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>file:///home/benoror</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/usr/share/applications/skype.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/usr/share/applications/pidgin.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/usr/share/applications/transmission.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/usr/share/applications/writer.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/usr/share/applications/calc.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/usr/share/applications/impress.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/usr/share/applications/cheese.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/usr/share/applications/vlc.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/usr/share/applications/ghb.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/usr/share/applications/gnome-sudoku.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/usr/share/applications/gnome-system-monitor.desktop</stringvalue>
+		</li>
+	</entry>
+	<entry name="Plugins" mtime="1275544433" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>Mount</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>GMail</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Weather</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>CPUMonitor</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Trash</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Desktop</stringvalue>
+		</li>
+	</entry>
+	<entry name="Launchers" mtime="1277926995" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>file:///usr/share/applications/pidgin.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>file:///usr/share/applications/transmission.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>file:///usr/share/applications/cheese.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>file:///usr/share/applications/vlc.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>file:///usr/share/applications/gnome-system-monitor.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>file:///usr/share/applications/ghb.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>file:///usr/share/applications/calc.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>file:///usr/share/applications/writer.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>file:///usr/share/applications/impress.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>file:///home/benoror</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>file:///usr/share/applications/skype.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>file:///usr/share/applications/gnome-sudoku.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>file:///usr/share/applications/rxvt-unicode.desktop</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>file:///usr/share/applications/chromium.desktop</stringvalue>
+		</li>
+	</entry>
+	<entry name="WindowManager" mtime="1256941366" type="bool" value="true"/>
+</gconf>

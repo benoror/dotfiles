@@ -1,25 +1,73 @@
+""""""""""""""""""""""""""""""""""""""""""""""""
+" Vundle Config http://github.com/gmarik/vundle/
+""""""""""""""""""""""""""""""""""""""""""""""""
+" vundle
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/vundle.git/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+" original repos on github
+Bundle 'tpope/vim-rails'
+Bundle 'msanders/snipmate.vim'
+Bundle 'scrooloose/nerdtree'
+" vim-scripts repos
+"Bundle 'L9'
+"Bundle 'FuzzyFinder'
+"Bundle 'rails.vim'
+" non github repos
+Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'git://github.com/altercation/vim-colors-solarized.git'
+Bundle 'git://github.com/vim-scripts/xoria256.vim.git'
+" ...
+
+filetype plugin indent on     " required!
+" or
+" filetype plugin on          " to not use the indentation settings set by plugins
+
+"
+" Brief help
+"
+" :BundleInstall  - install bundles (won't update installed)
+" :BundleInstall! - update if installed
+"
+" :Bundles foo    - search for foo
+" :Bundles! foo   - refresh cached list and search for foo
+"
+" :BundleClean    - confirm removal of unused bundles
+" :BundleClean!   - remove without confirmation
+"
+" see :h vundle for more details
+" Note: comments after Bundle command are not allowed..
+
+""""""""""""""""""""""""""""""""""""""""""""""""
 " Identation
+""""""""""""""""""""""""""""""""""""""""""""""""
+set softtabstop=2
 set shiftwidth=2
-set tabstop=2
-set autoindent
+set expandtab
+
+set smartindent
 
 "highlight current line
-set cursorline 
-"don't be backwards compatible with silly vi options
-set nocompatible
+set cursorline
 "allow backspacing over everything in insert mode
 set bs=2
 " keep 50 lines of command line history
-set history=50          
+set history=50
 "Always show cursor position
 set ruler
-" Foldin
+" Folding
 set fdm=marker
 "You can use the mouse to resize windows in Vim if you set your mouse as follows.
 set mouse=a
-"This is necessary to allow pasting from outside vim. It turns off auto stuff.
-"You can tell you are in paste mode when the ruler is not visible
-set paste
 "Usually annoys me
 "set nowrap
 "Usually I don't care about case when searching
@@ -27,7 +75,7 @@ set ignorecase
 "Only ignore case when we type lower case when searching
 set smartcase
 "I hate noise
-set visualbell
+"set visualbell
 "Show menu with possible completions
 set wildmenu
 "smd:   shows current vi mode in lower left
@@ -36,16 +84,15 @@ set showcmd
 set laststatus=2
 "tf:    improves redrawing for newer computers
 set ttyfast
-"smartindent moves # to start of line which is not very smart, so undo here.
 :inoremap # X#
 "bk:    does not write a persistent backup file of an edited file
-set nobackup                    
+set nobackup
 "wb:    does keep a backup file while editing a file
-set nowritebackup                 
+set nowritebackup
 " no swap file
 set noswapfile
 "lz:    will not redraw the screen while running macros (goes faster)
-set lazyredraw                  
+set lazyredraw
 "The rest deal with whitespace handling and
 "mainly make sure hardtabs are never entered
 "as their interpretation is too non standard in my experience
@@ -66,6 +113,8 @@ if &t_Co > 2 || has("gui_running")
     syntax on
     set hlsearch
     set incsearch "For fast terminals can highlight search string as you type
+    " Default theme
+    colo xoria256
 endif
 
 if &diff
@@ -95,54 +144,23 @@ vnoremap X "_X
 
 "<home> toggles between start of line and start of text
 
-" Default theme
-colo xoria256_benoror
-"colo xoria256
-
 " Show line numbers
 set number
 set numberwidth=5
 
 " tab navigation like firefox
-map <C-t> :tabnew 
-imap <C-t> <Esc>:tabnew 
+map <C-t> :tabnew
+imap <C-t> <Esc>:tabnew
 
 " avoid finger error
 map <F1> <Esc>
 imap <F1> <Esc>
 
-" I love the new CursorLine, but terminal underlining kicks legibility in the nuts.
-" So what to do? Bold is (extremely) subtle, but it's better than nothing.
-hi CursorLine cterm=bold ctermbg=0
+" Command-T
+nmap <silent> <S-t> :CommandT<CR>
+nmap <silent> <S-b> :CommandTBuffer<CR>
 
-" Line numbers
-hi LineNr ctermfg=7 ctermbg=0
-
-" Search higlighted
-hi Search cterm=bold ctermfg=0 ctermbg=3
-
-" The default fold color is too bright and looks too much like the statusline
-hi Folded ctermfg=8 ctermbg=0
-hi FoldColumn cterm=bold ctermfg=8 ctermbg=0
-
-" Statusline
-" I like this better than all the reverse video of the default statusline.
-hi StatusLine term=reverse cterm=bold ctermfg=16 ctermbg=12
-hi StatusLineNC term=reverse cterm=bold ctermfg=2 ctermbg=8
-hi User1 ctermfg=4
-hi User2 ctermfg=1
-hi User3 ctermfg=5
-hi User4 cterm=bold ctermfg=8
-hi User5 ctermfg=6
-hi User6 ctermfg=2
-hi User7 ctermfg=2
-hi User8 ctermfg=3
-hi User9 cterm=reverse ctermfg=8 ctermbg=7
-
-" A nice, minimalistic tabline
-hi TabLine cterm=none ctermfg=12 ctermbg=0
-hi TabLineSel cterm=bold ctermfg=16 ctermbg=12
-hi TabLineFill cterm=none ctermbg=0 ctermfg=0
+hi Folded ctermfg=14 ctermbg=0
 
 " Always show tabs
 set showtabline=2
@@ -161,3 +179,4 @@ au VimLeave * !clear && echo "Vim closed"
 " NERDTree
 map <F2> :NERDTreeToggle<CR>
 let NERDTreeShowBookmarks=1
+

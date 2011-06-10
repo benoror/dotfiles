@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="virtual_root" mtime="1297326811" type="string">
+		<stringvalue>file:///home/benoror</stringvalue>
+	</entry>
+	<entry name="root" mtime="1297326811" type="string">
+		<stringvalue>file:///</stringvalue>
+	</entry>
+	<entry name="tree_view" mtime="1297326811" type="bool" value="true"/>
+</gconf>

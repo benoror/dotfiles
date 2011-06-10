@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="param-resource" mtime="1253967199" type="string">
+		<stringvalue>Home</stringvalue>
+	</entry>
+	<entry name="avatar_token" mtime="1254053202" type="string">
+		<stringvalue>9fc44160d0423dedb8a2fde6f7b3c2020443eb52</stringvalue>
+	</entry>
+	<entry name="avatar_id" mtime="1254053202" type="int" value="1254053202"/>
+	<entry name="avatar_mime" mtime="1254053202" type="string">
+		<stringvalue>image/jpg</stringvalue>
+	</entry>
+	<entry name="alias" mtime="1255047058" type="string">
+		<stringvalue>benoror</stringvalue>
+	</entry>
+	<entry name="normalized_name" mtime="1255473847" type="string">
+		<stringvalue>benoror@gmail.com</stringvalue>
+	</entry>
+	<entry name="enabled" mtime="1253924118" type="bool" value="true"/>
+	<entry name="param-password" mtime="1253924118" type="string">
+		<stringvalue>keyring</stringvalue>
+	</entry>
+	<entry name="param-account" mtime="1253924104" type="string">
+		<stringvalue>benoror@gmail.com</stringvalue>
+	</entry>
+	<entry name="display_name" mtime="1253924118" type="string">
+		<stringvalue>Google Talk (benoror@gmail.com)</stringvalue>
+	</entry>
+	<entry name="data_dir" mtime="1253924101" type="string">
+		<stringvalue>/home/benoror/.mission-control/accounts/gtalk0</stringvalue>
+	</entry>
+	<entry name="profile" mtime="1253924101" type="string">
+		<stringvalue>gtalk</stringvalue>
+	</entry>
+</gconf>

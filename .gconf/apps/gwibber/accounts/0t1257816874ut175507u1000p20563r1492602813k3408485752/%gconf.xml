@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="send_enabled" mtime="1257817018" type="bool" value="true"/>
+	<entry name="receive_enabled" mtime="1257817017" type="bool" value="true"/>
+	<entry name="password" mtime="1257816880" type="string">
+		<stringvalue>tkl@USELF2mkch</stringvalue>
+	</entry>
+	<entry name="username" mtime="1257816876" type="string">
+		<stringvalue>benoror</stringvalue>
+	</entry>
+	<entry name="message_color" mtime="1257816874" type="string">
+		<stringvalue>#72729f9fcfcf</stringvalue>
+	</entry>
+	<entry name="protocol" mtime="1257816874" type="string">
+		<stringvalue>twitter</stringvalue>
+	</entry>
+</gconf>

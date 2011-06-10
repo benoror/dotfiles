@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="action_double_click_titlebar" mtime="1266881409" type="string">
+		<stringvalue>toggle_maximize_vertically</stringvalue>
+	</entry>
+	<entry name="disable_workarounds" mtime="1262764879" type="bool" value="true"/>
+	<entry name="button_layout" mtime="1256837665" type="string">
+		<stringvalue>:minimize,maximize,close</stringvalue>
+	</entry>
+	<entry name="application_based" mtime="1256837605" type="bool" value="false"/>
+	<entry name="titlebar_uses_system_font" mtime="1262764847" type="bool" value="true"/>
+	<entry name="reduced_resources" mtime="1256837208" type="bool" value="false"/>
+	<entry name="compositing_manager" mtime="1275460508" type="bool" value="true"/>
+	<entry name="focus_mode" mtime="1266881396" type="string">
+		<stringvalue>click</stringvalue>
+	</entry>
+	<entry name="theme" mtime="1287368308" type="string">
+		<stringvalue>Clearlooks</stringvalue>
+	</entry>
+	<entry name="titlebar_font" mtime="1262635589" type="string">
+		<stringvalue>DejaVu Sans Bold Semi-Condensed 9</stringvalue>
+	</entry>
+	<entry name="num_workspaces" mtime="1267301549" type="int" value="2"/>
+</gconf>

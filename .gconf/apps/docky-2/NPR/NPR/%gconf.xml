@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="MyStations" mtime="1275544369" type="list" ltype="int">
+		<li type="int" value="102"/>
+		<li type="int" value="822"/>
+	</entry>
+</gconf>

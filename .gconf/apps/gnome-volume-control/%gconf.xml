@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="HDAIntelAlsamixerMux1" mtime="1275323063" type="bool" value="true"/>
+	<entry name="HDAIntelAlsamixerMux" mtime="1275323062" type="bool" value="true"/>
+	<entry name="HDAIntelAlsamixerDigital" mtime="1275323061" type="bool" value="true"/>
+	<entry name="HDAIntelAlsamixerIEC9581" mtime="1257036863" type="bool" value="true"/>
+	<entry name="HDAIntelAlsamixerIEC958" mtime="1257036862" type="bool" value="true"/>
+	<entry name="HDAIntelAlsamixerDigitalMicBoost" mtime="1256797846" type="bool" value="true"/>
+	<entry name="HDAIntelAlsamixerDigitalMic" mtime="1256797845" type="bool" value="true"/>
+	<entry name="HDAIntelAlsamixerCapture1" mtime="1256797845" type="bool" value="true"/>
+	<entry name="HDAIntelAlsamixerCapture" mtime="1256797844" type="bool" value="true"/>
+	<entry name="HDAIntelAlsamixerMicrophone" mtime="1256797842" type="bool" value="true"/>
+	<entry name="active-element" mtime="1275323102" type="string">
+		<stringvalue>HDA Intel (Alsa mixer)</stringvalue>
+	</entry>
+</gconf>

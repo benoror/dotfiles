@@ -20,9 +20,10 @@ vbell off
 #screen -t vim       2       vim -c NERDTree
 screen -t syslog-ng 0   tail -f -n36 /var/log/everything.log
 #source /home/benoror/.screentabs
-screen -t bash 3
-screen -t irssi 2   irssi
+screen -t bash 4
+screen -t radio 3
 screen -t ncmpcpp 1   ncmpcpp
+screen -t irssi 2   irssi
 
 # terminfo and termcap for nice 256 color terminal
 term "screen-256color"

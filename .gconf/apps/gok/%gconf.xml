@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="use_xkb_geom" mtime="1253319541" type="bool" value="false"/>
+</gconf>

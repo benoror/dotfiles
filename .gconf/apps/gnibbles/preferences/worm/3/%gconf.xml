@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="color" mtime="1257297717" type="string">
+		<stringvalue>orange</stringvalue>
+	</entry>
+</gconf>

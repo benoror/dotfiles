@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="download_prefix" mtime="1279864801" type="string">
+		<stringvalue>file:///home/benoror</stringvalue>
+	</entry>
+	<entry name="download_next_time" mtime="1279864782" type="int" value="1279868382"/>
+	<entry name="paned_position" mtime="1279865353" type="int" value="89"/>
+</gconf>

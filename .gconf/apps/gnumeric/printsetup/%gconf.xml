@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="hf-right" mtime="1263841862" type="list" ltype="string">
+	</entry>
+	<entry name="hf-middle" mtime="1263841862" type="list" ltype="string">
+	</entry>
+	<entry name="hf-left" mtime="1263841862" type="list" ltype="string">
+	</entry>
+</gconf>

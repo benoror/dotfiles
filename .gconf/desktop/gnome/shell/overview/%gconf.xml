@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="workspaces_view" mtime="1270591463" type="string">
+		<stringvalue>grid</stringvalue>
+	</entry>
+</gconf>

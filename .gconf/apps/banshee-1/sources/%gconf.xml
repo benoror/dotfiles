@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="no_confirm_unmap_smartplaylistsource" mtime="1268466750" type="bool" value="false"/>
+</gconf>

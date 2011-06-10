@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="move_on_info_save" mtime="1268345841" type="bool" value="true"/>
+	<entry name="file_pattern" mtime="1269200460" type="string">
+		<stringvalue>%track_number%. %title%</stringvalue>
+	</entry>
+	<entry name="folder_pattern" mtime="1269200460" type="string">
+		<stringvalue>%album_artist%%path_sep%%album%</stringvalue>
+	</entry>
+</gconf>

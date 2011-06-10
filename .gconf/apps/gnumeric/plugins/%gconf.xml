@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="file-states" mtime="1256141904" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>GOffice_plot_radar|2055:98066:4951:1227162631|/usr/lib/goffice/0.6.5/plugins/plot_radar</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fnlookup|2055:101278:7842:1254346063|/usr/lib/gnumeric/1.8.4/plugins/fn-lookup</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fnlogical|2055:101233:7350:1254346063|/usr/lib/gnumeric/1.8.4/plugins/fn-logical</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_derivatives|2055:101239:9438:1254346064|/usr/lib/gnumeric/1.8.4/plugins/derivatives</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_sc|2055:101276:7949:1254346059|/usr/lib/gnumeric/1.8.4/plugins/sc</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>GOffice_plot_surface|2055:98083:4680:1227162633|/usr/lib/goffice/0.6.5/plugins/plot_surface</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fninfo|2055:101195:9384:1254346063|/usr/lib/gnumeric/1.8.4/plugins/fn-info</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_GnomeGlossary|2055:101241:10380:1254346065|/usr/lib/gnumeric/1.8.4/plugins/gnome-glossary</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_lotus|2055:101273:8019:1254346059|/usr/lib/gnumeric/1.8.4/plugins/lotus</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>GOffice_plot_barcol|2055:98055:10119:1227162627|/usr/lib/goffice/0.6.5/plugins/plot_barcol</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fnstring|2055:101254:8967:1254346064|/usr/lib/gnumeric/1.8.4/plugins/fn-string</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_PyFunc|2055:101221:9422:1254346065|/usr/lib/gnumeric/1.8.4/plugins/py-func</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fneng|2055:101281:8989:1254346062|/usr/lib/gnumeric/1.8.4/plugins/fn-eng</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_oleo|2055:101248:8514:1254346059|/usr/lib/gnumeric/1.8.4/plugins/oleo</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fnstat|2055:101207:10883:1254346064|/usr/lib/gnumeric/1.8.4/plugins/fn-stat</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fnrandom|2055:101213:9751:1254346064|/usr/lib/gnumeric/1.8.4/plugins/fn-random</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_applix|2055:101226:8825:1254346061|/usr/lib/gnumeric/1.8.4/plugins/applix</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>GOffice_reg_logfit|2055:98087:1969:1227162639|/usr/lib/goffice/0.6.5/plugins/reg_logfit</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>GOffice_plot_boxes|2055:98051:2537:1227162635|/usr/lib/goffice/0.6.5/plugins/plot_boxes</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fncomplex|2055:101224:10259:1254346063|/usr/lib/gnumeric/1.8.4/plugins/fn-complex</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_xbase|2055:101198:8886:1254346060|/usr/lib/gnumeric/1.8.4/plugins/xbase</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fnfinancial|2055:101219:8375:1254346062|/usr/lib/gnumeric/1.8.4/plugins/fn-financial</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fnmath|2055:101284:9054:1254346063|/usr/lib/gnumeric/1.8.4/plugins/fn-math</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_PythonLoader|2055:101186:7316:1254346065|/usr/lib/gnumeric/1.8.4/plugins/python-loader</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_plan_perfect|2055:101260:9981:1254346060|/usr/lib/gnumeric/1.8.4/plugins/plan_perfect</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_sylk|2055:101205:9257:1254346060|/usr/lib/gnumeric/1.8.4/plugins/sylk</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fnTimeSeriesAnalysis|2055:101291:1096:1254346064|/usr/lib/gnumeric/1.8.4/plugins/fn-tsa</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_sample_datasource|2055:101300:6378:1254346065|/usr/lib/gnumeric/1.8.4/plugins/sample_datasource</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>GOffice_plot_xy|2055:98060:6879:1227162630|/usr/lib/goffice/0.6.5/plugins/plot_xy</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_r|2055:101217:6889:1254346063|/usr/lib/gnumeric/1.8.4/plugins/fn-r</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_psiconv|2055:101258:8382:1254346061|/usr/lib/gnumeric/1.8.4/plugins/psiconv</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fndatabase|2055:101236:9202:1254346062|/usr/lib/gnumeric/1.8.4/plugins/fn-database</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_OpenCalc|2055:101297:9230:1254346061|/usr/lib/gnumeric/1.8.4/plugins/openoffice</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>GOffice_smoothing|2055:98046:1915:1227162641|/usr/lib/goffice/0.6.5/plugins/smoothing</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_Excel|2055:101268:24035:1254346059|/usr/lib/gnumeric/1.8.4/plugins/excel</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_PerlFunc|2055:101193:6775:1254346066|/usr/lib/gnumeric/1.8.4/plugins/perl-func</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fnerlang|2055:101267:5306:1254346062|/usr/lib/gnumeric/1.8.4/plugins/fn-erlang</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>GOffice_plot_pie|2055:98073:6952:1227162625|/usr/lib/goffice/0.6.5/plugins/plot_pie</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_dif|2055:101190:16217:1254346060|/usr/lib/gnumeric/1.8.4/plugins/dif</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>GOffice_reg_linear|2055:98069:4437:1227162637|/usr/lib/goffice/0.6.5/plugins/reg_linear</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_CORBA|2055:101201:5390:1254346065|/usr/lib/gnumeric/1.8.4/plugins/corba</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fndate|2055:101230:9312:1254346062|/usr/lib/gnumeric/1.8.4/plugins/fn-date</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_html|2055:101262:29029:1254346060|/usr/lib/gnumeric/1.8.4/plugins/html</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_QPro|2055:101251:7119:1254346060|/usr/lib/gnumeric/1.8.4/plugins/qpro</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_PerlLoader|2055:101245:4592:1254346065|/usr/lib/gnumeric/1.8.4/plugins/perl-loader</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_UIHello|2055:101288:4585:1254346065|/usr/lib/gnumeric/1.8.4/plugins/uihello</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_mps|2055:101211:10901:1254346061|/usr/lib/gnumeric/1.8.4/plugins/mps</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_numtheory|2055:101294:12949:1254346062|/usr/lib/gnumeric/1.8.4/plugins/numtheory</stringvalue>
+		</li>
+	</entry>
+	<entry name="active" mtime="1263841862" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>Gnumeric_fnlookup</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_numtheory</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fndatabase</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_sc</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_sylk</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_psiconv</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_applix</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fneng</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fndate</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fnfinancial</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fncomplex</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fnstring</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_derivatives</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fninfo</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_QPro</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_dif</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_r</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_html</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fnlogical</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_plan_perfect</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fnrandom</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_Excel</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fnerlang</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_lotus</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_OpenCalc</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fnmath</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_fnstat</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_oleo</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_mps</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>Gnumeric_xbase</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>GOffice_reg_logfit</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>GOffice_reg_linear</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>GOffice_smoothing</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>GOffice_plot_surface</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>GOffice_plot_xy</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>GOffice_plot_pie</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>GOffice_plot_boxes</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>GOffice_plot_radar</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>GOffice_plot_barcol</stringvalue>
+		</li>
+	</entry>
+</gconf>

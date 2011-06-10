@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="speed" mtime="1256840577" type="int" value="1411"/>
+	<entry name="flags" mtime="1256840577" type="int" value="196"/>
+</gconf>

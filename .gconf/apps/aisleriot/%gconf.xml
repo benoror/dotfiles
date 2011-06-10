@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="statistics" mtime="1267169516" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>klondike.scm</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>2</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>10</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>224</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>774</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>poker.scm</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>0</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>2</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>0</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>0</stringvalue>
+		</li>
+	</entry>
+	<entry name="maximized" mtime="1267169274" type="bool" value="true"/>
+	<entry name="height" mtime="1253497307" type="int" value="738"/>
+	<entry name="width" mtime="1253497307" type="int" value="749"/>
+	<entry name="game_file" mtime="1267169482" type="string">
+		<stringvalue>klondike.scm</stringvalue>
+	</entry>
+	<entry name="recent_games_list" mtime="1267169482" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>klondike.scm</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>poker.scm</stringvalue>
+		</li>
+	</entry>
+	<entry name="show_statusbar" mtime="1267169274" type="bool" value="true"/>
+	<entry name="show_toolbar" mtime="1255545554" type="bool" value="true"/>
+</gconf>

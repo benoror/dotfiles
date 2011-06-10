@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="realname" mtime="1259118858" type="string">
+		<stringvalue>Benji Orozco</stringvalue>
+	</entry>
+	<entry name="nickname" mtime="1259118858" type="string">
+		<stringvalue>benoror</stringvalue>
+	</entry>
+</gconf>
