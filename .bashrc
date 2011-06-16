@@ -3,10 +3,20 @@
 
 # bash options ------------------------------------
 #set -o vi                  # vi input mode
+shopt -s autocd             # cd by naming directory
+shopt -s cdable_vars        # if cd arg is not valid, assumes its a var defining a dir
+shopt -s cdspell            # autocorrects cd misspellings
 shopt -s checkwinsize       # update the value of LINES and COLUMNS after each command if altered
+shopt -s cmdhist            # save multi-line commands in history as single line
+shopt -s dotglob            # include dotfiles in pathname expansion
+shopt -s expand_aliases     # expand aliases
+shopt -s extglob            # enable extended pattern-matching features
+shopt -s histappend         # append to (not overwrite) the history file
+shopt -s hostcomplete       # attempt hostname expansion when @ is at the beginning of a word
+shopt -s nocaseglob         # pathname expansion will be treated as case-insensitive
 
-# Set our environment variables
-#export PATH="$PATH:/opt/ruby1.8/bin"
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
 
 # set PATH so it includes user's private bin if it exists
 if [ -d ~/bin ] ; then

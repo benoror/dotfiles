@@ -138,6 +138,21 @@ set listchars=tab:>-,trail:.,extends:>
 " Key bindings
 """"""""""""""""""""""""""""""""""""""""""""""""
 
+" keep cursor centered
+":nnoremap <Down> jzz
+":nnoremap <Up> kzz
+":nnoremap j jzz
+":nnoremap k kzz
+
+" Underscore as word separator
+:set iskeyword-=_
+
+" space bar un-highligts search
+:noremap <silent> <Space> :silent noh<Bar>echo<CR>
+
+" Allows writing to files with root priviledges
+cmap w!! w !sudo tee % > /dev/null
+
 "allow deleting selection without updating the clipboard (yank buffer)
 vnoremap x "_x
 vnoremap X "_X
@@ -149,8 +164,8 @@ set number
 set numberwidth=5
 
 " tab navigation like firefox
-map <C-t> :tabnew
-imap <C-t> <Esc>:tabnew
+map <C-t> :tabnew 
+imap <C-t> <Esc>:tabnew 
 
 " avoid finger error
 map <F1> <Esc>
