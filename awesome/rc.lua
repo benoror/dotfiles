@@ -43,11 +43,11 @@ layouts =
 -- Define a tag table which hold all screen tags.
 tags = {
     names  = {
-                "1 [code]",     	-- tile
-                "2 [debug]",     	-- tile
-                "3 [misc]",   		-- tile
-                "4 [float]",     	-- float
-                "5 [log]"     	        -- tile
+                "1 [code]",	-- tile
+                "2 [debug]",    -- tile
+                "3 [misc]",     -- tile
+                "4 [float]",    -- float
+                "5 [log]"       -- tile
              },
     layout = {
                 layouts[2],
@@ -351,23 +351,23 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 -- {{{ Autorun
 autorun = true
 autorunApps = {
-	"feh --bg-scale Dropbox/Pictures/Wallpapers/squares2.jpg",
-	"urxvt -name term1",
-	"gvim",
+	"sh .fehbg",
+	-- "urxvt -name term1",
+	-- "gvim",
 	-- "chromium",
 	-- "urxvt -name irssi -e irssi",
 	-- "urxvt -name ncmpcpp -e ncmpcpp",
 	"urxvt -name syslog-ng -e tail -f -n100 /var/log/everything.log",
 	"urxvt -name htop -e htop",
-	"wicd-client",
-	"volwheel",
-	"dropboxd"
+	-- "wicd-client",
+	-- "volwheel",
+	-- "dropboxd"
 	-- "parcellite",
 	-- "gnome-settings-daemon"
 }
 if autorun then
   for app = 1, #autorunApps do
-    awful.util.spawn(autorunApps[app])
+    awful.util.spawn(autorunApps[app], false, 1)
   end
 end
 -- }}}
