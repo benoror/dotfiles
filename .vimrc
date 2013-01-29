@@ -184,9 +184,6 @@ set showtabline=2
 "hi rightMargin ctermfg=lightblue
 "match rightMargin /.\%>80v/
 
-" Clear screen on exit
-au VimLeave * !clear && echo "Vim closed"
-
 " NERDTree
 "filetype plugin on
 "autocmd BufRead * NERDTree

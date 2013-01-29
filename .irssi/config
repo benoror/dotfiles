@@ -8,8 +8,8 @@ servers = (
     autoconnect = "yes";
   },
   {
-    address = "irc.oftc.net";
-    chatnet = "OFTC";
+    address = "irc.geekshed.net";
+    chatnet = "Geekshed";
     port = "6667";
     use_ssl = "no";
     ssl_verify = "no";
@@ -41,7 +41,7 @@ chatnets = {
     realname = "Benji Orozco";
     autosendcmd = "/msg NickServ identify g8ag8g;wait 500;/window goto NickServ;/wc";
   };
-  OFTC = {
+  Geekshed = {
     type = "IRC";
     nick = "benoror";
     username = "benoror";
@@ -63,11 +63,12 @@ chatnets = {
 };
 
 channels = (
-  { name = "#unixmexico"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#Chris"; chatnet = "Geekshed"; autojoin = "yes"; },
   { name = "#archlinux"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#archlinux-es"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#unixmexico"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#heroku"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#rubyonrails"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#diaspora"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#diaspora-dev"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#undergroundorgmx"; chatnet = "2600"; autojoin = "yes"; }
 );
 
@@ -286,8 +287,16 @@ logs = { };
 
 ignores = (
   {
-    level = "JOINS PARTS QUITS MODES";
-    channels = ( "#unixmexico", "#archlinux", "#archlinux-es", "#rubyonrails", "#django", "#awesome", "&bitlbee" );
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#unixmexico",
+                 "#Chris",
+                 "#archlinux",
+                 "#archlinux-es",
+                 "#unixmexico",
+                 "#heroku",
+                 "#rubyonrails",
+                 "#undergroundorgmx",
+                 "&bitlbee" );
   }
 );
 

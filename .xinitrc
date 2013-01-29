@@ -16,7 +16,14 @@ volwheel &
 # wicd
 wicd-client &
 
+# VMWare copy-paste
+vmware-user-suid-wrapper &
+
+#Synergy Client
+#synergyc --daemon benja-pc &
+#(sleep 30 && qsynergy && sleep 10 && setxkbmap es) &
+
 # Dropbox
-(sleep 300 && /usr/bin/dropboxd) &
+(sleep 120 && /usr/bin/dropboxd) &
 
 exec awesome
