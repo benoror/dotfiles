@@ -3,14 +3,28 @@
 # hide mouse cursor when idle
 unclutter -idle 5 -noevents &
 
-# set background
+# set background -- better in awesome startup
 sh .fehbg &
 
 #xrandr -s 1280x768 &&
 #xrandr -s 1366x768 &&
 #xrandr -s 1440x900 &&
-xrandr -s 1680x1050 &&
+#xrandr -s 1680x1050 &&
 
-vmware-user-suid-wrapper &&
+# thunar
+# https://wiki.archlinux.org/index.php/Thunar
+#thunar --daemon &
+
+# volume widget
+#volwheel &
+
+# wicd
+#wicd-client &
+
+# VMWare copy-paste
+vmware-user-suid-wrapper &
+
+#TOR Vidalia
+vidalia -style CDE &
 
 exec awesome

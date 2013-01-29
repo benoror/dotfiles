@@ -1,6 +1,9 @@
 # ~/.bashrc
 # by Benji Orozco
 
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
 # bash options ------------------------------------
 #set -o vi                  # vi input mode
 shopt -s autocd             # cd by naming directory
@@ -15,16 +18,10 @@ shopt -s histappend         # append to (not overwrite) the history file
 shopt -s hostcomplete       # attempt hostname expansion when @ is at the beginning of a word
 shopt -s nocaseglob         # pathname expansion will be treated as case-insensitive
 
-# If not running interactively, don't do anything
-[ -z "$PS1" ] && return
-
 # set PATH so it includes user's private bin if it exists
 if [ -d ~/bin ] ; then
     PATH=~/bin:"${PATH}"
 fi
-#if [ -d ~/Dropbox/bin ] ; then
-#    PATH=~/Dropbox/bin:"${PATH}"
-#fi
 
 export MAILCHECK=0
 export EDITOR="vim"
@@ -57,8 +54,8 @@ fi
 # Misc Alias.
 alias gvim='gvim -p'
 alias vim='vim -p'
-alias vi='vim'
-alias v='vim'
+alias vi='vim -p'
+alias v='vim -p'
 alias psaux='ps aux | less'
 alias cd..='cd ..'
 alias ..='cd ..'
@@ -70,6 +67,8 @@ alias l='ls -CF'
 alias xit='exit'
 alias grep='grep --colour'
 alias cl=clear
+alias pamcna='pacman'
+alias pacmna='pacman'
 
 # Security Alias.
 alias rm='rm -i'

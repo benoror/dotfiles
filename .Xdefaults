@@ -26,12 +26,13 @@ URxvt.shiva.scrollTtyOutput:      false
 !URxvt*scrollBar: false
 URxvt*scrollBar_right: true
 URxvt*scrollstyle:plain
+URxvt*scrollwidth:20
 URxvt*scrollColor:#555555
 URxvt*borderLess: false
 
 ! -- Fonts -- !
-URxvt.font:             xft:Terminus:pixelsize=14:antialias=true
-URxvt.boldFont:         xft:Terminus:bold:pixelsize=14:antialias=true
+URxvt.font:             xft:Terminus:pixelsize=16:antialias=true
+URxvt.boldFont:         xft:Terminus:bold:pixelsize=16:antialias=true
 #URxvt.font:xft:envy code r:medium:pixelsize=12
 #URxvt.boldFont:xft:envy code r:bold:pixelsize=12
 #URxvt.font:xft:dina:medium:pixelsize=12
