@@ -1,53 +1,4 @@
 """"""""""""""""""""""""""""""""""""""""""""""""
-" Vundle Config http://github.com/gmarik/vundle/
-""""""""""""""""""""""""""""""""""""""""""""""""
-" vundle
-set nocompatible               " be iMproved
-filetype off                   " required!
-
-set rtp+=~/.vim/vundle.git/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
-
-" My Bundles here:
-"
-" original repos on github
-Bundle 'tpope/vim-rails'
-Bundle 'msanders/snipmate.vim'
-Bundle 'scrooloose/nerdtree'
-" vim-scripts repos
-"Bundle 'L9'
-"Bundle 'FuzzyFinder'
-"Bundle 'rails.vim'
-" non github repos
-Bundle 'git://git.wincent.com/command-t.git'
-Bundle 'git://github.com/altercation/vim-colors-solarized.git'
-Bundle 'git://github.com/vim-scripts/xoria256.vim.git'
-" ...
-
-filetype plugin indent on     " required!
-" or
-" filetype plugin on          " to not use the indentation settings set by plugins
-
-"
-" Brief help
-"
-" :BundleInstall  - install bundles (won't update installed)
-" :BundleInstall! - update if installed
-"
-" :Bundles foo    - search for foo
-" :Bundles! foo   - refresh cached list and search for foo
-"
-" :BundleClean    - confirm removal of unused bundles
-" :BundleClean!   - remove without confirmation
-"
-" see :h vundle for more details
-" Note: comments after Bundle command are not allowed..
-
-""""""""""""""""""""""""""""""""""""""""""""""""
 " Identation
 """"""""""""""""""""""""""""""""""""""""""""""""
 set softtabstop=2
@@ -183,12 +134,3 @@ set showtabline=2
 " Color lines that exceed 80 columns in blue (doesn't scale)
 "hi rightMargin ctermfg=lightblue
 "match rightMargin /.\%>80v/
-
-" NERDTree
-"filetype plugin on
-"autocmd BufRead * NERDTree
-
-" NERDTree
-map <F2> :NERDTreeToggle<CR>
-let NERDTreeShowBookmarks=1
-
