@@ -4,5 +4,6 @@
 .gconfd/*
 .heroku/*
 .ssh/*
+.gnupg/*
 .vim/bundle/*
 .vim/vundle.git
