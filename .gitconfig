@@ -1,3 +1,5 @@
 [user]
-	name = Benji Orozco
 	email = benoror@gmail.com
+	name = Benjamin Orozco
+[credential]
+	helper = cache --timeout=3600

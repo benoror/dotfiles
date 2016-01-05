@@ -39,9 +39,9 @@ URxvt.boldFont:         xft:Terminus:bold:pixelsize=16:antialias=true
 #URxvt.boldFont:xft:dina:bold:pixelsize=12
 
 ! teh transparency stuff
-URxvt.transparent: true
-URxvt*inheritPixmap: true
-!URxvt*tintColor: #3a3a3a
+!URxvt.transparent: true
+!URxvt*inheritPixmap: true
+URxvt*tintColor: #3a3a3a
 !URxvt*shading: 50
 URxvt*depth: 24
 !URxvt*background: rgba:3f00/3f00/3f00/dddd
