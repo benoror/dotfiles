@@ -1,5 +1,5 @@
 # ~/.bashrc
-# by Benji Orozco
+# by Ben Orozco <github.com/benoror>
 
 # If not running interactively, don't do anything
 #Test1
@@ -23,6 +23,7 @@ shopt -s extglob            # enable extended pattern-matching features
 shopt -s histappend         # append to (not overwrite) the history file
 shopt -s hostcomplete       # attempt hostname expansion when @ is at the beginning of a word
 shopt -s nocaseglob         # pathname expansion will be treated as case-insensitive
+shopt -s globstar           # match all files and zero or more directories and subdirectories. 
 
 # set PATH so it includes user's private bin if it exists
 if [ -d ~/bin ] ; then
@@ -40,7 +41,7 @@ export PAGER=less
 export LESS='-iMnQR'
 export PRINTER=lp
 export CVS_RSH=ssh
-export HISTSIZE=2000
+export HISTSIZE=10000
 export HISTFILESIZE=100000
 export HISTCONTROL=ignoreboth
 export TERM=xterm-256color
@@ -82,6 +83,9 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+# colored GCC warnings and errors
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
 # Misc Alias.
 alias gvim='gvim -p'
 alias vim='vim -p'
@@ -107,9 +111,22 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias ln='ln -i'
 
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
 fi
 
 #http://lifehacker.com/5167879/cut-the-bash-prompt-down-to-size
@@ -196,6 +213,22 @@ if ! shopt -oq posix; then
 fi
 
 #------------------------------------------------------------------------------
+# Added by NVM
+#------------------------------------------------------------------------------
+export NVM_DIR="/home/benoror/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+#------------------------------------------------------------------------------
+# Added by Perl
+#------------------------------------------------------------------------------
+PATH="/home/benoror/perl5/bin${PATH+:}${PATH}"; export PATH;
+PERL5LIB="/home/benoror/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/benoror/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/benoror/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/benoror/perl5"; export PERL_MM_OPT;
+
+#------------------------------------------------------------------------------
 # Message.
 #------------------------------------------------------------------------------
 . ~/.message
+
