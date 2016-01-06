@@ -187,8 +187,7 @@ if ! shopt -oq posix; then
 fi
 
 #------------------------------------------------------------------------------
-# Git Prompt
-# http://jondavidjohn.com/quest-for-the-perfect-git-bash-prompt-redux/
+# Prompt
 #------------------------------------------------------------------------------
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -213,6 +212,9 @@ else
 fi
 unset color_prompt force_color_prompt
 
+# Run twolfson/sexy-bash-prompt
+. ~/.bash_prompt
+
 #------------------------------------------------------------------------------
 # Added by NVM
 #------------------------------------------------------------------------------
@@ -232,4 +234,3 @@ PERL_MM_OPT="INSTALL_BASE=/home/benoror/perl5"; export PERL_MM_OPT;
 # Message.
 #------------------------------------------------------------------------------
 . ~/.message
-
