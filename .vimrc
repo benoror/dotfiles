@@ -105,6 +105,14 @@ highlight Pmenu ctermfg=0 ctermbg=3
 highlight PmenuSel ctermfg=0 ctermbg=7
 
 """"""""""""""""""""""""""""""""""""""""""""""""
+" Habit breaking, habit making
+""""""""""""""""""""""""""""""""""""""""""""""""
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntax highlighting
 """"""""""""""""""""""""""""""""""""""""""""""""
 
