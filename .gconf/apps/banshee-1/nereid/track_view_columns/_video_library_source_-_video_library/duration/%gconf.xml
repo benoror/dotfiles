@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="width" mtime="1269199293" type="float" value="0.07961399108171463"/>
-	<entry name="visible" mtime="1269199293" type="bool" value="true"/>
-	<entry name="order" mtime="1269199293" type="int" value="7"/>
-</gconf>

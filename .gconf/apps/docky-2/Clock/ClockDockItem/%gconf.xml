@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="ClockTheme" mtime="1265182322" type="string">
-		<stringvalue>default-24</stringvalue>
-	</entry>
-	<entry name="ShowDate" mtime="1256939639" type="bool" value="true"/>
-	<entry name="ShowDigital" mtime="1265182309" type="bool" value="false"/>
-	<entry name="ShowMilitary" mtime="1265182322" type="bool" value="true"/>
-</gconf>

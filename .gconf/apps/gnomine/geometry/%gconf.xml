@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="mode" mtime="1259014953" type="int" value="1"/>
-	<entry name="ysize" mtime="1259014952" type="int" value="16"/>
-	<entry name="xsize" mtime="1259014952" type="int" value="16"/>
-	<entry name="nmines" mtime="1259014952" type="int" value="40"/>
-</gconf>

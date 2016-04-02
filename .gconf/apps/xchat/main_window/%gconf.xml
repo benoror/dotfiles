@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="y" mtime="1261693604" type="int" value="52"/>
-	<entry name="x" mtime="1261693604" type="int" value="399"/>
-	<entry name="height" mtime="1261693599" type="int" value="600"/>
-	<entry name="width" mtime="1261693599" type="int" value="800"/>
-</gconf>

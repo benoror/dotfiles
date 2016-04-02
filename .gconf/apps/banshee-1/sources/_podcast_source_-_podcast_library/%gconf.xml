@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="library-location" mtime="1269200461" type="string">
-		<stringvalue>/home/benoror/Podcasts</stringvalue>
-	</entry>
-</gconf>

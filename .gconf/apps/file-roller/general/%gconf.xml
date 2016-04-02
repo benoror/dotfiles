@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="encrypt_header" mtime="1281390701" type="bool" value="false"/>
-	<entry name="migrate_directories" mtime="1252922513" type="bool" value="false"/>
-</gconf>

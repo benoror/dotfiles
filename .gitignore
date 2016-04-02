@@ -1,7 +1,3 @@
-.mutt/*
-.irssi/*
-.gconf/*
-.gconfd/*
 .heroku/*
 .ssh/*
 .gnupg/*

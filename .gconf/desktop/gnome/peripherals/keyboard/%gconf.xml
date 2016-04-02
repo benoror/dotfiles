@@ -1,4 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="disable_xmm_and_xkb_warning" mtime="1267229548" type="bool" value="true"/>
-</gconf>

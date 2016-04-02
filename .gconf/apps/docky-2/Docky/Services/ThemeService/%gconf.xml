@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="GlowTime" mtime="1277926684" type="int" value="10"/>
-	<entry name="UrgentHue" mtime="1277926678" type="int" value="150"/>
-	<entry name="Theme" mtime="1277926668" type="string">
-		<stringvalue>Classic</stringvalue>
-	</entry>
-</gconf>

@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="command" mtime="1254798060" type="string">
-		<stringvalue>emerald --replace</stringvalue>
-	</entry>
-</gconf>

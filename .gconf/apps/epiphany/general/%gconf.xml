@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="toolbar_style" mtime="1257261007" type="string">
-		<stringvalue>icons</stringvalue>
-	</entry>
-</gconf>
