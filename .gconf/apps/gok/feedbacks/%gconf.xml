@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="workaround" mtime="1253319547" type="string">
-		<stringvalue>GConf seems to have problems accessing directories who do not have any siblings who are keys.  This key exists to ensure that the subdirectories in this directory do have a sibling who is a key - this key.</stringvalue>
-	</entry>
-</gconf>

@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="ActiveApplets" mtime="1254841277" type="string">
-		<stringvalue>BatteryMonitor;ClockDockItem;CPUMonitorDocklet;SwitcherDocklet;TrashDockItem;VolumeDocklet;WeatherDocklet;</stringvalue>
-	</entry>
-</gconf>

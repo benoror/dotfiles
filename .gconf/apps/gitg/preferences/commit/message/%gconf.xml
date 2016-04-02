@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="right-margin-at" mtime="1258608235" type="int" value="72"/>
-	<entry name="show-right-margin" mtime="1258608235" type="bool" value="true"/>
-</gconf>

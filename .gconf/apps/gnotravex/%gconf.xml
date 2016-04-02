@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="maximized" mtime="1256341202" type="bool" value="true"/>
-	<entry name="height" mtime="1256341201" type="int" value="240"/>
-	<entry name="width" mtime="1256341201" type="int" value="320"/>
-	<entry name="colours" mtime="1256341200" type="bool" value="true"/>
-</gconf>

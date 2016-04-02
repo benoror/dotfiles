@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="shuffle_mode" mtime="1275519044" type="string">
-		<stringvalue>shuffle_off</stringvalue>
-	</entry>
-	<entry name="repeat_mode" mtime="1268345784" type="string">
-		<stringvalue>repeat_none</stringvalue>
-	</entry>
-</gconf>

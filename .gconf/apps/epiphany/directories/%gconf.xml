@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="downloads_folder" mtime="1257018988" type="string">
-		<stringvalue>~/Downloads</stringvalue>
-	</entry>
-</gconf>

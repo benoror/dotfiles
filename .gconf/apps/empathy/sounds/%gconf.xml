@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="sounds_incoming_message" mtime="1257463921" type="bool" value="false"/>
-	<entry name="sounds_enabled" mtime="1257463922" type="bool" value="false"/>
-</gconf>

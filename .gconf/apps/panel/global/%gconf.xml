@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="panel_show_delay" mtime="1259620135" type="int" value="30"/>
-	<entry name="panel_hide_delay" mtime="1259620130" type="int" value="50"/>
-	<entry name="panel_minimized_size" mtime="1259620110" type="int" value="0"/>
-</gconf>

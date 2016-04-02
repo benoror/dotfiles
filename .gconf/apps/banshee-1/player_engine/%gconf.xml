@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="replay_gain_enabled" mtime="1268347044" type="bool" value="true"/>
-	<entry name="equalizer_preset" mtime="1274416478" type="string">
-		<stringvalue>Pop</stringvalue>
-	</entry>
-	<entry name="volume" mtime="1275519044" type="int" value="100"/>
-</gconf>
