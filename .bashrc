@@ -216,21 +216,9 @@ unset color_prompt force_color_prompt
 . ~/.bash_prompt
 
 #------------------------------------------------------------------------------
-# Added by NVM
-#------------------------------------------------------------------------------
-export NVM_DIR="/home/benoror/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-#------------------------------------------------------------------------------
-# Added by Perl
-#------------------------------------------------------------------------------
-PATH="/home/benoror/perl5/bin${PATH+:}${PATH}"; export PATH;
-PERL5LIB="/home/benoror/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/benoror/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/benoror/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/benoror/perl5"; export PERL_MM_OPT;
-
-#------------------------------------------------------------------------------
 # Message.
 #------------------------------------------------------------------------------
 . ~/.message
+
+export NVM_DIR="/Users/benoror/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
