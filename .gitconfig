@@ -3,3 +3,7 @@
 	email = benoror@gmail.com
 [core]
 	editor = vim
+[log]
+	abbrevCommit = true
+[format]
+	pretty = oneline
