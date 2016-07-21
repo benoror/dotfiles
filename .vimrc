@@ -29,6 +29,8 @@ Plugin 'VundleVim/Vundle.vim'
 " Avoid a name conflict with L9
 " Plugin 'user/L9', {'name': 'newL9'}
 
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'fugitive.vim'
 Plugin 'yosiat/oceanic-next-vim'
 
 " All of your Plugins must be added before the following line
@@ -99,7 +101,7 @@ set lazyredraw
 " Dark background
 set t_Co=256
 "I always work on dark terminals
-"set background=dark
+set background=dark
 "Make the completion menus readable
 highlight Pmenu ctermfg=0 ctermbg=3
 highlight PmenuSel ctermfg=0 ctermbg=7
@@ -107,20 +109,20 @@ highlight PmenuSel ctermfg=0 ctermbg=7
 """"""""""""""""""""""""""""""""""""""""""""""""
 " Habit breaking, habit making
 """"""""""""""""""""""""""""""""""""""""""""""""
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+" noremap <Up> <NOP>
+" noremap <Down> <NOP>
+" noremap <Left> <NOP>
+" noremap <Right> <NOP>
 
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-
-inoremap <left> <nop>
-inoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
+" nnoremap <left> <nop>
+" nnoremap <right> <nop>
+" nnoremap <up> <nop>
+" nnoremap <down> <nop>
+"
+" inoremap <left> <nop>
+" inoremap <right> <nop>
+" inoremap <up> <nop>
+" inoremap <down> <nop>
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " Syntax highlighting
@@ -182,16 +184,25 @@ set number
 set numberwidth=5
 
 " tab navigation like firefox
-map <C-t> :tabnew 
-imap <C-t> <Esc>:tabnew 
+map <C-t> :tabnew
+imap <C-t> <Esc>:tabnew
 
 " avoid finger error
 map <F1> <Esc>
 imap <F1> <Esc>
 
-" Command-T
-nmap <silent> <S-t> :CommandT<CR>
-nmap <silent> <S-b> :CommandTBuffer<CR>
+""""""""""""""""""""""""""""""""""""""""""""""""
+" CtrlP
+""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <silent> <C-p> :CtrlPMixed<CR>
+" Open in new tabs by default
+" https://github.com/kien/ctrlp.vim/issues/160
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
+
+
 
 hi Folded ctermfg=14 ctermbg=0
 
