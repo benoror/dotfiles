@@ -3,3 +3,4 @@
 .gnupg/*
 .vim/bundle/*
 .vim/vundle.git
+.vim/.netrwhist
