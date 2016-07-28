@@ -1,10 +1,13 @@
 [user]
-	name = Ben Orozco
-	email = benoror@gmail.com
+  name = Ben Orozco
+  email = benoror@gmail.com
 [core]
-	editor = vim
-	pager = less -+F -+X
+  editor = vim
+  pager = less -+F -+X
 [log]
-	abbrevCommit = true
+  abbrevCommit = true
 [format]
-	pretty = oneline
+  pretty = oneline
+[alias]
+  co = checkout
+  br = branch

@@ -32,6 +32,10 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'fugitive.vim'
 Plugin 'yosiat/oceanic-next-vim'
+Plugin 'joukevandermaas/vim-ember-hbs'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-surround'
+Plugin 'pangloss/vim-javascript'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -66,8 +70,10 @@ set bs=2
 set history=50
 "Always show cursor position
 set ruler
-" Folding
-set fdm=marker
+" Folding method
+" set fdm=marker
+set foldmethod=syntax
+set foldlevelstart=20
 "You can use the mouse to resize windows in Vim if you set your mouse as follows.
 set mouse=a
 "Usually annoys me
@@ -194,7 +200,10 @@ imap <F1> <Esc>
 """"""""""""""""""""""""""""""""""""""""""""""""
 " CtrlP
 """"""""""""""""""""""""""""""""""""""""""""""""
+
+" Use mixed mode by default
 nmap <silent> <C-p> :CtrlPMixed<CR>
+
 " Open in new tabs by default
 " https://github.com/kien/ctrlp.vim/issues/160
 let g:ctrlp_prompt_mappings = {
@@ -202,12 +211,29 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
 
+" Exclude files and directories using Vim's wildignore and CtrlP's own g:ctrlp_custom_ignore:
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
+" Ignore some folders
+let g:ctrlp_custom_ignore = '\v[\/](DS_Store|node_modules|bower_components|dist|coverage|tmp|electron-builds)|(\.(swp|ico|git|svn))$'
+" Use .gitignore to generate ignores
+" https://github.com/kien/ctrlp.vim/issues/174
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+"let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+" Misc
+""""""""""""""""""""""""""""""""""""""""""""""""
 
 hi Folded ctermfg=14 ctermbg=0
 
 " Always show tabs
 set showtabline=2
+  
+" automatically refresh any unchanged files. Also see :checktime
+set autoread
 
 " Color lines that exceed 80 columns in blue (doesn't scale)
 "hi rightMargin ctermfg=lightblue
