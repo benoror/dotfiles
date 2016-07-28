@@ -36,6 +36,8 @@ Plugin 'joukevandermaas/vim-ember-hbs'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
 Plugin 'pangloss/vim-javascript'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -222,6 +224,12 @@ let g:ctrlp_custom_ignore = '\v[\/](DS_Store|node_modules|bower_components|dist|
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 "let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 
+""""""""""""""""""""""""""""""""""""""""""""""""
+" NERDTree{Tabs}
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Open NERDTree on console vim startup
+let g:nerdtree_tabs_open_on_console_startup = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " Misc
@@ -231,7 +239,7 @@ hi Folded ctermfg=14 ctermbg=0
 
 " Always show tabs
 set showtabline=2
-  
+
 " automatically refresh any unchanged files. Also see :checktime
 set autoread
 
