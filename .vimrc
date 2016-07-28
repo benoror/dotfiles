@@ -65,8 +65,6 @@ set expandtab
 
 set smartindent
 
-"highlight current line
-set cursorline
 "allow backspacing over everything in insert mode
 set bs=2
 " keep 50 lines of command line history
@@ -162,6 +160,13 @@ highlight RedundantSpaces term=standout ctermbg=red guibg=red
 match RedundantSpaces /\s\+$\| \+\ze\t/ "\ze sets end of match so only spaces highlighted
 "use :set list! to toggle visible whitespace on/off
 set listchars=tab:>-,trail:.,extends:>
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+" Highlight current line
+" http://stackoverflow.com/questions/8640276/how-do-i-change-my-vim-highlight-line-to-not-be-an-underline
+""""""""""""""""""""""""""""""""""""""""""""""""
+set cursorline
+hi CursorLine term=bold cterm=bold ctermbg=237 guibg=Grey40
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " Key bindings
