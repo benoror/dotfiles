@@ -5,3 +5,4 @@
 .vim/vundle.git
 .vim/.netrwhist
 osx/.hyperterm_plugins/node_modules/
+.vim/bundle/
