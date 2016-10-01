@@ -32,13 +32,17 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'fugitive.vim'
 Plugin 'yosiat/oceanic-next-vim'
+"Plugin 'mhartington/oceanic-next'
 Plugin 'joukevandermaas/vim-ember-hbs'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'Nopik/vim-nerdtree-direnter'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'elzr/vim-json'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -161,6 +165,10 @@ match RedundantSpaces /\s\+$\| \+\ze\t/ "\ze sets end of match so only spaces hi
 "use :set list! to toggle visible whitespace on/off
 set listchars=tab:>-,trail:.,extends:>
 
+" How to Strip Trailing Whitespace
+" http://peterdowns.com/posts/strip-trailing-whitespace.html
+autocmd BufWritePre <buffer> :%s/\s\+$//e
+
 """"""""""""""""""""""""""""""""""""""""""""""""
 " Highlight current line
 " http://stackoverflow.com/questions/8640276/how-do-i-change-my-vim-highlight-line-to-not-be-an-underline
@@ -198,8 +206,8 @@ set number
 set numberwidth=5
 
 " tab navigation like firefox
-map <C-t> :tabnew
-imap <C-t> <Esc>:tabnew
+map <C-t> :tabnew<Space>
+imap <C-t> <Esc>:tabnew<Space>
 
 " avoid finger error
 map <F1> <Esc>
@@ -235,13 +243,23 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 " Open NERDTree on console vim startup
-let g:nerdtree_tabs_open_on_console_startup = 1
+let g:nerdtree_tabs_open_on_console_startup = 0
+
+" Mapping
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+
+" Open in new tab bye default
+let NERDTreeMapOpenInTab='<Enter>'
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " Misc
 """"""""""""""""""""""""""""""""""""""""""""""""
-
+" Highlight Folded
 hi Folded ctermfg=14 ctermbg=0
+
+"
+set endofline
 
 " Always show tabs
 set showtabline=2
