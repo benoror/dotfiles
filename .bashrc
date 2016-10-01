@@ -23,7 +23,7 @@ shopt -s extglob            # enable extended pattern-matching features
 shopt -s histappend         # append to (not overwrite) the history file
 shopt -s hostcomplete       # attempt hostname expansion when @ is at the beginning of a word
 shopt -s nocaseglob         # pathname expansion will be treated as case-insensitive
-shopt -s globstar &> /dev/null           # match all files and zero or more directories and subdirectories. 
+shopt -s globstar &> /dev/null           # match all files and zero or more directories and subdirectories.
 
 # set PATH so it includes user's private bin if it exists
 if [ -d ~/bin ] ; then
@@ -68,7 +68,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
-
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
@@ -77,47 +76,15 @@ fi
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# Misc Alias.
-alias gvim='gvim -p'
-alias vim='vim -p'
-alias vi='vim -p'
-alias v='vim -p'
-alias psaux='ps aux | less'
-alias cd..='cd ..'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias n='netstat -a -e -e -p -A inet'
-alias ll='ls -l'
-alias la='ls -A'
-alias l='ls -CF'
-alias xit='exit'
-alias grep='grep --colour'
-alias cl=clear
-alias pamcna='pacman'
-alias pacmna='pacman'
-
-# Security Alias.
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-alias ln='ln -i'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+# You may want to put all your additions into a separate file
+if [ -f ~/.shell_aliases ]; then
+    . ~/.shell_aliases
 fi
 
 # Extract Files

@@ -1,0 +1,30 @@
+# Misc Alias.
+alias gvim='gvim -p'
+alias vim='vim -p'
+alias vi='vim -p'
+alias v='vim -p'
+alias psaux='ps aux | less'
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias n='netstat -a -e -e -p -A inet'
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
+alias xit='exit'
+alias grep='grep --colour'
+alias cl=clear
+alias pamcna='pacman'
+alias pacmna='pacman'
+
+# Security Alias.
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias ln='ln -i'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+
