@@ -28,12 +28,18 @@ if tput setaf 1 &> /dev/null; then
     #sexy_bash_prompt_git_progress_color="$sexy_bash_prompt_bold$(tput setaf 9)" # BOLD RED
   #else
   # Otherwise, use colors from our set of 8
-    sexy_bash_prompt_user_color="$sexy_bash_prompt_bold$(tput setaf 4)" # BOLD BLUE
-    sexy_bash_prompt_preposition_color="$sexy_bash_prompt_bold$(tput setaf 7)" # BOLD WHITE
-    sexy_bash_prompt_device_color="$sexy_bash_prompt_bold$(tput setaf 6)" # BOLD CYAN
-    sexy_bash_prompt_dir_color="$sexy_bash_prompt_bold$(tput setaf 2)" # BOLD GREEN
-    sexy_bash_prompt_git_status_color="$sexy_bash_prompt_bold$(tput setaf 3)" # BOLD YELLOW
-    sexy_bash_prompt_git_progress_color="$sexy_bash_prompt_bold$(tput setaf 1)" # BOLD RED
+    #sexy_bash_prompt_user_color="$sexy_bash_prompt_bold$(tput setaf 4)" # BOLD BLUE
+    #sexy_bash_prompt_preposition_color="$sexy_bash_prompt_bold$(tput setaf 7)" # BOLD WHITE
+    #sexy_bash_prompt_device_color="$sexy_bash_prompt_bold$(tput setaf 6)" # BOLD CYAN
+    #sexy_bash_prompt_dir_color="$sexy_bash_prompt_bold$(tput setaf 2)" # BOLD GREEN
+    #sexy_bash_prompt_git_status_color="$sexy_bash_prompt_bold$(tput setaf 3)" # BOLD YELLOW
+    #sexy_bash_prompt_git_progress_color="$sexy_bash_prompt_bold$(tput setaf 1)" # BOLD RED
+    sexy_bash_prompt_user_color="$(tput setaf 4)" 
+    sexy_bash_prompt_preposition_color="$sexy_bash_prompt_bold$(tput setaf 12)"
+    sexy_bash_prompt_device_color="$(tput setaf 4)"
+    sexy_bash_prompt_dir_color="$sexy_bash_prompt_bold$(tput setaf 2)"
+    sexy_bash_prompt_git_status_color="$(tput setaf 1)"
+    sexy_bash_prompt_git_progress_color="$sexy_bash_prompt_bold$(tput setaf 3)"
   #fi
 
   sexy_bash_prompt_symbol_color="$sexy_bash_prompt_bold" # BOLD
@@ -256,14 +262,15 @@ sexy_bash_prompt_get_git_info () {
 }
 
 # Define the sexy-bash-prompt
-PS1="\[$sexy_bash_prompt_user_color\]\u\[$sexy_bash_prompt_reset\] \
-\[$sexy_bash_prompt_preposition_color\]at\[$sexy_bash_prompt_reset\] \
-\[$sexy_bash_prompt_device_color\]\h\[$sexy_bash_prompt_reset\] \
-\[$sexy_bash_prompt_preposition_color\]in\[$sexy_bash_prompt_reset\] \
+PS1="\[$sexy_bash_prompt_user_color\]\u\[$sexy_bash_prompt_reset\]\
+\[$sexy_bash_prompt_preposition_color\]@\[$sexy_bash_prompt_reset\]\
+\[$sexy_bash_prompt_device_color\]\h\[$sexy_bash_prompt_reset\]\
+\[$sexy_bash_prompt_preposition_color\]\[$sexy_bash_prompt_reset\] \
 \[$sexy_bash_prompt_dir_color\]\w\[$sexy_bash_prompt_reset\]\
 \$( sexy_bash_prompt_is_on_git && \
-  echo -n \" \[$sexy_bash_prompt_preposition_color\]on\[$sexy_bash_prompt_reset\] \" && \
+  echo -n \" \[$sexy_bash_prompt_preposition_color\][\[$sexy_bash_prompt_reset\] \" &&\
   echo -n \"\[$sexy_bash_prompt_git_status_color\]\$(sexy_bash_prompt_get_git_info)\" && \
   echo -n \"\[$sexy_bash_prompt_git_progress_color\]\$(sexy_bash_prompt_get_git_progress)\" && \
+  echo -n \" \[$sexy_bash_prompt_preposition_color\]]\[$sexy_bash_prompt_reset\] \" &&\
   echo -n \"\[$sexy_bash_prompt_preposition_color\]\")\n\[$sexy_bash_prompt_reset\]\
 \[$sexy_bash_prompt_symbol_color\]$sexy_bash_prompt_symbol \[$sexy_bash_prompt_reset\]"
