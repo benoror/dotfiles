@@ -1,7 +1,7 @@
 module.exports = {
   config: {
     // default font size in pixels for all tabs
-    fontSize: 13,
+    fontSize: 14,
 
     // font family with optional fallbacks
     fontFamily: 'Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
@@ -31,6 +31,9 @@ module.exports = {
     // custom padding (css format, i.e.: `top right bottom left`)
     padding: '0px 0px 0px 0px',
 
+    // window size
+    windowSize: [800, 600],
+
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
     // an array here instead of a color map object
@@ -57,7 +60,7 @@ module.exports = {
 
     // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
     // if left empty, your system's login shell will be used by default
-    shell: ''
+    shell: '/usr/local/bin/zsh'
 
     // for advanced config flags please refer to https://hyperterm.org/#cfg
   },
@@ -68,7 +71,14 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: [],
+  plugins: [
+    //'hyperpower',
+    //'hypercwd',
+    //'hyperterm-oceanic-next',
+    //'hypercolors',
+    'hyperterm-base16-ocean-saturated'
+    //'hyperterm-snazzy'
+  ],
 
   // in development, you can create a directory under
   // `~/.hyperterm_plugins/local/` and include it here
