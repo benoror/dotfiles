@@ -43,10 +43,14 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'Nopik/vim-nerdtree-direnter'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'elzr/vim-json'
+
 "Plugin 'bling/vim-bufferline'
 "Plugin 'weynhamz/vim-plugin-minibufexpl'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+
+Plugin 'scrooloose/syntastic'
+Plugin 'ngmy/vim-rubocop'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -270,6 +274,22 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='wombat'
 
 """"""""""""""""""""""""""""""""""""""""""""""""
+" Syntastic
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_javascript_checkers = ['eslint']
+
+""""""""""""""""""""""""""""""""""""""""""""""""
 " Misc
 """"""""""""""""""""""""""""""""""""""""""""""""
 " Highlight Folded
@@ -287,4 +307,4 @@ set autoread
 " Color lines that exceed 80 columns in blue (doesn't scale)
 "hi rightMargin ctermfg=lightblue
 "match rightMargin /.\%>80v/
-"
+
