@@ -43,6 +43,10 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'Nopik/vim-nerdtree-direnter'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'elzr/vim-json'
+"Plugin 'bling/vim-bufferline'
+"Plugin 'weynhamz/vim-plugin-minibufexpl'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -213,6 +217,12 @@ imap <C-t> <Esc>:tabnew<Space>
 map <F1> <Esc>
 imap <F1> <Esc>
 
+"map gn :bn<CR>
+map gn gt
+"map gp :bp<CR>
+map gp gT
+map gd :bd<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""
 " CtrlP
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -253,6 +263,13 @@ let NERDTreeMapOpenInTab='<Enter>'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""
+" Airline
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='wombat'
+
+""""""""""""""""""""""""""""""""""""""""""""""""
 " Misc
 """"""""""""""""""""""""""""""""""""""""""""""""
 " Highlight Folded
@@ -270,3 +287,4 @@ set autoread
 " Color lines that exceed 80 columns in blue (doesn't scale)
 "hi rightMargin ctermfg=lightblue
 "match rightMargin /.\%>80v/
+"
