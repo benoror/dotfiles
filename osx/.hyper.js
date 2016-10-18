@@ -76,8 +76,9 @@ module.exports = {
     //'hypercwd',
     //'hyperterm-oceanic-next',
     //'hypercolors',
-    'hyperterm-base16-ocean-saturated'
-    //'hyperterm-snazzy'
+    //'hyperterm-snazzy',
+    //'hyperterm-base16-ocean-saturated',
+    //'hyperterm-tabs'
   ],
 
   // in development, you can create a directory under
