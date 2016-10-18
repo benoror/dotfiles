@@ -1,8 +1,8 @@
 # Misc Alias.
-alias gvim='gvim -p'
-alias vim='vim -p'
-alias vi='vim -p'
-alias v='vim -p'
+alias gvim='gvim'
+alias vim='vim'
+alias vi='vim'
+alias v='vim'
 alias psaux='ps aux | less'
 alias cd..='cd ..'
 alias ..='cd ..'
