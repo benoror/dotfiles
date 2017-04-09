@@ -29,20 +29,24 @@ Plugin 'VundleVim/Vundle.vim'
 " Avoid a name conflict with L9
 " Plugin 'user/L9', {'name': 'newL9'}
 
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'fugitive.vim'
 Plugin 'yosiat/oceanic-next-vim'
 "Plugin 'mhartington/oceanic-next'
-Plugin 'joukevandermaas/vim-ember-hbs'
+Plugin 'chriskempson/base16-vim'
+Plugin 'tpope/vim-sensible'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'fugitive.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
-Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'Nopik/vim-nerdtree-direnter'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'elzr/vim-json'
+
+Plugin 'sheerun/vim-polyglot'
+"Plugin 'joukevandermaas/vim-ember-hbs'
+"Plugin 'elzr/vim-json'
+"Plugin 'pangloss/vim-javascript'
 
 "Plugin 'bling/vim-bufferline'
 "Plugin 'weynhamz/vim-plugin-minibufexpl'
@@ -88,7 +92,14 @@ set ruler
 set foldmethod=syntax
 set foldlevelstart=20
 "You can use the mouse to resize windows in Vim if you set your mouse as follows.
-set mouse=a
+set mouse+=a
+if &term =~ '^screen'
+  " tmux knows the extended mouse mode
+  set ttymouse=xterm2
+endif
+"Change shape pipe in Insert, block in Normal
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 "Usually annoys me
 "set nowrap
 "Usually I don't care about case when searching
@@ -154,6 +165,11 @@ if &t_Co > 2 || has("gui_running")
     set incsearch "For fast terminals can highlight search string as you type
     " Default theme
     colorscheme OceanicNext
+    " Remove scrollbar  from NERDTree & All windows
+    set guioptions-=L
+    set guioptions-=r
+    " Set default font
+    set guifont=Consolas:h14
 endif
 
 if &diff
@@ -182,7 +198,7 @@ autocmd BufWritePre <buffer> :%s/\s\+$//e
 " http://stackoverflow.com/questions/8640276/how-do-i-change-my-vim-highlight-line-to-not-be-an-underline
 """"""""""""""""""""""""""""""""""""""""""""""""
 set cursorline
-hi CursorLine term=bold cterm=bold ctermbg=237 guibg=Grey40
+hi CursorLine term=bold cterm=bold ctermbg=237 guibg=#444444
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " Key bindings
@@ -195,7 +211,7 @@ hi CursorLine term=bold cterm=bold ctermbg=237 guibg=Grey40
 ":nnoremap k kzz
 
 " Underscore as word separator
-:set iskeyword-=_
+":set iskeyword-=_
 
 " space bar un-highligts search
 :noremap <silent> <Space> :silent noh<Bar>echo<CR>
@@ -212,6 +228,7 @@ vnoremap X "_X
 " Show line numbers
 set number
 set numberwidth=5
+highlight CursorLineNR ctermfg=white guifg=white
 
 " tab navigation like firefox
 map <C-t> :tabnew<Space>
@@ -232,7 +249,7 @@ map gd :bd<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 " Use mixed mode by default
-nmap <silent> <C-p> :CtrlPMixed<CR>
+"nmap <silent> <C-p> :CtrlPMixed<CR>
 
 " Open in new tabs by default
 " https://github.com/kien/ctrlp.vim/issues/160
@@ -253,6 +270,49 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 "let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 
 """"""""""""""""""""""""""""""""""""""""""""""""
+" The Silver Searcher
+" https://robots.thoughtbot.com/faster-grepping-in-vim
+""""""""""""""""""""""""""""""""""""""""""""""""
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  " let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  " http://softwareas.com/a-simple-way-to-speed-up-vim-ctrl-p-plugin-delegate-to-ag/
+  let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+        \ --ignore .git
+        \ --ignore .swp
+        \ --ignore .ico
+        \ --ignore .svn
+        \ --ignore .hg
+        \ --ignore .DS_Store
+        \ --ignore node_modules
+        \ --ignore bower_components
+        \ --ignore dist
+        \ --ignore coverage
+        \ --ignore tmp
+        \ --ignore electron-builds
+        \ --ignore "**/*.pyc"
+        \ -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
+
+" bind K to grep word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" bind \ (backward slash) to grep shortcut
+command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+" map it to any character, such as \:
+nnoremap \ :Ag<SPACE>
+
+" quickfix window results will be opened in separate tab pages.
+" http://stackoverflow.com/questions/6852763/vim-quickfix-list-launch-files-in-new-tab
+set switchbuf+=usetab,newtab
+
+""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree{Tabs}
 """"""""""""""""""""""""""""""""""""""""""""""""
 
@@ -265,6 +325,19 @@ map <Leader>n <plug>NERDTreeTabsToggle<CR>
 " Open in new tab bye default
 let NERDTreeMapOpenInTab='<Enter>'
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+" NERDCommenter
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " Airline
@@ -288,6 +361,8 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_javascript_checkers = ['eslint']
+"let g:syntastic_html_checkers=['tidy']
+let g:syntastic_html_checkers=[]
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " Misc
