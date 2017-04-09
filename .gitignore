@@ -4,6 +4,9 @@
 .vim/bundle/*
 .vim/vundle.git
 .vim/.netrwhist
+.vim.old/bundle/*
+.vim.old/vundle.git
+.vim.old/.netrwhist
 osx/.hyperterm_plugins/node_modules/
 .vim/bundle/
 .tmux/*
