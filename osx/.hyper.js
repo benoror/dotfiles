@@ -11,7 +11,7 @@ module.exports = {
     cursorColor: 'rgba(255,255,255,0.50)',
 
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
-    cursorShape: 'BLOCK',
+    cursorShape: 'BEAM',
 
     // color of the text
     foregroundColor: '#eee',
@@ -29,7 +29,7 @@ module.exports = {
     termCSS: '',
 
     // custom padding (css format, i.e.: `top right bottom left`)
-    padding: '0px 0px 0px 0px',
+    padding: '0px 0px 18px 0px',
 
     // window size
     windowSize: [800, 600],
@@ -73,13 +73,26 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
     //'hyperpower',
-    //'hypercwd',
-    //'hyperterm-oceanic-next',
+    'hypercwd',
     //'hypercolors',
     //'hyperterm-snazzy',
     //'hyperterm-base16-ocean-saturated',
-    //'hyperterm-tabs'
+    //'hyperterm-tabs',
+    //'hyperterm-oceanic-next'
+    //'hyper-oceans16'
+    //'hyper-chesterish'
+    //'hyper-snazzy'
+    //'hyper-now'
+    //'hyper-simple-vibrancy',
+    'hyperterm-cursor',
+    //'hyperline',
+    'hyper-statusline',
+    'hyper-tabs-enhanced'
   ],
+
+  hyperStatusLine: {
+    fontSize: 14,
+  },
 
   // in development, you can create a directory under
   // `~/.hyperterm_plugins/local/` and include it here

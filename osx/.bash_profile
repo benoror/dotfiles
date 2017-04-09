@@ -28,4 +28,3 @@ fi
 # Load .bashrc
 
 test -e "${HOME}/.bashrc" && source "${HOME}/.bashrc"
-

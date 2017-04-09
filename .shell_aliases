@@ -1,8 +1,9 @@
 # Misc Alias.
-alias gvim='gvim'
-alias vim='vim'
-alias vi='vim'
-alias v='vim'
+alias gvim='gvim -p'
+alias vim='vim -p'
+alias vi='vim -p'
+alias v='vim -p'
+alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 alias psaux='ps aux | less'
 alias cd..='cd ..'
 alias ..='cd ..'
