@@ -7,3 +7,7 @@
 osx/.hyperterm_plugins/node_modules/
 .vim/bundle/
 .tmux/*
+node_modules
+node_modules/*
+*/**/node_modules/*
+npm-debug.log*

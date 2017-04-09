@@ -6,5 +6,10 @@
   "repository": "zeit/hyper",
   "license": "MIT",
   "homepage": "https://hyper.is",
-  "dependencies": {}
+  "dependencies": {
+    "hypercwd": "latest",
+    "hyperterm-cursor": "latest",
+    "hyper-statusline": "latest",
+    "hyper-tabs-enhanced": "latest"
+  }
 }
