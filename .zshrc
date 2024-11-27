@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$PATH:$HOME/bin:$HOME/.docker/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/benoror/.oh-my-zsh
@@ -7,7 +7,7 @@ export ZSH=/Users/benoror/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="avit"
+ZSH_THEME=""
 # Use pure instead, see below
 
 # Uncomment the following line to use case-sensitive completion.
@@ -103,6 +103,7 @@ unsetopt share_history
 # Prompt
 # https://github.com/sindresorhus/pure
 #------------------------------------------------------------------------------
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
 autoload -U promptinit; promptinit
 prompt pure
 
@@ -110,3 +111,8 @@ prompt pure
 # Message.
 #------------------------------------------------------------------------------
 . ~/.message
+
+#------------------------------------------------------------------------------
+# ASDF
+#------------------------------------------------------------------------------
+. /usr/local/opt/asdf/libexec/asdf.sh
