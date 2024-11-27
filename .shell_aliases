@@ -1,8 +1,10 @@
-# Misc Alias.
-alias gvim='gvim -p'
-alias vim='vim -p'
-alias vi='vim -p'
-alias v='vim -p'
+# NeoVim
+alias gvim='nvim -p'
+alias vim='nvim -p'
+alias vi='nvim -p'
+alias v='nvim -p'
+
+# Misc
 alias psaux='ps aux | less'
 alias cd..='cd ..'
 alias ..='cd ..'
@@ -17,7 +19,7 @@ alias cl=clear
 alias pamcna='pacman'
 alias pacmna='pacman'
 
-# Security Alias.
+# Security
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'

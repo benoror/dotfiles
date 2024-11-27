@@ -3,7 +3,7 @@
   email = benoror@gmail.com
 	signingkey = CCF10E4807D46DA6
 [core]
-  editor = vim
+  editor = nvim
   pager = less -+F -+X
 [log]
   abbrevCommit = true
