@@ -1,6 +1,7 @@
 [user]
   name = Ben Orozco
   email = benoror@gmail.com
+	signingkey = CCF10E4807D46DA6
 [core]
   editor = vim
   pager = less -+F -+X
@@ -19,3 +20,11 @@
   st = status --short --branch
 	merc = merge --no-ff
 	grog = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
+[commit]
+	gpgsign = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
