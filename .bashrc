@@ -187,5 +187,3 @@ unset color_prompt force_color_prompt
 #------------------------------------------------------------------------------
 . ~/.message
 
-export NVM_DIR="/Users/benoror/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
