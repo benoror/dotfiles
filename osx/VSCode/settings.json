@@ -1,0 +1,106 @@
+{
+  "jest.autoEnable": false,
+  "editor.tabSize" : 2,
+  "editor.formatOnSave" : false,
+  "eslint.options" : {
+    "env" : {
+      "browser" : true,
+      "jest\/globals" : true,
+      "es6" : true
+    },
+    "rules" : {
+      "no-debugger" : "off"
+    },
+    "parserOptions" : {
+      "ecmaVersion" : 2018,
+      "sourceType" : "module",
+      "ecmaFeatures" : {
+        "jsx" : true
+      }
+    }
+  },
+  "workbench.activityBar.visible" : true,
+  "gitlens.views.repositories.location" : "gitlens",
+  "editor.multiCursorModifier" : "alt",
+  "gitlens.views.fileHistory.location" : "gitlens",
+  "terminal.integrated.rendererType" : "dom",
+  "editor.lightbulb.enabled" : true,
+  "[ruby]" : {
+    "editor.defaultFormatter" : "misogi.ruby-rubocop",
+    "editor.formatOnSave" : false
+  },
+  "vsicons.dontShowNewVersionMessage" : true,
+  "editor.quickSuggestions" : {
+    "strings" : true
+  },
+  "terminal.integrated.fontSize" : 16,
+  "tailwindCSS.includeLanguages" : {
+    "javascript" : "javascriptreact",
+    "html" : "html",
+    "plaintext" : "html"
+  },
+  "terminal.integrated.fontFamily" : "Inconsolata for Powerline",
+  "emmet.includeLanguages" : {
+    "html" : "html",
+    "javascript" : "javascriptreact"
+  },
+  "[html]" : {
+    "editor.defaultFormatter" : "vscode.html-language-features"
+  },
+  "[json]" : {
+    "editor.defaultFormatter" : "esbenp.prettier-vscode"
+  },
+  "breadcrumbs.enabled" : true,
+  "editor.renderWhitespace" : "boundary",
+  "eslint.autoFixOnSave" : false,
+  "editor.insertSpaces" : true,
+  "editor.snippetSuggestions" : "top",
+  "editor.acceptSuggestionOnCommitCharacter" : false,
+  "explorer.confirmDragAndDrop" : false,
+  "gitlens.views.compare.location" : "gitlens",
+  "editor.fontFamily" : "Inconsolata for Powerline",
+  "editor.accessibilitySupport" : "off",
+  "javascript.updateImportsOnFileMove.enabled" : "always",
+  "editor.acceptSuggestionOnEnter" : "off",
+  "terminal.external.osxExec" : "iTerm.app",
+  "eslint.validate" : [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "editor.detectIndentation" : true,
+  "[javascript]" : {
+    "editor.defaultFormatter" : "esbenp.prettier-vscode",
+    "editor.formatOnSave" : false
+  },
+  "gitlens.views.lineHistory.location" : "gitlens",
+  "search.exclude" : {
+    "**\/node_modules" : true,
+    "**\/bower_components" : true,
+    "**\/dist" : true,
+    "**\/build" : true,
+    "**\/.gh-pages" : true,
+    "**\/__recordings__" : true,
+    "**\/.build" : true,
+    "**\/coverage" : true
+  },
+  "editor.suggest.localityBonus" : true,
+  "editor.minimap.enabled" : true,
+  "workbench.statusBar.visible" : true,
+  "files.exclude" : {
+    "USE_GITIGNORE" : true
+  },
+  "gitlens.views.search.location" : "gitlens",
+  "diffEditor.ignoreTrimWhitespace" : false,
+  "editor.rulers" : [
+    80,
+    90
+  ],
+  "editor.fontSize" : 16,
+  "editor.renderControlCharacters": false,
+  "workbench.colorTheme": "Oceanic Next (dimmed bg)",
+  "terminal.integrated.tabs.enabled": false,
+  "window.nativeTabs": true,
+  "editor.wordWrap": "on"
+}
