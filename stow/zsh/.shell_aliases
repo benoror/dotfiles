@@ -1,4 +1,6 @@
 # NeoVim
+which nvim >/dev/null 2>&1 || alias nvim='/usr/bin/vim'
+which io.neovim.nvim >/dev/null 2>&1 && alias nvim='io.neovim.nvim' # flatpak SD
 alias gvim='nvim -p'
 alias vim='nvim -p'
 alias vi='nvim -p'
