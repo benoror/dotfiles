@@ -31,4 +31,7 @@ alias ln='ln -i'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-
+# pinentry fallback (for MacOS)
+if [ -f /usr/local/bin/pinentry-mac ]; then
+  alias pinentry='/usr/local/bin/pinentry-mac'
+fi
