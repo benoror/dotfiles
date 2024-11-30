@@ -1,7 +1,7 @@
 return {
   { "roflolilolmao/oceanic-next.nvim" },
 
-  -- Configure LazyVim to load gruvbox
+  -- Configure LazyVim to load OceanicNext
   {
     "LazyVim/LazyVim",
     opts = {
