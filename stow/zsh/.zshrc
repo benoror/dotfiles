@@ -131,3 +131,9 @@ fi
 if [ -f /usr/local/opt/asdf/libexec/asdf.sh ]; then
   . /usr/local/opt/asdf/libexec/asdf.sh
 fi
+
+#------------------------------------------------------------------------------
+# gpg-agent
+#------------------------------------------------------------------------------
+GPG_TTY=$(tty)
+export GPG_TTY
