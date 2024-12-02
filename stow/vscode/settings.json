@@ -31,7 +31,7 @@
   "editor.quickSuggestions" : {
     "strings" : true
   },
-  "terminal.integrated.fontSize" : 16,
+  "terminal.integrated.fontSize" : 18,
   "tailwindCSS.includeLanguages" : {
     "javascript" : "javascriptreact",
     "html" : "html",
@@ -55,11 +55,12 @@
   "editor.acceptSuggestionOnCommitCharacter" : false,
   "explorer.confirmDragAndDrop" : false,
   "gitlens.views.compare.location" : "gitlens",
-  "editor.fontFamily" : "Inconsolata for Powerline",
+  "editor.fontFamily" : "Inconsolata Nerd Font Mono",
   "editor.accessibilitySupport" : "off",
   "javascript.updateImportsOnFileMove.enabled" : "always",
   "editor.acceptSuggestionOnEnter" : "off",
   "terminal.external.osxExec" : "iTerm.app",
+  "terminal.explorerKind": "external",
   "eslint.validate" : [
     "javascript",
     "javascriptreact",
@@ -94,14 +95,23 @@
     80,
     90
   ],
-  "editor.fontSize" : 16,
+  "editor.fontSize" : 18,
   "editor.renderControlCharacters": false,
-  "workbench.colorTheme": "Oceanic Next",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "catppuccin.colorOverrides": {
+    "mocha": {
+      "base": "#111111",
+    },
+  },
   "window.nativeTabs": true,
   "editor.wordWrap": "on",
   "workbench.startupEditor": "none",
   "window.customTitleBarVisibility": "never",
   "github.copilot.editor.enableAutoCompletions": true,
   "workbench.preferredDarkColorTheme": "Tokyo Midnight",
-  "workbench.fontAliasing": "auto"
+  "workbench.fontAliasing": "auto",
+  "workbench.iconTheme": "catppuccin-mocha",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
 }
