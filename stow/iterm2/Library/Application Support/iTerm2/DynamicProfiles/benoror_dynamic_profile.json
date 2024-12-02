@@ -1,0 +1,427 @@
+{"Profiles": [{
+  "Badge Text" : "",
+  "Ansi 5 Color" : {
+    "Green Component" : 0.4509804,
+    "Blue Component" : 0.99215690000000001,
+    "Red Component" : 1
+  },
+  "Working Directory" : "\/Users\/benoror\/code",
+  "Prompt Before Closing 2" : 1,
+  "Selected Text Color" : {
+    "Green Component" : 0.94760049999999996,
+    "Blue Component" : 0.94760049999999996,
+    "Red Component" : 0.94760049999999996
+  },
+  "Set Local Environment Vars" : 2,
+  "Rows" : 25,
+  "Ansi 11 Color" : {
+    "Green Component" : 1,
+    "Blue Component" : 0.7996491,
+    "Red Component" : 1
+  },
+  "Use Italic Font" : true,
+  "Foreground Color" : {
+    "Green Component" : 0.73333334922790527,
+    "Blue Component" : 0.73333334922790527,
+    "Red Component" : 0.73333334922790527
+  },
+  "Right Option Key Sends" : 0,
+  "Show Status Bar" : true,
+  "Character Encoding" : 4,
+  "Selection Color" : {
+    "Green Component" : 0.22248570000000001,
+    "Blue Component" : 0.51530609999999999,
+    "Red Component" : 0.20990739999999999
+  },
+  "Blend" : 0.048557253649635035,
+  "Mouse Reporting" : true,
+  "Cursor Boost" : 0,
+  "Ansi 4 Color" : {
+    "Green Component" : 0.79607839999999996,
+    "Blue Component" : 0.99607840000000003,
+    "Red Component" : 0.58823530000000002
+  },
+  "Non-ASCII Anti Aliased" : true,
+  "Sync Title" : false,
+  "Disable Window Resizing" : true,
+  "Description" : "Default",
+  "Custom Locale" : "en_US.UTF-8",
+  "Close Sessions On End" : true,
+  "Jobs to Ignore" : [
+    "rlogin",
+    "ssh",
+    "slogin",
+    "telnet"
+  ],
+  "Scrollback Lines" : 10000,
+  "Draw Powerline Glyphs" : true,
+  "Status Bar Layout" : {
+    "components" : [
+      {
+        "class" : "iTermStatusBarWorkingDirectoryComponent",
+        "configuration" : {
+          "knobs" : {
+            "path" : "path",
+            "base: priority" : 5,
+            "base: compression resistance" : 1,
+            "shared text color" : {
+              "Red Component" : 0.90000000000000002,
+              "Color Space" : "sRGB",
+              "Blue Component" : 0.63,
+              "Alpha Component" : 1,
+              "Green Component" : 0.63
+            },
+            "minwidth" : 0,
+            "maxwidth" : 1.7976931348623157e+308
+          },
+          "layout advanced configuration dictionary value" : {
+            "font" : ".AppleSystemUIFont 12",
+            "algorithm" : 0
+          }
+        }
+      },
+      {
+        "class" : "iTermStatusBarGitComponent",
+        "configuration" : {
+          "knobs" : {
+            "base: priority" : 5,
+            "iTermStatusBarGitComponentPollingIntervalKey" : 2,
+            "base: compression resistance" : 1,
+            "shared text color" : {
+              "Red Component" : 0.90000000000000002,
+              "Color Space" : "sRGB",
+              "Blue Component" : 0.63,
+              "Alpha Component" : 1,
+              "Green Component" : 0.86142857142857143
+            },
+            "minwidth" : 0,
+            "maxwidth" : 1.7976931348623157e+308
+          },
+          "layout advanced configuration dictionary value" : {
+            "font" : ".AppleSystemUIFont 12",
+            "algorithm" : 0
+          }
+        }
+      },
+      {
+        "class" : "iTermStatusBarJobComponent",
+        "configuration" : {
+          "knobs" : {
+            "base: priority" : 5,
+            "shared text color" : {
+              "Red Component" : 0.7071428571428573,
+              "Color Space" : "sRGB",
+              "Blue Component" : 0.63,
+              "Alpha Component" : 1,
+              "Green Component" : 0.90000000000000002
+            },
+            "base: compression resistance" : 1,
+            "minwidth" : 0,
+            "maxwidth" : 1.7976931348623157e+308
+          },
+          "layout advanced configuration dictionary value" : {
+            "font" : ".AppleSystemUIFont 12",
+            "algorithm" : 0
+          }
+        }
+      },
+      {
+        "class" : "iTermStatusBarCPUUtilizationComponent",
+        "configuration" : {
+          "knobs" : {
+            "base: priority" : 5,
+            "shared text color" : {
+              "Red Component" : 0.63,
+              "Color Space" : "sRGB",
+              "Blue Component" : 0.78428571428571425,
+              "Alpha Component" : 1,
+              "Green Component" : 0.90000000000000002
+            },
+            "base: compression resistance" : 1
+          },
+          "layout advanced configuration dictionary value" : {
+            "font" : ".AppleSystemUIFont 12",
+            "algorithm" : 0
+          }
+        }
+      },
+      {
+        "class" : "iTermStatusBarMemoryUtilizationComponent",
+        "configuration" : {
+          "knobs" : {
+            "base: priority" : 5,
+            "shared text color" : {
+              "Red Component" : 0.63,
+              "Color Space" : "sRGB",
+              "Blue Component" : 0.90000000000000002,
+              "Alpha Component" : 1,
+              "Green Component" : 0.78428571428571436
+            },
+            "base: compression resistance" : 1
+          },
+          "layout advanced configuration dictionary value" : {
+            "font" : ".AppleSystemUIFont 12",
+            "algorithm" : 0
+          }
+        }
+      },
+      {
+        "class" : "iTermStatusBarFixedSpacerComponent",
+        "configuration" : {
+          "knobs" : {
+            "base: priority" : 5,
+            "iTermStatusBarFixedSpacerComponentWidthKnob" : 5,
+            "base: compression resistance" : 1,
+            "shared text color" : {
+              "Red Component" : 0.70714285714285685,
+              "Color Space" : "sRGB",
+              "Blue Component" : 0.90000000000000002,
+              "Alpha Component" : 1,
+              "Green Component" : 0.63
+            }
+          },
+          "layout advanced configuration dictionary value" : {
+            "font" : ".AppleSystemUIFont 12",
+            "algorithm" : 0
+          }
+        }
+      },
+      {
+        "class" : "iTermStatusBarSearchFieldComponent",
+        "configuration" : {
+          "knobs" : {
+            "base: priority" : 5,
+            "shared text color" : {
+              "Red Component" : 0.90000000000000002,
+              "Color Space" : "sRGB",
+              "Blue Component" : 0.86142857142857154,
+              "Alpha Component" : 1,
+              "Green Component" : 0.63
+            },
+            "base: compression resistance" : 1
+          },
+          "layout advanced configuration dictionary value" : {
+            "font" : ".AppleSystemUIFont 12",
+            "algorithm" : 0
+          }
+        }
+      }
+    ],
+    "advanced configuration" : {
+      "font" : ".AppleSystemUIFont 12",
+      "algorithm" : 0
+    }
+  },
+  "Flashing Bell" : false,
+  "Cursor Guide Color" : {
+    "Red Component" : 0.74862593412399292,
+    "Color Space" : "P3",
+    "Blue Component" : 0.99125725030899048,
+    "Alpha Component" : 0.25,
+    "Green Component" : 0.92047786712646484
+  },
+  "BM Growl" : true,
+  "Ansi 3 Color" : {
+    "Green Component" : 1,
+    "Blue Component" : 0.71372550000000001,
+    "Red Component" : 1
+  },
+  "Icon" : 1,
+  "Link Color" : {
+    "Red Component" : 0.14513972401618958,
+    "Color Space" : "P3",
+    "Blue Component" : 0.7093239426612854,
+    "Alpha Component" : 1,
+    "Green Component" : 0.35333043336868286
+  },
+  "Use Non-ASCII Font" : false,
+  "Shortcut" : "",
+  "Bold Color" : {
+    "Green Component" : 1,
+    "Blue Component" : 1,
+    "Red Component" : 1
+  },
+  "Use Cursor Guide" : false,
+  "Unlimited Scrollback" : false,
+  "Allow Title Setting" : true,
+  "Custom Command" : "No",
+  "Keyboard Map" : {
+    "0x9-0x40000" : {
+      "Text" : "`n",
+      "Action" : 12
+    },
+    "0x37-0x40000" : {
+      "Text" : "`7",
+      "Action" : 12
+    },
+    "0x34-0x40000" : {
+      "Text" : "`4",
+      "Action" : 12
+    },
+    "0x31-0x40000" : {
+      "Text" : "`1",
+      "Action" : 12
+    },
+    "0x38-0x40000" : {
+      "Text" : "`8",
+      "Action" : 12
+    },
+    "0x35-0x40000" : {
+      "Text" : "`5",
+      "Action" : 12
+    },
+    "0x19-0x60000" : {
+      "Text" : "`p",
+      "Action" : 12
+    },
+    "0x32-0x40000" : {
+      "Text" : "`2",
+      "Action" : 12
+    },
+    "0x39-0x40000" : {
+      "Text" : "`9",
+      "Action" : 12
+    },
+    "0x36-0x40000" : {
+      "Text" : "`6",
+      "Action" : 12
+    },
+    "0x33-0x40000" : {
+      "Text" : "`3",
+      "Action" : 12
+    },
+    "0x30-0x40000" : {
+      "Text" : "`0",
+      "Action" : 12
+    }
+  },
+  "Ansi 14 Color" : {
+    "Green Component" : 0.87631029999999999,
+    "Blue Component" : 0.99703969999999997,
+    "Red Component" : 0.87591359999999996
+  },
+  "Ansi 2 Color" : {
+    "Green Component" : 1,
+    "Blue Component" : 0.37647059999999999,
+    "Red Component" : 0.65882350000000001
+  },
+  "Send Code When Idle" : false,
+  "ASCII Anti Aliased" : true,
+  "Tags" : [
+
+  ],
+  "Ansi 9 Color" : {
+    "Green Component" : 0.71372550000000001,
+    "Blue Component" : 0.69019609999999998,
+    "Red Component" : 1
+  },
+  "Use Bold Font" : true,
+  "Silence Bell" : false,
+  "Ansi 12 Color" : {
+    "Green Component" : 0.86277559999999998,
+    "Blue Component" : 0.9982605,
+    "Red Component" : 0.71165029999999996
+  },
+  "Window Type" : 0,
+  "Allow Title Reporting" : true,
+  "Use Bright Bold" : true,
+  "Cursor Text Color" : {
+    "Green Component" : 1,
+    "Blue Component" : 1,
+    "Red Component" : 1
+  },
+  "Default Bookmark" : "No",
+  "Cursor Color" : {
+    "Green Component" : 0.64705880000000005,
+    "Blue Component" : 0.37647059999999999,
+    "Red Component" : 1
+  },
+  "Ansi 1 Color" : {
+    "Green Component" : 0.4235294,
+    "Blue Component" : 0.37647059999999999,
+    "Red Component" : 1
+  },
+  "Name" : "benoror - tmux keybindings",
+  "Blinking Cursor" : false,
+  "Guid" : "6BD12B77-E2E6-450D-BF2E-9E8350FBB913",
+  "Match Background Color" : {
+    "Red Component" : 1,
+    "Color Space" : "P3",
+    "Blue Component" : 0,
+    "Alpha Component" : 1,
+    "Green Component" : 1
+  },
+  "Idle Code" : 0,
+  "Ansi 10 Color" : {
+    "Green Component" : 1,
+    "Blue Component" : 0.67277030000000004,
+    "Red Component" : 0.80941479999999999
+  },
+  "Ansi 8 Color" : {
+    "Green Component" : 0.4862745,
+    "Blue Component" : 0.4862745,
+    "Red Component" : 0.4862745
+  },
+  "Badge Color" : {
+    "Red Component" : 0.92929404973983765,
+    "Color Space" : "P3",
+    "Blue Component" : 0.13960540294647217,
+    "Alpha Component" : 0.5,
+    "Green Component" : 0.25479039549827576
+  },
+  "Smart Cursor Color" : true,
+  "Ambiguous Double Width" : false,
+  "Blur Radius" : 19.813194754464284,
+  "Background Image Mode" : 2,
+  "Cursor Type" : 2,
+  "Ansi 0 Color" : {
+    "Green Component" : 0.30978869999999997,
+    "Blue Component" : 0.30978869999999997,
+    "Red Component" : 0.30978869999999997
+  },
+  "Blur" : true,
+  "Normal Font" : "InconsolataNFM-Regular 18",
+  "Vertical Spacing" : 1,
+  "Ansi 7 Color" : {
+    "Green Component" : 0.93353169999999996,
+    "Blue Component" : 0.93353169999999996,
+    "Red Component" : 0.93353169999999996
+  },
+  "Use HFS Plus Mapping" : true,
+  "Command" : "tmux -CC attach || tmux -CC",
+  "Terminal Type" : "xterm-256color",
+  "Horizontal Spacing" : 1,
+  "Option Key Sends" : 0,
+  "Only The Default BG Color Uses Transparency" : false,
+  "Blink Allowed" : false,
+  "Minimum Contrast" : 0,
+  "Ansi 15 Color" : {
+    "Green Component" : 1,
+    "Blue Component" : 1,
+    "Red Component" : 1
+  },
+  "Ansi 6 Color" : {
+    "Green Component" : 0.77254900000000004,
+    "Blue Component" : 0.99607840000000003,
+    "Red Component" : 0.77647060000000001
+  },
+  "Transparency" : 0.14676339285714285,
+  "Background Color" : {
+    "Green Component" : 0,
+    "Blue Component" : 0,
+    "Red Component" : 0
+  },
+  "Screen" : -2,
+  "Non Ascii Font" : "Monaco 12",
+  "Ansi 13 Color" : {
+    "Green Component" : 0.61330589999999996,
+    "Blue Component" : 0.99652090000000004,
+    "Red Component" : 1
+  },
+  "Columns" : 80,
+  "Use Tab Color" : false,
+  "Visual Bell" : true,
+  "ASCII Ligatures" : true,
+  "Thin Strokes" : 1,
+  "Custom Directory" : "No"
+}]}
