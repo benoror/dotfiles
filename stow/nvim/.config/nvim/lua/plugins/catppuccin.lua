@@ -7,7 +7,12 @@ return {
 
     config = function()
       require("catppuccin").setup({
-        transparent_background = true,
+        transparent_background = false,
+        color_overrides = {
+          mocha = {
+            base = "#111111",
+          },
+        },
       })
       vim.cmd.colorscheme("catppuccin-mocha")
     end,
