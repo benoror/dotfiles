@@ -1,8 +1,8 @@
 [Appearance]
 AntiAliasFonts=true
 BoldIntense=true
-ColorScheme=Ocean
-Font=Inconsolata for Powerline,14,-1,5,57,0,0,0,0,0,Medium
+ColorScheme=Catppuccin-Mocha
+Font=Inconsolata Nerd Font,14,-1,5,50,0,0,0,0,0
 LineSpacing=4
 UseFontLineChararacters=true
 
