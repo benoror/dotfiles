@@ -1,1 +1,4 @@
-background = 1e1d2c
+theme = catppuccin-mocha
+#background = 1e1d2c
+font-size = 36
+#font-family = Inconsolata Nerd Font Mono
