@@ -110,6 +110,10 @@ fi
 bindkey '^r' history-incremental-search-backward
 bindkey '^R' history-incremental-pattern-search-backward
 
+# Don't share history across open terminals
+# https://github.com/robbyrussell/oh-my-zsh/issues/2537
+unsetopt share_history
+
 #------------------------------------------------------------------------------
 # Prompt
 # https://github.com/sindresorhus/pure
