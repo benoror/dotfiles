@@ -1,9 +1,9 @@
 **/.DS_Store
-.tmux/*
 node_modules
 node_modules/*
 */**/node_modules/*
 npm-debug.log*
 
+# stow hidden
 **/.ssh/*
 **/.gnupg/*
