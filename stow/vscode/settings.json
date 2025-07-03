@@ -1,117 +1,126 @@
 {
   "jest.autoEnable": false,
-  "editor.tabSize" : 2,
-  "editor.formatOnSave" : false,
-  "eslint.options" : {
-    "env" : {
-      "browser" : true,
-      "jest\/globals" : true,
-      "es6" : true
-    },
-    "rules" : {
-      "no-debugger" : "off"
-    },
-    "parserOptions" : {
-      "ecmaVersion" : 2018,
-      "sourceType" : "module",
-      "ecmaFeatures" : {
-        "jsx" : true
+  "editor.tabSize": 2,
+  "editor.formatOnSave": false,
+  "eslint.options": {
+      "env": {
+          "browser": true,
+          "jest/globals": true,
+          "es6": true
+      },
+      "rules": {
+          "no-debugger": "off"
+      },
+      "parserOptions": {
+          "ecmaVersion": 2018,
+          "sourceType": "module",
+          "ecmaFeatures": {
+              "jsx": true
+          }
       }
-    }
   },
-  "gitlens.views.repositories.location" : "gitlens",
-  "editor.multiCursorModifier" : "alt",
-  "gitlens.views.fileHistory.location" : "gitlens",
+  "gitlens.views.repositories.location": "gitlens",
+  "editor.multiCursorModifier": "alt",
+  "gitlens.views.fileHistory.location": "gitlens",
   "terminal.integrated.rendererType": "dom",
-  "[ruby]" : {
-    "editor.defaultFormatter" : "misogi.ruby-rubocop",
-    "editor.formatOnSave" : false
+  "[ruby]": {
+      "editor.defaultFormatter": "misogi.ruby-rubocop",
+      "editor.formatOnSave": false
   },
-  "vsicons.dontShowNewVersionMessage" : true,
-  "editor.quickSuggestions" : {
-    "strings" : true
+  "vsicons.dontShowNewVersionMessage": true,
+  "editor.quickSuggestions": {
+      "strings": true
   },
-  "terminal.integrated.fontSize" : 18,
-  "tailwindCSS.includeLanguages" : {
-    "javascript" : "javascriptreact",
-    "html" : "html",
-    "plaintext" : "html"
+  "tailwindCSS.includeLanguages": {
+      "javascript": "javascriptreact",
+      "html": "html",
+      "plaintext": "html"
   },
-  "terminal.integrated.fontFamily" : "Inconsolata for Powerline",
-  "emmet.includeLanguages" : {
-    "html" : "html",
-    "javascript" : "javascriptreact"
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "Jetbrains Mono Nerd Font",
+  "emmet.includeLanguages": {
+      "html": "html",
+      "javascript": "javascriptreact"
   },
-  "[html]" : {
-    "editor.defaultFormatter" : "vscode.html-language-features"
+  "[html]": {
+      "editor.defaultFormatter": "vscode.html-language-features"
   },
-  "[json]" : {
-    "editor.defaultFormatter" : "esbenp.prettier-vscode"
+  "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.renderWhitespace" : "boundary",
-  "eslint.autoFixOnSave" : false,
-  "editor.insertSpaces" : true,
-  "editor.snippetSuggestions" : "top",
-  "editor.acceptSuggestionOnCommitCharacter" : false,
-  "explorer.confirmDragAndDrop" : false,
-  "gitlens.views.compare.location" : "gitlens",
-  "editor.fontFamily" : "Inconsolata Nerd Font Mono",
-  "editor.accessibilitySupport" : "off",
-  "javascript.updateImportsOnFileMove.enabled" : "always",
-  "editor.acceptSuggestionOnEnter" : "off",
-  "terminal.external.osxExec" : "iTerm.app",
+  "editor.renderWhitespace": "boundary",
+  "eslint.autoFixOnSave": false,
+  "editor.insertSpaces": true,
+  "editor.snippetSuggestions": "top",
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "explorer.confirmDragAndDrop": false,
+  "gitlens.views.compare.location": "gitlens",
+  "editor.fontFamily": "JetbrainsMono Nerd Font",
+  "editor.accessibilitySupport": "off",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.acceptSuggestionOnEnter": "off",
+  "terminal.external.osxExec": "Ghostty.app",
   "terminal.explorerKind": "external",
-  "eslint.validate" : [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
+  "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact"
   ],
-  "editor.detectIndentation" : true,
-  "[javascript]" : {
-    "editor.defaultFormatter" : "esbenp.prettier-vscode",
-    "editor.formatOnSave" : false
+  "editor.detectIndentation": true,
+  "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": false
   },
-  "gitlens.views.lineHistory.location" : "gitlens",
-  "search.exclude" : {
-    "**\/node_modules" : true,
-    "**\/bower_components" : true,
-    "**\/dist" : true,
-    "**\/build" : true,
-    "**\/.gh-pages" : true,
-    "**\/__recordings__" : true,
-    "**\/.build" : true,
-    "**\/coverage" : true
+  "gitlens.views.lineHistory.location": "gitlens",
+  "search.exclude": {
+      "**/node_modules": true,
+      "**/bower_components": true,
+      "**/dist": true,
+      "**/build": true,
+      "**/.gh-pages": true,
+      "**/__recordings__": true,
+      "**/.build": true,
+      "**/coverage": true
   },
-  "editor.suggest.localityBonus" : true,
-  "editor.minimap.enabled" : true,
-  "workbench.statusBar.visible" : true,
-  "files.exclude" : {
-    "USE_GITIGNORE" : true
+  "editor.suggest.localityBonus": true,
+  "editor.minimap.enabled": true,
+  "workbench.statusBar.visible": true,
+  "files.exclude": {
+      "USE_GITIGNORE": true
   },
-  "gitlens.views.search.location" : "gitlens",
-  "diffEditor.ignoreTrimWhitespace" : false,
-  "editor.rulers" : [
-    80,
-    90
+  "gitlens.views.search.location": "gitlens",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.rulers": [
+      80,
+      90
   ],
-  "editor.fontSize" : 18,
+  "editor.fontSize": 16,
   "editor.renderControlCharacters": false,
-  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.colorTheme": "Catppuccin Macchiato",
   "catppuccin.colorOverrides": {
-    "mocha": {
-      "base": "#111111",
-    },
+      "mocha": {
+          "base": "#111111"
+      }
   },
+  "catppuccin.italicKeywords": false,
   "window.nativeTabs": true,
   "editor.wordWrap": "on",
   "workbench.startupEditor": "none",
   "window.customTitleBarVisibility": "never",
-  "github.copilot.editor.enableAutoCompletions": true,
   "workbench.preferredDarkColorTheme": "Tokyo Midnight",
-  "workbench.fontAliasing": "auto",
-  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.iconTheme": "catppuccin-macchiato",
   "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
+      "asvetliakov.vscode-neovim": 1
   },
+  "vscode-neovim.easymotion": false,
+  "vscode-neovim.sneak": false,
+  "workbench.fontAliasing": "antialiased",
+  "[typescript]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
+  "[typescriptreact]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
 }
