@@ -6,4 +6,8 @@
     "args": { "text": "${relativeFile}" },
     "when": "terminalFocus"
   },
+  {
+    "key": "cmd+i",
+    "command": "composerMode.agent"
+  },
 ]
