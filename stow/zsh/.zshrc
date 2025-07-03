@@ -132,9 +132,11 @@ fi
 #------------------------------------------------------------------------------
 # ASDF
 #------------------------------------------------------------------------------
-if [ -f /usr/local/opt/asdf/libexec/asdf.sh ]; then
-  . /usr/local/opt/asdf/libexec/asdf.sh
-fi
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+# https://github.com/asdf-community/asdf-golang
+. ${ASDF_DATA_DIR:-$HOME/.asdf}/plugins/golang/set-env.zsh
+
 
 #------------------------------------------------------------------------------
 # gpg-agent
