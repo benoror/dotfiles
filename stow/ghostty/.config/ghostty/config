@@ -1,5 +1,5 @@
 term=xterm-256color
-theme = catppuccin-mocha
+theme = Catppuccin Mocha
 #background = 1e1d2c
 font-size = 16
 #font-family = Inconsolata Nerd Font Mono
