@@ -109,10 +109,7 @@
   "workbench.startupEditor": "none",
   "window.customTitleBarVisibility": "never",
   "workbench.preferredDarkColorTheme": "Tokyo Midnight",
-  "workbench.iconTheme": "catppuccin-macchiato",
-  "extensions.experimental.affinity": {
-      "asvetliakov.vscode-neovim": 1
-  },
+"workbench.iconTheme": "catppuccin-macchiato",
   "vscode-neovim.easymotion": false,
   "vscode-neovim.sneak": false,
   "workbench.fontAliasing": "antialiased",
@@ -122,5 +119,8 @@
   "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
   "[typescriptreact]": {
       "editor.defaultFormatter": "vscode.typescript-language-features"
-  }
+  },
+  "window.commandCenter": true,
+  "git.blame.editorDecoration.enabled": false,
+  "git.blame.statusBarItem.enabled": false,
 }
