@@ -10,7 +10,7 @@ return {
         transparent_background = false,
         color_overrides = {
           mocha = {
-            base = "#111111",
+            base = "#1e1d1c",
           },
         },
       })
