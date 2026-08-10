@@ -1,126 +1,134 @@
 {
-  "jest.autoEnable": false,
-  "editor.tabSize": 2,
-  "editor.formatOnSave": false,
-  "eslint.options": {
-      "env": {
-          "browser": true,
-          "jest/globals": true,
-          "es6": true
-      },
-      "rules": {
-          "no-debugger": "off"
-      },
-      "parserOptions": {
-          "ecmaVersion": 2018,
-          "sourceType": "module",
-          "ecmaFeatures": {
-              "jsx": true
-          }
-      }
-  },
-  "gitlens.views.repositories.location": "gitlens",
-  "editor.multiCursorModifier": "alt",
-  "gitlens.views.fileHistory.location": "gitlens",
-  "terminal.integrated.rendererType": "dom",
-  "[ruby]": {
-      "editor.defaultFormatter": "misogi.ruby-rubocop",
-      "editor.formatOnSave": false
-  },
-  "vsicons.dontShowNewVersionMessage": true,
-  "editor.quickSuggestions": {
-      "strings": true
-  },
-  "tailwindCSS.includeLanguages": {
-      "javascript": "javascriptreact",
-      "html": "html",
-      "plaintext": "html"
-  },
-  "terminal.integrated.fontSize": 14,
-  "terminal.integrated.fontFamily": "Jetbrains Mono Nerd Font",
-  "emmet.includeLanguages": {
-      "html": "html",
-      "javascript": "javascriptreact"
-  },
-  "[html]": {
-      "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "[json]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.renderWhitespace": "boundary",
-  "eslint.autoFixOnSave": false,
-  "editor.insertSpaces": true,
-  "editor.snippetSuggestions": "top",
-  "editor.acceptSuggestionOnCommitCharacter": false,
-  "explorer.confirmDragAndDrop": false,
-  "gitlens.views.compare.location": "gitlens",
-  "editor.fontFamily": "JetbrainsMono Nerd Font",
-  "editor.accessibilitySupport": "off",
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "editor.acceptSuggestionOnEnter": "off",
-  "terminal.external.osxExec": "Ghostty.app",
-  "terminal.explorerKind": "external",
-  "eslint.validate": [
-      "javascript",
-      "javascriptreact",
-      "typescript",
-      "typescriptreact"
-  ],
-  "editor.detectIndentation": true,
-  "[javascript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode",
-      "editor.formatOnSave": false
-  },
-  "gitlens.views.lineHistory.location": "gitlens",
-  "search.exclude": {
-      "**/node_modules": true,
-      "**/bower_components": true,
-      "**/dist": true,
-      "**/build": true,
-      "**/.gh-pages": true,
-      "**/__recordings__": true,
-      "**/.build": true,
-      "**/coverage": true
-  },
-  "editor.suggest.localityBonus": true,
-  "editor.minimap.enabled": true,
-  "workbench.statusBar.visible": true,
-  "files.exclude": {
-      "USE_GITIGNORE": true
-  },
-  "gitlens.views.search.location": "gitlens",
-  "diffEditor.ignoreTrimWhitespace": false,
-  "editor.rulers": [
-      80,
-      90
-  ],
-  "editor.fontSize": 16,
-  "editor.renderControlCharacters": false,
-  "workbench.colorTheme": "Catppuccin Macchiato",
-  "catppuccin.colorOverrides": {
-      "mocha": {
-          "base": "#111111"
-      }
-  },
-  "catppuccin.italicKeywords": false,
-  "window.nativeTabs": true,
-  "editor.wordWrap": "on",
-  "workbench.startupEditor": "none",
-  "window.customTitleBarVisibility": "never",
-  "workbench.preferredDarkColorTheme": "Tokyo Midnight",
-"workbench.iconTheme": "catppuccin-macchiato",
-  "vscode-neovim.easymotion": false,
-  "vscode-neovim.sneak": false,
-  "workbench.fontAliasing": "antialiased",
-  "[typescript]": {
-      "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
-  "[typescriptreact]": {
-      "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "window.commandCenter": true,
-  "git.blame.editorDecoration.enabled": false,
-  "git.blame.statusBarItem.enabled": false,
+    "jest.autoEnable": false,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": false,
+    "eslint.options": {
+        "env": {
+            "browser": true,
+            "jest/globals": true,
+            "es6": true
+        },
+        "rules": {
+            "no-debugger": "off"
+        },
+        "parserOptions": {
+            "ecmaVersion": 2018,
+            "sourceType": "module",
+            "ecmaFeatures": {
+                "jsx": true
+            }
+        }
+    },
+    "gitlens.views.repositories.location": "gitlens",
+    "editor.multiCursorModifier": "alt",
+    "gitlens.views.fileHistory.location": "gitlens",
+    "terminal.integrated.rendererType": "dom",
+    "[ruby]": {
+        "editor.defaultFormatter": "misogi.ruby-rubocop",
+        "editor.formatOnSave": false
+    },
+    "vsicons.dontShowNewVersionMessage": true,
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    "tailwindCSS.includeLanguages": {
+        "javascript": "javascriptreact",
+        "html": "html",
+        "plaintext": "html"
+    },
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.fontFamily": "Jetbrains Mono Nerd Font",
+    "emmet.includeLanguages": {
+        "html": "html",
+        "javascript": "javascriptreact"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.renderWhitespace": "boundary",
+    "eslint.autoFixOnSave": false,
+    "editor.insertSpaces": true,
+    "editor.snippetSuggestions": "top",
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "explorer.confirmDragAndDrop": false,
+    "gitlens.views.compare.location": "gitlens",
+    "editor.fontFamily": "JetbrainsMono Nerd Font",
+    "editor.accessibilitySupport": "off",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.acceptSuggestionOnEnter": "off",
+    "terminal.external.osxExec": "Ghostty.app",
+    "terminal.explorerKind": "external",
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    "editor.detectIndentation": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": false
+    },
+    "gitlens.views.lineHistory.location": "gitlens",
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/dist": true,
+        "**/build": true,
+        "**/.gh-pages": true,
+        "**/__recordings__": true,
+        "**/.build": true,
+        "**/coverage": true
+    },
+    "editor.suggest.localityBonus": true,
+    "workbench.statusBar.visible": true,
+    "files.exclude": {
+        "USE_GITIGNORE": true
+    },
+    "gitlens.views.search.location": "gitlens",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.rulers": [
+        80,
+        90
+    ],
+    "editor.fontSize": 12,
+    "editor.renderControlCharacters": false,
+    "catppuccin.colorOverrides": {
+        "mocha": {
+            "base": "#111111"
+        }
+    },
+    "catppuccin.italicKeywords": false,
+    "editor.wordWrap": "on",
+    "workbench.startupEditor": "none",
+    "workbench.preferredDarkColorTheme": "Tokyo Midnight",
+    "workbench.iconTheme": "catppuccin noctis icons",
+    "vscode-neovim.easymotion": false,
+    "vscode-neovim.sneak": false,
+    "workbench.fontAliasing": "antialiased",
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "window.commandCenter": true,
+    "git.blame.editorDecoration.enabled": false,
+    "git.blame.statusBarItem.enabled": false,
+    "cursor.composer.textSizeScale": 1.3,
+    "workbench.colorTheme": "Catppuccin Macchiato",
+    "catppuccin-noctis-icons.hidesExplorerArrows": false,
+    "window.nativeTabs": true,
+    "python.createEnvironment.trigger": "off",
+    "window.autoDetectColorScheme": false,
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": false
+    },
+    "diffEditor.renderSideBySide": false,
+    "diffEditor.experimental.showMoves": true,
+    "editor.minimap.enabled": true
 }
