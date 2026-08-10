@@ -23,10 +23,12 @@ Routing for frontend, backend, language, and repo cases: `@RESOLVER.md`.
 
 - Make the smallest change that solves the task. Do not invent parallel architecture.
 - Prefer existing patterns, packages, and scripts in the repo.
+- Prefer small, reviewable diffs. Split large work into phases when the project expects it.
 - Do not commit secrets, `.env` files, or credentials.
-- Do not create git commits unless the user asks.
+- Do not create git commits unless the user asks. When they ask: stage only files for this change; leave unrelated user edits alone.
 - Do not push, force-push, or change shared remotes unless the user asks.
-- Verify with the project’s normal tests or checks when you change behavior.
+- Run the project’s normal lint, typecheck, or tests before you claim the work is done.
+- Do not silence lint or type errors without a documented reason.
 - Keep docs in sync when behavior, contracts, or setup change. Call out drift if you cannot update docs now.
 - Ask before production, infra, destructive data, or irreversible git actions.
 - Load only the docs and skills you need. Prefer progressive disclosure over large dumps.

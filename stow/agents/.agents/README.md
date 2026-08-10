@@ -135,17 +135,18 @@ Forum: [Support global AGENTS.md](https://forum.cursor.com/t/support-global-agen
 
 ## Sources for AGENTS.md content
 
-Lean rules came from patterns shared across local repos under `~/code/**`:
+Lean rules came from patterns shared across:
 
-- Prefer project docs for facts; keep agent files as conventions.
-- Small diffs; no parallel architecture.
-- No secrets; no commits unless asked.
-- Verify with project checks; keep docs current.
-- Progressive disclosure via routers / resolvers.
+- `mba15m4:~/code/**` (kamek, spoint, propatlas, personal vaults)
+- `mbp14m4:~/code/**` (Trivelta standards, Procevi, ObsidianOS work, dbt gold)
+
+Shared personal defaults stay lean: project docs for facts, small diffs, no secrets, commits only when asked, scoped staging, lint/typecheck before “done”, progressive disclosure.
+
+**Not copied into the hub:** large Trivelta Engineering Standards (`AGENTS.md` in admin/backend/pam repos). Those stay project-owned; `RESOLVER.md` points agents there for `~/code/trivelta/*`.
 
 Workflow modes mirror [Prompt Engineering Cheatsheet](/Users/benoror/vaults/trivelta/Agentic%20Workflows/Prompt%20Engineering%20Cheatsheet.md) (`/research`, `/implement`, `/refactor`, `/test`, `/debug`, `/document`).
 
-Remote review of `benoror@mbp14m4` (`100.104.209.56`) is still pending: Tailscale can show the host active, but SSH to port 22 timed out (likely Remote Login / `sshd` off). See [TODO.md](../TODO.md).
+SSH tip: use the machine hostname (e.g. `mbp14m4`, `mba15m4`) in known_hosts. Connecting by Tailscale IP alone can fail host-key checks.
 
 ## Related
 
