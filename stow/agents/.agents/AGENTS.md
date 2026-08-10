@@ -11,7 +11,7 @@ Global personal layer for coding agents on this machine.
 Prefer a project `AGENTS.md` / `CLAUDE.md` when one exists.
 Read project READMEs and `docs/` for facts. Keep this file lean.
 
-Routing for frontend, backend, language, and repo cases: `@RESOLVER.md`.
+Discovery and precedence: `@RESOLVER.md`.
 
 ## Layers
 
@@ -48,5 +48,5 @@ Use these modes when the user asks (see vault Prompt Engineering Cheatsheet for 
 ## Cursor note
 
 Cursor User Rules remain the reliable global channel until Cursor supports a global `AGENTS.md`.
-This hub still links `~/.cursor/AGENTS.md` for forward compatibility.
+Do not rely on `~/.cursor/AGENTS.md` for bootstrap.
 Project rules and project `AGENTS.md` stay primary inside Cursor workspaces.
