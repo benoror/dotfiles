@@ -21,8 +21,9 @@ Candidate skill sources (from vault todos / repos):
 
 - [ ] Optional opt-in personal overlays per repo (`CLAUDE.local.md`, gitignored `.agents` links).
 - [ ] Do **not** blanket-stow into every `~/code/*` repo by default.
-- [ ] Re-check remote `~/code/**` on `mbp14m4` when SSH works; merge any extra common rules into hub `AGENTS.md` if they stay lean.
-  - 2026-08-09: Tailscale showed host active, but TCP/22 timed out (ping loss). Enable Remote Login / `sshd` on mbp14m4, then re-run review.
+- [x] Review `mba15m4:~/code/**` and `mbp14m4:~/code/**`; fold lean cross-cutting rules into hub — ✅ 2026-08-09
+  - Kept Trivelta Engineering Standards in-repo only (via `RESOLVER.md`).
+  - Added scoped staging, lint-before-done, no silent suppressions, Procevi/Trivelta/dbt routing.
 
 ## Content seeding
 
