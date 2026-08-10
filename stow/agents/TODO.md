@@ -21,7 +21,8 @@ Candidate skill sources (from vault todos / repos):
 
 - [ ] Optional opt-in personal overlays per repo (`CLAUDE.local.md`, gitignored `.agents` links).
 - [ ] Do **not** blanket-stow into every `~/code/*` repo by default.
-- [ ] Re-check remote `~/code/**` on `mbp14m4` when Tailscale is online; merge any extra common rules into hub `AGENTS.md` if they stay lean.
+- [ ] Re-check remote `~/code/**` on `mbp14m4` when SSH works; merge any extra common rules into hub `AGENTS.md` if they stay lean.
+  - 2026-08-09: Tailscale showed host active, but TCP/22 timed out (ping loss). Enable Remote Login / `sshd` on mbp14m4, then re-run review.
 
 ## Content seeding
 

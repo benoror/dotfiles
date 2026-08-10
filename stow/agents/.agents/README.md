@@ -145,7 +145,7 @@ Lean rules came from patterns shared across local repos under `~/code/**`:
 
 Workflow modes mirror [Prompt Engineering Cheatsheet](/Users/benoror/vaults/trivelta/Agentic%20Workflows/Prompt%20Engineering%20Cheatsheet.md) (`/research`, `/implement`, `/refactor`, `/test`, `/debug`, `/document`).
 
-Remote review of `benoror@mbp14m4` (`100.104.209.56`) was skipped: host offline on Tailscale at install time.
+Remote review of `benoror@mbp14m4` (`100.104.209.56`) is still pending: Tailscale can show the host active, but SSH to port 22 timed out (likely Remote Login / `sshd` off). See [TODO.md](../TODO.md).
 
 ## Related
 
