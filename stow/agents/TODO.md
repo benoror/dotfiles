@@ -15,25 +15,20 @@ Candidate skill sources (from vault todos / repos):
 
 - [ ] `/grill-me` and other [mattpocock/skills](https://github.com/mattpocock/skills)
 - [ ] Anthropic / Cursor / skills.sh catalogs worth pinning personally
-- [ ] Repo-local skills already used in `~/code/kamek-ai/.agents/skills` (react-best-practices, shadcn, …) — decide what belongs global vs project
+- [ ] Repo-local skills already used in `~/code/kamek-ai/.agents/skills` — decide global vs project
 
-## Repo packages under ~/code
+## Repo overlays
 
-- [ ] Optional opt-in personal overlays per repo (`CLAUDE.local.md`, gitignored `.agents` links).
+- [ ] Optional `make` target for personal `CLAUDE.local.md` / gitignored `.agents` links (opt-in only).
 - [ ] Do **not** blanket-stow into every `~/code/*` repo by default.
-- [x] Review `mba15m4:~/code/**` and `mbp14m4:~/code/**`; fold lean cross-cutting rules into hub — ✅ 2026-08-09
-  - Kept Trivelta Engineering Standards in-repo only (via `RESOLVER.md`).
-  - Added scoped staging, lint-before-done, no silent suppressions, Procevi/Trivelta/dbt routing.
 
-## Content seeding
+## Done
 
-- [ ] Grow `RESOLVER.md` rows as stable personal overrides appear.
-- [ ] Keep hub `AGENTS.md` lean; push detail into skills and project guides.
+- [x] Review `mba15m4:~/code/**` and `mbp14m4:~/code/**`; fold lean rules into hub — ✅ 2026-08-09
+- [x] Migrate off `symlink-agents.sh` to Stow-owned tool entrypoints + root Makefile — ✅ 2026-08-09
 
 ## Explicitly out of scope
 
-These earlier ideas stay dropped. The hub + fan-out script scales better:
-
-- Stow-everything into `~/.claude` / `~/.cursor` trees
 - Double hub at `~/code/agents/`
-- `agents-stow` Make/just wrapper for many repo packages
+- Justfile (Make is enough for bootstrap)
+- Required `~/.cursor/AGENTS.md` (use Cursor User Rules)
