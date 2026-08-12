@@ -48,3 +48,17 @@ Omit `API Contract / Frontend Notes` when there are no API or client-facing cont
 - For frontend notes, write as a quick handoff: exact contract change, migration concern, and anything the client must display/send differently.
 - Do not invent tests. If evidence is missing, say what was not run.
 - Prefer ASD-STE100 short sentences when writing the final description.
+
+## Stacked PRs (`gh-stack`)
+
+Compose with the hub skill `gh-stack`. Do not replace stack CLI workflows.
+
+After `gh stack submit --auto` (or when the user asks to polish stack PR bodies):
+
+1. Run `gh stack view --json` to list each layer and its PR number.
+2. For each open PR in the stack (bottom → top):
+   - Check out that layer (`gh stack checkout <branch-or-pr>`).
+   - Diff against the **stack parent** (the branch below), not trunk alone — that is the reviewer's layer diff.
+   - Draft this skill's template for that layer only.
+   - Apply with `gh pr edit <n> --body-file <path>` (and `--title` if the auto title is weak).
+3. Keep each description scoped to that layer. Do not restate the whole stack in every PR; one short "Stack context" bullet is enough when helpful.

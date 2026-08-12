@@ -124,6 +124,7 @@ Vendored under `.agents/skills/` (universal agent path). After restow they appea
 | [vercel-labs/skills](https://www.skills.sh/vercel-labs/skills/find-skills) | find-skills |
 | [anthropics/skills](https://www.skills.sh/anthropics/skills/skill-creator) | skill-creator |
 | Graduated (Trivelta) | pr-description (generic) |
+| [github/gh-stack](https://www.skills.sh/github/gh-stack/gh-stack) | gh-stack (stacked PRs; also `gh extension install github/gh-stack`) |
 
 Refresh / add:
 
