@@ -18,7 +18,7 @@ No fan-out script. Bootstrap with Make on each machine.
 
 ## Layout
 
-| Path in package | After `make agents-install` | Role |
+| Path in package | After `make install-agents` | Role |
 | --- | --- | --- |
 | `.agents/AGENTS.md` | `~/.agents/AGENTS.md` | Canonical personal defaults |
 | `.agents/RESOLVER.md` | `~/.agents/RESOLVER.md` | Discovery / precedence playbook |
@@ -33,7 +33,7 @@ Cursor is **not** part of this package. Use Cursor User Rules for global Cursor 
 
 ```mermaid
 flowchart LR
-  pkg["~/dotfiles/stow/agents"] -->|"make agents-install"| home["$HOME"]
+  pkg["~/dotfiles/stow/agents"] -->|"make install-agents"| home["$HOME"]
   home --> hub["~/.agents/AGENTS.md"]
   home --> resolver["~/.agents/RESOLVER.md"]
   home --> claude["~/.claude/CLAUDE.md"]
@@ -57,7 +57,7 @@ flowchart LR
 ```bash
 git clone <dotfiles-remote> ~/dotfiles
 cd ~/dotfiles
-make agents-install
+make install-agents   # or: make agents-install
 make agents-verify
 ```
 
@@ -67,10 +67,11 @@ Needs GNU Stow. Homebrew: `brew install stow`.
 
 ```bash
 cd ~/dotfiles
-make agents-restow    # after package edits
+make restow-agents    # after package edits
 make agents-verify
-make agents-uninstall # remove package links only
+make uninstall-agents # remove package links only
 ```
+
 
 Dry-run before a risky restow:
 
