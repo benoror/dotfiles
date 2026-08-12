@@ -163,6 +163,7 @@ Do **not** Dropbox-sync whole `~/.cursor`, `~/.claude`, or `~/.codex` trees.
 
 - [ ] Periodic: ask agent which instruction files it loaded; prune hub / RESOLVER
 - [ ] Prefer nested package `AGENTS.md` over bloating repo roots
+- [ ] Evaluate potential own skills to extract/graduate from `~/vaults/trivelta/Agentic Workflows/Prompt Engineering Cheatsheet.md` (modes already lean in hub AGENTS; look for skill-sized workflows beyond `/research`–`/document`)
 
 ## Done
 
