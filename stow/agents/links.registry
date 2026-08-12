@@ -1,0 +1,24 @@
+# Agents skill link registry (Make input)
+#
+# Human map of all skills + end locations: REGISTRY.md
+#
+# One target per line. Blank lines and # comments ignored.
+# Format: <kind><TAB><path>[<TAB><skills...>]
+#
+# kind: vault | code
+# path: absolute or ~/... (expanded on each machine)
+# skills: space-separated skill names under ~/.agents/skills/
+#         omit to use defaults for that kind (see Makefile)
+#
+# Sync all rows on a machine after agents-restow:
+#   make agents-link-sync
+#
+# Ad-hoc (also appends to this file if APPEND=1):
+#   make agents-link-vault VAULT=~/vaults/personal
+#   make agents-link-code CODE=~/code/kamek-ai
+#   make agents-link-code CODE=~/code/solopreneur SKILLS='grill-me tdd ask-matt'
+
+vault	~/vaults/personal
+vault	~/vaults/openclaw/workspace	find-skills skill-creator
+code	~/code/solopreneur	grill-me grilling tdd ask-matt pr-description
+code	~/code/kamek-ai	grill-me tdd ask-matt find-skills

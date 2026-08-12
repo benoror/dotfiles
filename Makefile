@@ -3,6 +3,8 @@ SHELL := /usr/bin/env bash
 DOTFILES_DIR := $(abspath $(dir $(lastword $(MAKEFILE_LIST))))
 STOW_DIR := $(DOTFILES_DIR)/stow
 TARGET := $(HOME)
+AGENTS_PKG := $(STOW_DIR)/agents
+AGENTS_LINKS_REGISTRY := $(AGENTS_PKG)/links.registry
 
 # Safe defaults (no secrets, no Linux leftovers)
 CORE := zsh git asdf agents ghostty
@@ -18,7 +20,7 @@ LINUX := kde konsole
 SAFE := $(CORE) $(EDITORS) $(MAC)
 ALL := $(SAFE) $(SECRETS) $(LINUX)
 
-.PHONY: help install restow uninstall
+.PHONY: help install restow uninstall verify
 .PHONY: install-core restow-core uninstall-core
 .PHONY: install-editors restow-editors uninstall-editors
 .PHONY: install-mac restow-mac uninstall-mac
@@ -26,6 +28,11 @@ ALL := $(SAFE) $(SECRETS) $(LINUX)
 .PHONY: install-linux restow-linux uninstall-linux
 .PHONY: install-all restow-all uninstall-all
 .PHONY: agents-install agents-restow agents-uninstall agents-verify
+.PHONY: agents-link-vault agents-link-code agents-link-sync
+
+# Default skill sets when a registry/CLI row omits SKILLS=
+AGENTS_VAULT_SKILLS ?= find-skills skill-creator pr-description
+AGENTS_CODE_SKILLS ?= grill-me tdd ask-matt pr-description
 
 help:
 	@printf '%s\n' \
@@ -33,6 +40,7 @@ help:
 	  '  make install            Install core + editors + mac' \
 	  '  make restow             Restow those groups' \
 	  '  make uninstall          Uninstall those groups' \
+	  '  make verify             Smoke: SAFE package dirs exist under stow/' \
 	  '  make install-core       $(CORE)' \
 	  '  make install-editors    $(EDITORS)' \
 	  '  make install-mac        $(MAC)' \
@@ -44,8 +52,12 @@ help:
 	  '  packages: $(ALL)' \
 	  '' \
 	  'Agents extras:' \
-	  '  make agents-verify      Check agent entrypoints' \
-	  '  make agents-install     Alias for install-agents'
+	  '  make agents-verify      Check agent entrypoints + skill count' \
+	  '  make agents-install     Alias for install-agents' \
+	  '  make agents-link-vault VAULT=~/vaults/personal [SKILLS="…"]' \
+	  '  make agents-link-code CODE=~/code/foo [SKILLS="…"]' \
+	  '  make agents-link-sync   Re-link all rows in stow/agents/links.registry' \
+	  '  APPEND=1                With link-vault/code: append target to registry'
 
 # Explicit per-package rules (Make 3.81: pattern rules lose to empty prereq nodes)
 define PACKAGE_RULES
@@ -90,7 +102,25 @@ install-all: install install-secrets install-linux
 restow-all: restow restow-secrets restow-linux
 uninstall-all: uninstall uninstall-secrets uninstall-linux
 
-# --- agents aliases + verify -----------------------------------------------
+# Lightweight package presence check (not per-file content verify)
+verify:
+	@set -euo pipefail; \
+	fail=0; \
+	for pkg in $(SAFE); do \
+	  if [[ -d "$(STOW_DIR)/$$pkg" ]]; then \
+	    printf 'OK       stow/%s\n' "$$pkg"; \
+	  else \
+	    printf 'MISSING  stow/%s\n' "$$pkg"; \
+	    fail=1; \
+	  fi; \
+	done; \
+	if [[ "$$fail" -ne 0 ]]; then \
+	  printf 'verify failed\n' >&2; \
+	  exit 1; \
+	fi; \
+	printf 'verify OK (use agents-verify for hub entrypoints)\n'
+
+# --- agents aliases + verify + link ----------------------------------------
 
 agents-install: install-agents
 agents-restow: restow-agents
@@ -126,8 +156,94 @@ agents-verify:
 	check_link "$(HOME)/.codex/AGENTS.md" ""; \
 	check_link "$(HOME)/.config/opencode/AGENTS.md" ""; \
 	check_link "$(HOME)/.config/agents/AGENTS.md" ""; \
+	skills="$(HOME)/.agents/skills"; \
+	if [[ -d "$$skills" || -L "$$skills" ]]; then \
+	  count="$$(find -L "$$skills" -mindepth 1 -maxdepth 1 -type d 2>/dev/null | wc -l | tr -d ' ')"; \
+	  printf 'OK       %s (%s skill dirs)\n' "$$skills" "$$count"; \
+	  if [[ "$$count" -eq 0 ]]; then \
+	    printf 'WARN     no skill directories under %s\n' "$$skills"; \
+	  fi; \
+	else \
+	  printf 'MISSING  %s\n' "$$skills"; \
+	  fail=1; \
+	fi; \
 	if [[ "$$fail" -ne 0 ]]; then \
 	  printf 'agents-verify failed\n' >&2; \
 	  exit 1; \
 	fi; \
 	printf 'agents-verify OK\n'
+
+# Shared: link hub skills into ROOT/.agents/skills (skills list via $$1)
+define AGENTS_LINK_INTO
+	src="$(HOME)/.agents/skills"; \
+	root="$$(python3 -c 'import os,sys; print(os.path.realpath(os.path.expanduser(sys.argv[1])))' "$(1)")"; \
+	dest="$$root/.agents/skills"; \
+	mkdir -p "$$dest"; \
+	skills="$(2)"; \
+	if [[ -z "$$skills" ]]; then skills="$(3)"; fi; \
+	for name in $$skills; do \
+	  if [[ ! -d "$$src/$$name" ]]; then \
+	    printf 'SKIP     missing hub skill: %s\n' "$$name"; \
+	    continue; \
+	  fi; \
+	  target="$$dest/$$name"; \
+	  if [[ -L "$$target" ]]; then \
+	    ln -sfn "$$src/$$name" "$$target"; \
+	    printf 'RELINK   %s -> %s\n' "$$target" "$$src/$$name"; \
+	  elif [[ -e "$$target" ]]; then \
+	    printf 'CONFLICT %s exists (not a symlink); leave alone\n' "$$target"; \
+	  else \
+	    ln -s "$$src/$$name" "$$target"; \
+	    printf 'LINK     %s -> %s\n' "$$target" "$$src/$$name"; \
+	  fi; \
+	done
+endef
+
+agents-link-vault:
+	@set -euo pipefail; \
+	if [[ -z "$(VAULT)" ]]; then \
+	  printf 'Usage: make agents-link-vault VAULT=~/vaults/personal [SKILLS="…"] [APPEND=1]\n' >&2; \
+	  exit 1; \
+	fi; \
+	$(call AGENTS_LINK_INTO,$(VAULT),$(SKILLS),$(AGENTS_VAULT_SKILLS)); \
+	if [[ "$(APPEND)" == "1" ]]; then \
+	  skills="$(SKILLS)"; \
+	  if [[ -z "$$skills" ]]; then skills="$(AGENTS_VAULT_SKILLS)"; fi; \
+	  printf 'vault\t%s\t%s\n' "$(VAULT)" "$$skills" >> "$(AGENTS_LINKS_REGISTRY)"; \
+	  printf 'APPEND   %s\n' "$(AGENTS_LINKS_REGISTRY)"; \
+	fi
+
+agents-link-code:
+	@set -euo pipefail; \
+	if [[ -z "$(CODE)" ]]; then \
+	  printf 'Usage: make agents-link-code CODE=~/code/foo [SKILLS="…"] [APPEND=1]\n' >&2; \
+	  exit 1; \
+	fi; \
+	$(call AGENTS_LINK_INTO,$(CODE),$(SKILLS),$(AGENTS_CODE_SKILLS)); \
+	if [[ "$(APPEND)" == "1" ]]; then \
+	  skills="$(SKILLS)"; \
+	  if [[ -z "$$skills" ]]; then skills="$(AGENTS_CODE_SKILLS)"; fi; \
+	  printf 'code\t%s\t%s\n' "$(CODE)" "$$skills" >> "$(AGENTS_LINKS_REGISTRY)"; \
+	  printf 'APPEND   %s\n' "$(AGENTS_LINKS_REGISTRY)"; \
+	fi
+
+# Re-link every registry row (portable across machines after clone + agents-restow)
+agents-link-sync:
+	@set -euo pipefail; \
+	reg="$(AGENTS_LINKS_REGISTRY)"; \
+	if [[ ! -f "$$reg" ]]; then \
+	  printf 'MISSING  %s\n' "$$reg" >&2; \
+	  exit 1; \
+	fi; \
+	while IFS=$$'\t' read -r kind path skills || [[ -n "$$kind" ]]; do \
+	  [[ -z "$$kind" || "$$kind" =~ ^# ]] && continue; \
+	  case "$$kind" in \
+	    vault) \
+	      $(MAKE) agents-link-vault VAULT="$$path" SKILLS="$$skills" ;; \
+	    code) \
+	      $(MAKE) agents-link-code CODE="$$path" SKILLS="$$skills" ;; \
+	    *) \
+	      printf 'SKIP     unknown kind: %s\n' "$$kind" ;; \
+	  esac; \
+	done < "$$reg"; \
+	printf 'agents-link-sync OK\n'

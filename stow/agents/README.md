@@ -9,12 +9,15 @@ Follow ASD-STE100 Simplified Technical English for technical text. These rules a
 - Use active voice. Write "Turn the switch", not "The switch must be turned".
 - Write short paragraphs. Keep one topic in each paragraph.
 
-`README.md` and `TODO.md` stay in the package only (see [`.stow-local-ignore`](.stow-local-ignore)).
+`README.md`, `TODO.md`, `REGISTRY.md`, `links.registry`, and `skills-lock.json` stay in the package only (see [`.stow-local-ignore`](.stow-local-ignore)).
 
 ## Goal
 
 One Stow package installs the hub and tool entrypoints.
 No fan-out script. Bootstrap with Make on each machine.
+
+**Skill map (sources → end locations):** [REGISTRY.md](REGISTRY.md).
+**Make fan-out rows:** [links.registry](links.registry) (`make agents-link-sync`).
 
 ## Layout
 
@@ -22,12 +25,15 @@ No fan-out script. Bootstrap with Make on each machine.
 | --- | --- | --- |
 | `.agents/AGENTS.md` | `~/.agents/AGENTS.md` | Canonical personal defaults |
 | `.agents/RESOLVER.md` | `~/.agents/RESOLVER.md` | Discovery / precedence playbook |
+| `.agents/skills/*` | `~/.agents/skills/*` | Global skills (mattpocock + find-skills + skill-creator + graduated) |
 | `.claude/CLAUDE.md` | `~/.claude/CLAUDE.md` | `@~/.agents/AGENTS.md` |
 | `.codex/AGENTS.md` | `~/.codex/AGENTS.md` | Symlink → hub |
 | `.config/opencode/AGENTS.md` | `~/.config/opencode/AGENTS.md` | Symlink → hub |
 | `.config/agents/AGENTS.md` | `~/.config/agents/AGENTS.md` | Generic fallback symlink → hub |
 
-Cursor is **not** part of this package. Use Cursor User Rules for global Cursor prefs.
+`skills-lock.json` stays in the package (stow-ignored) for `npx skills experimental_install` restore.
+
+Cursor is **not** part of this package. Use Cursor User Rules for global Cursor prefs. Install **pstack** with `/add-plugin pstack` on each Mac.
 
 ## Architecture
 
@@ -106,7 +112,51 @@ Keep the hub lean. Large team standards (e.g. Trivelta) stay in those repos; `RE
 
 Workflow modes mirror the vault Prompt Engineering Cheatsheet (`/research`, `/implement`, `/refactor`, `/test`, `/debug`, `/document`).
 
+## Skills
+
+Full inventory and end locations: **[REGISTRY.md](REGISTRY.md)**.
+
+Vendored under `.agents/skills/` (universal agent path). After restow they appear at `~/.agents/skills/`.
+
+| Source | Skills (summary) |
+| --- | --- |
+| [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | grill / tdd / review / implement / handoff / … (see registry) |
+| [vercel-labs/skills](https://www.skills.sh/vercel-labs/skills/find-skills) | find-skills |
+| [anthropics/skills](https://www.skills.sh/anthropics/skills/skill-creator) | skill-creator |
+| Graduated (Trivelta) | pr-description (generic) |
+
+Refresh / add:
+
+```bash
+cd ~/dotfiles/stow/agents
+npx skills add mattpocock/skills -s <name> --copy -y -a universal
+make -C ~/dotfiles agents-restow
+# then update REGISTRY.md + skills-lock.json
+```
+
+### Vaults and code as consumers
+
+Vault/code trees stay outside this repo. Link graduated hub skills into targets:
+
+```bash
+# One-shot
+make agents-link-vault VAULT=~/vaults/personal
+make agents-link-code CODE=~/code/solopreneur SKILLS='grill-me tdd ask-matt'
+
+# Posterity (checked into package, stow-ignored):
+#   REGISTRY.md     — human map
+#   links.registry  — Make rows
+make agents-link-sync          # re-link every row on a new machine
+make agents-link-code CODE=~/code/foo APPEND=1   # link + append registry row
+```
+
+Defaults: vaults get `find-skills skill-creator pr-description`; code gets `grill-me tdd ask-matt pr-description` (override with `SKILLS=`). Does not overwrite existing non-symlink files.
+
+`make verify` only checks SAFE stow package dirs exist. Use `agents-verify` for hub entrypoints — no per-package `verify-*` for zsh/nvim/etc.
+
 ## Related
 
-- Deferred work: [TODO.md](TODO.md)
+- Skill / location map: [REGISTRY.md](REGISTRY.md)
+- Make link rows: [links.registry](links.registry)
+- Phased plan: [TODO.md](TODO.md)
 - Make entrypoints: [../../Makefile](../../Makefile)
