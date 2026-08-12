@@ -45,6 +45,20 @@ Use these modes when the user asks (see vault Prompt Engineering Cheatsheet for 
 - **/debug** — trace the failing flow until root causes are clear; report before a large rewrite.
 - **/document** — short PR or handoff notes for backend and frontend readers.
 
+## Skills
+
+Global skills live under `~/.agents/skills/` (this package).
+Load only what the task needs. Prefer progressive disclosure.
+
+Useful entry points:
+
+- **ask-matt** / **grill-me** / **tdd** / **diagnosing-bugs** / **code-review** / **handoff**
+- **pr-description** — branch → PR body
+- **find-skills** — discover packs on skills.sh
+- **skill-creator** — author new skills
+
+Cursor-only: install **pstack** via `/add-plugin pstack` (not Stow). Plan: `~/dotfiles/stow/agents/TODO.md`.
+
 ## Cursor note
 
 Cursor User Rules remain the reliable global channel until Cursor supports a global `AGENTS.md`.
