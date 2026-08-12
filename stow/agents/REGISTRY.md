@@ -76,9 +76,11 @@ Rows drive `make agents-link-sync`. Skills listed are **symlinks into** the targ
 | Kind | Target (end location) | Hub skills linked |
 | --- | --- | --- |
 | vault | `~/vaults/personal/.agents/skills/` | find-skills, skill-creator, pr-description (defaults) |
-| vault | `~/vaults/openclaw/workspace/.agents/skills/` | find-skills, skill-creator |
 | code | `~/code/solopreneur/.agents/skills/` | grill-me, grilling, tdd, ask-matt, pr-description, gh-stack |
-| code | `~/code/kamek-ai/.agents/skills/` | grill-me, tdd, ask-matt, find-skills, gh-stack |
+| code | `~/code/kamek-ai/.agents/skills/` | grill-me, tdd, ask-matt, find-skills, gh-stack — `hosts=personal` |
+| vault | `~/vaults/openclaw/workspace/.agents/skills/` | find-skills, skill-creator — `hosts=personal` (Hermes) |
+
+Missing targets are skipped. `hosts=personal` skips on work (`mbp14m4`); omit hosts = all machines.
 
 Defaults if a row omits skills: vaults → `AGENTS_VAULT_SKILLS`; code → `AGENTS_CODE_SKILLS` (see root Makefile).
 
