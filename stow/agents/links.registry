@@ -3,22 +3,21 @@
 # Human map of all skills + end locations: REGISTRY.md
 #
 # One target per line. Blank lines and # comments ignored.
-# Format: <kind><TAB><path>[<TAB><skills...>]
+# Format: <kind><TAB><path>[<TAB><skills...>][<TAB>hosts=<tag[,tag]>]
 #
 # kind: vault | code
 # path: absolute or ~/... (expanded on each machine)
-# skills: space-separated skill names under ~/.agents/skills/
-#         omit to use defaults for that kind (see Makefile)
+# skills: space-separated names under ~/.agents/skills/ (omit = kind defaults)
+# hosts: optional. Omit = all machines. Tags: personal | work
+#        personal = mba / Hermes mastermind; work = mbp14m4
+# Missing paths are always skipped.
 #
-# Sync all rows on a machine after agents-restow:
-#   make agents-link-sync
-#
-# Ad-hoc (also appends to this file if APPEND=1):
-#   make agents-link-vault VAULT=~/vaults/personal
-#   make agents-link-code CODE=~/code/kamek-ai
-#   make agents-link-code CODE=~/code/solopreneur SKILLS='grill-me tdd ask-matt'
+# Sync: make agents-link-sync
 
+# Both machines
 vault	~/vaults/personal
-vault	~/vaults/openclaw/workspace	find-skills skill-creator
 code	~/code/solopreneur	grill-me grilling tdd ask-matt pr-description gh-stack
-code	~/code/kamek-ai	grill-me tdd ask-matt find-skills gh-stack
+
+# Personal laptop only (Hermes / kamek)
+code	~/code/kamek-ai	grill-me tdd ask-matt find-skills gh-stack	hosts=personal
+vault	~/vaults/openclaw/workspace	find-skills skill-creator	hosts=personal

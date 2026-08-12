@@ -174,9 +174,14 @@ agents-verify:
 	printf 'agents-verify OK\n'
 
 # Shared: link hub skills into ROOT/.agents/skills (skills list via $$1)
+# Skips missing roots (personal-only paths on other machines).
 define AGENTS_LINK_INTO
 	src="$(HOME)/.agents/skills"; \
-	root="$$(python3 -c 'import os,sys; print(os.path.realpath(os.path.expanduser(sys.argv[1])))' "$(1)")"; \
+	root_raw="$$(python3 -c 'import os,sys; print(os.path.expanduser(sys.argv[1]))' "$(1)")"; \
+	if [[ ! -d "$$root_raw" ]]; then \
+	  printf 'SKIP     missing target: %s\n' "$$root_raw"; \
+	else \
+	root="$$(cd "$$root_raw" && pwd)"; \
 	dest="$$root/.agents/skills"; \
 	mkdir -p "$$dest"; \
 	skills="$(2)"; \
@@ -196,7 +201,8 @@ define AGENTS_LINK_INTO
 	    ln -s "$$src/$$name" "$$target"; \
 	    printf 'LINK     %s -> %s\n' "$$target" "$$src/$$name"; \
 	  fi; \
-	done
+	done; \
+	fi
 endef
 
 agents-link-vault:
@@ -228,6 +234,7 @@ agents-link-code:
 	fi
 
 # Re-link every registry row (portable across machines after clone + agents-restow)
+# Optional 4th field: hosts=personal|work (comma-separated). Omit = all machines.
 agents-link-sync:
 	@set -euo pipefail; \
 	reg="$(AGENTS_LINKS_REGISTRY)"; \
@@ -235,8 +242,21 @@ agents-link-sync:
 	  printf 'MISSING  %s\n' "$$reg" >&2; \
 	  exit 1; \
 	fi; \
-	while IFS=$$'\t' read -r kind path skills || [[ -n "$$kind" ]]; do \
+	host="$$(scutil --get LocalHostName 2>/dev/null || hostname -s)"; \
+	role=personal; \
+	case "$$host" in \
+	  mbp14m4*|*-work*|work*) role=work ;; \
+	esac; \
+	printf 'HOST     %s (role=%s)\n' "$$host" "$$role"; \
+	while IFS=$$'\t' read -r kind path skills hosts || [[ -n "$$kind" ]]; do \
 	  [[ -z "$$kind" || "$$kind" =~ ^# ]] && continue; \
+	  if [[ -n "$${hosts:-}" && "$$hosts" == hosts=* ]]; then \
+	    tags="$${hosts#hosts=}"; \
+	    if [[ ",$$tags," != *",$$role,"* ]]; then \
+	      printf 'SKIP     hosts=%s (this machine role=%s): %s %s\n' "$$tags" "$$role" "$$kind" "$$path"; \
+	      continue; \
+	    fi; \
+	  fi; \
 	  case "$$kind" in \
 	    vault) \
 	      $(MAKE) agents-link-vault VAULT="$$path" SKILLS="$$skills" ;; \
