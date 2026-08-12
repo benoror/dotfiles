@@ -63,6 +63,7 @@ Canonical tree: `stow/agents/.agents/skills/` → stowed to `~/.agents/skills/`.
 | find-skills | vercel-labs/skills | skills.sh discovery |
 | skill-creator | anthropics/skills | Author skills |
 | pr-description | Graduated (Trivelta) | Generic PR body |
+| gh-stack | [github/gh-stack](https://www.skills.sh/github/gh-stack/gh-stack) | Official stacked PRs (`gh stack`); needs `gh extension install github/gh-stack`. Hub patch: compose with `pr-description` after submit (re-apply if skill is reinstalled). |
 
 Restore hashes: [skills-lock.json](skills-lock.json).
 
@@ -76,8 +77,8 @@ Rows drive `make agents-link-sync`. Skills listed are **symlinks into** the targ
 | --- | --- | --- |
 | vault | `~/vaults/personal/.agents/skills/` | find-skills, skill-creator, pr-description (defaults) |
 | vault | `~/vaults/openclaw/workspace/.agents/skills/` | find-skills, skill-creator |
-| code | `~/code/solopreneur/.agents/skills/` | grill-me, grilling, tdd, ask-matt, pr-description |
-| code | `~/code/kamek-ai/.agents/skills/` | grill-me, tdd, ask-matt, find-skills |
+| code | `~/code/solopreneur/.agents/skills/` | grill-me, grilling, tdd, ask-matt, pr-description, gh-stack |
+| code | `~/code/kamek-ai/.agents/skills/` | grill-me, tdd, ask-matt, find-skills, gh-stack |
 
 Defaults if a row omits skills: vaults → `AGENTS_VAULT_SKILLS`; code → `AGENTS_CODE_SKILLS` (see root Makefile).
 
@@ -104,7 +105,7 @@ Plus hub symlinks from the table above.
 | Skill | Origin | End location |
 | --- | --- | --- |
 | domain-hunter, reddit, twitter | project-local | same |
-| grill-me, grilling, tdd, ask-matt, pr-description | hub symlinks | → `~/.agents/skills/…` |
+| grill-me, grilling, tdd, ask-matt, pr-description, gh-stack | hub symlinks | → `~/.agents/skills/…` |
 
 ---
 

@@ -20,5 +20,5 @@
 
 vault	~/vaults/personal
 vault	~/vaults/openclaw/workspace	find-skills skill-creator
-code	~/code/solopreneur	grill-me grilling tdd ask-matt pr-description
-code	~/code/kamek-ai	grill-me tdd ask-matt find-skills
+code	~/code/solopreneur	grill-me grilling tdd ask-matt pr-description gh-stack
+code	~/code/kamek-ai	grill-me tdd ask-matt find-skills gh-stack

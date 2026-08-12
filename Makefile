@@ -32,7 +32,7 @@ ALL := $(SAFE) $(SECRETS) $(LINUX)
 
 # Default skill sets when a registry/CLI row omits SKILLS=
 AGENTS_VAULT_SKILLS ?= find-skills skill-creator pr-description
-AGENTS_CODE_SKILLS ?= grill-me tdd ask-matt pr-description
+AGENTS_CODE_SKILLS ?= grill-me tdd ask-matt pr-description gh-stack
 
 help:
 	@printf '%s\n' \

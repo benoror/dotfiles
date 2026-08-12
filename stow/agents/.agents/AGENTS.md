@@ -54,6 +54,7 @@ Useful entry points:
 
 - **ask-matt** / **grill-me** / **tdd** / **diagnosing-bugs** / **code-review** / **handoff**
 - **pr-description** — branch → PR body
+- **gh-stack** — GitHub stacked PRs (`gh stack`; needs CLI extension)
 - **find-skills** — discover packs on skills.sh
 - **skill-creator** — author new skills
 
