@@ -126,6 +126,7 @@ Vendored under `.agents/skills/` (universal agent path). After restow they appea
 | Graduated (Trivelta) | pr-description (generic) |
 | [github/gh-stack](https://www.skills.sh/github/gh-stack/gh-stack) | gh-stack (stacked PRs; also `gh extension install github/gh-stack`) |
 | [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail) | ponytail pack (YAGNI / lazy senior-dev) |
+| [steveruizok gist](https://gist.github.com/steveruizok/83ae5c53f2784ebf8f5fe0a3fb94480f) | product-description (outside-in behavior spec) |
 
 Refresh / add:
 
