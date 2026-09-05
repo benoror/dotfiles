@@ -53,12 +53,16 @@ Load only what the task needs. Prefer progressive disclosure.
 Useful entry points:
 
 - **ask-matt** / **grill-me** / **tdd** / **diagnosing-bugs** / **code-review** / **handoff**
+- **ponytail** — smallest solution that works (YAGNI)
 - **pr-description** — branch → PR body
 - **gh-stack** — GitHub stacked PRs (`gh stack`; needs CLI extension)
+- **product-description** — outside-in product behavior spec
+- **show-me** — diagrams and focused HTML
 - **find-skills** — discover packs on skills.sh
 - **skill-creator** — author new skills
 
 Cursor-only: install **pstack** via `/add-plugin pstack` (not Stow). Plan: `~/dotfiles/stow/agents/TODO.md`.
+Do not vendor full pstack into this hub. Two recommended pstack skills wait on Ben (tweet pending).
 
 ## Cursor note
 

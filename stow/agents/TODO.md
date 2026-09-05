@@ -56,6 +56,7 @@ Cursor plugins stay **Cursor-local** (not Stow-mirrored wholesale).
 
 - [ ] Install **pstack**: `/add-plugin pstack` then `/setup-pstack` — [setup-pstack](https://www.skills.sh/cursor/plugins/setup-pstack) · [repo](https://github.com/cursor/plugins/tree/main/pstack)
 - [ ] Default entry: `/poteto-mode` for non-trivial Cursor work
+- [ ] REGISTRY “Cursor — pstack”: add 2 recommended skills after Ben confirms the names (tweet pending). Do not invent names.
 - [ ] Skim other popular Cursor plugin skills for daily use:
   - [ ] `deslop` / `unslop`
   - [ ] `review-and-ship` / `make-pr-easy-to-review` / `get-pr-comments`
