@@ -50,23 +50,39 @@ make agents-link-sync
 
 Canonical tree: `stow/agents/.agents/skills/` → stowed to `~/.agents/skills/`.
 
-| Skill | Source pack | Notes |
+| Skill | Source | Summary |
 | --- | --- | --- |
-| ask-matt | mattpocock/skills | Router |
-| grill-me, grilling, grill-with-docs | mattpocock/skills | Plan stress-test |
-| tdd, diagnosing-bugs, implement | mattpocock/skills | Build / debug |
-| handoff, claude-handoff | mattpocock/skills | Session handoff |
-| code-review, improve-codebase-architecture | mattpocock/skills | Review / deepen |
-| writing-for-agents, setup-matt-pocock-skills | mattpocock/skills | Meta |
-| to-spec, to-tickets, prototype, research, wayfinder | mattpocock/skills | Spec / plan |
-| resolving-merge-conflicts | mattpocock/skills | Git |
-| find-skills | vercel-labs/skills | skills.sh discovery |
-| skill-creator | anthropics/skills | Author skills |
-| pr-description | Graduated (Trivelta) | Generic PR body |
-| gh-stack | [github/gh-stack](https://www.skills.sh/github/gh-stack/gh-stack) | Official stacked PRs (`gh stack`); needs `gh extension install github/gh-stack`. Hub patch: compose with `pr-description` after submit (re-apply if skill is reinstalled). |
-| ponytail, ponytail-audit, ponytail-debt, ponytail-gain, ponytail-help, ponytail-review | [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail) | Lazy senior-dev pack (YAGNI). Primary skill plus audit, debt, gain, help, and review. |
-| product-description | [steveruizok gist](https://gist.github.com/steveruizok/83ae5c53f2784ebf8f5fe0a3fb94480f) | Outside-in product behavior spec. Installer puts `SKILL.md` beside `references/`. |
-| show-me | [humanlayer/skills](https://www.skills.sh/humanlayer/skills/show-me) | Visual diagrams and focused HTML artifacts. |
+| ask-matt | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Route work to the right skill or flow. |
+| grill-me | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Start a grilling session to stress-test a plan. |
+| grilling | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Interview the user and map a design tree. |
+| grill-with-docs | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Grill a plan and write ADRs and a glossary as you go. |
+| tdd | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Build test-first and keep tests that specify behavior. |
+| diagnosing-bugs | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Diagnose hard bugs and slow paths in a tight loop. |
+| implement | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Implement work from a spec or tickets. |
+| handoff | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Write a compact handoff for the next agent. |
+| claude-handoff | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Hand the session to a fresh Claude background agent. |
+| code-review | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Review a diff against standards and the spec. |
+| improve-codebase-architecture | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Find deepening refactors and report them. |
+| writing-for-agents | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Write skills and `AGENTS.md` that agents follow. |
+| setup-matt-pocock-skills | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Wire tracker, labels, and domain docs for this pack. |
+| to-spec | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Turn the current conversation into a tracker spec. |
+| to-tickets | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Split a plan into tracer-bullet tickets. |
+| prototype | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Build throwaway code to answer a design question. |
+| research | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Research a question from primary sources and write notes. |
+| wayfinder | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Map large work as decision tickets on the tracker. |
+| resolving-merge-conflicts | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Resolve an in-progress merge or rebase. |
+| find-skills | [vercel-labs/skills](https://www.skills.sh/vercel-labs/skills/find-skills) | Discover and install skills from skills.sh. |
+| skill-creator | [anthropics/skills](https://www.skills.sh/anthropics/skills/skill-creator) | Author, edit, and measure agent skills. |
+| pr-description | Graduated (Trivelta) | Draft a concise PR body from branch context. |
+| gh-stack | [github/gh-stack](https://www.skills.sh/github/gh-stack/gh-stack) | Manage stacked PRs with `gh stack`. Needs `gh extension install github/gh-stack`. Hub patch: compose with `pr-description` after submit. Re-apply the patch if you reinstall the skill. |
+| ponytail | [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail) | Force the smallest solution that works (YAGNI). |
+| ponytail-audit | [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail-audit) | Audit the whole repo for over-engineering. |
+| ponytail-debt | [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail-debt) | List `ponytail:` comments as a debt ledger. |
+| ponytail-gain | [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail-gain) | Show ponytail's measured impact scoreboard. |
+| ponytail-help | [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail-help) | Show a one-shot reference for ponytail modes and commands. |
+| ponytail-review | [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail-review) | Review a diff only for over-engineering. |
+| product-description | [steveruizok gist](https://gist.github.com/steveruizok/83ae5c53f2784ebf8f5fe0a3fb94480f) | Write an outside-in product behavior spec. `npx skills` cannot clone this gist. Use the gist `install.sh` so `SKILL.md` sits beside `references/`. |
+| show-me | [humanlayer/skills](https://www.skills.sh/humanlayer/skills/show-me) | Draw diagrams and focused HTML to explain the current topic. |
 
 Restore hashes: [skills-lock.json](skills-lock.json).
 
@@ -131,6 +147,10 @@ Hub fan-out only adds the symlink rows in [links.registry](links.registry); it d
 | Primary entry | `/poteto-mode` after `/setup-pstack` |
 
 Preferred long-term: marketplace `/add-plugin pstack` for account sync. Local plugin dir is fine for immediate use.
+
+Do not vendor full pstack into this hub.
+
+<!-- TODO: add 2 recommended pstack skills after Ben confirms the names (tweet pending). Do not invent names. -->
 
 ---
 
