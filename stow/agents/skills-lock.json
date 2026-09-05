@@ -109,6 +109,12 @@
       "skillPath": "skills/ponytail-review/SKILL.md",
       "computedHash": "4646594fcd75455533f7ff1425f4f1c5ba0fa65f88241bf262b1c4fc275f049a"
     },
+    "product-description": {
+      "source": "https://gist.github.com/steveruizok/83ae5c53f2784ebf8f5fe0a3fb94480f",
+      "sourceType": "gist",
+      "skillPath": "SKILL.md",
+      "computedHash": "46182fed6254a188217a5508411197471b209b895b6c97f79b7107dbe78ee6a6"
+    },
     "prototype": {
       "source": "mattpocock/skills",
       "sourceType": "github",
