@@ -125,6 +125,7 @@ Vendored under `.agents/skills/` (universal agent path). After restow they appea
 | [anthropics/skills](https://www.skills.sh/anthropics/skills/skill-creator) | skill-creator |
 | Graduated (Trivelta) | pr-description (generic) |
 | [github/gh-stack](https://www.skills.sh/github/gh-stack/gh-stack) | gh-stack (stacked PRs; also `gh extension install github/gh-stack`) |
+| [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail) | ponytail pack (YAGNI / lazy senior-dev) |
 
 Refresh / add:
 

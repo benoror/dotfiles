@@ -64,6 +64,7 @@ Canonical tree: `stow/agents/.agents/skills/` → stowed to `~/.agents/skills/`.
 | skill-creator | anthropics/skills | Author skills |
 | pr-description | Graduated (Trivelta) | Generic PR body |
 | gh-stack | [github/gh-stack](https://www.skills.sh/github/gh-stack/gh-stack) | Official stacked PRs (`gh stack`); needs `gh extension install github/gh-stack`. Hub patch: compose with `pr-description` after submit (re-apply if skill is reinstalled). |
+| ponytail, ponytail-audit, ponytail-debt, ponytail-gain, ponytail-help, ponytail-review | [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail) | Lazy senior-dev pack (YAGNI). Primary skill plus audit, debt, gain, help, and review. |
 
 Restore hashes: [skills-lock.json](skills-lock.json).
 
