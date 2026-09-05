@@ -62,7 +62,8 @@ Useful entry points:
 - **skill-creator** — author new skills
 
 Cursor-only: install **pstack** via `/add-plugin pstack` (not Stow). Plan: `~/dotfiles/stow/agents/TODO.md`.
-Do not vendor full pstack into this hub. Two recommended pstack skills wait on Ben (tweet pending).
+Do not vendor full pstack into this hub.
+Recommended pstack skills (see REGISTRY): `/create-verification-skill` and `/maintain-verification-skill`.
 
 ## Cursor note
 

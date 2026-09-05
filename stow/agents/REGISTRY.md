@@ -150,7 +150,16 @@ Preferred long-term: marketplace `/add-plugin pstack` for account sync. Local pl
 
 Do not vendor full pstack into this hub.
 
-<!-- TODO: add 2 recommended pstack skills after Ben confirms the names (tweet pending). Do not invent names. -->
+Use `/setup-pstack` to pick models. Then use `/poteto-mode` for non-trivial Cursor work.
+
+Recommendation source: [poteto tweet](https://x.com/poteto/status/2093414407196012990).
+
+| Skill | Source | Summary |
+| --- | --- | --- |
+| `/create-verification-skill` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/create-verification-skill/SKILL.md) | Create a project verification skill so the agent can run, control, and debug the app. Trusted agent loop. |
+| `/maintain-verification-skill` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/maintain-verification-skill/SKILL.md) | Keep the verification skill and feature map sharp. Use daily automation, a grok bot, or Cursor automation. |
+
+Example feature map: [poteto/verification-skill-example](https://github.com/poteto/verification-skill-example).
 
 ---
 
