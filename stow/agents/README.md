@@ -125,6 +125,11 @@ Vendored under `.agents/skills/` (universal agent path). After restow they appea
 | [anthropics/skills](https://www.skills.sh/anthropics/skills/skill-creator) | skill-creator |
 | Graduated (Trivelta) | pr-description (generic) |
 | [github/gh-stack](https://www.skills.sh/github/gh-stack/gh-stack) | gh-stack (stacked PRs; also `gh extension install github/gh-stack`) |
+| [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail) | ponytail pack (YAGNI / lazy senior-dev) |
+| [steveruizok gist](https://gist.github.com/steveruizok/83ae5c53f2784ebf8f5fe0a3fb94480f) | product-description (outside-in behavior spec) |
+| [humanlayer/skills](https://www.skills.sh/humanlayer/skills/show-me) | show-me (diagrams and focused HTML) |
+
+Per-skill sources and short summaries: [REGISTRY.md](REGISTRY.md).
 
 Refresh / add:
 
@@ -133,6 +138,14 @@ cd ~/dotfiles/stow/agents
 npx skills add mattpocock/skills -s <name> --copy -y -a universal
 make -C ~/dotfiles agents-restow
 # then update REGISTRY.md + skills-lock.json
+```
+
+The product-description gist has no GitHub clone for `npx skills`. Install it with the gist script:
+
+```bash
+cd ~/dotfiles/stow/agents
+curl -fsSL https://gist.githubusercontent.com/steveruizok/83ae5c53f2784ebf8f5fe0a3fb94480f/raw/install.sh \
+  | sh -s -- .agents/skills/product-description
 ```
 
 ### Vaults and code as consumers
