@@ -130,5 +130,6 @@
     },
     "diffEditor.renderSideBySide": false,
     "diffEditor.experimental.showMoves": true,
-    "editor.minimap.enabled": true
+    "editor.minimap.enabled": true,
+    "remote.autoForwardPorts": false
 }
