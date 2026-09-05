@@ -150,14 +150,25 @@ Preferred long-term: marketplace `/add-plugin pstack` for account sync. Local pl
 
 Do not vendor full pstack into this hub.
 
-Use `/setup-pstack` to pick models. Then use `/poteto-mode` for non-trivial Cursor work.
-
-Recommendation source: [poteto tweet](https://x.com/poteto/status/2093414407196012990).
+Entry points only. Remaining `principle-*` and other pstack skills live in the plugin. `/poteto-mode` typically pulls them in. This registry does not list them.
 
 | Skill | Source | Summary |
 | --- | --- | --- |
+| `/setup-pstack` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/setup-pstack/SKILL.md) | Configure which model each pstack role uses. |
+| `/poteto-mode` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-mode/SKILL.md) | Primary workflow for non-trivial Cursor work. It invokes many skills for you. |
 | `/create-verification-skill` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/create-verification-skill/SKILL.md) | Create a project verification skill so the agent can run, control, and debug the app. Trusted agent loop. |
 | `/maintain-verification-skill` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/maintain-verification-skill/SKILL.md) | Keep the verification skill and feature map sharp. Use daily automation, a grok bot, or Cursor automation. |
+| `/show-me-your-work` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/show-me-your-work/SKILL.md) | Write a TSV decision trail for unattended or long runs. |
+| `/how` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/how/SKILL.md) | Walk through the current design before you change it. |
+| `/why` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/why/SKILL.md) | Capture design rationale and postmortems. |
+| `/architect` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/architect/SKILL.md) | Sketch types and signatures before you write code. |
+| `/arena` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/arena/SKILL.md) | Run parallel candidates and graft the winners. |
+| `/swarm` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/swarm/SKILL.md) | Fan out parallel workers and return one report. |
+| `/interrogate` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/interrogate/SKILL.md) | Run an adversarial multi-model review. |
+| `/tdd` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/tdd/SKILL.md) | Use when the user asks for TDD or failing tests. |
+| `/unslop` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/unslop/SKILL.md) | Cut AI tells from writing. |
+
+Verification recs: [poteto tweet](https://x.com/poteto/status/2093414407196012990).
 
 Example feature map: [poteto/verification-skill-example](https://github.com/poteto/verification-skill-example).
 
