@@ -148,8 +148,9 @@ fi
 #------------------------------------------------------------------------------
 # gpg-agent
 #------------------------------------------------------------------------------
-GPG_TTY=$(tty)
-export GPG_TTY
+# Real TTY when available; empty/null-safe for agent CLIs without a tty.
+export GPG_TTY="${GPG_TTY:-$(tty 2>/dev/null)}"
+[[ "$GPG_TTY" == "not a tty" || -z "$GPG_TTY" ]] && unset GPG_TTY
 
 #------------------------------------------------------------------------------
 # Google Cloud SDK
