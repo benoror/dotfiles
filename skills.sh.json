@@ -11,11 +11,6 @@
       "title": "Agent grading",
       "description": "Grade local agent conversations against installed skills. Transcripts stay on the machine.",
       "skills": ["skill-doctor"]
-    },
-    {
-      "title": "Product specs",
-      "description": "Write an outside-in product behavior spec from code and tests.",
-      "skills": ["product-description"]
     }
   ]
 }
