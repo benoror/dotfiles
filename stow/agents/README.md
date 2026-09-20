@@ -128,6 +128,7 @@ Vendored under `.agents/skills/` (universal agent path). After restow they appea
 | [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail) | ponytail pack (YAGNI / lazy senior-dev) |
 | [steveruizok gist](https://gist.github.com/steveruizok/83ae5c53f2784ebf8f5fe0a3fb94480f) | product-description (outside-in behavior spec) |
 | [humanlayer/skills](https://www.skills.sh/humanlayer/skills/show-me) | show-me (diagrams and focused HTML) |
+| [warpdotdev/common-skills](https://github.com/warpdotdev/common-skills/tree/main/.agents/skills/skill-doctor) | skill-doctor (hub fork; grade local sessions) |
 
 Per-skill sources and short summaries: [REGISTRY.md](REGISTRY.md).
 

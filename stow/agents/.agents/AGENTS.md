@@ -58,6 +58,7 @@ Useful entry points:
 - **gh-stack** — GitHub stacked PRs (`gh stack`; needs CLI extension)
 - **product-description** — outside-in product behavior spec
 - **show-me** — diagrams and focused HTML
+- **skill-doctor** — grade local agent sessions and draft skill edits
 - **find-skills** — discover packs on skills.sh
 - **skill-creator** — author new skills
 
