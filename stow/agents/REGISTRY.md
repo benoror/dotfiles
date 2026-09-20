@@ -83,6 +83,7 @@ Canonical tree: `stow/agents/.agents/skills/` → stowed to `~/.agents/skills/`.
 | ponytail-review | [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail-review) | Review a diff only for over-engineering. |
 | product-description | [steveruizok gist](https://gist.github.com/steveruizok/83ae5c53f2784ebf8f5fe0a3fb94480f) | Write an outside-in product behavior spec. `npx skills` cannot clone this gist. Use the gist `install.sh` so `SKILL.md` sits beside `references/`. |
 | show-me | [humanlayer/skills](https://www.skills.sh/humanlayer/skills/show-me) | Draw diagrams and focused HTML to explain the current topic. |
+| skill-doctor | [warpdotdev/common-skills](https://github.com/warpdotdev/common-skills/tree/main/.agents/skills/skill-doctor) | Grade local agent conversations against installed skills; propose skill edits; render a local HTML report. Never upload transcripts. Hub fork: multi-harness plugins including Cursor and Grok Bot. Pin: [ORIGIN.md](.agents/skills/skill-doctor/ORIGIN.md). Surfaces: [sot-surfaces.md](.agents/skills/skill-doctor/references/sot-surfaces.md). |
 
 Restore hashes: [skills-lock.json](skills-lock.json).
 
