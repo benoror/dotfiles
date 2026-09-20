@@ -1,16 +1,18 @@
 ---
 name: "skill-doctor"
-description: "Grades agent skills by scoring agent conversations for efficiency, code quality, procedure compliance, and verbosity, then drafts concrete skill edits and a shareable report. Use when the user wants their agent setup graded from real conversation history, or asks which of their installed skills are actually working."
+description: "Fork of Warp's skill-doctor (warpdotdev/common-skills). Grades agent skills by scoring local conversations for efficiency, code quality, procedure compliance, and verbosity, then drafts skill edits and a local HTML report. Use when the user wants their agent setup graded from real conversation history, or asks which installed skills are actually working."
 ---
 # skill-doctor
 
-Grade the user's agent setup by scoring recent local agent conversations, then propose concrete skill edits and render one shareable report page.
+Maintained fork of **Warp's skill-doctor**. Upstream authors: Warp / [warpdotdev](https://github.com/warpdotdev). Sources: [GitHub](https://github.com/warpdotdev/common-skills/tree/main/.agents/skills/skill-doctor) · [skills.sh](https://www.skills.sh/warpdotdev/common-skills/skill-doctor). Pin and fork notes: `ORIGIN.md`.
+
+This copy stays harness-agnostic. It grades local agent conversations, then proposes skill edits and renders one local HTML report.
 
 The report can cover conversations in the current repository, conversations in selected projects, or all local conversations. It can evaluate project skills alone or project and global skills together.
 
 Everything runs locally. Never upload transcripts, session files, or any excerpt of them anywhere. The only shareable artifact is the report the user chooses to post.
 
-Adapted from [warpdotdev/common-skills](https://github.com/warpdotdev/common-skills). See `ORIGIN.md` for the pinned commit. Skill-scope roots: `$SKILL_ROOT/references/sot-surfaces.md`.
+Skill-scope roots: `$SKILL_ROOT/references/sot-surfaces.md`.
 
 Let `SKILL_ROOT` be the directory containing this SKILL.md.
 
