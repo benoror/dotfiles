@@ -1,5 +1,5 @@
 ---
-name: "skill-doctor"
+name: skill-doctor
 description: "Based on Warp's skill-doctor (warpdotdev/common-skills). Grades local agent conversations for efficiency, code quality, procedure compliance, and verbosity, then drafts skill edits and a local HTML report. Use when the user asks for /skill-doctor, a skill-doctor run, or wants their agent setup graded from conversation history."
 ---
 # skill-doctor
