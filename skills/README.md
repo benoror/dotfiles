@@ -15,7 +15,7 @@ Each entry here is a **relative symlink** into that hub tree. Do not copy skill 
 | Skill | Why it is on this surface |
 | --- | --- |
 | `pr-description` | Graduated from Trivelta. Owned here. |
-| `skill-doctor` | Fork of warpdotdev/common-skills. Multi-harness grader owned here. |
+| `skill-doctor` | Maintained fork of Warp's skill-doctor (warpdotdev/common-skills); authors Warp / warpdotdev. |
 | `product-description` | First-class hub copy. The upstream gist cannot be cloned with `npx skills`. |
 
 ## Symlink rule
@@ -41,8 +41,18 @@ Then add the slug (the `name` in `SKILL.md`) to [../skills.sh.json](../skills.sh
 Repo page (after skills.sh sees this tree):
 
 ```bash
-npx skills add benoror/dotfiles -s <name>
+npx skills add benoror/dotfiles --skill <name>
 ```
+
+### Get indexed (FAQ)
+
+skills.sh lists skills from anonymous CLI telemetry ([FAQ](https://www.skills.sh/docs/faq)). After this branch merges to the default branch, install with telemetry **on** (do not set `DISABLE_TELEMETRY` or `DO_NOT_TRACK`):
+
+```bash
+npx skills add benoror/dotfiles --skill skill-doctor
+```
+
+That install is what lets the leaderboard see `skill-doctor` from this repo. Visiting the GitHub page alone does not index it.
 
 Pack [ben-orozcos-projects](https://www.skills.sh/packs/ben-orozcos-projects):
 
