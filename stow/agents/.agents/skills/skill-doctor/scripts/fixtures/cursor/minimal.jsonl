@@ -1,0 +1,4 @@
+{"role": "user", "message": {"content": [{"type": "text", "text": "Inspect the Cursor adapter"}]}}
+{"role": "assistant", "message": {"content": [{"type": "text", "text": "Reading the skill next."}, {"type": "tool_use", "name": "read_file", "input": {"path": "/Users/ben/app/.agents/skills/update-skill/SKILL.md"}}]}}
+{"role": "tool", "message": {"content": [{"type": "text", "text": "skill body"}]}}
+{"role": "assistant", "message": {"content": [{"type": "text", "text": "Patching the file."}, {"type": "tool_use", "name": "edit_file", "input": {"path": "/Users/ben/app/out.py", "old": "a", "new": "b"}}]}}

@@ -1,0 +1,4 @@
+{"role": "user", "message": {"content": [{"type": "text", "text": "Grade the skill-doctor collector"}]}}
+{"role": "assistant", "message": {"content": [{"type": "text", "text": "I will read the skill and patch the parser."}, {"type": "tool_use", "name": "read_file", "input": {"path": "/repo/.agents/skills/skill-doctor/SKILL.md"}}]}}
+{"role": "tool", "message": {"content": [{"type": "text", "text": "---\nname: skill-doctor\n"}]}}
+{"role": "assistant", "message": {"content": [{"type": "text", "text": "Writing the adapter next."}, {"type": "tool_use", "name": "write", "input": {"path": "/tmp/repo/out.py", "content": "ok"}}]}}
