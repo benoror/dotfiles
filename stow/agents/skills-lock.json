@@ -151,6 +151,12 @@
       "skillPath": "skills/skill-creator/SKILL.md",
       "computedHash": "5ea13a6d9f0d4bb694405d79acd00cadec0d21bb138c4dd10fcf3c500cb835c2"
     },
+    "skill-doctor": {
+      "source": "warpdotdev/common-skills",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/skill-doctor/SKILL.md",
+      "computedHash": "6d174b9f9300dc1160a88ba15bf56f499deb875cb639f733ae592953936eb442"
+    },
     "tdd": {
       "source": "mattpocock/skills",
       "sourceType": "github",
