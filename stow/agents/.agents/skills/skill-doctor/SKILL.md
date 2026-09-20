@@ -37,6 +37,8 @@ Use the short path below only when the user asks for a first run, a smoke, or a 
 
 ### Box first run
 
+On Grok Bot, prefer this path by default (harness `grok_bot`). After hub restow, ensure skills were materialized (`./scripts/materialize-workflows-for-grok.sh`) or `/skill-doctor` may be missing from slash autocomplete.
+
 ```bash
 REPORT_DIR="$(mktemp -d "${TMPDIR:-/tmp}/skill-doctor-XXXXXXXX")"
 python3 "$SKILL_ROOT/scripts/collect_sessions.py" \
