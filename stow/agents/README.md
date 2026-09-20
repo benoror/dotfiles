@@ -1,5 +1,7 @@
 # Agents stow package
 
+[![skills.sh](https://skills.sh/b/benoror/dotfiles)](https://skills.sh/benoror/dotfiles)
+
 Personal agent hub for coding tools.
 
 Follow ASD-STE100 Simplified Technical English for technical text. These rules apply to all prose you write: docs, commit messages, PR descriptions, reports, replies, etc:
@@ -18,6 +20,7 @@ No fan-out script. Bootstrap with Make on each machine.
 
 **Skill map (sources → end locations):** [REGISTRY.md](REGISTRY.md).
 **Make fan-out rows:** [links.registry](links.registry) (`make agents-link-sync`).
+**skills.sh / pack surface:** [../../skills/](../../skills/) (own/forked hub skills only).
 
 ## Layout
 
@@ -128,6 +131,7 @@ Vendored under `.agents/skills/` (universal agent path). After restow they appea
 | [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail) | ponytail pack (YAGNI / lazy senior-dev) |
 | [steveruizok gist](https://gist.github.com/steveruizok/83ae5c53f2784ebf8f5fe0a3fb94480f) | product-description (outside-in behavior spec) |
 | [humanlayer/skills](https://www.skills.sh/humanlayer/skills/show-me) | show-me (diagrams and focused HTML) |
+| [warpdotdev/common-skills](https://github.com/warpdotdev/common-skills/tree/main/.agents/skills/skill-doctor) | skill-doctor (based on / forked from Warp's skill-doctor; local multi-harness grader) |
 
 Per-skill sources and short summaries: [REGISTRY.md](REGISTRY.md).
 
