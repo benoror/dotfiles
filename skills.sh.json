@@ -1,0 +1,21 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Git / PR",
+      "description": "Draft review-ready pull request text from branch context.",
+      "skills": ["pr-description"]
+    },
+    {
+      "title": "Agent grading",
+      "description": "Grade local agent conversations against installed skills. Transcripts stay on the machine.",
+      "skills": ["skill-doctor"]
+    },
+    {
+      "title": "Product specs",
+      "description": "Write an outside-in product behavior spec from code and tests.",
+      "skills": ["product-description"]
+    }
+  ]
+}

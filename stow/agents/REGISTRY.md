@@ -11,6 +11,8 @@ Prefer this file for reading and planning. Prefer [links.registry](links.registr
 | **REGISTRY.md** (this file) | Human catalog: sources, end locations, ownership |
 | **links.registry** | Make sync input: which targets get which hub skill symlinks |
 | **skills-lock.json** | `npx skills` restore hashes for hub-vendored packs |
+| **[skills/](../../skills/)** (repo root) | skills.sh / pack publish surface — relative symlinks to own/forked hub skills only |
+| **[skills.sh.json](../../skills.sh.json)** (repo root) | skills.sh repo-page groups |
 | **TOOLS.md** | Avoid here — OpenClaw/Hermes uses that name for *local runtime notes* (SSH, voice, cameras), not skill inventory |
 
 ## Surfaces (end locations)
@@ -18,6 +20,7 @@ Prefer this file for reading and planning. Prefer [links.registry](links.registr
 ```mermaid
 flowchart TB
   hub["stow/agents/.agents/skills\n→ ~/.agents/skills"]
+  hub -->|relative symlink| publish["repo skills/ + skills.sh.json"]
   hub -->|agents-link-sync| vaults["vault .agents/skills"]
   hub -->|agents-link-sync| code["codebase .agents/skills"]
   pstack["~/.cursor/plugins/local/pstack\n+ ~/.cursor/rules/pstack-models.mdc"]
@@ -28,6 +31,7 @@ flowchart TB
 | Surface | End location | How it gets there | Owned by |
 | --- | --- | --- | --- |
 | Coding hub | `~/.agents/skills/<name>/` | Stow from `stow/agents/.agents/skills/` | This package (git) |
+| skills.sh / pack | repo-root `skills/<name>` → hub | Relative symlink; groups in `skills.sh.json` | Own/forked skills only |
 | Vault fan-out | `<vault>/.agents/skills/<name>` → hub | `make agents-link-sync` | Symlink; hub is source |
 | Code fan-out | `<repo>/.agents/skills/<name>` → hub | `make agents-link-sync` | Symlink; hub is source |
 | Project-local | `<repo>/.agents/skills/<name>/` (real dirs) | `npx skills add …` in that repo | That repo |
@@ -73,7 +77,7 @@ Canonical tree: `stow/agents/.agents/skills/` → stowed to `~/.agents/skills/`.
 | resolving-merge-conflicts | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Resolve an in-progress merge or rebase. |
 | find-skills | [vercel-labs/skills](https://www.skills.sh/vercel-labs/skills/find-skills) | Discover and install skills from skills.sh. |
 | skill-creator | [anthropics/skills](https://www.skills.sh/anthropics/skills/skill-creator) | Author, edit, and measure agent skills. |
-| pr-description | Graduated (Trivelta) | Draft a concise PR body from branch context. |
+| pr-description | Graduated (Trivelta) | Draft a concise PR body from branch context. **Ours.** Published on skills.sh via root `skills/`. |
 | gh-stack | [github/gh-stack](https://www.skills.sh/github/gh-stack/gh-stack) | Manage stacked PRs with `gh stack`. Needs `gh extension install github/gh-stack`. Hub patch: compose with `pr-description` after submit. Re-apply the patch if you reinstall the skill. |
 | ponytail | [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail) | Force the smallest solution that works (YAGNI). |
 | ponytail-audit | [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail-audit) | Audit the whole repo for over-engineering. |
@@ -81,11 +85,43 @@ Canonical tree: `stow/agents/.agents/skills/` → stowed to `~/.agents/skills/`.
 | ponytail-gain | [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail-gain) | Show ponytail's measured impact scoreboard. |
 | ponytail-help | [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail-help) | Show a one-shot reference for ponytail modes and commands. |
 | ponytail-review | [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail-review) | Review a diff only for over-engineering. |
-| product-description | [steveruizok gist](https://gist.github.com/steveruizok/83ae5c53f2784ebf8f5fe0a3fb94480f) | Write an outside-in product behavior spec. `npx skills` cannot clone this gist. Use the gist `install.sh` so `SKILL.md` sits beside `references/`. |
+| product-description | [steveruizok gist](https://gist.github.com/steveruizok/83ae5c53f2784ebf8f5fe0a3fb94480f) | Write an outside-in product behavior spec. First-class hub copy: `npx skills` cannot clone the gist, so this tree is the installable source (`install.sh` keeps `SKILL.md` beside `references/`). Published on skills.sh via root `skills/`. |
 | show-me | [humanlayer/skills](https://www.skills.sh/humanlayer/skills/show-me) | Draw diagrams and focused HTML to explain the current topic. |
-| skill-doctor | [warpdotdev/common-skills](https://github.com/warpdotdev/common-skills/tree/main/.agents/skills/skill-doctor) | Grade local agent conversations against installed skills; propose skill edits; render a local HTML report. Never upload transcripts. Hub fork: multi-harness plugins including Cursor and Grok Bot. Pin: [ORIGIN.md](.agents/skills/skill-doctor/ORIGIN.md). Surfaces: [sot-surfaces.md](.agents/skills/skill-doctor/references/sot-surfaces.md). |
+| skill-doctor | [warpdotdev/common-skills](https://github.com/warpdotdev/common-skills/tree/main/.agents/skills/skill-doctor) | Grade local agent conversations against installed skills; propose skill edits; render a local HTML report. Never upload transcripts. **Hub fork** (Cursor + Grok Bot plugins). Pin: [ORIGIN.md](.agents/skills/skill-doctor/ORIGIN.md). Surfaces: [sot-surfaces.md](.agents/skills/skill-doctor/references/sot-surfaces.md). Published on skills.sh via root `skills/`. |
 
 Restore hashes: [skills-lock.json](skills-lock.json).
+
+---
+
+## skills.sh / pack publish (`skills/`)
+
+Repo-root [`skills/`](../../skills/) is the [skills.sh](https://www.skills.sh/docs) discovery surface and the GitHub source for pack [ben-orozcos-projects](https://www.skills.sh/packs/ben-orozcos-projects). Stow hub `stow/agents/.agents/skills/` remains the source of truth.
+
+**Symlink rule:** only own or forked skills. Relative links, not copies.
+
+| Linked | Slug | Group in [`skills.sh.json`](../../skills.sh.json) |
+| --- | --- | --- |
+| `pr-description` | `pr-description` | Git / PR |
+| `skill-doctor` | `skill-doctor` | Agent grading |
+| `product-description` | `product-description` | Product specs |
+
+Do **not** symlink mattpocock, ponytail, anthropics `skill-creator`, vercel-labs `find-skills`, humanlayer `show-me`, or unmodified github `gh-stack`. The `gh-stack` hub note stays in the Stow tree only.
+
+Install one skill from this repo:
+
+```bash
+npx skills add benoror/dotfiles -s pr-description
+```
+
+Install the pack (no CLI auth):
+
+```bash
+npx skills add https://skills.sh/p/<pack-id>
+```
+
+The pack page is [ben-orozcos-projects](https://www.skills.sh/packs/ben-orozcos-projects). After merge, set that pack’s GitHub source in the Vercel skills.sh UI to `benoror/dotfiles` and folder `skills/`. The CLI cannot create or edit the pack when Vercel sign-in is required.
+
+More: [`skills/README.md`](../../skills/README.md). Badge: [skills.sh/benoror/dotfiles](https://skills.sh/benoror/dotfiles).
 
 ---
 
@@ -200,3 +236,4 @@ Do not vendor whole gstack into `stow/agents` (keeps the coding hub lean).
 1. Add or graduate a hub skill → update this file + [skills-lock.json](skills-lock.json) + optionally [TODO.md](TODO.md).
 2. Link it into vaults/code → edit [links.registry](links.registry), run `make agents-link-sync`, refresh the fan-out table here.
 3. Project-only pack → document under **Project-local**; do not add to the hub unless it graduates.
+4. Own/forked skill for skills.sh → relative symlink under repo-root `skills/`, add the slug to `skills.sh.json`, refresh this publish table.

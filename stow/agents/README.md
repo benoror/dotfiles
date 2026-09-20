@@ -1,5 +1,7 @@
 # Agents stow package
 
+[![skills.sh](https://skills.sh/b/benoror/dotfiles)](https://skills.sh/benoror/dotfiles)
+
 Personal agent hub for coding tools.
 
 Follow ASD-STE100 Simplified Technical English for technical text. These rules apply to all prose you write: docs, commit messages, PR descriptions, reports, replies, etc:
@@ -18,6 +20,7 @@ No fan-out script. Bootstrap with Make on each machine.
 
 **Skill map (sources → end locations):** [REGISTRY.md](REGISTRY.md).
 **Make fan-out rows:** [links.registry](links.registry) (`make agents-link-sync`).
+**skills.sh / pack surface:** [../../skills/](../../skills/) (own/forked hub skills only).
 
 ## Layout
 

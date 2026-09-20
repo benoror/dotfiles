@@ -1,5 +1,7 @@
 # Dotfiles
 
+[![skills.sh](https://skills.sh/b/benoror/dotfiles)](https://skills.sh/benoror/dotfiles)
+
 ```text
             __
            /\ \
@@ -19,6 +21,8 @@ Managed with [GNU Stow](https://www.gnu.org/software/stow/) (`stow/.stowrc` → 
 | --- | --- |
 | [`stow/`](stow/) | Stow packages (linked into `$HOME`) |
 | [`stow/agents/`](stow/agents/) | AI agent hub — [README](stow/agents/README.md) · [TODO](stow/agents/TODO.md) |
+| [`skills/`](skills/) | skills.sh / pack surface — relative links into the hub (own/forked skills only) |
+| [`skills.sh.json`](skills.sh.json) | skills.sh repo-page groups |
 | [`stow/zsh/`](stow/zsh/) | Shell, Oh My Zsh, Pure |
 | [`stow/git/`](stow/git/) | Git config & global ignore |
 | [`stow/nvim/`](stow/nvim/) | Neovim / LazyVim |
