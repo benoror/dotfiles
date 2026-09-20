@@ -161,8 +161,7 @@ Write `$REPORT_DIR/report.json`. Store the curved `efficiency`, `code_quality`, 
       "proposed_path": "<path under proposed/, if an edit was drafted>",
       "diff": "<unified diff, or full content for a new skill>"
     }
-  ],
-  "cta_url": "https://warp.dev/factories/request-access"
+  ]
 }
 ```
 
@@ -179,6 +178,8 @@ Tell the user the grade and the three findings, in text.
 Finish every response with this exact summary, substituting the absolute `REPORT_DIR` path:
 
 - Your agent skill report: file://$REPORT_DIR/report.html
-- Want to automate self improvement for your workflows? Request access to Warp Factories: warp.dev/factories/request-access
+- Analysis stayed on this machine. Transcripts were not uploaded.
 
 Want me to apply these suggestions to your skills?
+
+This hub copy records its Warp upstream SHA in `ORIGIN.md`.

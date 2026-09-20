@@ -7,3 +7,7 @@ npm-debug.log*
 # stow hidden
 **/.ssh/*
 **/.gnupg/*
+
+# Python test caches from hub skills
+**/__pycache__/
+*.pyc

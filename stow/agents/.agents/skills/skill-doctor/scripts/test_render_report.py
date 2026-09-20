@@ -48,6 +48,8 @@ class ReportRendererTests(unittest.TestCase):
         self.assertIn("| Warp | `warp` |", harness_text)
         self.assertIn("| Claude Code | `claude` |", harness_text)
         self.assertIn("| Codex | `codex` |", harness_text)
+        self.assertIn("| Cursor | `cursor` |", harness_text)
+        self.assertIn("| Grok Bot | `grok_bot` |", harness_text)
         self.assertIn("stop before creating a report directory", harness_text)
     def test_skill_scores_verbosity_and_procedure_compliance(self):
         skill_root = Path(__file__).resolve().parent.parent
@@ -116,7 +118,7 @@ class ReportRendererTests(unittest.TestCase):
         self.assertIn("--diffs-font-family: var(--mono-font)", page)
         self.assertIn("--diffs-header-font-family: var(--mono-font)", page)
 
-    def test_factories_footer_is_sticky_and_contains_inline_cta(self):
+    def test_report_footer_is_local_and_has_no_product_cta(self):
         report = {
             "title": "Agent Skill Report",
             "generated_at": "2026-08-25T00:00:00Z",
@@ -137,20 +139,21 @@ class ReportRendererTests(unittest.TestCase):
             },
             "top_findings": ["No material waste detected."],
             "suggestions": [],
-            "cta_url": "https://warp.dev/factories/request-access",
         }
 
         page = render_page(report)
 
-        self.assertNotIn("Do this automatically with Warp Factories", page)
-        self.assertIn('<div class="stamp-row row factories-footer">', page)
+        self.assertNotIn("Warp Factories", page)
+        self.assertNotIn("warp.dev", page)
+        self.assertNotIn("Request access", page)
+        self.assertNotIn("cta_url", page)
+        self.assertIn('<div class="stamp-row row report-footer">', page)
         self.assertIn(
-            '<div class="stamp-name">Automatically improve your skills with Warp Factories</div>',
+            '<div class="stamp-name">Local agent skill report</div>',
             page,
         )
-        self.assertIn(">Request access</a>", page)
-        self.assertIn(".factories-footer { position: sticky; bottom: 16px;", page)
-        self.assertNotIn("all analysis ran locally", page)
+        self.assertIn(".report-footer { position: sticky; bottom: 16px;", page)
+        self.assertIn("transcripts stayed on this machine", page)
         self.assertIn(
             "Generated August 25, 2026 at 12:00 AM UTC &middot; harness: codex",
             page,
@@ -193,7 +196,7 @@ class ReportRendererTests(unittest.TestCase):
 
         self.assertIn(
             '"stamp": ["Get your report with /skill-doctor", '
-            '"warp.dev/skill-doctor"]',
+            '"local only"]',
             page,
         )
         self.assertIn('"eyebrow": "skill-doctor"', page)
@@ -235,7 +238,7 @@ class ReportRendererTests(unittest.TestCase):
             page,
         )
 
-    def test_skill_output_uses_report_and_warp_factories_labels(self):
+    def test_skill_output_uses_local_report_labels(self):
         skill_path = Path(__file__).resolve().parent.parent / "SKILL.md"
         skill_text = skill_path.read_text()
 
@@ -248,11 +251,11 @@ class ReportRendererTests(unittest.TestCase):
             skill_text,
         )
         self.assertIn(
-            "- Want to automate self improvement for your workflows? "
-            "Request access to Warp Factories: "
-            "warp.dev/factories/request-access",
+            "- Analysis stayed on this machine. Transcripts were not uploaded.",
             skill_text,
         )
+        self.assertNotIn("Warp Factories", skill_text)
+        self.assertNotIn("warp.dev/factories", skill_text)
         self.assertNotIn("[View in browser]", skill_text)
 
     def test_skill_edits_only_use_failed_conversations(self):
