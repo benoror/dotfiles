@@ -121,13 +121,13 @@ WARP_MARK = (
     + "</svg>"
 )
 
-# Sticky report footer — attribution only, no product CTA.
-STAMP_NAME = "Adapted from warpdotdev/common-skills"
-STAMP_SUB = "all analysis ran locally \u00b7 transcripts stay on this machine"
+# Sticky report footer - attribution only, no product CTA.
+STAMP_NAME = "Based on Warp's skill-doctor"
+STAMP_SUB = "forked from warpdotdev/common-skills \u00b7 all analysis ran locally"
 
 # Attribution shown in the exported share image.
 SHARE_STAMP_NAME = "Get your report with /skill-doctor"
-SHARE_STAMP_SUB = "github.com/warpdotdev/common-skills"
+SHARE_STAMP_SUB = "based on Warp's skill-doctor \u00b7 warpdotdev/common-skills"
 
 # Design tokens lifted from warp.dev/factories (factories-landing.css):
 # white ground with a dot grid, Matter-Mono-ish monospace, #2a1eff accent,

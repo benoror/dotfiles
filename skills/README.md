@@ -15,7 +15,7 @@ Each entry here is a **relative symlink** into that hub tree. Do not copy skill 
 | Skill | Why it is on this surface |
 | --- | --- |
 | `pr-description` | Graduated from Trivelta. Owned here. |
-| `skill-doctor` | Maintained fork of Warp's skill-doctor (warpdotdev/common-skills); authors Warp / warpdotdev. |
+| `skill-doctor` | Based on / forked from Warp's skill-doctor (warpdotdev/common-skills). Multi-harness grader owned here. |
 | `product-description` | First-class hub copy. The upstream gist cannot be cloned with `npx skills`. |
 
 ## Symlink rule
