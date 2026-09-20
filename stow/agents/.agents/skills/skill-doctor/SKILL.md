@@ -1,12 +1,15 @@
 ---
 name: "skill-doctor"
-description: "Fork of Warp's skill-doctor (warpdotdev/common-skills). Grades agent skills by scoring local conversations for efficiency, code quality, procedure compliance, and verbosity, then drafts skill edits and a local HTML report. Use when the user wants their agent setup graded from real conversation history, or asks which installed skills are actually working."
+description: "Based on Warp's skill-doctor (warpdotdev/common-skills). Grades local agent conversations for efficiency, code quality, procedure compliance, and verbosity, then drafts skill edits and a local HTML report. Use when the user asks for /skill-doctor, a skill-doctor run, or wants their agent setup graded from conversation history."
 ---
 # skill-doctor
 
-Maintained fork of **Warp's skill-doctor**. Upstream authors: Warp / [warpdotdev](https://github.com/warpdotdev). Sources: [GitHub](https://github.com/warpdotdev/common-skills/tree/main/.agents/skills/skill-doctor) · [skills.sh](https://www.skills.sh/warpdotdev/common-skills/skill-doctor). Pin and fork notes: `ORIGIN.md`.
+Based on / forked from [Warp's skill-doctor](https://github.com/warpdotdev/common-skills/tree/main/.agents/skills/skill-doctor)
+in [warpdotdev/common-skills](https://github.com/warpdotdev/common-skills)
+([skills.sh](https://www.skills.sh/warpdotdev/common-skills/skill-doctor)).
+Pin and fork notes: `ORIGIN.md`.
 
-This copy stays harness-agnostic. It grades local agent conversations, then proposes skill edits and renders one local HTML report.
+This copy stays harness-agnostic. It grades local agent conversations, then proposes skill edits and renders one local HTML report. Attribution is credit, not a Warp product CTA.
 
 The report can cover conversations in the current repository, conversations in selected projects, or all local conversations. It can evaluate project skills alone or project and global skills together.
 

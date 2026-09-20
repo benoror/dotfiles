@@ -2,7 +2,9 @@
 
 This file is the single source of truth for harness support in `skill-doctor`. Reference it instead of repeating harness lists in `SKILL.md`.
 
-Forked from [warpdotdev/common-skills](https://github.com/warpdotdev/common-skills). This hub copy adds Cursor (`cursor`) and Grok Bot (`grok_bot`).
+Based on / forked from [Warp's skill-doctor](https://github.com/warpdotdev/common-skills/tree/main/.agents/skills/skill-doctor)
+in [warpdotdev/common-skills](https://github.com/warpdotdev/common-skills).
+This hub copy adds Cursor (`cursor`) and Grok Bot (`grok_bot`).
 
 ## Startup gate
 

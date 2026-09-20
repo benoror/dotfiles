@@ -148,7 +148,8 @@ class ReportRendererTests(unittest.TestCase):
         self.assertNotIn("factories-footer", page)
         self.assertNotIn(">Request access</a>", page)
         self.assertIn('<div class="stamp-row row report-footer">', page)
-        self.assertIn("Adapted from warpdotdev/common-skills", page)
+        self.assertIn("Based on Warp&#x27;s skill-doctor", page)
+        self.assertIn("forked from warpdotdev/common-skills", page)
         self.assertIn("all analysis ran locally", page)
         self.assertIn(".report-footer { position: sticky; bottom: 16px;", page)
         self.assertIn(
@@ -193,7 +194,7 @@ class ReportRendererTests(unittest.TestCase):
 
         self.assertIn(
             '"stamp": ["Get your report with /skill-doctor", '
-            '"github.com/warpdotdev/common-skills"]',
+            '"based on Warp\'s skill-doctor \\u00b7 warpdotdev/common-skills"]',
             page,
         )
         self.assertIn('"eyebrow": "skill-doctor"', page)
@@ -234,6 +235,22 @@ class ReportRendererTests(unittest.TestCase):
             "CARD.bars.length * rowH + (CARD.bars.length - 1) * gap",
             page,
         )
+
+    def test_public_copy_credits_warp_skill_doctor_without_branding(self):
+        skill_root = Path(__file__).resolve().parent.parent
+        skill_text = (skill_root / "SKILL.md").read_text()
+        origin_text = (skill_root / "ORIGIN.md").read_text()
+        harness_text = (
+            skill_root / "references" / "supported-harnesses.md"
+        ).read_text()
+
+        for text in (skill_text, origin_text, harness_text):
+            self.assertIn("Based on / forked from", text)
+            self.assertIn("Warp's skill-doctor", text)
+            self.assertIn("warpdotdev/common-skills", text)
+            self.assertNotIn("Warp Factories", text)
+            self.assertNotIn("warp.dev/factories", text)
+        self.assertIn("/skill-doctor", skill_text)
 
     def test_skill_output_uses_report_path_without_warp_factories(self):
         skill_path = Path(__file__).resolve().parent.parent / "SKILL.md"
