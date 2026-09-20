@@ -16,11 +16,11 @@ Each entry here is a **relative symlink** into that hub tree. Do not copy skill 
 | --- | --- |
 | `pr-description` | Graduated from Trivelta. Owned here. |
 | `skill-doctor` | Based on / forked from Warp's skill-doctor (warpdotdev/common-skills). Multi-harness grader owned here. |
-| `product-description` | First-class hub copy. The upstream gist cannot be cloned with `npx skills`. |
 
 ## Symlink rule
 
-Link only skills this repo owns or forks. Do **not** link pure upstream vendors:
+Link only skills this repo owns or forks. Do **not** link pure upstream vendors
+or hub-only copies:
 
 - mattpocock pack
 - ponytail pack
@@ -28,6 +28,7 @@ Link only skills this repo owns or forks. Do **not** link pure upstream vendors:
 - vercel-labs `find-skills`
 - humanlayer `show-me`
 - unmodified github `gh-stack` (the hub note stays in the Stow tree only)
+- steveruizok gist `product-description` (hub copy only; `npx skills` cannot clone gists)
 
 ```bash
 cd ~/dotfiles
@@ -50,7 +51,6 @@ makes [skills.sh/benoror/dotfiles](https://skills.sh/benoror/dotfiles) exist:
 ```bash
 npx skills add benoror/dotfiles -s skill-doctor
 npx skills add benoror/dotfiles -s pr-description
-npx skills add benoror/dotfiles -s product-description
 ```
 
 Install one skill later the same way. Always pass `-s <name>` so you get a
