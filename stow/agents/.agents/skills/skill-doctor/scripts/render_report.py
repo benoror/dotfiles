@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """Render a skill-doctor report.json into one shareable HTML report.
 
+/skill-doctor render entrypoint:
+
+  python3 scripts/render_report.py "$REPORT_DIR/report.json"
+
 Output (next to report.json):
   report.html - scorecard, findings, and suggested skill edits in a single
                 self-contained page, with a "share as png" button that draws
