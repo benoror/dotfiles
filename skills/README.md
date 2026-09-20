@@ -34,32 +34,50 @@ cd ~/dotfiles
 ln -sfn ../stow/agents/.agents/skills/<name> skills/<name>
 ```
 
-Then add the slug (the `name` in `SKILL.md`) to [../skills.sh.json](../skills.sh.json).
+Then add the slug (the `name` in `SKILL.md` frontmatter) to [../skills.sh.json](../skills.sh.json).
+The slug must match that `name`. `npx skills add` reads this folder, not the Stow hub path.
 
 ## Install
 
-Repo page (after skills.sh sees this tree):
+skills.sh does **not** crawl GitHub. It indexes from anonymous CLI install telemetry
+when someone runs `npx skills add` ([FAQ](https://www.skills.sh/docs/faq)).
+A push or a visit to the GitHub tree does not create the repo page.
+
+After this branch merges to the default branch, run these with telemetry **on**
+(do not set `DISABLE_TELEMETRY` or `DO_NOT_TRACK`). That create/refresh is what
+makes [skills.sh/benoror/dotfiles](https://skills.sh/benoror/dotfiles) exist:
 
 ```bash
-npx skills add benoror/dotfiles --skill <name>
+npx skills add benoror/dotfiles -s skill-doctor
+npx skills add benoror/dotfiles -s pr-description
+npx skills add benoror/dotfiles -s product-description
 ```
 
-### Get indexed (FAQ)
-
-skills.sh lists skills from anonymous CLI telemetry ([FAQ](https://www.skills.sh/docs/faq)). After this branch merges to the default branch, install with telemetry **on** (do not set `DISABLE_TELEMETRY` or `DO_NOT_TRACK`):
+Install one skill later the same way. Always pass `-s <name>` so you get a
+published slug, not every `SKILL.md` that happens to live in this repo:
 
 ```bash
-npx skills add benoror/dotfiles --skill skill-doctor
+npx skills add benoror/dotfiles -s <name>
 ```
 
-That install is what lets the leaderboard see `skill-doctor` from this repo. Visiting the GitHub page alone does not index it.
+A local list (no install) should show `skill-doctor` with the same `name`
+as the SKILL.md frontmatter:
 
-Pack [ben-orozcos-projects](https://www.skills.sh/packs/ben-orozcos-projects):
+```bash
+npx skills add ~/dotfiles -s skill-doctor --list
+```
+
+### Pack (Vercel UI)
+
+Pack [ben-orozcos-projects](https://www.skills.sh/packs/ben-orozcos-projects) is
+separate from the repo page. After merge, set the pack GitHub source in the
+Vercel skills.sh UI to `benoror/dotfiles` and folder `skills/`. The CLI cannot
+create or edit that pack when Vercel sign-in is required.
+
+Install the pack (no CLI auth):
 
 ```bash
 npx skills add https://skills.sh/p/<pack-id>
 ```
-
-After this branch merges, set the pack’s GitHub source in the Vercel skills.sh UI to `benoror/dotfiles` and the `skills/` folder. The CLI cannot create or edit that pack when Vercel auth is required.
 
 See [../stow/agents/REGISTRY.md](../stow/agents/REGISTRY.md).

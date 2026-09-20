@@ -99,7 +99,7 @@ Repo-root [`skills/`](../../skills/) is the [skills.sh](https://www.skills.sh/do
 
 **Symlink rule:** only own or forked skills. Relative links, not copies.
 
-| Linked | Slug | Group in [`skills.sh.json`](../../skills.sh.json) |
+| Linked | Slug (`name` in `SKILL.md`) | Group in [`skills.sh.json`](../../skills.sh.json) |
 | --- | --- | --- |
 | `pr-description` | `pr-description` | Git / PR |
 | `skill-doctor` | `skill-doctor` | Agent grading |
@@ -107,19 +107,32 @@ Repo-root [`skills/`](../../skills/) is the [skills.sh](https://www.skills.sh/do
 
 Do **not** symlink mattpocock, ponytail, anthropics `skill-creator`, vercel-labs `find-skills`, humanlayer `show-me`, or unmodified github `gh-stack`. The `gh-stack` hub note stays in the Stow tree only.
 
-Install one skill from this repo:
+### Indexing (not a GitHub crawl)
+
+skills.sh indexes from anonymous CLI install telemetry when someone runs
+`npx skills add` ([FAQ](https://www.skills.sh/docs/faq)). It does not crawl
+this repo. After merge, create or refresh the repo page with telemetry on
+(do not set `DISABLE_TELEMETRY` or `DO_NOT_TRACK`):
 
 ```bash
+npx skills add benoror/dotfiles -s skill-doctor
 npx skills add benoror/dotfiles -s pr-description
+npx skills add benoror/dotfiles -s product-description
 ```
 
-Install the pack (no CLI auth):
+Install one skill later:
+
+```bash
+npx skills add benoror/dotfiles -s <name>
+```
+
+### Pack (Vercel UI)
+
+The pack page is [ben-orozcos-projects](https://www.skills.sh/packs/ben-orozcos-projects). After merge, set that pack GitHub source in the Vercel skills.sh UI to `benoror/dotfiles` and folder `skills/`. The CLI cannot create or edit the pack when Vercel sign-in is required.
 
 ```bash
 npx skills add https://skills.sh/p/<pack-id>
 ```
-
-The pack page is [ben-orozcos-projects](https://www.skills.sh/packs/ben-orozcos-projects). After merge, set that pack’s GitHub source in the Vercel skills.sh UI to `benoror/dotfiles` and folder `skills/`. The CLI cannot create or edit the pack when Vercel sign-in is required.
 
 More: [`skills/README.md`](../../skills/README.md). Badge: [skills.sh/benoror/dotfiles](https://skills.sh/benoror/dotfiles).
 
