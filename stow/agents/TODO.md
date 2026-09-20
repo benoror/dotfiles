@@ -71,6 +71,7 @@ Cursor plugins stay **Cursor-local** (not Stow-mirrored wholesale).
 
 - [x] [find-skills](https://www.skills.sh/vercel-labs/skills/find-skills) ✅ 2026-08-11
 - [x] [skill-creator](https://www.skills.sh/anthropics/skills/skill-creator) ✅ 2026-08-11
+- [x] [skill-doctor](https://github.com/warpdotdev/common-skills/tree/main/.agents/skills/skill-doctor) ✅ 2026-09-20 — vendor into hub; generic multi-harness grader (cursor + grok_bot). Do not auto-apply skill edits.
 
 ### Graduated from Trivelta (`mbp14m4`)
 
@@ -175,6 +176,7 @@ Do **not** Dropbox-sync whole `~/.cursor`, `~/.claude`, or `~/.codex` trees.
 - [x] Evaluate gstack / gbrain / mattpocock / pstack + skills.sh catalogs — ✅ 2026-08-11
 - [x] Scan Trivelta agentic artifacts on `mbp14m4` for graduation — ✅ 2026-08-11
 - [x] Phase A: vendor mattpocock + find-skills + skill-creator + pr-description into hub — ✅ 2026-08-11
+- [x] Vendor skill-doctor from warpdotdev/common-skills as a multi-harness grader — ✅ 2026-09-20
 - [x] Vault maintenance: `make agents-link-vault` (consumers, not content dump) — ✅ 2026-08-11
 
 ## Explicitly out of scope
