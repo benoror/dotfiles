@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """Collect local agent sessions and skills for scoring.
 
+/skill-doctor collect entrypoint:
+
+  python3 scripts/collect_sessions.py --out "$REPORT_DIR" [scope flags]
+
 Harness plugins implement detect_runtime / list_sessions / parse_session /
 discover_skills. This module orchestrates them and emits:
 

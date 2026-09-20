@@ -19,6 +19,52 @@ Skill-scope roots: `$SKILL_ROOT/references/sot-surfaces.md`.
 
 Let `SKILL_ROOT` be the directory containing this SKILL.md.
 
+## First run (`/skill-doctor`)
+
+When the user types `/skill-doctor` or asks for a skill-doctor run, start this skill.
+
+Script entrypoints (local only; never upload transcripts):
+
+| Step | Command |
+| --- | --- |
+| Collect | `python3 "$SKILL_ROOT/scripts/collect_sessions.py"` |
+| Render | `python3 "$SKILL_ROOT/scripts/render_report.py" "$REPORT_DIR/report.json"` |
+| Smoke collect+render | `python3 "$SKILL_ROOT/scripts/smoke_collect_render.py"` |
+
+A normal `/skill-doctor` run still follows Step 0 (ask scope, then collect, score, render).
+
+Use the short path below only when the user asks for a first run, a smoke, or a fixture pass, or when you need to prove collect+render without scoring.
+
+### Box first run
+
+```bash
+REPORT_DIR="$(mktemp -d "${TMPDIR:-/tmp}/skill-doctor-XXXXXXXX")"
+python3 "$SKILL_ROOT/scripts/collect_sessions.py" \
+  --harness grok_bot \
+  --grok-bot-home "${GROK_BOT_HOME:-/home/box/agent-data/agent-transcripts}" \
+  --grok-bot-workflows "${GROK_BOT_WORKFLOWS:-/home/box/agent-data/workflows}" \
+  --all-conversations \
+  --include-global-skills \
+  --out "$REPORT_DIR"
+```
+
+Read `$REPORT_DIR/inventory.json`. If `sessions_sampled` is 0, say so and stop. If sessions exist, continue from Step 2, or render a local smoke scorecard (no model scoring, no upload):
+
+```bash
+python3 "$SKILL_ROOT/scripts/smoke_collect_render.py" \
+  --grok-bot-home "${GROK_BOT_HOME:-/home/box/agent-data/agent-transcripts}" \
+  --out "$REPORT_DIR"
+```
+
+### Fixture smoke
+
+```bash
+REPORT_DIR="$(mktemp -d "${TMPDIR:-/tmp}/skill-doctor-XXXXXXXX")"
+python3 "$SKILL_ROOT/scripts/smoke_collect_render.py" --out "$REPORT_DIR"
+```
+
+This writes synthetic sessions, collects them, and renders `$REPORT_DIR/report.html`. Transcripts stay on the machine.
+
 ## Step 0: Start the run
 
 ### Verify the executing harness
