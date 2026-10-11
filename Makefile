@@ -58,7 +58,7 @@ help:
 	  '' \
 	  'Agents extras:' \
 	  '  make agents-verify      Check agent entrypoints + skill count + skill sets' \
-	  '  make agents-skillsets   Clone/update upstream skill sets, link into ~/.agents/skills' \
+	  '  make agents-skillsets   Clone/update skill sets, link into ~/.agents/skills and ~/.claude/skills' \
 	  '  make agents-skillsets-check  Read-only drift check (REGISTRY + installed vs upstream)' \
 	  '  make agents-install     Alias for install-agents' \
 	  '  make agents-link-vault VAULT=~/vaults/personal [SKILLS="…"]' \

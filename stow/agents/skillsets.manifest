@@ -1,17 +1,35 @@
-# Upstream skill sets (Make input for agents-skillsets)
+# Skill sets (Make input for agents-skillsets)
 #
 # One set per line, TAB separated. Blank lines and # comments ignored.
-# Format: <name> <repo> <subpath> <prefix> <enabled> <registry_tag> [include]
+# Format: <name> <type> <source> <subpath> <prefix> <enabled> <registry_tag> [include]
 #
-# name:         cache dir ~/.cache/skillsets/<name>
-# repo:         git URL (shallow, sparse clone of <subpath> only)
+# type:         upstream = shallow sparse clone of <source> into ~/.cache/skillsets/<name>
+#               local    = skills kept in this repo (<subpath> is relative to the repo root);
+#                          drift check skips them
+# source:       git URL for upstream, origin note for local (docs only)
 # subpath:      folder holding skills; any dir with SKILL.md up to 2 levels down counts
-# prefix:       link name = <prefix><skill>, so links never clash with hub copies
-# enabled:      1 = link into ~/.agents/skills, 0 = drift check only
-# registry_tag: link text in REGISTRY.md source column, used for drift checks
+# prefix:       link name = <prefix><skill>. Empty (-) for canonical sets.
+# enabled:      1 = link into targets, 0 = drift check only
+# registry_tag: link text in REGISTRY.md source column, used for drift checks (- = none)
 # include:      optional space separated skill names; omit = all
+#
+# Targets: ~/.agents/skills (upstream only; Stow owns local skills there) and
+# ~/.claude/skills (upstream and local). Override with SKILLSETS_TARGETS.
+#
+# Naming: mattpocock is canonical, so its links are unprefixed (/tdd, /grill-me keep working).
+# pstack stays prefixed (pstack-tdd) so it never clashes with mattpocock or hub names.
 #
 # Install: make agents-skillsets   Check: make agents-skillsets-check
 
-pstack	https://github.com/cursor/plugins	pstack/skills	pstack-	1	pstack
-mattpocock	https://github.com/mattpocock/skills	skills	mattpocock-	0	mattpocock/skills
+pstack	upstream	https://github.com/cursor/plugins	pstack/skills	pstack-	1	pstack
+mattpocock	upstream	https://github.com/mattpocock/skills	skills	-	1	mattpocock/skills	ask-matt claude-handoff code-review diagnosing-bugs grill-me grill-with-docs grilling handoff implement improve-codebase-architecture prototype research setup-matt-pocock-skills tdd to-spec to-tickets wayfinder writing-for-agents
+
+# Local copies (hand copied or own). Drift check skips these.
+ponytail	local	DietrichGebert/ponytail	stow/agents/.agents/skills	-	1	-	ponytail ponytail-audit ponytail-debt ponytail-gain ponytail-help ponytail-review
+find-skills	local	vercel-labs/skills	stow/agents/.agents/skills	-	1	-	find-skills
+gh-stack	local	github/gh-stack	stow/agents/.agents/skills	-	1	-	gh-stack
+skill-creator	local	anthropics/skills	stow/agents/.agents/skills	-	1	-	skill-creator
+show-me	local	humanlayer/skills	stow/agents/.agents/skills	-	1	-	show-me
+skill-doctor	local	warpdotdev/common-skills	stow/agents/.agents/skills	-	1	-	skill-doctor
+product-description	local	steveruizok gist	stow/agents/.agents/skills	-	1	-	product-description
+own	local	this repo	stow/agents/.agents/skills	-	1	-	pr-description resolving-merge-conflicts
