@@ -23,7 +23,11 @@ flowchart TB
   hub -->|relative symlink| publish["repo skills/ + skills.sh.json"]
   hub -->|agents-link-sync| vaults["vault .agents/skills"]
   hub -->|agents-link-sync| code["codebase .agents/skills"]
-  pstack["~/.cursor/plugins/local/pstack\n+ ~/.cursor/rules/pstack-models.mdc"]
+  sets["skillsets.manifest\n~/.cache/skillsets/<set>"]
+  sets -->|agents-skillsets| hub
+  sets -->|agents-skillsets| claude["~/.claude/skills"]
+  hub -->|agents-skillsets, local rows| claude
+  pstack["Cursor plugin pstack\n+ ~/.cursor/rules/pstack-*.mdc"]
   gstack["~/.claude/skills/gstack"]
   gstack -->|lite symlinks| oc["~/vaults/openclaw/workspace/skills"]
 ```
@@ -38,6 +42,7 @@ flowchart TB
 | Vault-local | `~/vaults/personal/.agents/skills/<name>/` | Vault tooling (not Stow) | Vault |
 | Cursor pstack | Cursor plugin (marketplace) + `~/.cursor/rules/pstack-{models,default}.mdc` | `/add-plugin pstack`; default rule via Stow | Cursor (not Stow) |
 | Upstream skill sets | `~/.agents/skills/<prefix><name>` → `~/.cache/skillsets/<set>/` | `make agents-skillsets` from [skillsets.manifest](skillsets.manifest) | Upstream repo (no copies here) |
+| Claude Code | `~/.claude/skills/<prefix><name>` → upstream cache or hub skill | `make agents-skillsets` (same manifest, local rows too) | Symlink; never replaces a real dir or another link |
 | gstack (Claude) | `~/.claude/skills/gstack/` | `git clone` + `./setup` | Claude home (not Stow) |
 | gstack (OpenClaw lite) | `~/vaults/openclaw/workspace/skills/gstack-openclaw-*` | Symlink → gstack `openclaw/skills/` | Symlink |
 
@@ -53,28 +58,28 @@ make agents-link-sync
 
 ## Hub skills (`~/.agents/skills`)
 
-Canonical tree: `stow/agents/.agents/skills/` → stowed to `~/.agents/skills/`.
+Local skills: `stow/agents/.agents/skills/` → stowed to `~/.agents/skills/`. mattpocock skills are no longer copied here; they link from the upstream clone with the same names (see Upstream skill sets).
 
 | Skill | Source | Summary |
 | --- | --- | --- |
-| ask-matt | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Route work to the right skill or flow. |
-| grill-me | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Start a grilling session to stress-test a plan. |
-| grilling | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Interview the user and map a design tree. |
-| grill-with-docs | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Grill a plan and write ADRs and a glossary as you go. |
-| tdd | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Build test-first and keep tests that specify behavior. |
-| diagnosing-bugs | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Diagnose hard bugs and slow paths in a tight loop. |
-| implement | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Implement work from a spec or tickets. |
-| handoff | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Write a compact handoff for the next agent. |
-| claude-handoff | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Hand the session to a fresh Claude background agent. |
-| code-review | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Review a diff against standards and the spec. |
-| improve-codebase-architecture | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Find deepening refactors and report them. |
-| writing-for-agents | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Write skills and `AGENTS.md` that agents follow. |
-| setup-matt-pocock-skills | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Wire tracker, labels, and domain docs for this pack. |
-| to-spec | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Turn the current conversation into a tracker spec. |
-| to-tickets | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Split a plan into tracer-bullet tickets. |
-| prototype | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Build throwaway code to answer a design question. |
-| research | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Research a question from primary sources and write notes. |
-| wayfinder | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Map large work as decision tickets on the tracker. |
+| ask-matt | [mattpocock/skills](https://github.com/mattpocock/skills) (upstream link) | Route work to the right skill or flow. |
+| grill-me | [mattpocock/skills](https://github.com/mattpocock/skills) (upstream link) | Start a grilling session to stress-test a plan. |
+| grilling | [mattpocock/skills](https://github.com/mattpocock/skills) (upstream link) | Interview the user and map a design tree. |
+| grill-with-docs | [mattpocock/skills](https://github.com/mattpocock/skills) (upstream link) | Grill a plan and write ADRs and a glossary as you go. |
+| tdd | [mattpocock/skills](https://github.com/mattpocock/skills) (upstream link) | Build test-first and keep tests that specify behavior. |
+| diagnosing-bugs | [mattpocock/skills](https://github.com/mattpocock/skills) (upstream link) | Diagnose hard bugs and slow paths in a tight loop. |
+| implement | [mattpocock/skills](https://github.com/mattpocock/skills) (upstream link) | Implement work from a spec or tickets. |
+| handoff | [mattpocock/skills](https://github.com/mattpocock/skills) (upstream link) | Write a compact handoff for the next agent. |
+| claude-handoff | [mattpocock/skills](https://github.com/mattpocock/skills) (upstream link) | Hand the session to a fresh Claude background agent. |
+| code-review | [mattpocock/skills](https://github.com/mattpocock/skills) (upstream link) | Review a diff against standards and the spec. |
+| improve-codebase-architecture | [mattpocock/skills](https://github.com/mattpocock/skills) (upstream link) | Find deepening refactors and report them. |
+| writing-for-agents | [mattpocock/skills](https://github.com/mattpocock/skills) (upstream link) | Write skills and `AGENTS.md` that agents follow. |
+| setup-matt-pocock-skills | [mattpocock/skills](https://github.com/mattpocock/skills) (upstream link) | Wire tracker, labels, and domain docs for this pack. |
+| to-spec | [mattpocock/skills](https://github.com/mattpocock/skills) (upstream link) | Turn the current conversation into a tracker spec. |
+| to-tickets | [mattpocock/skills](https://github.com/mattpocock/skills) (upstream link) | Split a plan into tracer-bullet tickets. |
+| prototype | [mattpocock/skills](https://github.com/mattpocock/skills) (upstream link) | Build throwaway code to answer a design question. |
+| research | [mattpocock/skills](https://github.com/mattpocock/skills) (upstream link) | Research a question from primary sources and write notes. |
+| wayfinder | [mattpocock/skills](https://github.com/mattpocock/skills) (upstream link) | Map large work as decision tickets on the tracker. |
 | resolving-merge-conflicts | mattpocock/skills (removed upstream; hub copy kept) | Resolve an in-progress merge or rebase. |
 | find-skills | [vercel-labs/skills](https://www.skills.sh/vercel-labs/skills/find-skills) | Discover and install skills from skills.sh. |
 | skill-creator | [anthropics/skills](https://www.skills.sh/anthropics/skills/skill-creator) | Author, edit, and measure agent skills. |
@@ -229,10 +234,26 @@ Example feature map: [poteto/verification-skill-example](https://github.com/pote
 
 ## Upstream skill sets ([skillsets.manifest](skillsets.manifest))
 
-Each set is a shallow sparse clone in `~/.cache/skillsets/<set>/` plus prefixed links in `~/.agents/skills/`. The prefix keeps them apart from hub copies. Nothing is copied into this repo.
+Upstream sets are shallow sparse clones in `~/.cache/skillsets/<set>/`. Local sets are the hub skills in this package. `make agents-skillsets` links them into `~/.agents/skills` (upstream only; Stow owns local skills there) and `~/.claude/skills` (both). Nothing upstream is copied into this repo.
 
-| Set | Repo | Linked | Notes |
-| --- | --- | --- | --- |
+| Set | Type | Source | Link names | Notes |
+| --- | --- | --- | --- | --- |
+| pstack | upstream | [github.com/cursor/plugins](https://github.com/cursor/plugins/tree/main/pstack) `pstack/skills` | `pstack-<name>` | All skills. |
+| mattpocock | upstream | [github.com/mattpocock/skills](https://github.com/mattpocock/skills) `skills` | `<name>` (no prefix) | Canonical. The 18 skills listed in the manifest. |
+| ponytail, find-skills, gh-stack, skill-creator, show-me, skill-doctor, product-description | local | hand copies (see Hub skills) | `<name>` | Drift check skips them. |
+| own | local | this repo | `<name>` | pr-description, resolving-merge-conflicts (removed upstream, kept here). |
+
+Naming: mattpocock is canonical, so its links keep the plain names and existing `/tdd`, `/grill-me` and friends keep working, including vault and repo fan-out. pstack stays prefixed, so its `tdd` is `pstack-tdd` and never clashes.
+
+Safety: the script only creates, replaces or prunes symlinks that point into the cache or this repo, and empty dirs left by Stow. A real dir or a link it does not own is reported as CLASH and left alone.
+
+- `make agents-skillsets` clones or updates and relinks (also run by `make agents-install`). Clashes print a warning; install still succeeds.
+- `make agents-skillsets-check` is read-only. It flags REGISTRY rows missing upstream, missing, stale, broken or clashing links, and stale caches (also run by `make agents-verify`).
+- `make agents-skillsets-list` prints the skills in each set.
+- `~/.agents/skills` must be a real dir. The agents package is stowed with `--no-folding`; run `make agents-restow` once if it is still a single link into this repo.
+- Claude Code reads `AGENTS.md` natively only at project level, and loads skills only from `~/.claude/skills` and `.claude/skills`. So `~/.claude/CLAUDE.md` (`@~/.agents/AGENTS.md`) and the `~/.claude/skills` links stay.
+
+--- | --- | --- | --- |
 | pstack | [github.com/cursor/plugins](https://github.com/cursor/plugins/tree/main/pstack) `pstack/skills` | yes, `pstack-*` | All skills. |
 | mattpocock | [github.com/mattpocock/skills](https://github.com/mattpocock/skills) `skills` | no (drift check only) | Hub keeps edited copies today; see TODO. |
 
