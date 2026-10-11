@@ -165,6 +165,8 @@ Do **not** Dropbox-sync whole `~/.cursor`, `~/.claude`, or `~/.codex` trees.
 
 ## Hygiene
 
+- [ ] mattpocock skills: per hub copy, retire it for the upstream `mattpocock-*` link (set `enabled=1` in skillsets.manifest) or keep the edited copy. Hub copies differ from upstream today.
+
 - [ ] Periodic: ask agent which instruction files it loaded; prune hub / RESOLVER
 - [ ] Prefer nested package `AGENTS.md` over bloating repo roots
 - [ ] Evaluate potential own skills to extract/graduate from `~/vaults/trivelta/Agentic Workflows/Prompt Engineering Cheatsheet.md` (modes already lean in hub AGENTS; look for skill-sized workflows beyond `/research`–`/document`)
