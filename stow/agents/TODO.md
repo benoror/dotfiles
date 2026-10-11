@@ -165,7 +165,7 @@ Do **not** Dropbox-sync whole `~/.cursor`, `~/.claude`, or `~/.codex` trees.
 
 ## Hygiene
 
-- [ ] mattpocock skills: per hub copy, retire it for the upstream `mattpocock-*` link (set `enabled=1` in skillsets.manifest) or keep the edited copy. Hub copies differ from upstream today.
+- [x] mattpocock skills: all hand copies retired; served from upstream with the same names (skillsets.manifest).
 
 - [ ] Periodic: ask agent which instruction files it loaded; prune hub / RESOLVER
 - [ ] Prefer nested package `AGENTS.md` over bloating repo roots
