@@ -1,0 +1,12 @@
+---
+description: Start repo coding tasks in poteto-mode by default (pstack)
+alwaysApply: true
+---
+# pstack default
+
+- Repo coding task (you will edit code in a git repo): start with the `poteto-mode` skill. Model roles come from `pstack-models.mdc`.
+- Trivial edit (typo, one-line config, version bump): skip poteto-mode and say so in one line.
+- Not a coding task (chat, brainstorm, ops, account or infra admin): do not start poteto-mode.
+- Opt out: if the request says "no poteto-mode", "skip pstack", or "quick fix, no pstack", do not start it.
+- Opt in anywhere: "@poteto-mode", "/poteto-mode", or "run poteto-mode".
+- Company repos (origin not under github.com/benoror, for example a work or client org): do not start poteto-mode unless the request opens it explicitly. Never carry context, files, or notes from a company repo into a personal repo, or the reverse.
