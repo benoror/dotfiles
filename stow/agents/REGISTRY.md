@@ -36,16 +36,17 @@ flowchart TB
 | Code fan-out | `<repo>/.agents/skills/<name>` → hub | `make agents-link-sync` | Symlink; hub is source |
 | Project-local | `<repo>/.agents/skills/<name>/` (real dirs) | `npx skills add …` in that repo | That repo |
 | Vault-local | `~/vaults/personal/.agents/skills/<name>/` | Vault tooling (not Stow) | Vault |
-| Cursor pstack | `~/.cursor/plugins/local/pstack/` (+ model rule) | Plugin install / local copy | Cursor home (not Stow) |
+| Cursor pstack | Cursor plugin (marketplace) + `~/.cursor/rules/pstack-{models,default}.mdc` | `/add-plugin pstack`; default rule via Stow | Cursor (not Stow) |
+| Upstream skill sets | `~/.agents/skills/<prefix><name>` → `~/.cache/skillsets/<set>/` | `make agents-skillsets` from [skillsets.manifest](skillsets.manifest) | Upstream repo (no copies here) |
 | gstack (Claude) | `~/.claude/skills/gstack/` | `git clone` + `./setup` | Claude home (not Stow) |
 | gstack (OpenClaw lite) | `~/vaults/openclaw/workspace/skills/gstack-openclaw-*` | Symlink → gstack `openclaw/skills/` | Symlink |
 
 After clone on a new machine:
 
 ```bash
-make agents-install && make agents-verify
+make agents-install && make agents-verify   # includes upstream skill sets
 make agents-link-sync
-# then: pstack + gstack host installs (see below) — not covered by Stow
+# then: Cursor /add-plugin pstack + /setup-pstack; gstack host install (see below)
 ```
 
 ---
@@ -74,7 +75,7 @@ Canonical tree: `stow/agents/.agents/skills/` → stowed to `~/.agents/skills/`.
 | prototype | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Build throwaway code to answer a design question. |
 | research | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Research a question from primary sources and write notes. |
 | wayfinder | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Map large work as decision tickets on the tracker. |
-| resolving-merge-conflicts | [mattpocock/skills](https://www.skills.sh/mattpocock/skills) | Resolve an in-progress merge or rebase. |
+| resolving-merge-conflicts | mattpocock/skills (removed upstream; hub copy kept) | Resolve an in-progress merge or rebase. |
 | find-skills | [vercel-labs/skills](https://www.skills.sh/vercel-labs/skills/find-skills) | Discover and install skills from skills.sh. |
 | skill-creator | [anthropics/skills](https://www.skills.sh/anthropics/skills/skill-creator) | Author, edit, and measure agent skills. |
 | pr-description | Graduated (Trivelta) | Draft a concise PR body from branch context. **Ours.** Published on skills.sh via root `skills/`. |
@@ -186,26 +187,29 @@ Hub fan-out only adds the symlink rows in [links.registry](links.registry); it d
 
 ---
 
-## Cursor — pstack (outside Stow)
+## pstack
 
 | Artifact | End location |
 | --- | --- |
-| Plugin skills / modes | `~/.cursor/plugins/local/pstack/` (or marketplace user install via `/add-plugin pstack`) |
-| Model role map | `~/.cursor/rules/pstack-models.mdc` (`alwaysApply`) |
-| Primary entry | `/poteto-mode` after `/setup-pstack` |
+| Cursor | Marketplace plugin (`/add-plugin pstack`), auto-updates. Do not keep a second local copy in `~/.cursor/plugins/local/`. |
+| Model role map | `~/.cursor/rules/pstack-models.mdc` (written by `/setup-pstack`, not in git) |
+| Default rule | `~/.cursor/rules/pstack-default.mdc` (Stow, from this package) |
+| Other tools | `~/.agents/skills/pstack-<name>` links from `make agents-skillsets` (Codex, OpenCode, and any tool that reads `~/.agents/skills`) |
 
-Preferred long-term: marketplace `/add-plugin pstack` for account sync. Local plugin dir is fine for immediate use.
+Default: every repo coding task starts in `poteto-mode`. Trivial edits skip it with a one-line note. Chats, ops and admin work do not use it. Opt out per task with "no poteto-mode" or "skip pstack".
 
-Do not vendor full pstack into this hub.
+Company repos (origin not under `github.com/benoror`): off unless the request opens it explicitly. Nothing from a company repo crosses into personal repos, or the reverse.
 
-Entry points only. Remaining `principle-*` and other pstack skills live in the plugin. `/poteto-mode` typically pulls them in. This registry does not list them.
+Outside Cursor, single-agent skills work as is. Multi-model skills (arena, interrogate, architect, swarm) run on the host's own model, and `pstack-models.mdc` is not read.
+
+Do not vendor pstack into this hub. Entry points only below; the other pstack skills (`principle-*` and more) come with the plugin or the skill set links, and `poteto-mode` pulls them in.
 
 | Skill | Source | Summary |
 | --- | --- | --- |
 | `/setup-pstack` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/setup-pstack/SKILL.md) | Configure which model each pstack role uses. |
 | `/poteto-mode` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-mode/SKILL.md) | Primary workflow for non-trivial Cursor work. It invokes many skills for you. |
 | `/create-verification-skill` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/create-verification-skill/SKILL.md) | Create a project verification skill so the agent can run, control, and debug the app. Trusted agent loop. |
-| `/maintain-verification-skill` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/maintain-verification-skill/SKILL.md) | Keep the verification skill and feature map sharp. Use daily automation, a grok bot, or Cursor automation. |
+| `/maintain-verification-skill` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/maintain-verification-skill/SKILL.md) | Keep the verification skill and feature map sharp. Run it from a daily automation. |
 | `/show-me-your-work` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/show-me-your-work/SKILL.md) | Write a TSV decision trail for unattended or long runs. |
 | `/how` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/how/SKILL.md) | Walk through the current design before you change it. |
 | `/why` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/why/SKILL.md) | Capture design rationale and postmortems. |
@@ -215,10 +219,27 @@ Entry points only. Remaining `principle-*` and other pstack skills live in the p
 | `/interrogate` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/interrogate/SKILL.md) | Run an adversarial multi-model review. |
 | `/tdd` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/tdd/SKILL.md) | Use when the user asks for TDD or failing tests. |
 | `/unslop` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/unslop/SKILL.md) | Cut AI tells from writing. |
+| `/poteto-help` | [pstack](https://github.com/cursor/plugins/blob/main/pstack/skills/poteto-help/SKILL.md) | Get help with pstack setup and picking the right skill. |
 
 Verification recs: [poteto tweet](https://x.com/poteto/status/2093414407196012990).
 
 Example feature map: [poteto/verification-skill-example](https://github.com/poteto/verification-skill-example).
+
+---
+
+## Upstream skill sets ([skillsets.manifest](skillsets.manifest))
+
+Each set is a shallow sparse clone in `~/.cache/skillsets/<set>/` plus prefixed links in `~/.agents/skills/`. The prefix keeps them apart from hub copies. Nothing is copied into this repo.
+
+| Set | Repo | Linked | Notes |
+| --- | --- | --- | --- |
+| pstack | [github.com/cursor/plugins](https://github.com/cursor/plugins/tree/main/pstack) `pstack/skills` | yes, `pstack-*` | All skills. |
+| mattpocock | [github.com/mattpocock/skills](https://github.com/mattpocock/skills) `skills` | no (drift check only) | Hub keeps edited copies today; see TODO. |
+
+- `make agents-skillsets` clones or updates and relinks (also run by `make agents-install`).
+- `make agents-skillsets-check` is read-only. It flags REGISTRY rows missing upstream, missing or broken links, and stale caches (also run by `make agents-verify`).
+- `make agents-skillsets-list` prints what each set has upstream.
+- `~/.agents/skills` must be a real dir. The agents package is stowed with `--no-folding`; run `make agents-restow` once if it is still a single link into this repo.
 
 ---
 
@@ -247,4 +268,5 @@ Do not vendor whole gstack into `stow/agents` (keeps the coding hub lean).
 1. Add or graduate a hub skill → update this file + [skills-lock.json](skills-lock.json) + optionally [TODO.md](TODO.md).
 2. Link it into vaults/code → edit [links.registry](links.registry), run `make agents-link-sync`, refresh the fan-out table here.
 3. Project-only pack → document under **Project-local**; do not add to the hub unless it graduates.
-4. Own/forked skill for skills.sh → relative symlink under repo-root `skills/`, add the slug to `skills.sh.json`, refresh this publish table. Do not publish hub-only gist copies such as `product-description`.
+4. New upstream set → add a manifest row, run `make agents-skillsets`, add a row to the skill sets table. Run `make agents-skillsets-check` weekly; on drift, fix rows in a PR.
+5. Own/forked skill for skills.sh → relative symlink under repo-root `skills/`, add the slug to `skills.sh.json`, refresh this publish table. Do not publish hub-only gist copies such as `product-description`.

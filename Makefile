@@ -5,6 +5,10 @@ STOW_DIR := $(DOTFILES_DIR)/stow
 TARGET := $(HOME)
 AGENTS_PKG := $(STOW_DIR)/agents
 AGENTS_LINKS_REGISTRY := $(AGENTS_PKG)/links.registry
+SKILLSETS := $(DOTFILES_DIR)/scripts/skillsets.sh
+# agents: never fold dirs, so ~/.agents/skills and ~/.cursor/rules stay real dirs
+# and skill set links or tool-written files never land inside this repo
+STOW_FLAGS_agents := --no-folding
 
 # Safe defaults (no secrets, no Linux leftovers)
 CORE := zsh git asdf agents ghostty
@@ -28,6 +32,7 @@ ALL := $(SAFE) $(SECRETS) $(LINUX)
 .PHONY: install-linux restow-linux uninstall-linux
 .PHONY: install-all restow-all uninstall-all
 .PHONY: agents-install agents-restow agents-uninstall agents-verify
+.PHONY: agents-skillsets agents-skillsets-check agents-skillsets-list
 .PHONY: agents-link-vault agents-link-code agents-link-sync
 
 # Default skill sets when a registry/CLI row omits SKILLS=
@@ -52,7 +57,9 @@ help:
 	  '  packages: $(ALL)' \
 	  '' \
 	  'Agents extras:' \
-	  '  make agents-verify      Check agent entrypoints + skill count' \
+	  '  make agents-verify      Check agent entrypoints + skill count + skill sets' \
+	  '  make agents-skillsets   Clone/update upstream skill sets, link into ~/.agents/skills' \
+	  '  make agents-skillsets-check  Read-only drift check (REGISTRY + installed vs upstream)' \
 	  '  make agents-install     Alias for install-agents' \
 	  '  make agents-link-vault VAULT=~/vaults/personal [SKILLS="…"]' \
 	  '  make agents-link-code CODE=~/code/foo [SKILLS="…"]' \
@@ -63,11 +70,11 @@ help:
 define PACKAGE_RULES
 .PHONY: install-$(1) restow-$(1) uninstall-$(1)
 install-$(1):
-	stow --dir="$(STOW_DIR)" --target="$(TARGET)" --stow $(1)
+	stow $(STOW_FLAGS_$(1)) --dir="$(STOW_DIR)" --target="$(TARGET)" --stow $(1)
 restow-$(1):
-	stow --dir="$(STOW_DIR)" --target="$(TARGET)" --restow $(1)
+	stow $(STOW_FLAGS_$(1)) --dir="$(STOW_DIR)" --target="$(TARGET)" --restow $(1)
 uninstall-$(1):
-	stow --dir="$(STOW_DIR)" --target="$(TARGET)" --delete $(1)
+	stow $(STOW_FLAGS_$(1)) --dir="$(STOW_DIR)" --target="$(TARGET)" --delete $(1)
 endef
 
 $(foreach pkg,$(ALL),$(eval $(call PACKAGE_RULES,$(pkg))))
@@ -123,8 +130,19 @@ verify:
 # --- agents aliases + verify + link ----------------------------------------
 
 agents-install: install-agents
+	@$(MAKE) --no-print-directory agents-skillsets
 agents-restow: restow-agents
 agents-uninstall: uninstall-agents
+
+# Upstream skill sets (manifest: stow/agents/skillsets.manifest)
+agents-skillsets:
+	@"$(SKILLSETS)" install
+
+agents-skillsets-check:
+	@"$(SKILLSETS)" check
+
+agents-skillsets-list:
+	@"$(SKILLSETS)" list
 
 agents-verify:
 	@set -euo pipefail; \
@@ -171,7 +189,8 @@ agents-verify:
 	  printf 'agents-verify failed\n' >&2; \
 	  exit 1; \
 	fi; \
-	printf 'agents-verify OK\n'
+	printf 'agents-verify OK\n'; \
+	$(MAKE) --no-print-directory agents-skillsets-check
 
 # Shared: link hub skills into ROOT/.agents/skills (skills list via $$1)
 # Skips missing roots (personal-only paths on other machines).
