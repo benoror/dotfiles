@@ -16,7 +16,10 @@ MANIFEST="${SKILLSETS_MANIFEST:-$ROOT/stow/agents/skillsets.manifest}"
 REGISTRY="${SKILLSETS_REGISTRY:-$ROOT/stow/agents/REGISTRY.md}"
 CACHE="${SKILLSETS_CACHE:-$HOME/.cache/skillsets}"
 AGENTS_DIR="$HOME/.agents/skills"
-TARGETS="${SKILLSETS_TARGETS:-$AGENTS_DIR $HOME/.claude/skills}"
+CURSOR_DIR="$HOME/.cursor/skills"
+TARGETS="${SKILLSETS_TARGETS:-$AGENTS_DIR $HOME/.claude/skills $CURSOR_DIR}"
+# Sets a native Cursor plugin already provides; never linked into ~/.cursor/skills
+CURSOR_SKIP="${SKILLSETS_CURSOR_SKIP:-pstack}"
 cmd="${1:-check}"
 drift=0
 
@@ -39,6 +42,12 @@ skills_in() { # base -> "<skill>\t<abs dir>"
   find "$1" -mindepth 2 -maxdepth 3 -name SKILL.md | while read -r f; do
     d="$(dirname "$f")"; printf '%s\t%s\n' "$(basename "$d")" "$d"
   done | sort
+}
+
+skip_target() { # set type target -> 0 if this set must not be linked into target
+  [[ "$2" == local && "$3" == "$AGENTS_DIR" ]] && return 0  # Stow owns local skills there
+  [[ "$3" == "$CURSOR_DIR" ]] && case " $CURSOR_SKIP " in *" $1 "*) return 0 ;; esac
+  return 1
 }
 
 included() { [[ -z "$2" ]] && return 0; case " $2 " in *" $1 "*) return 0 ;; esac; return 1; }
@@ -129,8 +138,7 @@ while IFS=$'\t' read -r name type src sub prefix enabled tag include; do
     install)
       [[ "$enabled" == 1 ]] || continue
       for t in $TARGETS; do
-        # Stow owns local skills in ~/.agents/skills
-        [[ "$type" == local && "$t" == "$AGENTS_DIR" ]] && continue
+        skip_target "$name" "$type" "$t" && continue
         while IFS=$'\t' read -r s d; do link_one "$t" "$prefix$s" "$d"; done < "$tmp/$name.up"
       done ;;
     check)
@@ -148,7 +156,7 @@ while IFS=$'\t' read -r name type src sub prefix enabled tag include; do
       if [[ "$enabled" == 1 ]]; then
         for t in $TARGETS; do
           [[ -d "$t" ]] || continue
-          [[ "$type" == local && "$t" == "$AGENTS_DIR" ]] && continue
+          skip_target "$name" "$type" "$t" && continue
           while IFS=$'\t' read -r s d; do
             l="$t/$prefix$s"; want="$d"
             [[ "$type" == upstream ]] && want="$CACHE/$name${d#"$tmp/$name"}"
