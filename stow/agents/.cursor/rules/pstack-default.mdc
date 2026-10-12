@@ -9,4 +9,4 @@ alwaysApply: true
 - Not a coding task (chat, brainstorm, ops, account or infra admin): do not start poteto-mode.
 - Opt out: if the request says "no poteto-mode", "skip pstack", or "quick fix, no pstack", do not start it.
 - Opt in anywhere: "@poteto-mode", "/poteto-mode", or "run poteto-mode".
-- Company repos (origin not under github.com/benoror, for example a work or client org): do not start poteto-mode unless the request opens it explicitly. Never carry context, files, or notes from a company repo into a personal repo, or the reverse.
+- Company repos (origin not under github.com/benoror, for example a work or client org): poteto-mode is on by default here too (Ben 2026-10-12). Never carry context, files, or notes from a company repo into a personal repo, or the reverse.
