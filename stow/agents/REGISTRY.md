@@ -28,8 +28,6 @@ flowchart TB
   sets -->|agents-skillsets| claude["~/.claude/skills"]
   hub -->|agents-skillsets, local rows| claude
   pstack["Cursor plugin pstack\n+ ~/.cursor/rules/pstack-*.mdc"]
-  gstack["~/.claude/skills/gstack"]
-  gstack -->|lite symlinks| oc["~/vaults/openclaw/workspace/skills"]
 ```
 
 | Surface | End location | How it gets there | Owned by |
@@ -43,15 +41,13 @@ flowchart TB
 | Cursor pstack | Cursor plugin (marketplace) + `~/.cursor/rules/pstack-{models,default}.mdc` | `/add-plugin pstack`; default rule via Stow | Cursor (not Stow) |
 | Upstream skill sets | `~/.agents/skills/<prefix><name>` → `~/.cache/skillsets/<set>/` | `make agents-skillsets` from [skillsets.manifest](skillsets.manifest) | Upstream repo (no copies here) |
 | Claude Code | `~/.claude/skills/<prefix><name>` → upstream cache or hub skill | `make agents-skillsets` (same manifest, local rows too) | Symlink; never replaces a real dir or another link |
-| gstack (Claude) | `~/.claude/skills/gstack/` | `git clone` + `./setup` | Claude home (not Stow) |
-| gstack (OpenClaw lite) | `~/vaults/openclaw/workspace/skills/gstack-openclaw-*` | Symlink → gstack `openclaw/skills/` | Symlink |
 
 After clone on a new machine:
 
 ```bash
 make agents-install && make agents-verify   # includes upstream skill sets
 make agents-link-sync
-# then: Cursor /add-plugin pstack + /setup-pstack; gstack host install (see below)
+# then: Cursor /add-plugin pstack + /setup-pstack
 ```
 
 ---
@@ -264,19 +260,6 @@ Safety: the script only creates, replaces or prunes symlinks that point into the
 
 ---
 
-## Future mastermind — gstack (outside Stow)
-
-Provisional OpenClaw workspace; migrate host to Hermes when ready (`./setup --host hermes`).
-
-| Artifact | End location |
-| --- | --- |
-| Full suite | `~/.claude/skills/gstack/` (`./setup`) |
-| OpenClaw lite | `~/vaults/openclaw/workspace/skills/gstack-openclaw-{office-hours,ceo-review,investigate,retro}` → gstack `openclaw/skills/` |
-| Dispatch rules | `~/vaults/openclaw/workspace/AGENTS.md` § Coding Tasks |
-
-Do not vendor whole gstack into `stow/agents` (keeps the coding hub lean).
-
----
 
 ## Keep out of this registry
 
