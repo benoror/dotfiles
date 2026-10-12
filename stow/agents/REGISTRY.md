@@ -41,6 +41,7 @@ flowchart TB
 | Cursor pstack | Cursor plugin (marketplace) + `~/.cursor/rules/pstack-{models,default}.mdc` | `/add-plugin pstack`; default rule via Stow | Cursor (not Stow) |
 | Upstream skill sets | `~/.agents/skills/<prefix><name>` → `~/.cache/skillsets/<set>/` | `make agents-skillsets` from [skillsets.manifest](skillsets.manifest) | Upstream repo (no copies here) |
 | Claude Code | `~/.claude/skills/<prefix><name>` → upstream cache or hub skill | `make agents-skillsets` (same manifest, local rows too) | Symlink; never replaces a real dir or another link |
+| Cursor | `~/.cursor/skills/<prefix><name>` (all sets except pstack) | `make agents-skillsets`; pstack comes from the Cursor plugin. Turn off "Include third-party Plugins, Skills, and other configs" so Cursor skips `~/.agents` and `~/.claude` | Symlink; one copy per skill in Cursor |
 
 After clone on a new machine:
 
