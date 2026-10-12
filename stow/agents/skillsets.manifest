@@ -14,7 +14,11 @@
 # include:      optional space separated skill names; omit = all
 #
 # Targets: ~/.agents/skills (upstream only; Stow owns local skills there) and
-# ~/.claude/skills (upstream and local). Override with SKILLSETS_TARGETS.
+# ~/.claude/skills and ~/.cursor/skills (upstream and local). Override with SKILLSETS_TARGETS.
+# Cursor: sets in SKILLSETS_CURSOR_SKIP (default pstack) are not linked into ~/.cursor/skills,
+# because the Cursor pstack plugin already provides them. Pair with Cursor Settings >
+# Rules, Skills, Subagents > "Include third-party Plugins, Skills, and other configs" OFF,
+# so Cursor stops also reading ~/.agents and ~/.claude and loads each skill once.
 #
 # Naming: mattpocock is canonical, so its links are unprefixed (/tdd, /grill-me keep working).
 # pstack stays prefixed (pstack-tdd) so it never clashes with mattpocock or hub names.
