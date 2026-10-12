@@ -131,5 +131,8 @@
     "diffEditor.renderSideBySide": false,
     "diffEditor.experimental.showMoves": true,
     "editor.minimap.enabled": true,
-    "remote.autoForwardPorts": false
+    "remote.autoForwardPorts": false,
+    "cursor.composer.queueMessageDefaultBehavior": "steer",
+    "cursor.composer.queueManualSendBehavior2": "steer",
+    "cursor.composer.usageSummaryDisplay": "always"
 }
