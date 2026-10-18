@@ -11,8 +11,9 @@ If you are in doubt, leave it out and ask. Do not commit:
 - Secrets: API keys, tokens, passwords, `.env` files, cookies, session files, SSH or GPG private material, webhook URLs.
 - Personal data: phone numbers, home addresses, family member names, health data, financial data, account numbers.
 - Private notes: Obsidian vault content, vault file names, chat logs, memory files from AI assistants, and anything copied from the private bot hub or a work lane.
-- Company data: employer or client code, internal system names, internal URLs, client names, private repo contents.
-- Private network details: Tailscale or other private DNS names, private IP addresses, internal URLs, bot inbox addresses. Short machine nicknames (for example `mbp14m4`) are OK.
+- Company data: employer or client source code and client data.
+
+Internal names, repo paths, machine names, and tailnet names or IPs are OK. They are not credentials and do not give access.
 
 A public email address in `stow/git/` and this README is OK.
 
