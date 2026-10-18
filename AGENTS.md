@@ -6,11 +6,11 @@ Instructions for coding agents that work in this repo. The global personal layer
 
 Everything you commit is public forever. Git history, forks, mirrors, and skills.sh all keep a copy. A later delete does not remove it.
 
-Do not commit:
+If you are in doubt, leave it out and ask. Do not commit:
 
 - Secrets: API keys, tokens, passwords, `.env` files, cookies, session files, SSH or GPG private material, webhook URLs.
 - Personal data: phone numbers, home addresses, family member names, health data, financial data, account numbers.
-- Private notes: Obsidian vault content, vault file names, chat logs, memory files from AI assistants.
+- Private notes: Obsidian vault content, vault file names, chat logs, memory files from AI assistants, and anything copied from the private bot hub or a work lane.
 - Company data: employer or client code, internal system names, internal URLs, client names, private repo contents.
 - Private network details: Tailscale or other private DNS names, private IP addresses, internal URLs, bot inbox addresses. Short machine nicknames (for example `mbp14m4`) are OK.
 
@@ -36,4 +36,7 @@ If you find a leak that is already pushed, do not try to hide it with a new comm
 - In `skills/`, link only skills this repo owns or forks. Read `skills/README.md` first.
 - Keep the index table in `README.md` current when you add, move, or remove a top-level path or package.
 - Work on a branch and open a pull request. Do not push to `master` without Ben's approval.
-- Keep changes small. Do not change unrelated config.
+- Keep diffs small and focused. Do not change unrelated config.
+- Make each commit atomic, with a clear message (`type(scope): summary`).
+- Do not add a new dependency, plugin, or tool without a stated reason.
+- For agent skills, use the layout in `stow/agents/README.md` and the list in `stow/agents/REGISTRY.md`. Do not repeat them here.
