@@ -19,6 +19,7 @@ Managed with [GNU Stow](https://www.gnu.org/software/stow/) (`stow/.stowrc` → 
 
 | Path | Role |
 | --- | --- |
+| [`AGENTS.md`](AGENTS.md) | Rules for coding agents in this repo (public repo: no private data) |
 | [`stow/`](stow/) | Stow packages (linked into `$HOME`) |
 | [`stow/agents/`](stow/agents/) | AI agent hub — [README](stow/agents/README.md) · [TODO](stow/agents/TODO.md) |
 | [`skills/`](skills/) | skills.sh / pack surface — relative links into the hub (own/forked skills only) |
