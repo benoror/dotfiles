@@ -34,7 +34,7 @@ Managed with [GNU Stow](https://www.gnu.org/software/stow/) (`stow/.stowrc` → 
 | [`stow/kde/`](stow/kde/), [`stow/konsole/`](stow/konsole/) | Linux desktop leftovers |
 | [`Makefile`](Makefile) | Stow install/restow/uninstall (groups + per package) |
 | [`macos/`](macos/) | macOS extras (BetterMouse, Rectangle, …) |
-| [`fonts/`](fonts/) | Font files |
+| [`fonts/linux.fonts/`](fonts/linux.fonts/) | Fonts with no package (Luxi, Vegur, Dekar, Monaco port, personal) |
 | [`nixos/`](nixos/) | NixOS / UTM experiments |
 | [`linux_old/`](linux_old/) | Archived Linux configs |
 
@@ -45,5 +45,8 @@ make install              # core + editors + mac (no secrets/linux)
 make install-zsh          # one package
 make install-secrets      # ssh + gnupg (explicit)
 make agents-verify        # agents entrypoints
+make fonts                # Nerd Fonts, Powerline, Anonymous Pro, Terminus, Museo (Homebrew casks)
 stow -n -v -d ~/dotfiles/stow -t ~ zsh   # dry-run any package
 ```
+
+Packaged fonts come from Homebrew casks, not from this repo. On Linux, use the distro packages (`fonts-terminus`, `fonts-anonymous-pro`) and the [Nerd Fonts releases](https://github.com/ryanoasis/nerd-fonts/releases). `fonts/linux.fonts/` keeps only families with no package. Removed files stay in git history before this change; regenerate X11 index files there with `mkfontscale && mkfontdir` if you still use the core font path.
