@@ -52,6 +52,7 @@ help:
 	  '  make install-secrets    $(SECRETS)  (explicit)' \
 	  '  make install-linux      $(LINUX)  (optional)' \
 	  '  make install-all        Safe + secrets + linux' \
+	  '  make fonts              Install fonts from Homebrew casks (macOS)' \
 	  '' \
 	  'Per package: make install-<pkg> | restow-<pkg> | uninstall-<pkg>' \
 	  '  packages: $(ALL)' \
@@ -78,6 +79,14 @@ uninstall-$(1):
 endef
 
 $(foreach pkg,$(ALL),$(eval $(call PACKAGE_RULES,$(pkg))))
+
+# --- fonts (Homebrew casks; Linux desktop extras stay in fonts/linux.fonts) --
+
+FONT_CASKS := font-jetbrains-mono-nerd-font font-inconsolata-nerd-font font-powerline-symbols font-anonymous-pro font-terminus font-museo
+
+.PHONY: fonts
+fonts:
+	brew install --cask $(FONT_CASKS)
 
 # --- default = safe groups -------------------------------------------------
 
