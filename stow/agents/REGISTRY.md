@@ -107,7 +107,7 @@ Restore hashes: [skills-lock.json](skills-lock.json).
 
 ## skills.sh / pack publish (`skills/`)
 
-Repo-root [`skills/`](../../skills/) is the [skills.sh](https://www.skills.sh/docs) discovery surface and the GitHub source for pack [ben-orozcos-projects](https://www.skills.sh/packs/ben-orozcos-projects). Stow hub `stow/agents/.agents/skills/` remains the source of truth.
+Repo-root [`skills/`](../../skills/) is the [skills.sh](https://www.skills.sh/docs) discovery surface and the GitHub source for pack [HNXRLeUvoNFcf4jm](https://www.skills.sh/p/HNXRLeUvoNFcf4jm). Stow hub `stow/agents/.agents/skills/` remains the source of truth.
 
 **Symlink rule:** only own or forked skills. Relative links, not copies.
 
@@ -141,10 +141,10 @@ npx skills add benoror/dotfiles -s <name>
 
 ### Pack (Vercel UI)
 
-The pack page is [ben-orozcos-projects](https://www.skills.sh/packs/ben-orozcos-projects). After merge, set that pack GitHub source in the Vercel skills.sh UI to `benoror/dotfiles` and folder `skills/`. The CLI cannot create or edit the pack when Vercel sign-in is required.
+Pack [HNXRLeUvoNFcf4jm](https://www.skills.sh/p/HNXRLeUvoNFcf4jm) has GitHub source `benoror/dotfiles`, folder `skills/`, so new links here join it on merge. A pack cannot gain skills after creation, and the builder rejects a checkout over 50 MB. The first pack `1sJwYsjYwfouBtEI` stays alive for published links.
 
 ```bash
-npx skills add https://skills.sh/p/<pack-id>
+npx skills add https://skills.sh/p/HNXRLeUvoNFcf4jm
 ```
 
 More: [`skills/README.md`](../../skills/README.md). Badge: [skills.sh/benoror/dotfiles](https://skills.sh/benoror/dotfiles).
