@@ -5,7 +5,16 @@
     {
       "title": "Git / PR",
       "description": "Draft review-ready pull request text from branch context.",
-      "skills": ["pr-description"]
+      "skills": [
+        "pr-description"
+      ]
+    },
+    {
+      "title": "Architecture",
+      "description": "Domain-driven design as a checklist. Which context owns it, which layer it goes in, what it is called.",
+      "skills": [
+        "ddd"
+      ]
     },
     {
       "title": "Refactoring",
@@ -24,7 +33,9 @@
     {
       "title": "Agent grading",
       "description": "Grade local agent conversations against installed skills. Transcripts stay on the machine.",
-      "skills": ["skill-doctor"]
+      "skills": [
+        "skill-doctor"
+      ]
     }
   ]
 }

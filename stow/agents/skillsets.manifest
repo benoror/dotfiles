@@ -36,4 +36,4 @@ skill-creator	local	anthropics/skills	stow/agents/.agents/skills	-	1	-	skill-cre
 show-me	local	humanlayer/skills	stow/agents/.agents/skills	-	1	-	show-me
 skill-doctor	local	warpdotdev/common-skills	stow/agents/.agents/skills	-	1	-	skill-doctor
 product-description	local	steveruizok gist	stow/agents/.agents/skills	-	1	-	product-description
-own	local	this repo	stow/agents/.agents/skills	-	1	-	pr-description resolving-merge-conflicts five-step five-step-understand five-step-question five-step-delete five-step-simplify five-step-accelerate five-step-automate five-step-review
+own	local	this repo	stow/agents/.agents/skills	-	1	-	pr-description resolving-merge-conflicts five-step five-step-understand five-step-question five-step-delete five-step-simplify five-step-accelerate five-step-automate five-step-review ddd
