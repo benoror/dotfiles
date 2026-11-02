@@ -81,6 +81,14 @@ Local skills: `stow/agents/.agents/skills/` → stowed to `~/.agents/skills/`. m
 | find-skills | [vercel-labs/skills](https://www.skills.sh/vercel-labs/skills/find-skills) | Discover and install skills from skills.sh. |
 | skill-creator | [anthropics/skills](https://www.skills.sh/anthropics/skills/skill-creator) | Author, edit, and measure agent skills. |
 | pr-description | Graduated (Trivelta) | Draft a concise PR body from branch context. **Ours.** Published on skills.sh via root `skills/`. |
+| five-step | Graduated (vault cheatsheet) | Orchestrate a first-principles refactor with the five-step algorithm, in order. **Ours.** Holds `references/principles.md` and `references/report-template.md`. Published via root `skills/`. |
+| five-step-understand | Graduated (vault cheatsheet) | Step 0. Study the scope before any change. Uses `how` or `research` when installed. **Ours.** Published. |
+| five-step-question | Graduated (vault cheatsheet) | Step 1. Keep, delete, or rethink verdict per requirement, with evidence. **Ours.** Published. |
+| five-step-delete | Graduated (vault cheatsheet) | Step 2. Remove what should not exist, with usage evidence. **Ours.** Published. |
+| five-step-simplify | Graduated (vault cheatsheet) | Step 3. DRY, boundaries, contracts, reader load on what remains. **Ours.** Published. |
+| five-step-accelerate | Graduated (vault cheatsheet) | Step 4. Cycle time, coupling, feedback loops, atomic changes. **Ours.** Published. |
+| five-step-automate | Graduated (vault cheatsheet) | Step 5. Automate last, as a rerunnable script or check. **Ours.** Published. |
+| five-step-review | Graduated (vault cheatsheet) | Independent review on a different model. Removed or moved complexity? **Ours.** Published. |
 | gh-stack | [github/gh-stack](https://www.skills.sh/github/gh-stack/gh-stack) | Manage stacked PRs with `gh stack`. Needs `gh extension install github/gh-stack`. Hub patch: compose with `pr-description` after submit. Re-apply the patch if you reinstall the skill. |
 | ponytail | [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail) | Force the smallest solution that works (YAGNI). |
 | ponytail-audit | [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail-audit) | Audit the whole repo for over-engineering. |
@@ -105,6 +113,7 @@ Repo-root [`skills/`](../../skills/) is the [skills.sh](https://www.skills.sh/do
 | Linked | Slug (`name` in `SKILL.md`) | Group in [`skills.sh.json`](../../skills.sh.json) |
 | --- | --- | --- |
 | `pr-description` | `pr-description` | Git / PR |
+| `five-step`, `five-step-understand`, `five-step-question`, `five-step-delete`, `five-step-simplify`, `five-step-accelerate`, `five-step-automate`, `five-step-review` | same as dir name | Refactoring |
 | `skill-doctor` | `skill-doctor` | Agent grading |
 
 Do **not** symlink mattpocock, ponytail, anthropics `skill-creator`, vercel-labs `find-skills`, humanlayer `show-me`, unmodified github `gh-stack`, or the steveruizok gist `product-description` hub copy. Those stay in the Stow hub only.
@@ -119,6 +128,7 @@ this repo. After merge, create or refresh the repo page with telemetry on
 ```bash
 npx skills add benoror/dotfiles -s skill-doctor
 npx skills add benoror/dotfiles -s pr-description
+npx skills add benoror/dotfiles -s five-step
 ```
 
 Install one skill later:
@@ -238,7 +248,7 @@ Upstream sets are shallow sparse clones in `~/.cache/skillsets/<set>/`. Local se
 | pstack | upstream | [github.com/cursor/plugins](https://github.com/cursor/plugins/tree/main/pstack) `pstack/skills` | `pstack-<name>` | All skills. |
 | mattpocock | upstream | [github.com/mattpocock/skills](https://github.com/mattpocock/skills) `skills` | `<name>` (no prefix) | Canonical. The 18 skills listed in the manifest. |
 | ponytail, find-skills, gh-stack, skill-creator, show-me, skill-doctor, product-description | local | hand copies (see Hub skills) | `<name>` | Drift check skips them. |
-| own | local | this repo | `<name>` | pr-description, resolving-merge-conflicts (removed upstream, kept here). |
+| own | local | this repo | `<name>` | pr-description, resolving-merge-conflicts (removed upstream, kept here), five-step and its seven `five-step-*` steps. |
 
 Naming: mattpocock is canonical, so its links keep the plain names and existing `/tdd`, `/grill-me` and friends keep working, including vault and repo fan-out. pstack stays prefixed, so its `tdd` is `pstack-tdd` and never clashes.
 

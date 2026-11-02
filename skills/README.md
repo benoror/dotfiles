@@ -15,6 +15,7 @@ Each entry here is a **relative symlink** into that hub tree. Do not copy skill 
 | Skill | Why it is on this surface |
 | --- | --- |
 | `pr-description` | Graduated from Trivelta. Owned here. |
+| `five-step`, `five-step-*` (7 steps) | Graduated from the vault prompt cheatsheet. Five-step algorithm for codebases. Owned here. |
 | `skill-doctor` | Based on / forked from Warp's skill-doctor (warpdotdev/common-skills). Multi-harness grader owned here. |
 
 ## Symlink rule
@@ -51,6 +52,7 @@ makes [skills.sh/benoror/dotfiles](https://skills.sh/benoror/dotfiles) exist:
 ```bash
 npx skills add benoror/dotfiles -s skill-doctor
 npx skills add benoror/dotfiles -s pr-description
+npx skills add benoror/dotfiles -s five-step
 ```
 
 Install one skill later the same way. Always pass `-s <name>` so you get a
