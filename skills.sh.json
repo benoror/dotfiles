@@ -8,6 +8,20 @@
       "skills": ["pr-description"]
     },
     {
+      "title": "Refactoring",
+      "description": "The five-step algorithm for codebases. Understand, question, delete, simplify, accelerate, automate last, review. One orchestrator and seven atomic steps.",
+      "skills": [
+        "five-step",
+        "five-step-understand",
+        "five-step-question",
+        "five-step-delete",
+        "five-step-simplify",
+        "five-step-accelerate",
+        "five-step-automate",
+        "five-step-review"
+      ]
+    },
+    {
       "title": "Agent grading",
       "description": "Grade local agent conversations against installed skills. Transcripts stay on the machine.",
       "skills": ["skill-doctor"]

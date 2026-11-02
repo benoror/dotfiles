@@ -40,7 +40,7 @@ Use these modes when the user asks (see vault Prompt Engineering Cheatsheet for 
 
 - **/research** — study the named area in depth; write findings before large changes.
 - **/implement** — finish the stated goal; do not stop early without saying why.
-- **/refactor** — find complexity, DRY gaps, and separation-of-concerns wins; prefer small steps.
+- **/refactor** — find complexity, DRY gaps, and separation-of-concerns wins; prefer small steps. For a first-principles cut, use the `five-step` skill.
 - **/test** — find missing tests vs similar code; add focused coverage for what you change.
 - **/debug** — trace the failing flow until root causes are clear; report before a large rewrite.
 - **/document** — short PR or handoff notes for backend and frontend readers.
@@ -54,6 +54,7 @@ Useful entry points:
 
 - **ask-matt** / **grill-me** / **tdd** / **diagnosing-bugs** / **code-review** / **handoff**
 - **ponytail** — smallest solution that works (YAGNI)
+- **five-step** — first-principles refactor in order: understand, question, delete, simplify, accelerate, automate, review. Each step is its own `five-step-*` skill.
 - **pr-description** — branch → PR body
 - **gh-stack** — GitHub stacked PRs (`gh stack`; needs CLI extension)
 - **product-description** — outside-in product behavior spec
