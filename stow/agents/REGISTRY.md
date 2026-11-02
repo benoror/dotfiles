@@ -89,6 +89,7 @@ Local skills: `stow/agents/.agents/skills/` → stowed to `~/.agents/skills/`. m
 | five-step-accelerate | Graduated (vault cheatsheet) | Step 4. Cycle time, coupling, feedback loops, atomic changes. **Ours.** Published. |
 | five-step-automate | Graduated (vault cheatsheet) | Step 5. Automate last, as a rerunnable script or check. **Ours.** Published. |
 | five-step-review | Graduated (vault cheatsheet) | Independent review on a different model. Removed or moved complexity? **Ours.** Published. |
+| ddd | Own (patterns from a production bounded-context migration, structure only) | Domain-driven design checklist. Place new code, map contexts, audit boundaries. Holds `references/layout.md` and `references/checks.md`. **Ours.** Published. |
 | gh-stack | [github/gh-stack](https://www.skills.sh/github/gh-stack/gh-stack) | Manage stacked PRs with `gh stack`. Needs `gh extension install github/gh-stack`. Hub patch: compose with `pr-description` after submit. Re-apply the patch if you reinstall the skill. |
 | ponytail | [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail) | Force the smallest solution that works (YAGNI). |
 | ponytail-audit | [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail-audit) | Audit the whole repo for over-engineering. |
@@ -114,6 +115,7 @@ Repo-root [`skills/`](../../skills/) is the [skills.sh](https://www.skills.sh/do
 | --- | --- | --- |
 | `pr-description` | `pr-description` | Git / PR |
 | `five-step`, `five-step-understand`, `five-step-question`, `five-step-delete`, `five-step-simplify`, `five-step-accelerate`, `five-step-automate`, `five-step-review` | same as dir name | Refactoring |
+| `ddd` | `ddd` | Architecture |
 | `skill-doctor` | `skill-doctor` | Agent grading |
 
 Do **not** symlink mattpocock, ponytail, anthropics `skill-creator`, vercel-labs `find-skills`, humanlayer `show-me`, unmodified github `gh-stack`, or the steveruizok gist `product-description` hub copy. Those stay in the Stow hub only.
@@ -248,7 +250,7 @@ Upstream sets are shallow sparse clones in `~/.cache/skillsets/<set>/`. Local se
 | pstack | upstream | [github.com/cursor/plugins](https://github.com/cursor/plugins/tree/main/pstack) `pstack/skills` | `pstack-<name>` | All skills. |
 | mattpocock | upstream | [github.com/mattpocock/skills](https://github.com/mattpocock/skills) `skills` | `<name>` (no prefix) | Canonical. The 18 skills listed in the manifest. |
 | ponytail, find-skills, gh-stack, skill-creator, show-me, skill-doctor, product-description | local | hand copies (see Hub skills) | `<name>` | Drift check skips them. |
-| own | local | this repo | `<name>` | pr-description, resolving-merge-conflicts (removed upstream, kept here), five-step and its seven `five-step-*` steps. |
+| own | local | this repo | `<name>` | pr-description, resolving-merge-conflicts (removed upstream, kept here), five-step and its seven `five-step-*` steps, ddd. |
 
 Naming: mattpocock is canonical, so its links keep the plain names and existing `/tdd`, `/grill-me` and friends keep working, including vault and repo fan-out. pstack stays prefixed, so its `tdd` is `pstack-tdd` and never clashes.
 

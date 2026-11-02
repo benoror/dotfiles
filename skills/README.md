@@ -16,6 +16,7 @@ Each entry here is a **relative symlink** into that hub tree. Do not copy skill 
 | --- | --- |
 | `pr-description` | Graduated from Trivelta. Owned here. |
 | `five-step`, `five-step-*` (7 steps) | Graduated from the vault prompt cheatsheet. Five-step algorithm for codebases. Owned here. |
+| `ddd` | Domain-driven design checklist for agents. Owned here. |
 | `skill-doctor` | Based on / forked from Warp's skill-doctor (warpdotdev/common-skills). Multi-harness grader owned here. |
 
 ## Symlink rule

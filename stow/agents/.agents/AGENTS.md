@@ -55,6 +55,7 @@ Useful entry points:
 - **ask-matt** / **grill-me** / **tdd** / **diagnosing-bugs** / **code-review** / **handoff**
 - **ponytail** — smallest solution that works (YAGNI)
 - **five-step** — first-principles refactor in order: understand, question, delete, simplify, accelerate, automate, review. Each step is its own `five-step-*` skill.
+- **ddd** — before new code in a multi-domain codebase: which context owns it, which layer, what it is called.
 - **pr-description** — branch → PR body
 - **gh-stack** — GitHub stacked PRs (`gh stack`; needs CLI extension)
 - **product-description** — outside-in product behavior spec
