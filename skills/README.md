@@ -72,15 +72,19 @@ npx skills add ~/dotfiles -s skill-doctor --list
 
 ### Pack (Vercel UI)
 
-Pack [ben-orozcos-projects](https://www.skills.sh/packs/ben-orozcos-projects) is
-separate from the repo page. After merge, set the pack GitHub source in the
-Vercel skills.sh UI to `benoror/dotfiles` and folder `skills/`. The CLI cannot
-create or edit that pack when Vercel sign-in is required.
+The pack [skills.sh/p/HNXRLeUvoNFcf4jm](https://www.skills.sh/p/HNXRLeUvoNFcf4jm)
+is separate from the repo page. Its GitHub source is `benoror/dotfiles`, folder
+`skills/`, so a skill linked here joins the pack on merge with no UI step. Packs
+cannot gain skills after creation, and the builder rejects a checkout over 50 MB,
+so keep large binaries out of the repo. The CLI cannot create or edit a pack.
 
 Install the pack (no CLI auth):
 
 ```bash
-npx skills add https://skills.sh/p/<pack-id>
+npx skills add https://skills.sh/p/HNXRLeUvoNFcf4jm
 ```
+
+The first pack, `1sJwYsjYwfouBtEI`, stays alive for links already published. It
+holds only `pr-description` and `skill-doctor` as file uploads.
 
 See [../stow/agents/REGISTRY.md](../stow/agents/REGISTRY.md).
