@@ -31,7 +31,7 @@ Diff range (base and head, or PR). The ledger or the stated intent. File pointer
 - Did we add an abstraction, layer, option, or parameter that one caller uses?
 - Are responsibilities and contracts clearer? Can a new reader answer "where does X come from" in 30 seconds?
 - Did we preserve intended behavior? Name every behavior change and check it is intentional and listed.
-- Are redundant tests, code paths, or dependencies left?
+- Are redundant tests, code paths, or dependencies left? Scan the diff for repeated private functions and identical expressions. For each near-match the author kept, is the behavior that would change on merge named?
 - Did we optimize or automate something that should not exist?
 - Could the result be materially simpler? Say how.
 

@@ -21,7 +21,7 @@ Scope. The ledger.
 
 Evaluate what remains against these questions. Record only findings that change a decision.
 
-1. DRY. Where do two implementations repeat one decision? Merge them only when the shared code would have at least two real callers today.
+1. DRY. When a behavior shows up more than once, decide whether it is the same rule. Same inputs, same null-versus-zero policy, and same result means one function, and callers pass only what differs. A private helper copied into the next module is a miss, even when each copy has one caller in its file. Do not merge functions that only look alike. If one turns an empty sum into zero and the other keeps NULL, they are different rules and stay apart.
 2. Separation of concerns. Which module owns which decision? Where does one module reach into another's state?
 3. Boundaries. Are modules, services, and domain contexts cohesive? Where justified, apply the patterns the codebase already uses (repository, query object, service object, adapter, gateway, bounded context, aggregate, ubiquitous language). Use the codebase's own domain terms.
 4. Contracts. Are types, interfaces, and error handling consistent across similar code?
@@ -30,6 +30,8 @@ Evaluate what remains against these questions. Record only findings that change 
 7. Consistency. Make similar implementations match the best existing one.
 
 Optimize the system, not a component. Reject a local simplification that adds complexity elsewhere.
+
+Before you finish, scan the diff for repeated private functions and identical expressions. Collapse the real duplicates. For each near-match you leave, name the behavior that would change if you merged it.
 
 ## Output
 
