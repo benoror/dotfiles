@@ -141,7 +141,7 @@ npx skills add benoror/dotfiles -s <name>
 
 ### Pack (Vercel UI)
 
-Pack [HNXRLeUvoNFcf4jm](https://www.skills.sh/p/HNXRLeUvoNFcf4jm) has GitHub source `benoror/dotfiles`, folder `skills/`, so new links here join it on merge. A pack cannot gain skills after creation, and the builder rejects a checkout over 50 MB. The first pack `1sJwYsjYwfouBtEI` stays alive for published links.
+Pack [HNXRLeUvoNFcf4jm](https://www.skills.sh/p/HNXRLeUvoNFcf4jm) lists ten GitHub-sourced entries (`benoror/dotfiles@master`). Edits to a listed skill reach installers; a new skill does not join, because the list freezes at creation and the UI only deletes. Create a new pack per batch of new skills and keep old ids alive for posted links. The builder rejects a checkout over 50 MB. `ddd` is on the repo page only until the next pack. Run telemetry installs from a scratch directory, not from this repo.
 
 ```bash
 npx skills add https://skills.sh/p/HNXRLeUvoNFcf4jm

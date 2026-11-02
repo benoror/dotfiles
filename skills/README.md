@@ -73,10 +73,18 @@ npx skills add ~/dotfiles -s skill-doctor --list
 ### Pack (Vercel UI)
 
 The pack [skills.sh/p/HNXRLeUvoNFcf4jm](https://www.skills.sh/p/HNXRLeUvoNFcf4jm)
-is separate from the repo page. Its GitHub source is `benoror/dotfiles`, folder
-`skills/`, so a skill linked here joins the pack on merge with no UI step. Packs
-cannot gain skills after creation, and the builder rejects a checkout over 50 MB,
+is separate from the repo page. Its entries are GitHub-sourced
+(`benoror/dotfiles@master`, folder `skills/`), so edits to a listed skill reach
+installers on the next install or `npx skills update`. The list itself is frozen
+at creation: a new directory under `skills/` does not join an existing pack, and
+the UI can only delete entries. The builder also rejects a checkout over 50 MB,
 so keep large binaries out of the repo. The CLI cannot create or edit a pack.
+
+Publishing a new skill therefore has two parts. The repo page picks it up after
+one telemetry-on `npx skills add benoror/dotfiles -s <name>`, run from a scratch
+directory so the CLI does not install copies into this repo. The pack picks it up
+only when a new pack is created; do that per batch, not per skill, and keep old
+pack ids alive for links already posted.
 
 Install the pack (no CLI auth):
 
@@ -84,7 +92,9 @@ Install the pack (no CLI auth):
 npx skills add https://skills.sh/p/HNXRLeUvoNFcf4jm
 ```
 
-The first pack, `1sJwYsjYwfouBtEI`, stays alive for links already published. It
-holds only `pr-description` and `skill-doctor` as file uploads.
+Pack history. `1sJwYsjYwfouBtEI` (Sep 2026) holds `pr-description` and
+`skill-doctor` as file uploads. `HNXRLeUvoNFcf4jm` (Nov 2, 2026) holds those two
+plus the eight `five-step` skills. `ddd` is on the repo page only until the next
+pack. Both ids stay alive.
 
 See [../stow/agents/REGISTRY.md](../stow/agents/REGISTRY.md).
