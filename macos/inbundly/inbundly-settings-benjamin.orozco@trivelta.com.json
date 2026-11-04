@@ -1,0 +1,27 @@
+{
+  "app": "inbundly",
+  "v": 1,
+  "exportedAt": "2026-10-22T01:50:07.446Z",
+  "settings": {
+    "bundleColorStyle": "background",
+    "bundleOtherViews": true,
+    "bundlingEnabled": true,
+    "colorBundlesByLabel": true,
+    "combineLabels": true,
+    "exclude": true,
+    "groupMessagesByDate": true,
+    "keepStarredUnbundled": true,
+    "labels": [],
+    "markReadOnArchive": true,
+    "matchStylusCatppuccin": false,
+    "priorityBundles": [
+      "⭐️/@carson",
+      "⭐️/@connor"
+    ],
+    "senderBundling": false,
+    "showBundleArchive": false,
+    "showPinnedToggle": false,
+    "skipSingleItemBundles": true,
+    "skipStarredOnArchive": true
+  }
+}

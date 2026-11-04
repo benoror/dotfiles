@@ -1,0 +1,84 @@
+{
+  "app": "inbundly",
+  "v": 1,
+  "exportedAt": "2026-10-22T01:53:47.554Z",
+  "settings": {
+    "bundleColorStyle": "background",
+    "bundleOtherViews": true,
+    "bundlingEnabled": true,
+    "colorBundlesByLabel": true,
+    "combineLabels": true,
+    "customBundles": {
+      "bundles": {
+        "FDE": [
+          "1a0dad2c308a6fad",
+          "1a0dacc6c2b594dd",
+          "1a1133831e793fc0",
+          "1a11d07bcf56a0f6",
+          "1a121b0bc988617e",
+          "1a10cd4261b40af4",
+          "1a10cd18453ab80e",
+          "1a10ccbced70bc7b",
+          "1a0f50dbdc29c44b",
+          "1a0cf8cf1d66f790",
+          "1a0f82b50e913759",
+          "1a0f789969fb6734",
+          "1a135344c1ee49cb",
+          "1a13533b6d08c92e",
+          "1a11d80601348dd8",
+          "1a15a2606c00792d",
+          "1a15ef53e169ab57"
+        ],
+        "Izzi Movil": [
+          "19e838fdce61aa4f",
+          "19ef0aa5c7a845c0",
+          "19ef0aac519eab30",
+          "1a0ca5092da08bbf",
+          "1a0ca4fa202901fe",
+          "1a0c849d103ef89b"
+        ],
+        "iPhone 18 Ale": [
+          "19faa7d07c8b3986",
+          "1a095f027d98cda9"
+        ],
+        "switch2": [
+          "1a1469fdac19e0d5",
+          "1a0c2248d986d6a6",
+          "1a0c99570df04466",
+          "1a14a97dea639065",
+          "1a14b9ec2e0d974d"
+        ]
+      },
+      "v": 1
+    },
+    "exclude": true,
+    "groupMessagesByDate": true,
+    "keepStarredUnbundled": true,
+    "labels": [],
+    "markReadOnArchive": true,
+    "matchStylusCatppuccin": true,
+    "priorityBundles": [
+      "Crypto",
+      "Crypto/*",
+      "Fam 👨‍👩‍👧‍👦/Contabilidad",
+      "Fam 👨‍👩‍👧‍👦/School 🙇",
+      "Fin 🏦",
+      "Fin 🏦/*",
+      "Trav ✈️/*",
+      "IH/Inbundly",
+      "IH/Kamek.ai/*",
+      "IH/AI 🤖",
+      "IH/AI 🤖/*",
+      "BrokerLit",
+      "Job[seek]/Apptegy/*",
+      "Job[seek]/LinkedIn/reach",
+      "Job[seek]"
+    ],
+    "senderBundling": true,
+    "showBundleArchive": false,
+    "showBundleDelete": true,
+    "showPinnedToggle": false,
+    "skipSingleItemBundles": true,
+    "skipStarredOnArchive": true
+  }
+}
