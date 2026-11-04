@@ -154,6 +154,26 @@ curl -fsSL https://gist.githubusercontent.com/steveruizok/83ae5c53f2784ebf8f5fe0
   | sh -s -- .agents/skills/product-description
 ```
 
+### Health check (agents-doctor)
+
+Run `make agents-doctor` to check one machine. The check is read-only. It shows counts and names only.
+
+The check reports:
+
+1. The dotfiles commit, the count of commits behind `origin/master`, and the count of dirty files.
+2. For `~/.agents/skills`, `~/.claude/skills` and `~/.cursor/skills`: missing skills, broken links, and skills that are not in this repo.
+3. The entrypoints for Codex, OpenCode, Claude Code and `~/.agents`.
+4. The result of `make agents-skillsets-check`.
+5. One `SUMMARY` line: host, commit, behind count, missing and broken names.
+
+To repair, run `make agents-doctor FIX=1`. This runs `git pull --ff-only`, `make agents-restow` and `make agents-skillsets`.
+
+Set `NO_FETCH=1` to skip `git fetch`. Then the check does not write to the repo. To check a remote machine, send the script over SSH:
+
+```bash
+ssh -n <host> "NO_FETCH=1 bash -c $(printf %q "$(cat scripts/agents-doctor.sh)")"
+```
+
 ### Vaults and code as consumers
 
 Vault/code trees stay outside this repo. Link graduated hub skills into targets:
