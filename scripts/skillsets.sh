@@ -11,7 +11,7 @@
 # Exit: 0 ok, 1 drift or clash (check), 2 error. install warns on clashes, exits 0. Works with macOS bash 3.2.
 set -euo pipefail
 
-ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+ROOT="$(cd "$(dirname "$0")/.." && pwd -P)"
 MANIFEST="${SKILLSETS_MANIFEST:-$ROOT/stow/agents/skillsets.manifest}"
 REGISTRY="${SKILLSETS_REGISTRY:-$ROOT/stow/agents/REGISTRY.md}"
 CACHE="${SKILLSETS_CACHE:-$HOME/.cache/skillsets}"
