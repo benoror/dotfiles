@@ -90,6 +90,10 @@ Local skills: `stow/agents/.agents/skills/` → stowed to `~/.agents/skills/`. m
 | five-step-automate | Graduated (vault cheatsheet) | Step 5. Automate last, as a rerunnable script or check. **Ours.** Published. |
 | five-step-review | Graduated (vault cheatsheet) | Independent review on a different model. Removed or moved complexity? **Ours.** Published. |
 | ddd | Own (patterns from a production bounded-context migration, structure only) | Domain-driven design checklist. Place new code, map contexts, audit boundaries. Holds `references/layout.md` and `references/checks.md`. **Ours.** Published. |
+| tool-efficiency | Own (adapted from a public thread by Michael Fenech) | Pick the lightest tool route, keep cheat sheets, look before writes, log failures. **Ours.** |
+| reddit | [ReScienceLab/opc-skills](https://github.com/ReScienceLab/opc-skills) (upstream link) | Read public Reddit posts, comments, subreddits and users. |
+| twitter | [ReScienceLab/opc-skills](https://github.com/ReScienceLab/opc-skills) (upstream link) | Read public X data through twitterapi.io. Needs `TWITTERAPI_API_KEY`. |
+| domain-hunter | [ReScienceLab/opc-skills](https://github.com/ReScienceLab/opc-skills) (upstream link) | Find available domains, compare registrar prices, find promo codes. |
 | gh-stack | [github/gh-stack](https://www.skills.sh/github/gh-stack/gh-stack) | Manage stacked PRs with `gh stack`. Needs `gh extension install github/gh-stack`. Hub patch: compose with `pr-description` after submit. Re-apply the patch if you reinstall the skill. |
 | ponytail | [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail) | Force the smallest solution that works (YAGNI). |
 | ponytail-audit | [DietrichGebert/ponytail](https://www.skills.sh/dietrichgebert/ponytail/ponytail-audit) | Audit the whole repo for over-engineering. |
@@ -250,7 +254,8 @@ Upstream sets are shallow sparse clones in `~/.cache/skillsets/<set>/`. Local se
 | pstack | upstream | [github.com/cursor/plugins](https://github.com/cursor/plugins/tree/main/pstack) `pstack/skills` | `pstack-<name>` | All skills. |
 | mattpocock | upstream | [github.com/mattpocock/skills](https://github.com/mattpocock/skills) `skills` | `<name>` (no prefix) | Canonical. The 18 skills listed in the manifest. |
 | ponytail, find-skills, gh-stack, skill-creator, show-me, skill-doctor, product-description | local | hand copies (see Hub skills) | `<name>` | Drift check skips them. |
-| own | local | this repo | `<name>` | pr-description, resolving-merge-conflicts (removed upstream, kept here), five-step and its seven `five-step-*` steps, ddd. |
+| opc-skills | upstream | [github.com/ReScienceLab/opc-skills](https://github.com/ReScienceLab/opc-skills) `skills` | `<name>` (no prefix) | reddit, twitter, domain-hunter only. |
+| own | local | this repo | `<name>` | pr-description, resolving-merge-conflicts (removed upstream, kept here), five-step and its seven `five-step-*` steps, ddd, tool-efficiency. |
 
 Naming: mattpocock is canonical, so its links keep the plain names and existing `/tdd`, `/grill-me` and friends keep working, including vault and repo fan-out. pstack stays prefixed, so its `tdd` is `pstack-tdd` and never clashes.
 
