@@ -32,7 +32,7 @@ ALL := $(SAFE) $(SECRETS) $(LINUX)
 .PHONY: install-linux restow-linux uninstall-linux
 .PHONY: install-all restow-all uninstall-all
 .PHONY: agents-install agents-restow agents-uninstall agents-verify
-.PHONY: agents-skillsets agents-skillsets-check agents-skillsets-list
+.PHONY: agents-skillsets agents-skillsets-check agents-skillsets-list agents-doctor
 .PHONY: agents-link-vault agents-link-code agents-link-sync
 
 # Default skill sets when a registry/CLI row omits SKILLS=
@@ -61,6 +61,7 @@ help:
 	  '  make agents-verify      Check agent entrypoints + skill count + skill sets' \
 	  '  make agents-skillsets   Clone/update skill sets, link into ~/.agents/skills and ~/.claude/skills' \
 	  '  make agents-skillsets-check  Read-only drift check (REGISTRY + installed vs upstream)' \
+	  '  make agents-doctor [FIX=1]  Repo vs origin, skill links per agent dir, skill sets' \
 	  '  make agents-install     Alias for install-agents' \
 	  '  make agents-link-vault VAULT=~/vaults/personal [SKILLS="…"]' \
 	  '  make agents-link-code CODE=~/code/foo [SKILLS="…"]' \
@@ -149,6 +150,9 @@ agents-skillsets:
 
 agents-skillsets-check:
 	@"$(SKILLSETS)" check
+
+agents-doctor:
+	@scripts/agents-doctor.sh $(if $(FIX),--fix)
 
 agents-skillsets-list:
 	@"$(SKILLSETS)" list
