@@ -235,3 +235,18 @@ Finish every response with this exact summary, substituting the absolute `REPORT
 - Your agent skill report: file://$REPORT_DIR/report.html
 
 Want me to apply these suggestions to your skills? Do not apply edits unless the user asks. Never upload transcripts.
+
+## Fleet-friction pass (optional)
+
+Use when the user asks for a fleet checkup, friction audit, or "what should we automate", or a standing routine fires. It is separate from the grading steps above. Default window: last 24 hours unless named. State the window and bot count before mining.
+
+- Corpus: `/home/box/agent-data/agent-transcripts/<agentId>/<agentId>.jsonl`. Skip folders starting with `sand-subagent-`. Order by modification time. Map ids to names via `/home/box/agent-data/agents/<id>/profile.json`. Skip bots with no user messages in the window.
+- Mine with parallel background workers, each on a slice of paths; keep only findings in the main thread. Per bot: user goals, friction signals with short quotes, repeated corrections, misunderstandings, candidate gaps.
+- Friction signals: frustration, "stop", "wrong", "i said", "undo", the same instruction restated, the user doing work the bot should own, the bot asking questions an experiment could settle, abandoned threads.
+- Privacy lanes: report patterns and short quotes only. Never carry raw private content (finance, family, company IP) across lanes.
+- Report: at most 5 bullets, then proposals tagged `skill`, `bot`, or `routine`, each with the evidence that earned it. Create nothing until the user picks.
+- Implement after the pick: skills via `skill-authoring` and `UpdateSkill`; bots handed to the fleet's bot-design owner; routines via the `routines` skill.
+- Recurring mistake classes at repo level (same bug pattern across code sessions) go to pstack's `correct` skill instead.
+- When run by a routine and there is nothing to propose, stay quiet.
+
+(Fleet-friction pass adapted from the Dr Eggbot v2 template, poteto / Grok Bot team.)
