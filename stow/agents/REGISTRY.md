@@ -267,17 +267,7 @@ Safety: the script only creates, replaces or prunes symlinks that point into the
 - `~/.agents/skills` must be a real dir. The agents package is stowed with `--no-folding`; run `make agents-restow` once if it is still a single link into this repo.
 - Claude Code reads `AGENTS.md` natively only at project level, and loads skills only from `~/.claude/skills` and `.claude/skills`. So `~/.claude/CLAUDE.md` (`@~/.agents/AGENTS.md`) and the `~/.claude/skills` links stay.
 
---- | --- | --- | --- |
-| pstack | [github.com/cursor/plugins](https://github.com/cursor/plugins/tree/main/pstack) `pstack/skills` | yes, `pstack-*` | All skills. |
-| mattpocock | [github.com/mattpocock/skills](https://github.com/mattpocock/skills) `skills` | no (drift check only) | Hub keeps edited copies today; see TODO. |
-
-- `make agents-skillsets` clones or updates and relinks (also run by `make agents-install`).
-- `make agents-skillsets-check` is read-only. It flags REGISTRY rows missing upstream, missing or broken links, and stale caches (also run by `make agents-verify`).
-- `make agents-skillsets-list` prints what each set has upstream.
-- `~/.agents/skills` must be a real dir. The agents package is stowed with `--no-folding`; run `make agents-restow` once if it is still a single link into this repo.
-
 ---
-
 
 ## Keep out of this registry
 
@@ -287,7 +277,7 @@ Safety: the script only creates, replaces or prunes symlinks that point into the
 
 ## Maintenance
 
-1. Add or graduate a hub skill → update this file + [skills-lock.json](skills-lock.json) + optionally [TODO.md](TODO.md).
+1. Add or graduate a hub skill → update this file + [skills-lock.json](skills-lock.json).
 2. Link it into vaults/code → edit [links.registry](links.registry), run `make agents-link-sync`, refresh the fan-out table here.
 3. Project-only pack → document under **Project-local**; do not add to the hub unless it graduates.
 4. New upstream set → add a manifest row, run `make agents-skillsets`, add a row to the skill sets table. Run `make agents-skillsets-check` weekly; on drift, fix rows in a PR.

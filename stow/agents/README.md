@@ -11,7 +11,7 @@ Follow ASD-STE100 Simplified Technical English for technical text. These rules a
 - Use active voice. Write "Turn the switch", not "The switch must be turned".
 - Write short paragraphs. Keep one topic in each paragraph.
 
-`README.md`, `TODO.md`, `REGISTRY.md`, `links.registry`, and `skills-lock.json` stay in the package only (see [`.stow-local-ignore`](.stow-local-ignore)).
+`README.md`, `REGISTRY.md`, `links.registry`, and `skills-lock.json` stay in the package only (see [`.stow-local-ignore`](.stow-local-ignore)).
 
 ## Goal
 
@@ -194,9 +194,46 @@ Defaults: vaults get `find-skills skill-creator pr-description`; code gets `gril
 
 `make verify` only checks SAFE stow package dirs exist. Use `agents-verify` for hub entrypoints — no per-package `verify-*` for zsh/nvim/etc.
 
+## Decisions
+
+Lasting rules for this hub. They replace the old phased plan (`TODO.md`, retired 2026-11-24).
+
+### What goes in the hub
+
+- Keep the hub lean. Prefer mattpocock process skills (tdd, diagnose, implement, review) over new mega-packs.
+- Cherry-pick other packs (for example addyosmani `security-and-hardening`, `ci-cd-and-automation`) only to fill a real gap. Skip skills that duplicate grill, tdd, review or planning.
+- To write a new skill, use anthropics `skill-creator`, not a second authoring skill.
+- Add stack-specific packs project-local, only when the work needs them: React view transitions, React Native, Vercel deploy (secrets via env or 1Password), `mcp-builder` for new MCP servers, `webapp-testing` for browser loops. Skip the Office document skills unless a task needs them.
+- Project-specific skills (RBAC, dbt parity, CI helpers, vendor skills under `.venv`) stay in their repos. Do not graduate them.
+- Never carry context, files, or notes from a company repo into a personal repo, or the reverse.
+- Cursor plugins (pstack) stay Cursor-local. Do not vendor or Stow-mirror them.
+
+### Vaults and code
+
+- Vaults and code repos consume hub skills. Do not copy vault notes into this repo.
+- Graduate a portable skill into `.agents/skills/` first, then link it out with `links.registry`. Vault-owned skills stay in the vault until graduated on purpose.
+- Link hub skills into a repo only on request (`make agents-link-code`). No blanket per-repo install.
+- Prefer nested package `AGENTS.md` files over a large repo-root file.
+
+### Memory and mastermind
+
+- Notes plus local search (Obsidian + QMD) is the memory layer. Revisit gbrain only if that fails.
+- gstack is not installed on any machine (removed 2026-10-12). Do not put gstack or gbrain in the hub.
+
+### Cross-machine config
+
+- Do not Dropbox-sync the live `~/.cursor`, `~/.claude`, or `~/.codex` trees.
+- Stow curated config files only, with no secrets in git.
+- Perplexity desktop caches stay local-only.
+
+### Out of scope
+
+- A second hub at `~/code/agents/`.
+- A Justfile (Make is enough).
+- A required `~/.cursor/AGENTS.md`.
+
 ## Related
 
 - Skill / location map: [REGISTRY.md](REGISTRY.md)
 - Make link rows: [links.registry](links.registry)
-- Phased plan: [TODO.md](TODO.md)
 - Make entrypoints: [../../Makefile](../../Makefile)

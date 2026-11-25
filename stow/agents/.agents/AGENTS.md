@@ -64,7 +64,7 @@ Useful entry points:
 - **find-skills** — discover packs on skills.sh
 - **skill-creator** — author new skills
 
-Cursor-only: install **pstack** via `/add-plugin pstack` (not Stow). Plan: `~/dotfiles/stow/agents/TODO.md`.
+Cursor-only: install **pstack** via `/add-plugin pstack` (not Stow). Rules: `~/dotfiles/stow/agents/README.md` § Decisions.
 Do not vendor full pstack into this hub.
 Recommended pstack skills (see REGISTRY): `/create-verification-skill` and `/maintain-verification-skill`.
 
